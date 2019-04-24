@@ -1,0 +1,130 @@
+C:\Users\Roy\Documents\pruebasDeSoftware\WindowsApplication7\WindowsApplication7\bin\Debug\WindowsApplication7.exe.config
+C:\Users\Roy\Documents\pruebasDeSoftware\WindowsApplication7\WindowsApplication7\bin\Debug\WindowsApplication7.exe
+C:\Users\Roy\Documents\pruebasDeSoftware\WindowsApplication7\WindowsApplication7\bin\Debug\WindowsApplication7.pdb
+C:\Users\Roy\Documents\pruebasDeSoftware\WindowsApplication7\WindowsApplication7\bin\Debug\WindowsApplication7.xml
+C:\Users\Roy\Documents\pruebasDeSoftware\WindowsApplication7\WindowsApplication7\obj\x86\Debug\matriculas_prueba_servidor.vbprojResolveAssemblyReference.cache
+C:\Users\Roy\Documents\pruebasDeSoftware\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication1.apoderado.resources
+C:\Users\Roy\Documents\pruebasDeSoftware\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication1.Form1.resources
+C:\Users\Roy\Documents\pruebasDeSoftware\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication1.inicio.resources
+C:\Users\Roy\Documents\pruebasDeSoftware\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication1.matricula.resources
+C:\Users\Roy\Documents\pruebasDeSoftware\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication1.menu_principal.resources
+C:\Users\Roy\Documents\pruebasDeSoftware\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication1.Resources.resources
+C:\Users\Roy\Documents\pruebasDeSoftware\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication1.registro.resources
+C:\Users\Roy\Documents\pruebasDeSoftware\WindowsApplication7\WindowsApplication7\obj\x86\Debug\matriculas_prueba_servidor.vbproj.GenerateResource.Cache
+C:\Users\Roy\Documents\pruebasDeSoftware\WindowsApplication7\WindowsApplication7\obj\x86\Debug\RdlCompile.cache
+C:\Users\Roy\Documents\pruebasDeSoftware\WindowsApplication7\WindowsApplication7\obj\x86\Debug\RdlCompile.compiled
+C:\Users\Roy\Documents\pruebasDeSoftware\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication7.exe
+C:\Users\Roy\Documents\pruebasDeSoftware\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication7.xml
+C:\Users\Roy\Documents\pruebasDeSoftware\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication7.pdb
+E:\WindowsApplication7\WindowsApplication7\bin\Debug\WindowsApplication7.exe.config
+E:\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication7.exe
+E:\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication7.xml
+E:\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication7.pdb
+E:\WindowsApplication7\WindowsApplication7\obj\x86\Debug\matriculas_prueba_servidor.vbprojResolveAssemblyReference.cache
+E:\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication1.Form1.resources
+E:\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication1.inicio.resources
+E:\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication1.matricula.resources
+E:\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication1.Resources.resources
+E:\WindowsApplication7\WindowsApplication7\obj\x86\Debug\matriculas_prueba_servidor.vbproj.GenerateResource.Cache
+E:\WindowsApplication7\WindowsApplication7\bin\Debug\WindowsApplication7.exe
+E:\WindowsApplication7\WindowsApplication7\bin\Debug\WindowsApplication7.pdb
+E:\WindowsApplication7\WindowsApplication7\bin\Debug\WindowsApplication7.xml
+C:\Users\Roy\Desktop\WindowsApplication7\WindowsApplication7\bin\Debug\WindowsApplication7.exe.config
+C:\Users\Roy\Desktop\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication7.exe
+C:\Users\Roy\Desktop\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication7.xml
+C:\Users\Roy\Desktop\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication7.pdb
+C:\Users\Roy\Desktop\WindowsApplication7\WindowsApplication7\bin\Debug\WindowsApplication7.exe
+C:\Users\Roy\Desktop\WindowsApplication7\WindowsApplication7\bin\Debug\WindowsApplication7.pdb
+C:\Users\Roy\Desktop\WindowsApplication7\WindowsApplication7\bin\Debug\WindowsApplication7.xml
+C:\Users\Roy\Desktop\WindowsApplication7\WindowsApplication7\obj\x86\Debug\matriculas_prueba_servidor.vbprojResolveAssemblyReference.cache
+C:\Users\Roy\Desktop\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication1.Form1.resources
+C:\Users\Roy\Desktop\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication1.inicio.resources
+C:\Users\Roy\Desktop\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication1.matricula.resources
+C:\Users\Roy\Desktop\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication1.Resources.resources
+C:\Users\Roy\Desktop\WindowsApplication7\WindowsApplication7\obj\x86\Debug\matriculas_prueba_servidor.vbproj.GenerateResource.Cache
+C:\Users\Roy\Desktop\matricula llankanao\WindowsApplication7\WindowsApplication7\bin\Debug\WindowsApplication7.exe.config
+C:\Users\Roy\Desktop\matricula llankanao\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication7.exe
+C:\Users\Roy\Desktop\matricula llankanao\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication7.xml
+C:\Users\Roy\Desktop\matricula llankanao\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication7.pdb
+C:\Users\Roy\Desktop\matricula llankanao\WindowsApplication7\WindowsApplication7\bin\Debug\WindowsApplication7.exe
+C:\Users\Roy\Desktop\matricula llankanao\WindowsApplication7\WindowsApplication7\bin\Debug\WindowsApplication7.pdb
+C:\Users\Roy\Desktop\matricula llankanao\WindowsApplication7\WindowsApplication7\bin\Debug\WindowsApplication7.xml
+C:\Users\Roy\Desktop\matricula llankanao\WindowsApplication7\WindowsApplication7\obj\x86\Debug\matriculas_prueba_servidor.vbprojResolveAssemblyReference.cache
+C:\Users\Roy\Desktop\matricula llankanao\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication1.Form1.resources
+C:\Users\Roy\Desktop\matricula llankanao\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication1.inicio.resources
+C:\Users\Roy\Desktop\matricula llankanao\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication1.matricula.resources
+C:\Users\Roy\Desktop\matricula llankanao\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication1.Resources.resources
+C:\Users\Roy\Desktop\matricula llankanao\WindowsApplication7\WindowsApplication7\obj\x86\Debug\matriculas_prueba_servidor.vbproj.GenerateResource.Cache
+E:\app para hp\WindowsApplication7\WindowsApplication7\bin\Debug\WindowsApplication7.exe.config
+E:\app para hp\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication7.exe
+E:\app para hp\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication7.xml
+E:\app para hp\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication7.pdb
+E:\app para hp\WindowsApplication7\WindowsApplication7\bin\Debug\WindowsApplication7.exe
+E:\app para hp\WindowsApplication7\WindowsApplication7\bin\Debug\WindowsApplication7.pdb
+E:\app para hp\WindowsApplication7\WindowsApplication7\bin\Debug\WindowsApplication7.xml
+E:\app para hp\WindowsApplication7\WindowsApplication7\obj\x86\Debug\matriculas_prueba_servidor.vbprojResolveAssemblyReference.cache
+E:\app para hp\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication1.Form1.resources
+E:\app para hp\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication1.inicio.resources
+E:\app para hp\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication1.matricula.resources
+E:\app para hp\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication1.Resources.resources
+E:\app para hp\WindowsApplication7\WindowsApplication7\obj\x86\Debug\matriculas_prueba_servidor.vbproj.GenerateResource.Cache
+C:\Users\Roy\Desktop\matricula llankanao\app para hp\WindowsApplication7\WindowsApplication7\bin\Debug\WindowsApplication7.exe.config
+C:\Users\Roy\Desktop\matricula llankanao\app para hp\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication7.exe
+C:\Users\Roy\Desktop\matricula llankanao\app para hp\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication7.xml
+C:\Users\Roy\Desktop\matricula llankanao\app para hp\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication7.pdb
+C:\Users\Roy\Desktop\matricula llankanao\app para hp\WindowsApplication7\WindowsApplication7\bin\Debug\WindowsApplication7.exe
+C:\Users\Roy\Desktop\matricula llankanao\app para hp\WindowsApplication7\WindowsApplication7\bin\Debug\WindowsApplication7.pdb
+C:\Users\Roy\Desktop\matricula llankanao\app para hp\WindowsApplication7\WindowsApplication7\bin\Debug\WindowsApplication7.xml
+C:\Users\Roy\Desktop\matricula llankanao\app para hp\WindowsApplication7\WindowsApplication7\obj\x86\Debug\matriculas_prueba_servidor.vbprojResolveAssemblyReference.cache
+C:\Users\Roy\Desktop\matricula llankanao\app para hp\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication1.Form1.resources
+C:\Users\Roy\Desktop\matricula llankanao\app para hp\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication1.FormEntrarUsuarios.resources
+C:\Users\Roy\Desktop\matricula llankanao\app para hp\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication1.FormMenuUsuario.resources
+C:\Users\Roy\Desktop\matricula llankanao\app para hp\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication1.inicio.resources
+C:\Users\Roy\Desktop\matricula llankanao\app para hp\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication1.matricula.resources
+C:\Users\Roy\Desktop\matricula llankanao\app para hp\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication1.Resources.resources
+C:\Users\Roy\Desktop\matricula llankanao\app para hp\WindowsApplication7\WindowsApplication7\obj\x86\Debug\matriculas_prueba_servidor.vbproj.GenerateResource.Cache
+E:\matricula llankanao\app para hp\WindowsApplication7\WindowsApplication7\bin\Debug\WindowsApplication7.exe.config
+E:\matricula llankanao\app para hp\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication7.exe
+E:\matricula llankanao\app para hp\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication7.xml
+E:\matricula llankanao\app para hp\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication7.pdb
+E:\matricula llankanao\app para hp\WindowsApplication7\WindowsApplication7\bin\Debug\WindowsApplication7.exe
+E:\matricula llankanao\app para hp\WindowsApplication7\WindowsApplication7\bin\Debug\WindowsApplication7.pdb
+E:\matricula llankanao\app para hp\WindowsApplication7\WindowsApplication7\bin\Debug\WindowsApplication7.xml
+E:\matricula llankanao\app para hp\WindowsApplication7\WindowsApplication7\obj\x86\Debug\matriculas_prueba_servidor.vbprojResolveAssemblyReference.cache
+E:\matricula llankanao\app para hp\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication1.Form1.resources
+E:\matricula llankanao\app para hp\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication1.FormEntrarUsuarios.resources
+E:\matricula llankanao\app para hp\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication1.FormMenuUsuario.resources
+E:\matricula llankanao\app para hp\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication1.inicio.resources
+E:\matricula llankanao\app para hp\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication1.matricula.resources
+E:\matricula llankanao\app para hp\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication1.Resources.resources
+E:\matricula llankanao\app para hp\WindowsApplication7\WindowsApplication7\obj\x86\Debug\matriculas_prueba_servidor.vbproj.GenerateResource.Cache
+C:\WindowsApplication7\WindowsApplication7\bin\Debug\WindowsApplication7.exe.config
+C:\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication7.exe
+C:\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication7.xml
+C:\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication7.pdb
+C:\WindowsApplication7\WindowsApplication7\bin\Debug\WindowsApplication7.exe
+C:\WindowsApplication7\WindowsApplication7\bin\Debug\WindowsApplication7.pdb
+C:\WindowsApplication7\WindowsApplication7\bin\Debug\WindowsApplication7.xml
+C:\WindowsApplication7\WindowsApplication7\obj\x86\Debug\matriculas_prueba_servidor.vbprojResolveAssemblyReference.cache
+C:\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication1.Form1.resources
+C:\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication1.FormEntrarUsuarios.resources
+C:\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication1.FormMenuUsuario.resources
+C:\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication1.inicio.resources
+C:\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication1.matricula.resources
+C:\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication1.Resources.resources
+C:\WindowsApplication7\WindowsApplication7\obj\x86\Debug\matriculas_prueba_servidor.vbproj.GenerateResource.Cache
+D:\matricula llankanao\app para hp\WindowsApplication7\WindowsApplication7\bin\Debug\WindowsApplication7.exe.config
+D:\matricula llankanao\app para hp\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication7.exe
+D:\matricula llankanao\app para hp\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication7.xml
+D:\matricula llankanao\app para hp\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication7.pdb
+D:\matricula llankanao\app para hp\WindowsApplication7\WindowsApplication7\bin\Debug\WindowsApplication7.exe
+D:\matricula llankanao\app para hp\WindowsApplication7\WindowsApplication7\bin\Debug\WindowsApplication7.pdb
+D:\matricula llankanao\app para hp\WindowsApplication7\WindowsApplication7\bin\Debug\WindowsApplication7.xml
+D:\matricula llankanao\app para hp\WindowsApplication7\WindowsApplication7\obj\x86\Debug\matriculas_prueba_servidor.vbprojResolveAssemblyReference.cache
+D:\matricula llankanao\app para hp\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication1.Form1.resources
+D:\matricula llankanao\app para hp\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication1.FormEntrarUsuarios.resources
+D:\matricula llankanao\app para hp\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication1.FormMenuUsuario.resources
+D:\matricula llankanao\app para hp\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication1.inicio.resources
+D:\matricula llankanao\app para hp\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication1.matricula.resources
+D:\matricula llankanao\app para hp\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication1.Resources.resources
+D:\matricula llankanao\app para hp\WindowsApplication7\WindowsApplication7\obj\x86\Debug\matriculas_prueba_servidor.vbproj.GenerateResource.Cache

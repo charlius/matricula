@@ -1,0 +1,22 @@
+C:\Users\Roy\Documents\Visual Studio 2010\Projects\WindowsApplication7\WindowsApplication7\bin\Debug\WindowsApplication7.exe
+C:\Users\Roy\Documents\Visual Studio 2010\Projects\WindowsApplication7\WindowsApplication7\bin\Debug\WindowsApplication7.pdb
+C:\Users\Roy\Documents\Visual Studio 2010\Projects\WindowsApplication7\WindowsApplication7\bin\Debug\WindowsApplication7.xml
+C:\Users\Roy\Documents\Visual Studio 2010\Projects\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication1.Form1.resources
+C:\Users\Roy\Documents\Visual Studio 2010\Projects\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication1.menu_principal.resources
+C:\Users\Roy\Documents\Visual Studio 2010\Projects\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication1.Resources.resources
+C:\Users\Roy\Documents\Visual Studio 2010\Projects\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication7.vbproj.GenerateResource.Cache
+C:\Users\Roy\Documents\Visual Studio 2010\Projects\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication7.exe
+C:\Users\Roy\Documents\Visual Studio 2010\Projects\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication7.xml
+C:\Users\Roy\Documents\Visual Studio 2010\Projects\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication7.pdb
+C:\Users\Roy\Documents\Visual Studio 2010\Projects\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication1.apoderado.resources
+C:\Users\Roy\Documents\Visual Studio 2010\Projects\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication1.matricula.resources
+C:\Users\Roy\Documents\Visual Studio 2010\Projects\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication1.registro.resources
+C:\Users\Roy\Documents\Visual Studio 2010\Projects\WindowsApplication7\WindowsApplication7\bin\Debug\WindowsApplication7.exe.config
+C:\Users\Roy\Documents\Visual Studio 2010\Projects\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication7.vbprojResolveAssemblyReference.cache
+C:\Users\Roy\Documents\Visual Studio 2010\Projects\WindowsApplication7\WindowsApplication7\obj\x86\Debug\RdlCompile.cache
+C:\Users\Roy\Documents\Visual Studio 2010\Projects\WindowsApplication7\WindowsApplication7\obj\x86\Debug\RdlCompile.compiled
+C:\Users\Roy\Documents\Visual Studio 2010\Projects\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication1.inicio.resources
+C:\Users\Roy\Documents\pruebasDeSoftware\WindowsApplication7\WindowsApplication7\bin\Debug\WindowsApplication7.exe.config
+C:\Users\Roy\Documents\pruebasDeSoftware\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication7.exe
+C:\Users\Roy\Documents\pruebasDeSoftware\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication7.xml
+C:\Users\Roy\Documents\pruebasDeSoftware\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication7.pdb
