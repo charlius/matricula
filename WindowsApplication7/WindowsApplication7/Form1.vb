@@ -11,14 +11,15 @@ Public Class Form1
     Public FechaNa As Date
     Public FechaMa As Date
 
-    Dim ipServidor As String = "DESKTOP-AVV9E8Q"
-    Dim claveBD As String
-    Dim servidorSQL As String
-    Dim basededatos As String = "matriculas_ll"
-    Dim usuarioBD As String = "charles"
+    Dim ipServidor As String = datos_conn.getservidor()
+    Dim puerto As String = datos_conn.getpuerto()
+    Dim claveBD As String = datos_conn.getpass()
+    Dim basededatos As String = datos_conn.getbd()
+    Dim usuarioBD As String = datos_conn.getuser()
     Dim strcon As String
     Public dreader As SqlDataReader
-    Dim conector As New SqlConnection("server=DESKTOP-AVV9E8Q ;user='charles';password= '199314' ; database=matriculas_ll")
+    Dim conector As New SqlConnection("server=" + ipServidor + "  ;user='" + usuarioBD + "';password= '" + claveBD + "' ; database=" + basededatos + "")
+
 
     Dim cmd As OleDbDataAdapter
     Dim cnn As OleDbConnection
@@ -389,7 +390,7 @@ Public Class Form1
         Try
             conector.Close()
 
-            Dim qry As String = "select alumno.rut_alumno ,alumno.nombres,alumno.apellidos,alumno.fecha_nacimiento, alumno.edad,curso.Nombre ,alumno.fono_urgencia ,alumno.fono_urgencia_otro,alumno.sexo,apoderado.rut_apoderado , apoderado.nombre_apoderado ,apoderado.domicilio , apoderado.fono  ,matricula.fecha_matricula ,matricula.escuela_procedencia ,matricula.cursos_repetidos ,matricula.domicilio_alumno ,matricula.alergico , matricula.grupo_sanguineo ,matricula.enfermedad ,matricula.grupo_pie ,matricula.nombre_padre ,matricula.nombre_madre ,matricula.rut_padre ,matricula.rut_madre ,matricula.trabajo_padre ,matricula.trabajo_madre ,matricula.escolaridad_padre ,matricula.escolaridad_madre ,matricula.vive_con ,matricula.casa_propia ,matricula.ingreso_mensual ,matricula.beneficio ,matricula.religion , usuario.nombre_usuario from alumno, apoderado, curso, matricula, usuario where matricula.rut_alumno = alumno.rut_alumno And apoderado.rut_apoderado = matricula.rut_apoderado And alumno.curso = curso.id_curso And matricula.id_usuario = usuario.id_usuario And matricula.rut_alumno =  '" & Label1.Text & "'"
+            Dim qry As String = "select alumno.rut_alumno ,alumno.nombres,alumno.apellidos,alumno.fecha_nacimiento, matricula.edad_alumno,curso.Nombre ,matricula.fono_urgencia_1 ,matricula.fono_urgencia_2,alumno.sexo,apoderado.rut_apoderado , apoderado.nombre_apoderado ,apoderado.domicilio , apoderado.fono  ,matricula.fecha_matricula ,matricula.escuela_procedencia ,matricula.cursos_repetidos ,matricula.domicilio_alumno ,matricula.alergico , matricula.grupo_sanguineo ,matricula.enfermedad ,matricula.grupo_pie ,matricula.nombre_padre ,matricula.nombre_madre ,matricula.rut_padre ,matricula.rut_madre ,matricula.trabajo_padre ,matricula.trabajo_madre ,matricula.escolaridad_padre ,matricula.escolaridad_madre ,matricula.vive_con ,matricula.casa_propia ,matricula.ingreso_mensual ,matricula.beneficio ,matricula.religion , usuario.nombre_usuario from alumno, apoderado, curso, matricula, usuario where matricula.rut_alumno = alumno.rut_alumno And apoderado.rut_apoderado = matricula.rut_apoderado And matricula.curso_alumno = curso.id_curso And matricula.id_usuario = usuario.id_usuario And matricula.rut_alumno ='" & Label1.Text & "'"
             conector.Open()
             Dim sqlcmd As New SqlCommand(qry, conector)
             Dim dr As SqlDataReader
@@ -403,10 +404,10 @@ Public Class Form1
                 matricula.TextBox2.Text = dr("apellidos")
                 FechaNa = dr("fecha_nacimiento")
                 matricula.calendarn.SetDate(FechaNa)
-                matricula.TextBox1.Text = dr("edad")
+                matricula.TextBox1.Text = dr("edad_alumno")
                 matricula.ComboBox1.Text = dr("Nombre")
-                matricula.TextBox5.Text = dr("fono_urgencia")
-                matricula.TextBox29.Text = dr("fono_urgencia_otro")
+                matricula.TextBox5.Text = dr("fono_urgencia_1")
+                matricula.TextBox29.Text = dr("fono_urgencia_2")
                 matricula.ComboBox6.Text = dr("sexo")
                 matricula.TextBox9.Text = dr("rut_apoderado")
                 matricula.TextBox27.Text = dr("rut_apoderado")

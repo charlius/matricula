@@ -103,11 +103,11 @@
     <Compile Include="FormMenuUsuario.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="inicio.vb">
+    <Compile Include="inicio1.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="inicio.Designer.vb">
-      <DependentUpon>inicio.vb</DependentUpon>
+    <Compile Include="inicio1.Designer.vb">
+      <DependentUpon>inicio1.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="matricula.Designer.vb">
@@ -116,6 +116,7 @@
     <Compile Include="matricula.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="datos_conn.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -131,6 +132,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="SeleccionarAñoCurso.Designer.vb">
+      <DependentUpon>SeleccionarAñoCurso.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SeleccionarAñoCurso.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Form1.resx">
@@ -142,8 +149,8 @@
     <EmbeddedResource Include="FormMenuUsuario.resx">
       <DependentUpon>FormMenuUsuario.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="inicio.resx">
-      <DependentUpon>inicio.vb</DependentUpon>
+    <EmbeddedResource Include="inicio1.resx">
+      <DependentUpon>inicio1.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="matricula.resx">
       <DependentUpon>matricula.vb</DependentUpon>
@@ -153,6 +160,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SeleccionarAñoCurso.resx">
+      <DependentUpon>SeleccionarAñoCurso.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -173,9 +183,9 @@
   <ItemGroup>
     <Content Include="descarga.ico" />
     <Content Include="iconoEjecutar.ico" />
+    <None Include="Resources\boton-de-minimizar.png" />
     <None Include="Resources\icon.png" />
     <None Include="Resourses\1.png" />
-    <None Include="Resourses\logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

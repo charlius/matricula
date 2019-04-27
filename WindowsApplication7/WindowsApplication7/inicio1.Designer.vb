@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class inicio
+Partial Class inicio1
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -22,13 +22,13 @@ Partial Class inicio
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(inicio))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(inicio1))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtuser = New System.Windows.Forms.TextBox()
         Me.txtpass = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.salir = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
@@ -52,7 +52,7 @@ Partial Class inicio
         Me.txtuser.BackColor = System.Drawing.Color.Yellow
         Me.txtuser.CausesValidation = False
         Me.txtuser.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.txtuser.ForeColor = System.Drawing.Color.DarkGray
+        Me.txtuser.ForeColor = System.Drawing.Color.Gray
         Me.txtuser.Location = New System.Drawing.Point(348, 99)
         Me.txtuser.Name = "txtuser"
         Me.txtuser.Size = New System.Drawing.Size(286, 26)
@@ -63,7 +63,7 @@ Partial Class inicio
         '
         Me.txtpass.BackColor = System.Drawing.Color.Yellow
         Me.txtpass.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.txtpass.ForeColor = System.Drawing.Color.DarkGray
+        Me.txtpass.ForeColor = System.Drawing.Color.Gray
         Me.txtpass.Location = New System.Drawing.Point(348, 143)
         Me.txtpass.Name = "txtpass"
         Me.txtpass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
@@ -93,26 +93,26 @@ Partial Class inicio
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(301, 379)
+        Me.Panel1.Size = New System.Drawing.Size(301, 359)
         Me.Panel1.TabIndex = 9
         '
-        'salir
+        'Button2
         '
-        Me.salir.FlatAppearance.BorderSize = 0
-        Me.salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.salir.Image = Global.WindowsApplication1.My.Resources.Resources.icon
-        Me.salir.Location = New System.Drawing.Point(845, 0)
-        Me.salir.Name = "salir"
-        Me.salir.Size = New System.Drawing.Size(30, 25)
-        Me.salir.TabIndex = 10
-        Me.salir.UseVisualStyleBackColor = True
+        Me.Button2.FlatAppearance.BorderSize = 0
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.Image = Global.WindowsApplication1.My.Resources.Resources.icon
+        Me.Button2.Location = New System.Drawing.Point(839, 0)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(34, 26)
+        Me.Button2.TabIndex = 10
+        Me.Button2.UseVisualStyleBackColor = True
         '
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.WindowsApplication1.My.Resources.Resources._1
-        Me.PictureBox1.Location = New System.Drawing.Point(63, 72)
+        Me.PictureBox1.Location = New System.Drawing.Point(66, 76)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(153, 206)
+        Me.PictureBox1.Size = New System.Drawing.Size(168, 194)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
@@ -122,19 +122,19 @@ Partial Class inicio
         Me.Button3.BackgroundImage = CType(resources.GetObject("Button3.BackgroundImage"), System.Drawing.Image)
         Me.Button3.FlatAppearance.BorderSize = 0
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Location = New System.Drawing.Point(761, 308)
+        Me.Button3.Location = New System.Drawing.Point(761, 295)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(103, 59)
+        Me.Button3.Size = New System.Drawing.Size(102, 52)
         Me.Button3.TabIndex = 8
         Me.Button3.UseVisualStyleBackColor = True
         '
-        'inicio
+        'inicio1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(10, Byte), Integer), CType(CType(100, Byte), Integer), CType(CType(204, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(878, 379)
-        Me.Controls.Add(Me.salir)
+        Me.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.ClientSize = New System.Drawing.Size(875, 359)
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button1)
@@ -143,8 +143,8 @@ Partial Class inicio
         Me.Controls.Add(Me.Label1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Name = "inicio"
-        Me.Opacity = 0.95R
+        Me.Name = "inicio1"
+        Me.Opacity = 0.96R
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form1"
         Me.Panel1.ResumeLayout(False)
@@ -160,6 +160,6 @@ Partial Class inicio
     Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
-    Friend WithEvents salir As System.Windows.Forms.Button
+    Friend WithEvents Button2 As System.Windows.Forms.Button
 
 End Class

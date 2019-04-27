@@ -43,12 +43,15 @@ Public Class matricula
 
 
 
-    Dim ipServidor As String = "DESKTOP-AVV9E8Q"
-    Dim claveBD As String
-    Dim servidorSQL As String
-    Dim basededatos As String = "matriculas_ll"
-    Dim usuarioBD As String = "charles"
+    Dim ipServidor As String = datos_conn.getservidor()
+    Dim puerto As String = datos_conn.getpuerto()
+    Dim claveBD As String = datos_conn.getpass()
+    Dim basededatos As String = datos_conn.getbd()
+    Dim usuarioBD As String = datos_conn.getuser()
     Dim strcon As String
+    Public dreader As SqlDataReader
+    Dim conector As New SqlConnection("server=" + ipServidor + "  ;user='" + usuarioBD + "';password= '" + claveBD + "' ; database=" + basededatos + "")
+
 
     Dim cmd As OleDbDataAdapter
     Dim cnn As OleDbConnection
@@ -57,8 +60,7 @@ Public Class matricula
 
 
 
-    Public dreader As SqlDataReader
-    Dim conector As New SqlConnection("server= DESKTOP-AVV9E8Q ;user='charles';password= '199314' ; database=matriculas_ll")
+    
 
     'ARRASTRAR FORMULARIO
     <DllImport("user32.DLL", EntryPoint:="ReleaseCapture")>
@@ -95,9 +97,8 @@ Public Class matricula
         matriculas_total()
 
 
-        claveBD = "199314"
-        servidorSQL = "DESKTOP-AVV9E8Q"
-        strcon = "Provider=SQLOLEDB.1;Password=" & claveBD & ";Persist Security Info=True;User ID=" & usuarioBD & ";Initial Catalog=" & basededatos & ";Data Source=" & servidorSQL & ""
+       
+        strcon = "Provider=SQLOLEDB.1;Password=" & claveBD & ";Persist Security Info=True;User ID=" & usuarioBD & ";Initial Catalog=" & basededatos & ";Data Source=" & servidor & ""
 
         conector.Close()
         Me.Location = Screen.PrimaryScreen.WorkingArea.Location
@@ -165,7 +166,7 @@ Public Class matricula
 
     Private Sub Button11_Click(sender As System.Object, e As System.EventArgs) Handles Button11.Click
         TabControl1.SelectedTab = TabControl1.TabPages.Item(1)
-        TextBox26.Text = inicio.nomUsuario
+        TextBox26.Text = inicio1.nomUsuario
         conector.Close()
 
         Button14.Visible = False
@@ -280,8 +281,8 @@ Public Class matricula
 
     End Sub
 
-    Private Sub Button14_Click(sender As System.Object, e As System.EventArgs) Handles Button14.Click
-        TextBox26.Text = inicio.nomUsuario
+    Private Sub Button14_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button14.Click
+        TextBox26.Text = inicio1.nomUsuario
         TabControl1.SelectedTab = TabControl1.TabPages.Item(2)
         Button3.Visible = False
         conector.Close()
@@ -294,11 +295,11 @@ Public Class matricula
             Button3.Visible = False
         End If
 
-       
+
     End Sub
 
-    Private Sub Button3_Click(sender As System.Object, e As System.EventArgs) Handles Button3.Click
-        TextBox26.Text = inicio.nomUsuario
+    Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
+        TextBox26.Text = inicio1.nomUsuario
         TabControl1.SelectedTab = TabControl1.TabPages.Item(3)
         Button65.Visible = False
         Button9.Visible = True
@@ -317,13 +318,13 @@ Public Class matricula
         End If
     End Sub
 
-    Private Sub Button7_Click(sender As System.Object, e As System.EventArgs)
+    Private Sub Button7_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         conector.Close()
 
 
     End Sub
 
-    Private Sub Button6_Click(sender As System.Object, e As System.EventArgs) Handles Button6.Click
+    Private Sub Button6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button6.Click
         Button3.Visible = True
         TabControl1.SelectedTab = TabControl1.TabPages.Item(2)
         conector.Close()
@@ -337,7 +338,7 @@ Public Class matricula
         End If
     End Sub
 
-    Private Sub Button2_Click(sender As System.Object, e As System.EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
         Button14.Visible = True
         TabControl1.SelectedTab = TabControl1.TabPages.Item(1)
         conector.Close()
@@ -351,7 +352,7 @@ Public Class matricula
 
     End Sub
 
-    Private Sub Button1_Click_3(sender As System.Object, e As System.EventArgs) Handles Button1.Click
+    Private Sub Button1_Click_3(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
         TabControl1.SelectedTab = TabControl1.TabPages.Item(0)
         conector.Close()
         matriculas_activas()
@@ -359,8 +360,8 @@ Public Class matricula
 
     End Sub
 
-  
-    Private Sub Button16_Click(sender As System.Object, e As System.EventArgs) Handles Button16.Click
+
+    Private Sub Button16_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button16.Click
 
         conector.Close()
         conector.Close()
@@ -368,7 +369,7 @@ Public Class matricula
 
 
         id_curso()
-      
+
         rut_completo_buscar = TextBox4.Text
         fecha = calendarn.SelectionRange.End
         TextBox28.Text = TextBox4.Text
@@ -376,7 +377,7 @@ Public Class matricula
 
 
 
-        If (TextBox1.Text = "" Or calendarn.SelectionRange.Start.Year >= Year(Now) Or TextBox2.Text = "" Or TextBox5.Text = "" Or TextBox3.Text = "" Or TextBox4.Text = "") Then
+        If (calendarn.SelectionRange.Start.Year >= Year(Now) Or TextBox2.Text = "" Or TextBox3.Text = "" Or TextBox4.Text = "") Then
             MsgBox("Verifique campos en blanco O Fecha de Nacimiento invalida", MsgBoxStyle.Critical, "Atencion")
             TextBox1.Select()
             conector.Close()
@@ -385,7 +386,7 @@ Public Class matricula
         Else
             conector.Close()
             conector.Open()
-            Dim qry As String = "select alumno.rut_alumno,alumno.nombres,alumno.apellidos,alumno.fecha_nacimiento,alumno.edad,curso.Nombre,alumno.fono_urgencia,alumno.fono_urgencia_otro,alumno.sexo from alumno,curso where curso.id_curso=alumno.curso and alumno.rut_alumno='" & TextBox4.Text & "'"
+            Dim qry As String = "select alumno.rut_alumno,alumno.nombres,alumno.apellidos,alumno.fecha_nacimiento,alumno.sexo from alumno where alumno.rut_alumno='" & TextBox4.Text & "'"
             Dim sqlcmd As New SqlCommand(qry, conector)
             Dim dr As SqlDataReader
             dr = sqlcmd.ExecuteReader
@@ -395,10 +396,6 @@ Public Class matricula
                 TextBox2.Text = dr("apellidos")
                 fechadenaci = dr("fecha_nacimiento")
                 calendarn.SetDate(fechadenaci)
-                TextBox1.Text = dr("edad")
-                ComboBox1.Text = dr("Nombre")
-                TextBox5.Text = dr("fono_urgencia")
-                TextBox29.Text = dr("fono_urgencia_otro")
                 ComboBox6.Text = dr("sexo")
                 conector.Close()
                 conector.Close()
@@ -409,13 +406,12 @@ Public Class matricula
                 Button15.Visible = False
                 Button16.Visible = False
 
-                TextBox1.Enabled = False
+
                 TextBox2.Enabled = False
                 TextBox3.Enabled = False
                 TextBox4.Enabled = False
-                TextBox5.Enabled = False
-                TextBox29.Enabled = False
-                ComboBox1.Enabled = False
+
+
                 ComboBox6.Enabled = False
                 calendarn.Enabled = False
 
@@ -426,7 +422,7 @@ Public Class matricula
                     conector.Close()
 
                     Dim cadena As String
-                    cadena = String.Format("INSERT INTO alumno VALUES ('" & rut_completo_buscar & "', '" & TextBox3.Text & "', '" & TextBox2.Text & "','" & fecha & "','" & TextBox1.Text & "'," & codigo_de_curso & ",'" & TextBox5.Text & "','" & TextBox29.Text & "','activo','" & sex & "')")
+                    cadena = String.Format("INSERT INTO alumno VALUES ('" & rut_completo_buscar & "', '" & TextBox3.Text & "', '" & TextBox2.Text & "','" & fecha & "','activo','" & sex & "')")
 
                     Dim insertar As New SqlCommand(cadena, conector)
                     conector.Open()
@@ -440,13 +436,12 @@ Public Class matricula
                     Button15.Visible = False
                     Button16.Visible = False
 
-                    TextBox1.Enabled = False
+
                     TextBox2.Enabled = False
                     TextBox3.Enabled = False
                     TextBox4.Enabled = False
-                    TextBox5.Enabled = False
-                    TextBox29.Enabled = False
-                    ComboBox1.Enabled = False
+
+
                     ComboBox6.Enabled = False
                     calendarn.Enabled = False
 
@@ -463,11 +458,11 @@ Public Class matricula
 
     End Sub
 
-    Private Sub TabPage2_Click(sender As System.Object, e As System.EventArgs) Handles TabPage2.Click
+    Private Sub TabPage2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TabPage2.Click
         conector.Close()
     End Sub
 
-    Private Sub Button5_Click(sender As System.Object, e As System.EventArgs) Handles Button5.Click
+    Private Sub Button5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button5.Click
 
         conector.Close()
 
@@ -558,7 +553,8 @@ Public Class matricula
         End If
     End Sub
 
-    Private Sub Button9_Click(sender As System.Object, e As System.EventArgs) Handles Button9.Click
+    Private Sub Button9_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button9.Click
+        id_curso()
         conector.Close()
         fecha_ma = calen.SelectionRange.End
 
@@ -574,10 +570,9 @@ Public Class matricula
         rut_completo_padre = TextBox11.Text
         conector.Close()
         check_no()
-        If CheckBox1.Checked = False And CheckBox2.Checked = False Or CheckBox3.Checked = False And CheckBox4.Checked = False Or CheckBox5.Checked = False And CheckBox6.Checked = False Or CheckBox7.Checked = False And CheckBox8.Checked = False Or CheckBox1.Checked = True And TextBox23.Text = "" Or CheckBox4.Checked = True And TextBox22.Text = "" Or CheckBox6.Checked = True And TextBox19.Text = "" Or CheckBox8.Checked = True And TextBox37.Text = "" Or calen.SelectionRange.Start.Year > Year(Now) Or calen.SelectionRange.Start.Month > Month(Now) Then
+        If CheckBox1.Checked = False And CheckBox2.Checked = False Or CheckBox3.Checked = False And CheckBox4.Checked = False Or CheckBox5.Checked = False And CheckBox6.Checked = False Or CheckBox7.Checked = False And CheckBox8.Checked = False Or CheckBox1.Checked = True And TextBox23.Text = "" Or CheckBox4.Checked = True And TextBox22.Text = "" Or CheckBox6.Checked = True And TextBox19.Text = "" Or CheckBox8.Checked = True And TextBox37.Text = "" Or calen.SelectionRange.Start.Year > Year(Now) Then
             MsgBox("No deje campos en blanco O fecha invalida", MsgBoxStyle.Critical, "Atencion")
         Else
-
             Try
 
                 conector.Open()
@@ -592,73 +587,72 @@ Public Class matricula
                     conector.Close()
 
                 End If
+
                 conector.Close()
+
+                Dim cadena As String
+                cadena = String.Format("INSERT INTO matricula (rut_alumno,rut_apoderado,id_usuario,fecha_matricula,escuela_procedencia,cursos_repetidos,domicilio_alumno,alergico,grupo_sanguineo,enfermedad,grupo_pie,nombre_padre,nombre_madre,rut_padre,rut_madre,trabajo_padre,trabajo_madre,escolaridad_padre,escolaridad_madre,vive_con,casa_propia,ingreso_mensual,beneficio,religion,curso_alumno,fono_urgencia_1,fono_urgencia_2,edad_alumno) VALUES ('" & TextBox28.Text & "', '" & TextBox27.Text & "', '" & usu & "','" & fecha_ma & "','" & TextBox25.Text & "','" & TextBox23.Text & "', '" & TextBox24.Text & "', '" & TextBox22.Text & "', '" & TextBox37.Text & "', '" & TextBox21.Text & "', '" & pie & "', '" & TextBox20.Text & "', '" & TextBox10.Text & "', '" & rut_completo_padre & "', '" & rut_completo_madre & "', '" & TextBox13.Text & "', '" & TextBox14.Text & "', '" & TextBox15.Text & "', '" & TextBox16.Text & "', '" & TextBox17.Text & "', '" & casa & "', " & TextBox18.Text & ", '" & TextBox19.Text & "', '" & re & "'," & codigo_de_curso & " ,'" & TextBox5.Text & "','" & TextBox29.Text & "','" & TextBox1.Text & "')")
+
+                Dim insertar As New SqlCommand(cadena, conector)
+
                 conector.Open()
-                Dim qrym As String = "select * from matricula where matricula.rut_alumno='" & TextBox28.Text & "'"
-                Dim sqlcmdm As New SqlCommand(qrym, conector)
-                Dim drm As SqlDataReader
-                drm = sqlcmdm.ExecuteReader
-                If drm.Read() Then
-                    MsgBox("Matricula Ya Existe " + vbCrLf + "Busque la matricula en MENU INICIO EN EL BOTON BUSCADOR", MsgBoxStyle.Critical, "Atencion")
-                    conector.Close()
-                Else
-                    conector.Close()
-                    Dim cadena As String
-                    cadena = String.Format("INSERT INTO matricula (rut_alumno,rut_apoderado,id_usuario,fecha_matricula,escuela_procedencia,cursos_repetidos,domicilio_alumno,alergico,grupo_sanguineo,enfermedad,grupo_pie,nombre_padre,nombre_madre,rut_padre,rut_madre,trabajo_padre,trabajo_madre,escolaridad_padre,escolaridad_madre,vive_con,casa_propia,ingreso_mensual,beneficio,religion) VALUES ('" & TextBox28.Text & "', '" & TextBox27.Text & "', '" & usu & "','" & fecha_ma & "','" & TextBox25.Text & "','" & TextBox23.Text & "', '" & TextBox24.Text & "', '" & TextBox22.Text & "', '" & TextBox37.Text & "', '" & TextBox21.Text & "', '" & pie & "', '" & TextBox20.Text & "', '" & TextBox10.Text & "', '" & rut_completo_padre & "', '" & rut_completo_madre & "', '" & TextBox13.Text & "', '" & TextBox14.Text & "', '" & TextBox15.Text & "', '" & TextBox16.Text & "', '" & TextBox17.Text & "', '" & casa & "', " & TextBox18.Text & ", '" & TextBox19.Text & "', '" & re & "')")
-                    Dim insertar As New SqlCommand(cadena, conector)
-                    conector.Open()
-                    insertar.ExecuteNonQuery()
-                    conector.Close()
-                    MsgBox("Matricula Ingresada Correctamente", MsgBoxStyle.Information, "Operacion Exitosa")
-                    rut_completo_buscar = TextBox28.Text
+                insertar.ExecuteNonQuery()
+                conector.Close()
+                MsgBox("Matricula Ingresada Correctamente", MsgBoxStyle.Information, "Operacion Exitosa")
+                rut_completo_buscar = TextBox28.Text
 
-                    Button65.Visible = True
-                    Button8.Visible = False
-                    Button9.Visible = False
+                Button65.Visible = True
+                Button8.Visible = False
+                Button9.Visible = False
 
-                    TextBox18.Enabled = False
-                    TextBox19.Enabled = False
-                    TextBox20.Enabled = False
-                    TextBox21.Enabled = False
-                    TextBox22.Enabled = False
-                    TextBox23.Enabled = False
-                    TextBox24.Enabled = False
-                    TextBox25.Enabled = False
-                    TextBox26.Enabled = False
-                    TextBox27.Enabled = False
-                    TextBox28.Enabled = False
-                    TextBox10.Enabled = False
-                    TextBox11.Enabled = False
-                    TextBox12.Enabled = False
-                    TextBox13.Enabled = False
-                    TextBox14.Enabled = False
-                    TextBox15.Enabled = False
-                    TextBox16.Enabled = False
-                    TextBox17.Enabled = False
-                    TextBox37.Enabled = False
+                TextBox1.Enabled = False
+                TextBox18.Enabled = False
+                TextBox19.Enabled = False
+                TextBox5.Enabled = False
+                TextBox29.Enabled = False
+                TextBox20.Enabled = False
+                TextBox21.Enabled = False
+                TextBox22.Enabled = False
+                TextBox23.Enabled = False
+                TextBox24.Enabled = False
+                TextBox25.Enabled = False
+                TextBox26.Enabled = False
+                TextBox27.Enabled = False
+                TextBox28.Enabled = False
+                TextBox10.Enabled = False
+                TextBox11.Enabled = False
+                TextBox12.Enabled = False
+                TextBox13.Enabled = False
+                TextBox14.Enabled = False
+                TextBox15.Enabled = False
+                TextBox16.Enabled = False
+                TextBox17.Enabled = False
+                TextBox37.Enabled = False
 
-                    ComboBox2.Enabled = False
-                    ComboBox3.Enabled = False
-                    ComboBox4.Enabled = False
+                ComboBox1.Enabled = False
+                ComboBox2.Enabled = False
+                ComboBox3.Enabled = False
+                ComboBox4.Enabled = False
 
-                    CheckBox1.Enabled = False
-                    CheckBox2.Enabled = False
-                    CheckBox3.Enabled = False
-                    CheckBox4.Enabled = False
-                    CheckBox5.Enabled = False
-                    CheckBox6.Enabled = False
-                    CheckBox7.Enabled = False
-                    CheckBox8.Enabled = False
+                CheckBox1.Enabled = False
+                CheckBox2.Enabled = False
+                CheckBox3.Enabled = False
+                CheckBox4.Enabled = False
+                CheckBox5.Enabled = False
+                CheckBox6.Enabled = False
+                CheckBox7.Enabled = False
+                CheckBox8.Enabled = False
 
-                    calen.Enabled = False
+                calen.Enabled = False
 
-                    'TODO: esta línea de código carga datos en la tabla 'DataSet1.proc_matriculas' Puede moverla o quitarla según sea necesario.
+                'TODO: esta línea de código carga datos en la tabla 'DataSet1.proc_matriculas' Puede moverla o quitarla según sea necesario.
 
 
-                    conector.Close()
-                End If
+                conector.Close()
+
                 conector.Close()
             Catch ex As Exception
+                MsgBox("error" & vbCrLf & ex.Message)
 
 
                 conector.Close()
@@ -670,34 +664,34 @@ Public Class matricula
 
 
 
-    Private Sub PictureBox1_Click(sender As System.Object, e As System.EventArgs) Handles PictureBox1.Click
+    Private Sub PictureBox1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox1.Click
         conector.Close()
         conector.Close()
         conector.Close()
         If MsgBox("¿ Seguro que desea salir ?", vbQuestion + vbYesNo, "Pregunta") = vbYes Then
             conector.Close()
             conector.Close()
-
+            End
 
             Me.Close()
         End If
     End Sub
 
-   
 
-    Private Sub TabPage4_Click(sender As System.Object, e As System.EventArgs) Handles TabPage4.Click
+
+    Private Sub TabPage4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TabPage4.Click
         conector.Close()
         conector.Close()
 
     End Sub
 
-    Private Sub Button17_Click(sender As System.Object, e As System.EventArgs) Handles Button17.Click
+    Private Sub Button17_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button17.Click
         TabControl1.SelectedTab = TabControl1.TabPages.Item(1)
         conector.Close()
         conector.Close()
     End Sub
 
-    Private Sub Button18_Click(sender As System.Object, e As System.EventArgs) Handles Button18.Click
+    Private Sub Button18_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button18.Click
         TabControl1.SelectedTab = TabControl1.TabPages.Item(2)
         conector.Close()
         Button3.Visible = False
@@ -705,20 +699,19 @@ Public Class matricula
         Button5.Visible = True
 
     End Sub
-  
+
     Private Sub Textbox9_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles TextBox9.KeyPress
         e.Handled = ValidaChar(e.KeyChar)
     End Sub
 
-    Private Sub Button26_Click(sender As System.Object, e As System.EventArgs) Handles Button26.Click
-        TextBox1.Enabled = True
+    Private Sub Button26_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button26.Click
+
         TextBox2.Enabled = True
         TextBox3.Enabled = True
         TextBox4.Enabled = True
-        TextBox5.Enabled = True
-        TextBox29.Enabled = True
 
-        ComboBox1.Enabled = True
+
+
         ComboBox6.Enabled = True
 
         calendarn.Enabled = True
@@ -746,7 +739,7 @@ Public Class matricula
 
         End If
     End Sub
-    Private Sub Button15_Click(sender As System.Object, e As System.EventArgs) Handles Button15.Click
+    Private Sub Button15_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button15.Click
         conector.Close()
         id_curso()
         fecha = calendarn.SelectionRange.End
@@ -755,13 +748,13 @@ Public Class matricula
         rut_completo_buscar = TextBox4.Text
 
         conector.Close()
-        If (TextBox1.Text = "" Or calendarn.SelectionRange.Start.Year >= Year(Now) Or TextBox2.Text = "" Or TextBox3.Text = "" Or TextBox4.Text = "" Or TextBox5.Text = "") Then
+        If (calendarn.SelectionRange.Start.Year >= Year(Now) Or TextBox2.Text = "" Or TextBox3.Text = "" Or TextBox4.Text = "") Then
             MsgBox("No deje campos en blanco O Fecha Nacimineto Invalida", MsgBoxStyle.Critical, "Atencion")
             TextBox1.Select()
         Else
             Try
                 Dim cadena As String
-                cadena = String.Format("UPDATE alumno SET nombres = '" & TextBox3.Text & "' , apellidos ='" & TextBox2.Text & "', fecha_nacimiento = '" & fecha & "' , edad = '" & TextBox1.Text & "' , curso = " & codigo_de_curso & ", fono_urgencia = '" & TextBox5.Text & "' , fono_urgencia_otro = '" & TextBox29.Text & "' , estado= 'activo', sexo = '" & ComboBox6.SelectedItem & "' WHERE rut_alumno = '" & rut_completo_buscar & "'")
+                cadena = String.Format("UPDATE alumno SET nombres = '" & TextBox3.Text & "' , apellidos ='" & TextBox2.Text & "', fecha_nacimiento = '" & fecha & "' , estado= 'activo', sexo = '" & ComboBox6.SelectedItem & "' WHERE alumno.rut_alumno = '" & rut_completo_buscar & "'")
                 Dim insertar As New SqlCommand(cadena, conector)
                 conector.Open()
                 insertar.ExecuteNonQuery()
@@ -772,13 +765,12 @@ Public Class matricula
                 Button16.Visible = False
                 Button15.Visible = False
 
-                TextBox1.Enabled = False
+
                 TextBox2.Enabled = False
                 TextBox3.Enabled = False
                 TextBox4.Enabled = False
-                TextBox5.Enabled = False
-                TextBox29.Enabled = False
-                ComboBox1.Enabled = False
+
+
                 ComboBox6.Enabled = False
                 calendarn.Enabled = False
 
@@ -794,7 +786,7 @@ Public Class matricula
         End If
     End Sub
 
-    Private Sub Button27_Click(sender As System.Object, e As System.EventArgs) Handles Button27.Click
+    Private Sub Button27_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button27.Click
         TextBox6.Enabled = True
         TextBox7.Enabled = True
         TextBox8.Enabled = True
@@ -805,9 +797,9 @@ Public Class matricula
         conector.Close()
     End Sub
 
-    
 
-    Private Sub Button4_Click(sender As System.Object, e As System.EventArgs) Handles Button4.Click
+
+    Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.Click
         conector.Close()
         rut_completo_apoderado = TextBox9.Text
         If (TextBox6.Text = "" Or TextBox7.Text = "" Or TextBox8.Text = "" Or TextBox9.Text = "") Then
@@ -839,7 +831,8 @@ Public Class matricula
         End If
     End Sub
 
-    Private Sub Button8_Click(sender As System.Object, e As System.EventArgs) Handles Button8.Click
+    Private Sub Button8_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button8.Click
+        id_curso()
         conector.Close()
         If (TextBox5.Text = "" Or TextBox6.Text = "" Or TextBox7.Text = "" Or TextBox8.Text = "" Or CheckBox8.Checked = True And TextBox37.Text = "" Or CheckBox1.Checked = True And TextBox23.Text = "" Or CheckBox4.Checked = True And TextBox22.Text = "" Or CheckBox6.Checked = True And TextBox19.Text = "" Or calen.SelectionRange.Start.Year > Year(Now) Or calen.SelectionRange.Start.Month > Month(Now)) Then
             MsgBox("No deje campos en blanco O fecha Matricula Invalida", MsgBoxStyle.Critical, "Atencion")
@@ -848,7 +841,7 @@ Public Class matricula
             check_no()
             conector.Close()
             Dim cadena As String
-            cadena = String.Format("UPDATE matricula SET fecha_matricula ='" & fecha_ma & "',escuela_procedencia ='" & TextBox25.Text & "', cursos_repetidos = '" & TextBox23.Text & "', domicilio_alumno = '" & TextBox24.Text & "', alergico = '" & TextBox22.Text & "', grupo_sanguineo = '" & TextBox37.Text & "', enfermedad ='" & TextBox21.Text & "', grupo_pie ='" & ComboBox2.Text & "', nombre_padre = '" & TextBox20.Text & "', nombre_madre = '" & TextBox10.Text & "', rut_padre = '" & TextBox11.Text & "', rut_madre ='" & TextBox12.Text & "', trabajo_padre = '" & TextBox13.Text & "', trabajo_madre = '" & TextBox14.Text & "', escolaridad_padre = '" & TextBox15.Text & "', escolaridad_madre ='" & TextBox16.Text & "', vive_con = '" & TextBox17.Text & "', casa_propia = '" & ComboBox3.Text & "', ingreso_mensual= " & TextBox18.Text & ", beneficio = '" & TextBox19.Text & "', religion ='" & ComboBox4.Text & "' where rut_alumno = '" & TextBox28.Text & "'")
+            cadena = String.Format("UPDATE matricula SET fecha_matricula ='" & fecha_ma & "',escuela_procedencia ='" & TextBox25.Text & "', cursos_repetidos = '" & TextBox23.Text & "', domicilio_alumno = '" & TextBox24.Text & "', alergico = '" & TextBox22.Text & "', grupo_sanguineo = '" & TextBox37.Text & "', enfermedad ='" & TextBox21.Text & "', grupo_pie ='" & ComboBox2.Text & "', nombre_padre = '" & TextBox20.Text & "', nombre_madre = '" & TextBox10.Text & "', rut_padre = '" & TextBox11.Text & "', rut_madre ='" & TextBox12.Text & "', trabajo_padre = '" & TextBox13.Text & "', trabajo_madre = '" & TextBox14.Text & "', escolaridad_padre = '" & TextBox15.Text & "', escolaridad_madre ='" & TextBox16.Text & "', vive_con = '" & TextBox17.Text & "', casa_propia = '" & ComboBox3.Text & "', ingreso_mensual= " & TextBox18.Text & ", beneficio = '" & TextBox19.Text & "', religion ='" & ComboBox4.Text & "', curso_alumno =" & codigo_de_curso & ", fono_urgencia_1 ='" & TextBox5.Text & "',fono_urgencia_2 ='" & TextBox29.Text & "', edad_alumno = '" & TextBox1.Text & "' where matricula.rut_alumno = '" & TextBox28.Text & "'")
             Dim insertar As New SqlCommand(cadena, conector)
             conector.Open()
             insertar.ExecuteNonQuery()
@@ -859,6 +852,8 @@ Public Class matricula
             Button9.Visible = False
             Button8.Visible = False
 
+            TextBox5.Enabled = False
+            TextBox29.Enabled = False
             TextBox18.Enabled = False
             TextBox19.Enabled = False
             TextBox20.Enabled = False
@@ -880,6 +875,7 @@ Public Class matricula
             TextBox17.Enabled = False
             TextBox37.Enabled = False
 
+            ComboBox1.Enabled = False
             ComboBox2.Enabled = False
             ComboBox3.Enabled = False
             ComboBox4.Enabled = False
@@ -902,7 +898,7 @@ Public Class matricula
         End If
     End Sub
 
-    Private Sub Button28_Click(sender As System.Object, e As System.EventArgs) Handles Button28.Click
+    Private Sub Button28_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button28.Click
         conector.Close()
 
         campo_no()
@@ -910,7 +906,9 @@ Public Class matricula
 
         TextBox20.Enabled = True
         TextBox21.Enabled = True
-      
+        TextBox1.Enabled = True
+        TextBox5.Enabled = True
+        TextBox29.Enabled = True
         TextBox24.Enabled = True
         TextBox25.Enabled = True
         TextBox26.Enabled = True
@@ -925,7 +923,7 @@ Public Class matricula
         TextBox16.Enabled = True
         TextBox17.Enabled = True
 
-
+        ComboBox1.Enabled = True
         ComboBox2.Enabled = True
         ComboBox3.Enabled = True
         ComboBox4.Enabled = True
@@ -939,7 +937,7 @@ Public Class matricula
         CheckBox7.Enabled = True
         CheckBox8.Enabled = True
 
-       
+
         calen.Enabled = True
 
         Button9.Visible = False
@@ -973,7 +971,7 @@ Public Class matricula
         Try
             conector.Close()
             conector.Open()
-            Dim qryc As String = "select count (alumno.rut_alumno) from matricula,alumno where alumno.estado='activo' and alumno.curso=1 and matricula.rut_alumno=alumno.rut_alumno"
+            Dim qryc As String = "select count (alumno.rut_alumno) from matricula,alumno where alumno.estado='activo' and matricula.curso_alumno= 1 and matricula.rut_alumno=alumno.rut_alumno"
             Dim sqlcmdc As New SqlCommand(qryc, conector)
             Dim drc As Integer
             drc = sqlcmdc.ExecuteScalar
@@ -997,7 +995,7 @@ Public Class matricula
         Try
             conector.Close()
             conector.Open()
-            Dim qryc As String = "select count (alumno.rut_alumno) from matricula,alumno where alumno.estado='activo' and alumno.curso=2 and matricula.rut_alumno=alumno.rut_alumno"
+            Dim qryc As String = "select count (alumno.rut_alumno) from matricula,alumno where alumno.estado='activo' and matricula.curso_alumno=2 and matricula.rut_alumno=alumno.rut_alumno"
             Dim sqlcmdc As New SqlCommand(qryc, conector)
             Dim drc As Integer
             drc = sqlcmdc.ExecuteScalar
@@ -1021,7 +1019,7 @@ Public Class matricula
         Try
             conector.Close()
             conector.Open()
-            Dim qryc As String = "select count (alumno.rut_alumno) from matricula,alumno where alumno.estado='activo' and alumno.curso=3 and matricula.rut_alumno=alumno.rut_alumno"
+            Dim qryc As String = "select count (alumno.rut_alumno) from matricula,alumno where alumno.estado='activo' and matricula.curso_alumno=3 and matricula.rut_alumno=alumno.rut_alumno"
             Dim sqlcmdc As New SqlCommand(qryc, conector)
             Dim drc As Integer
             drc = sqlcmdc.ExecuteScalar
@@ -1045,7 +1043,7 @@ Public Class matricula
         Try
             conector.Close()
             conector.Open()
-            Dim qryc As String = "select count (alumno.rut_alumno) from matricula,alumno where alumno.estado='activo' and alumno.curso=4 and matricula.rut_alumno=alumno.rut_alumno"
+            Dim qryc As String = "select count (alumno.rut_alumno) from matricula,alumno where alumno.estado='activo' and matricula.curso_alumno=4 and matricula.rut_alumno=alumno.rut_alumno"
             Dim sqlcmdc As New SqlCommand(qryc, conector)
             Dim drc As Integer
             drc = sqlcmdc.ExecuteScalar
@@ -1069,7 +1067,7 @@ Public Class matricula
         Try
             conector.Close()
             conector.Open()
-            Dim qryc As String = "select count (alumno.rut_alumno) from matricula,alumno where alumno.estado='activo' and alumno.curso=5 and matricula.rut_alumno=alumno.rut_alumno"
+            Dim qryc As String = "select count (alumno.rut_alumno) from matricula,alumno where alumno.estado='activo' and matricula.curso_alumno=5 and matricula.rut_alumno=alumno.rut_alumno"
             Dim sqlcmdc As New SqlCommand(qryc, conector)
             Dim drc As Integer
             drc = sqlcmdc.ExecuteScalar
@@ -1093,7 +1091,7 @@ Public Class matricula
         Try
             conector.Close()
             conector.Open()
-            Dim qryc As String = "select count (alumno.rut_alumno) from matricula,alumno where alumno.estado='activo' and alumno.curso=6 and matricula.rut_alumno=alumno.rut_alumno"
+            Dim qryc As String = "select count (alumno.rut_alumno) from matricula,alumno where alumno.estado='activo' and matricula.curso_alumno=6 and matricula.rut_alumno=alumno.rut_alumno"
             Dim sqlcmdc As New SqlCommand(qryc, conector)
             Dim drc As Integer
             drc = sqlcmdc.ExecuteScalar
@@ -1117,7 +1115,7 @@ Public Class matricula
         Try
             conector.Close()
             conector.Open()
-            Dim qryc As String = "select count (alumno.rut_alumno) from matricula,alumno where alumno.estado='activo' and alumno.curso=7 and matricula.rut_alumno=alumno.rut_alumno"
+            Dim qryc As String = "select count (alumno.rut_alumno) from matricula,alumno where alumno.estado='activo' and matricula.curso_alumno=7 and matricula.rut_alumno=alumno.rut_alumno"
             Dim sqlcmdc As New SqlCommand(qryc, conector)
             Dim drc As Integer
             drc = sqlcmdc.ExecuteScalar
@@ -1141,7 +1139,7 @@ Public Class matricula
         Try
             conector.Close()
             conector.Open()
-            Dim qryc As String = "select count (alumno.rut_alumno) from matricula,alumno where alumno.estado='activo' and alumno.curso=8 and matricula.rut_alumno=alumno.rut_alumno"
+            Dim qryc As String = "select count (alumno.rut_alumno) from matricula,alumno where alumno.estado='activo' and matricula.curso_alumno=8 and matricula.rut_alumno=alumno.rut_alumno"
             Dim sqlcmdc As New SqlCommand(qryc, conector)
             Dim drc As Integer
             drc = sqlcmdc.ExecuteScalar
@@ -1165,7 +1163,7 @@ Public Class matricula
         Try
             conector.Close()
             conector.Open()
-            Dim qryc As String = "select count (alumno.rut_alumno) from matricula,alumno where alumno.estado='activo' and alumno.curso=9 and matricula.rut_alumno=alumno.rut_alumno"
+            Dim qryc As String = "select count (alumno.rut_alumno) from matricula,alumno where alumno.estado='activo' and matricula.curso_alumno=9 and matricula.rut_alumno=alumno.rut_alumno"
             Dim sqlcmdc As New SqlCommand(qryc, conector)
             Dim drc As Integer
             drc = sqlcmdc.ExecuteScalar
@@ -1189,7 +1187,7 @@ Public Class matricula
         Try
             conector.Close()
             conector.Open()
-            Dim qryc As String = "select count (alumno.rut_alumno) from matricula,alumno where alumno.estado='activo' and alumno.curso=10 and matricula.rut_alumno=alumno.rut_alumno"
+            Dim qryc As String = "select count (alumno.rut_alumno) from matricula,alumno where alumno.estado='activo' and matricula.curso_alumno=10 and matricula.rut_alumno=alumno.rut_alumno"
             Dim sqlcmdc As New SqlCommand(qryc, conector)
             Dim drc As Integer
             drc = sqlcmdc.ExecuteScalar
@@ -1208,23 +1206,27 @@ Public Class matricula
             MsgBox("error fun" & vbCrLf & ex.Message)
         End Try
     End Sub
-    Private Sub Button12_Click(sender As System.Object, e As System.EventArgs) Handles Button12.Click
-        TabControl1.SelectedTab = TabControl1.TabPages.Item(5)
-        primero_activas()
-        segundo_activas()
-        tercero_activas()
-        cuarto_activas()
-        quinto_activas()
-        sexto_activas()
-        septimo_activas()
-        octavo_activas()
-        kinder_activas()
-        prekinder_activas()
+    Private Sub Button12_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button12.Click
+        'TabControl1.SelectedTab = TabControl1.TabPages.Item(5)
+        'primero_activas()
+        'segundo_activas()
+        'tercero_activas()
+        'cuarto_activas()
+        'quinto_activas()
+        'sexto_activas()
+        'septimo_activas()
+        'octavo_activas()
+        'kinder_activas()
+        'prekinder_activas()
+
+        SeleccionarAñoCurso.Show()
+        Me.Enabled = False
+
 
     End Sub
     Sub mostraralumnocursosegundo()
         conector.Close()
-        Dim da As New SqlDataAdapter("select alumno.rut_alumno'Rut del Alumno', alumno.nombres'Nombre',alumno.apellidos'Apellidos',alumno.fecha_nacimiento'Fecha Nacimiento',alumno.edad'Edad',alumno.fono_urgencia'Fono Urgencia 1',alumno.fono_urgencia_otro'Fono Ugencia 2' from alumno,matricula where alumno.curso=2 and estado='activo' and matricula.rut_alumno = alumno.rut_alumno", conector)
+        Dim da As New SqlDataAdapter("select alumno.rut_alumno'Rut del Alumno', alumno.nombres'Nombre',alumno.apellidos'Apellidos',alumno.fecha_nacimiento'Fecha Nacimiento',matricula.edad_alumno'Edad',matricula.fono_urgencia_1'Fono Urgencia 1',matricula.fono_urgencia_2'Fono Ugencia 2' from alumno,matricula where matricula.curso_alumno= 2 and alumno.estado= 'activo' and matricula.rut_alumno = alumno.rut_alumno ", conector)
         Dim ds As New DataSet
         conector.Open()
 
@@ -1236,7 +1238,7 @@ Public Class matricula
 
     Sub mostraralumnocursotercero()
         conector.Close()
-        Dim da As New SqlDataAdapter("select alumno.rut_alumno'Rut del Alumno', alumno.nombres'Nombre',alumno.apellidos'Apellidos',alumno.fecha_nacimiento'Fecha Nacimiento',alumno.edad'Edad',alumno.fono_urgencia'Fono Urgencia 1',alumno.fono_urgencia_otro'Fono Ugencia 2' from alumno,matricula where alumno.curso=3 and estado='activo' and matricula.rut_alumno = alumno.rut_alumno", conector)
+        Dim da As New SqlDataAdapter("select alumno.rut_alumno'Rut del Alumno', alumno.nombres'Nombre',alumno.apellidos'Apellidos',alumno.fecha_nacimiento'Fecha Nacimiento',matricula.edad_alumno'Edad',matricula.fono_urgencia_1'Fono Urgencia 1',matricula.fono_urgencia_2'Fono Ugencia 2' from alumno,matricula where matricula.curso_alumno= 3 and alumno.estado= 'activo' and matricula.rut_alumno = alumno.rut_alumno ", conector)
         Dim ds As New DataSet
         conector.Open()
 
@@ -1247,7 +1249,7 @@ Public Class matricula
     End Sub
     Sub mostraralumnocursocuarto()
         conector.Close()
-        Dim da As New SqlDataAdapter("select alumno.rut_alumno'Rut del Alumno', alumno.nombres'Nombre',alumno.apellidos'Apellidos',alumno.fecha_nacimiento'Fecha Nacimiento',alumno.edad'Edad',alumno.fono_urgencia'Fono Urgencia 1',alumno.fono_urgencia_otro'Fono Ugencia 2' from alumno,matricula where alumno.curso=4 and estado='activo' and matricula.rut_alumno = alumno.rut_alumno", conector)
+        Dim da As New SqlDataAdapter("select alumno.rut_alumno'Rut del Alumno', alumno.nombres'Nombre',alumno.apellidos'Apellidos',alumno.fecha_nacimiento'Fecha Nacimiento',matricula.edad_alumno'Edad',matricula.fono_urgencia_1'Fono Urgencia 1',matricula.fono_urgencia_2'Fono Ugencia 2' from alumno,matricula where matricula.curso_alumno= 4 and alumno.estado= 'activo' and matricula.rut_alumno = alumno.rut_alumno ", conector)
         Dim ds As New DataSet
         conector.Open()
 
@@ -1258,7 +1260,7 @@ Public Class matricula
     End Sub
     Sub mostraralumnocursosexto()
         conector.Close()
-        Dim da As New SqlDataAdapter("select alumno.rut_alumno'Rut del Alumno', alumno.nombres'Nombre',alumno.apellidos'Apellidos',alumno.fecha_nacimiento'Fecha Nacimiento',alumno.edad'Edad',alumno.fono_urgencia'Fono Urgencia 1',alumno.fono_urgencia_otro'Fono Ugencia 2' from alumno,matricula where alumno.curso=6 and estado='activo' and matricula.rut_alumno = alumno.rut_alumno", conector)
+        Dim da As New SqlDataAdapter("select alumno.rut_alumno'Rut del Alumno', alumno.nombres'Nombre',alumno.apellidos'Apellidos',alumno.fecha_nacimiento'Fecha Nacimiento',matricula.edad_alumno'Edad',matricula.fono_urgencia_1'Fono Urgencia 1',matricula.fono_urgencia_2'Fono Ugencia 2' from alumno,matricula where matricula.curso_alumno= 6 and alumno.estado= 'activo' and matricula.rut_alumno = alumno.rut_alumno ", conector)
         Dim ds As New DataSet
         conector.Open()
 
@@ -1269,7 +1271,7 @@ Public Class matricula
     End Sub
     Sub mostraralumnocursoquinto()
         conector.Close()
-        Dim da As New SqlDataAdapter("select alumno.rut_alumno'Rut del Alumno', alumno.nombres'Nombre',alumno.apellidos'Apellidos',alumno.fecha_nacimiento'Fecha Nacimiento',alumno.edad'Edad',alumno.fono_urgencia'Fono Urgencia 1',alumno.fono_urgencia_otro'Fono Ugencia 2' from alumno,matricula where alumno.curso=5 and estado='activo' and matricula.rut_alumno = alumno.rut_alumno", conector)
+        Dim da As New SqlDataAdapter("select alumno.rut_alumno'Rut del Alumno', alumno.nombres'Nombre',alumno.apellidos'Apellidos',alumno.fecha_nacimiento'Fecha Nacimiento',matricula.edad_alumno'Edad',matricula.fono_urgencia_1'Fono Urgencia 1',matricula.fono_urgencia_2'Fono Ugencia 2' from alumno,matricula where matricula.curso_alumno= 5 and alumno.estado= 'activo' and matricula.rut_alumno = alumno.rut_alumno ", conector)
         Dim ds As New DataSet
         conector.Open()
 
@@ -1280,7 +1282,7 @@ Public Class matricula
     End Sub
     Sub mostraralumnocursoseptimo()
         conector.Close()
-        Dim da As New SqlDataAdapter("select alumno.rut_alumno'Rut del Alumno', alumno.nombres'Nombre',alumno.apellidos'Apellidos',alumno.fecha_nacimiento'Fecha Nacimiento',alumno.edad'Edad',alumno.fono_urgencia'Fono Urgencia 1',alumno.fono_urgencia_otro'Fono Ugencia 2' from alumno,matricula where alumno.curso=7 and estado='activo' and matricula.rut_alumno = alumno.rut_alumno", conector)
+        Dim da As New SqlDataAdapter("select alumno.rut_alumno'Rut del Alumno', alumno.nombres'Nombre',alumno.apellidos'Apellidos',alumno.fecha_nacimiento'Fecha Nacimiento',matricula.edad_alumno'Edad',matricula.fono_urgencia_1'Fono Urgencia 1',matricula.fono_urgencia_2'Fono Ugencia 2' from alumno,matricula where matricula.curso_alumno= 7 and alumno.estado= 'activo' and matricula.rut_alumno = alumno.rut_alumno ", conector)
         Dim ds As New DataSet
         conector.Open()
 
@@ -1291,7 +1293,7 @@ Public Class matricula
     End Sub
     Sub mostraralumnocursooctavo()
         conector.Close()
-        Dim da As New SqlDataAdapter("select alumno.rut_alumno'Rut del Alumno', alumno.nombres'Nombre',alumno.apellidos'Apellidos',alumno.fecha_nacimiento'Fecha Nacimiento',alumno.edad'Edad',alumno.fono_urgencia'Fono Urgencia 1',alumno.fono_urgencia_otro'Fono Ugencia 2' from alumno,matricula where alumno.curso=8 and estado='activo' and matricula.rut_alumno = alumno.rut_alumno", conector)
+        Dim da As New SqlDataAdapter("select alumno.rut_alumno'Rut del Alumno', alumno.nombres'Nombre',alumno.apellidos'Apellidos',alumno.fecha_nacimiento'Fecha Nacimiento',matricula.edad_alumno'Edad',matricula.fono_urgencia_1'Fono Urgencia 1',matricula.fono_urgencia_2'Fono Ugencia 2' from alumno,matricula where matricula.curso_alumno= 8 and alumno.estado= 'activo' and matricula.rut_alumno = alumno.rut_alumno ", conector)
         Dim ds As New DataSet
         conector.Open()
 
@@ -1302,7 +1304,7 @@ Public Class matricula
     End Sub
     Sub mostraralumnocursokinder()
         conector.Close()
-        Dim da As New SqlDataAdapter("select alumno.rut_alumno'Rut del Alumno', alumno.nombres'Nombre',alumno.apellidos'Apellidos',alumno.fecha_nacimiento'Fecha Nacimiento',alumno.edad'Edad',alumno.fono_urgencia'Fono Urgencia 1',alumno.fono_urgencia_otro'Fono Ugencia 2' from alumno,matricula where alumno.curso=9 and estado='activo' and matricula.rut_alumno = alumno.rut_alumno", conector)
+        Dim da As New SqlDataAdapter("select alumno.rut_alumno'Rut del Alumno', alumno.nombres'Nombre',alumno.apellidos'Apellidos',alumno.fecha_nacimiento'Fecha Nacimiento',matricula.edad_alumno'Edad',matricula.fono_urgencia_1'Fono Urgencia 1',matricula.fono_urgencia_2'Fono Ugencia 2' from alumno,matricula where matricula.curso_alumno= 9 and alumno.estado= 'activo' and matricula.rut_alumno = alumno.rut_alumno ", conector)
         Dim ds As New DataSet
         conector.Open()
 
@@ -1313,7 +1315,7 @@ Public Class matricula
     End Sub
     Sub mostraralumnocursoprekinder()
         conector.Close()
-        Dim da As New SqlDataAdapter("select alumno.rut_alumno'Rut del Alumno', alumno.nombres'Nombre',alumno.apellidos'Apellidos',alumno.fecha_nacimiento'Fecha Nacimiento',alumno.edad'Edad',alumno.fono_urgencia'Fono Urgencia 1',alumno.fono_urgencia_otro'Fono Ugencia 2' from alumno,matricula where alumno.curso=10 and estado='activo' and matricula.rut_alumno = alumno.rut_alumno", conector)
+        Dim da As New SqlDataAdapter("select alumno.rut_alumno'Rut del Alumno', alumno.nombres'Nombre',alumno.apellidos'Apellidos',alumno.fecha_nacimiento'Fecha Nacimiento',matricula.edad_alumno'Edad',matricula.fono_urgencia_1'Fono Urgencia 1',matricula.fono_urgencia_2'Fono Ugencia 2' from alumno,matricula where matricula.curso_alumno= 10 and alumno.estado= 'activo' and matricula.rut_alumno = alumno.rut_alumno ", conector)
         Dim ds As New DataSet
         conector.Open()
 
@@ -1325,7 +1327,7 @@ Public Class matricula
     End Sub
     Sub mostraralumnocursoprimero()
         conector.Close()
-        Dim da As New SqlDataAdapter("select alumno.rut_alumno'Rut del Alumno', alumno.nombres'Nombre',alumno.apellidos'Apellidos',alumno.fecha_nacimiento'Fecha Nacimiento',alumno.edad'Edad',alumno.fono_urgencia'Fono Urgencia 1',alumno.fono_urgencia_otro'Fono Ugencia 2' from alumno,matricula where alumno.curso=1 and estado='activo' and matricula.rut_alumno = alumno.rut_alumno ", conector)
+        Dim da As New SqlDataAdapter("select alumno.rut_alumno'Rut del Alumno', alumno.nombres'Nombre',alumno.apellidos'Apellidos',alumno.fecha_nacimiento'Fecha Nacimiento',matricula.edad_alumno'Edad',matricula.fono_urgencia_1'Fono Urgencia 1',matricula.fono_urgencia_2'Fono Ugencia 2' from alumno,matricula where matricula.curso_alumno= 1 and alumno.estado= 'activo' and matricula.rut_alumno = alumno.rut_alumno ", conector)
         Dim ds As New DataSet
         conector.Open()
 
@@ -1336,73 +1338,73 @@ Public Class matricula
 
     End Sub
 
-   
-    Private Sub Button29_Click(sender As System.Object, e As System.EventArgs) Handles Button29.Click
+
+    Private Sub Button29_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button29.Click
         TabControl1.SelectedTab = TabControl1.TabPages.Item(6)
         mostraralumnocursoprimero()
         conector.Close()
     End Sub
 
-    Private Sub Button30_Click(sender As System.Object, e As System.EventArgs) Handles Button30.Click
+    Private Sub Button30_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button30.Click
         TabControl1.SelectedTab = TabControl1.TabPages.Item(7)
         mostraralumnocursosegundo()
         conector.Close()
     End Sub
 
-    Private Sub Button33_Click(sender As System.Object, e As System.EventArgs) Handles Button33.Click
+    Private Sub Button33_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button33.Click
         TabControl1.SelectedTab = TabControl1.TabPages.Item(8)
         mostraralumnocursotercero()
         conector.Close()
     End Sub
 
-    Private Sub Button34_Click(sender As System.Object, e As System.EventArgs) Handles Button34.Click
+    Private Sub Button34_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button34.Click
         TabControl1.SelectedTab = TabControl1.TabPages.Item(9)
         mostraralumnocursocuarto()
         conector.Close()
     End Sub
 
-    Private Sub Button31_Click(sender As System.Object, e As System.EventArgs) Handles Button31.Click
+    Private Sub Button31_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button31.Click
         TabControl1.SelectedTab = TabControl1.TabPages.Item(10)
         mostraralumnocursoquinto()
         conector.Close()
     End Sub
 
-    Private Sub Button32_Click(sender As System.Object, e As System.EventArgs) Handles Button32.Click
+    Private Sub Button32_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button32.Click
         TabControl1.SelectedTab = TabControl1.TabPages.Item(11)
         mostraralumnocursosexto()
         conector.Close()
     End Sub
 
-    Private Sub Button35_Click(sender As System.Object, e As System.EventArgs) Handles Button35.Click
+    Private Sub Button35_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button35.Click
         TabControl1.SelectedTab = TabControl1.TabPages.Item(12)
         mostraralumnocursoseptimo()
         conector.Close()
     End Sub
 
-    Private Sub Button36_Click(sender As System.Object, e As System.EventArgs) Handles Button36.Click
+    Private Sub Button36_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button36.Click
         TabControl1.SelectedTab = TabControl1.TabPages.Item(13)
         mostraralumnocursooctavo()
         conector.Close()
     End Sub
 
-    Private Sub Button37_Click(sender As System.Object, e As System.EventArgs) Handles Button37.Click
+    Private Sub Button37_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button37.Click
         TabControl1.SelectedTab = TabControl1.TabPages.Item(14)
         mostraralumnocursokinder()
         conector.Close()
     End Sub
 
-    Private Sub Button38_Click(sender As System.Object, e As System.EventArgs) Handles Button38.Click
+    Private Sub Button38_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button38.Click
         TabControl1.SelectedTab = TabControl1.TabPages.Item(15)
         mostraralumnocursoprekinder()
         conector.Close()
     End Sub
 
-    Private Sub Button39_Click(sender As System.Object, e As System.EventArgs) Handles Button39.Click
+    Private Sub Button39_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button39.Click
         TabControl1.SelectedTab = TabControl1.TabPages.Item(0)
         conector.Close()
     End Sub
 
-    Private Sub Button41_Click(sender As System.Object, e As System.EventArgs) Handles Button41.Click
+    Private Sub Button41_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button41.Click
         TabControl1.SelectedTab = TabControl1.TabPages.Item(5)
         primero_activas()
         segundo_activas()
@@ -1418,7 +1420,7 @@ Public Class matricula
         conector.Close()
     End Sub
 
-    Private Sub Button40_Click(sender As System.Object, e As System.EventArgs) Handles Button40.Click
+    Private Sub Button40_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button40.Click
         TabControl1.SelectedTab = TabControl1.TabPages.Item(5)
         conector.Close()
         primero_activas()
@@ -1434,7 +1436,7 @@ Public Class matricula
 
     End Sub
 
-    Private Sub Button42_Click(sender As System.Object, e As System.EventArgs) Handles Button42.Click
+    Private Sub Button42_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button42.Click
         TabControl1.SelectedTab = TabControl1.TabPages.Item(5)
         conector.Close()
         primero_activas()
@@ -1450,7 +1452,7 @@ Public Class matricula
 
     End Sub
 
-    Private Sub Button43_Click(sender As System.Object, e As System.EventArgs) Handles Button43.Click
+    Private Sub Button43_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button43.Click
         TabControl1.SelectedTab = TabControl1.TabPages.Item(5)
         conector.Close()
         primero_activas()
@@ -1466,7 +1468,7 @@ Public Class matricula
 
     End Sub
 
-    Private Sub Button44_Click(sender As System.Object, e As System.EventArgs) Handles Button44.Click
+    Private Sub Button44_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button44.Click
         TabControl1.SelectedTab = TabControl1.TabPages.Item(5)
         conector.Close()
         primero_activas()
@@ -1482,7 +1484,7 @@ Public Class matricula
 
     End Sub
 
-    Private Sub Button45_Click(sender As System.Object, e As System.EventArgs) Handles Button45.Click
+    Private Sub Button45_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button45.Click
         TabControl1.SelectedTab = TabControl1.TabPages.Item(5)
         conector.Close()
         primero_activas()
@@ -1498,7 +1500,7 @@ Public Class matricula
 
     End Sub
 
-    Private Sub Button46_Click(sender As System.Object, e As System.EventArgs) Handles Button46.Click
+    Private Sub Button46_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button46.Click
         TabControl1.SelectedTab = TabControl1.TabPages.Item(5)
         conector.Close()
         primero_activas()
@@ -1514,7 +1516,7 @@ Public Class matricula
 
     End Sub
 
-    Private Sub Button47_Click(sender As System.Object, e As System.EventArgs) Handles Button47.Click
+    Private Sub Button47_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button47.Click
         TabControl1.SelectedTab = TabControl1.TabPages.Item(5)
         conector.Close()
         primero_activas()
@@ -1530,7 +1532,7 @@ Public Class matricula
 
     End Sub
 
-    Private Sub Button48_Click(sender As System.Object, e As System.EventArgs) Handles Button48.Click
+    Private Sub Button48_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button48.Click
         TabControl1.SelectedTab = TabControl1.TabPages.Item(5)
         conector.Close()
         primero_activas()
@@ -1546,7 +1548,7 @@ Public Class matricula
 
     End Sub
 
-    Private Sub Button49_Click(sender As System.Object, e As System.EventArgs) Handles Button49.Click
+    Private Sub Button49_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button49.Click
         TabControl1.SelectedTab = TabControl1.TabPages.Item(5)
         conector.Close()
         primero_activas()
@@ -1562,22 +1564,21 @@ Public Class matricula
 
     End Sub
 
-    Private Sub Button60_Click_1(sender As System.Object, e As System.EventArgs) Handles Button60.Click
+    Private Sub Button60_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button60.Click
         TabControl1.SelectedTab = TabControl1.TabPages.Item(16)
         conector.Close()
         TextBox30.Text = ("")
         TextBox30.Enabled = True
-        TextBox31.Enabled = False
+
         TextBox32.Enabled = False
         TextBox33.Enabled = False
         TextBox34.Enabled = False
-        TextBox35.Enabled = False
-        TextBox36.Enabled = False
+
 
         Button62.Visible = False
     End Sub
 
-    Private Sub Button62_Click_1(sender As System.Object, e As System.EventArgs) Handles Button62.Click
+    Private Sub Button62_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button62.Click
         Try
             Dim cadena As String
             cadena = String.Format("UPDATE alumno SET estado = ' inactivo '  WHERE rut_alumno = '" & TextBox30.Text & "'")
@@ -1587,21 +1588,20 @@ Public Class matricula
             conector.Close()
             MsgBox("Registro Actualizado Correctamente", MsgBoxStyle.Information, "Operacion Exitosa")
             TextBox30.Text = ""
-            TextBox31.Text = ""
+
             TextBox32.Text = ""
             TextBox33.Text = ""
             TextBox34.Text = ""
-            TextBox35.Text = ""
-            TextBox36.Text = ""
+
         Catch ex As Exception
             conector.Close()
         End Try
     End Sub
 
-    Private Sub Button61_Click_2(sender As System.Object, e As System.EventArgs) Handles Button61.Click
+    Private Sub Button61_Click_2(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button61.Click
         Try
             conector.Open()
-            Dim qry As String = "select alumno.rut_alumno, alumno.nombres,alumno.apellidos,alumno.fecha_nacimiento,alumno.edad,curso.Nombre,alumno.fono_urgencia from alumno,curso where alumno.rut_alumno='" & TextBox30.Text & "' and alumno.curso = curso.id_curso and alumno.estado= 'activo' "
+            Dim qry As String = "select alumno.rut_alumno, alumno.nombres,alumno.apellidos,alumno.fecha_nacimiento from alumno where alumno.rut_alumno='" & TextBox30.Text & "' and alumno.estado= 'activo' "
             Dim sqlcmd As New SqlCommand(qry, conector)
             Dim dr As SqlDataReader
             dr = sqlcmd.ExecuteReader
@@ -1609,9 +1609,8 @@ Public Class matricula
                 TextBox32.Text = dr("nombres")
                 TextBox33.Text = dr("apellidos")
                 TextBox34.Text = dr("fecha_nacimiento")
-                TextBox31.Text = dr("edad")
-                TextBox35.Text = dr("Nombre")
-                TextBox36.Text = dr("fono_urgencia")
+
+
 
                 conector.Close()
                 Button62.Visible = True
@@ -1626,7 +1625,7 @@ Public Class matricula
         End Try
     End Sub
 
-    Private Sub Button63_Click(sender As System.Object, e As System.EventArgs) Handles Button63.Click
+    Private Sub Button63_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button63.Click
         TabControl1.SelectedTab = TabControl1.TabPages.Item(0)
         conector.Close()
         matriculas_activas()
@@ -1644,7 +1643,7 @@ Public Class matricula
 
     End Sub
 
-    Private Sub Button64_Click(sender As System.Object, e As System.EventArgs) Handles Button64.Click
+    Private Sub Button64_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button64.Click
         TabControl1.SelectedTab = TabControl1.TabPages.Item(1)
         conector.Close()
         TextBox1.Enabled = True
@@ -1679,19 +1678,19 @@ Public Class matricula
         TextBox30.Enabled = True
     End Sub
 
-    Private Sub Button66_Click(sender As System.Object, e As System.EventArgs) Handles Button66.Click
+    Private Sub Button66_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button66.Click
         TabControl1.SelectedTab = TabControl1.TabPages.Item(0)
         conector.Close()
     End Sub
 
-    Private Sub Button65_Click(sender As System.Object, e As System.EventArgs) Handles Button65.Click
+    Private Sub Button65_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button65.Click
         conector.Close()
 
-       
+
         Try
             rut_pdf_alumno = TextBox28.Text
             conector.Open()
-            Dim qry As String = "select alumno.rut_alumno ,alumno.nombres,alumno.apellidos,alumno.fecha_nacimiento, alumno.edad,curso.Nombre ,alumno.fono_urgencia ,alumno.fono_urgencia_otro,alumno.sexo,apoderado.rut_apoderado , apoderado.nombre_apoderado ,apoderado.domicilio , apoderado.fono  ,matricula.fecha_matricula ,matricula.escuela_procedencia ,matricula.cursos_repetidos ,matricula.domicilio_alumno ,matricula.alergico , matricula.grupo_sanguineo ,matricula.enfermedad ,matricula.grupo_pie ,matricula.nombre_padre ,matricula.nombre_madre ,matricula.rut_padre ,matricula.rut_madre ,matricula.trabajo_padre ,matricula.trabajo_madre ,matricula.escolaridad_padre ,matricula.escolaridad_madre ,matricula.vive_con ,matricula.casa_propia ,matricula.ingreso_mensual ,matricula.beneficio ,matricula.religion , usuario.nombre_usuario from alumno, apoderado, curso, matricula, usuario where matricula.rut_alumno = alumno.rut_alumno And apoderado.rut_apoderado = matricula.rut_apoderado And alumno.curso = curso.id_curso And matricula.id_usuario = usuario.id_usuario And matricula.rut_alumno =  '" & rut_pdf_alumno & "' "
+            Dim qry As String = "select alumno.rut_alumno ,alumno.nombres,alumno.apellidos,alumno.fecha_nacimiento, matricula.edad_alumno,curso.Nombre ,matricula.fono_urgencia_1 ,matricula.fono_urgencia_2,alumno.sexo,apoderado.rut_apoderado , apoderado.nombre_apoderado ,apoderado.domicilio , apoderado.fono  ,matricula.fecha_matricula ,matricula.escuela_procedencia ,matricula.cursos_repetidos ,matricula.domicilio_alumno ,matricula.alergico , matricula.grupo_sanguineo ,matricula.enfermedad ,matricula.grupo_pie ,matricula.nombre_padre ,matricula.nombre_madre ,matricula.rut_padre ,matricula.rut_madre ,matricula.trabajo_padre ,matricula.trabajo_madre ,matricula.escolaridad_padre ,matricula.escolaridad_madre ,matricula.vive_con ,matricula.casa_propia ,matricula.ingreso_mensual ,matricula.beneficio ,matricula.religion , usuario.nombre_usuario from alumno, apoderado, curso, matricula, usuario where matricula.rut_alumno = alumno.rut_alumno And apoderado.rut_apoderado = matricula.rut_apoderado And matricula.curso_alumno = curso.id_curso And matricula.id_usuario = usuario.id_usuario And matricula.rut_alumno ='" & rut_pdf_alumno & "' "
             Dim sqlcmd As New SqlCommand(qry, conector)
             Dim dr As SqlDataReader
             dr = sqlcmd.ExecuteReader
@@ -1701,10 +1700,10 @@ Public Class matricula
                 Form1.Label2.Text = dr("nombres")
                 Form1.Label3.Text = dr("apellidos")
                 Form1.Label4.Text = dr("fecha_nacimiento")
-                Form1.Label5.Text = dr("edad")
+                Form1.Label5.Text = dr("edad_alumno")
                 Form1.Label6.Text = dr("Nombre")
-                Form1.Label7.Text = dr("fono_urgencia")
-                Form1.Label8.Text = dr("fono_urgencia_otro")
+                Form1.Label7.Text = dr("fono_urgencia_1")
+                Form1.Label8.Text = dr("fono_urgencia_2")
                 Form1.Label67.Text = dr("sexo")
                 Form1.Label9.Text = dr("rut_apoderado")
                 Form1.Label10.Text = dr("nombre_apoderado")
@@ -1761,7 +1760,7 @@ Public Class matricula
         End If
 
 
-   
+
     End Sub
     Private Sub TextBox2_KeyPress(ByVal sender As Object, _
                              ByVal e As System.Windows.Forms.KeyPressEventArgs) _
@@ -1776,11 +1775,11 @@ Public Class matricula
             e.Handled = True
         End If
     End Sub
- 
 
 
 
-    Private Sub textbox5_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles TextBox5.KeyDown
+
+    Private Sub textbox5_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs)
         Select Case e.KeyData
             Case Keys.A To Keys.Z Or Keys.Space
 
@@ -1789,7 +1788,7 @@ Public Class matricula
                 e.SuppressKeyPress = True
         End Select
     End Sub
-    Private Sub textbox29_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles TextBox29.KeyDown
+    Private Sub textbox29_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs)
         Select Case e.KeyData
             Case Keys.A To Keys.Z Or Keys.Space
 
@@ -1861,14 +1860,14 @@ Public Class matricula
         End If
     End Sub
 
-    Private Sub TextBox11_TextChanged(sender As System.Object, e As System.EventArgs) Handles TextBox11.TextChanged
+    Private Sub TextBox11_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextBox11.TextChanged
         If TextBox11.TextLength = 8 Then TextBox11.Text = ValidaRut(TextBox11.Text)
         conector.Close()
     End Sub
 
 
-    Private Sub Button13_Click(sender As System.Object, e As System.EventArgs) Handles Button13.Click
-        TextBox26.Text = inicio.nomUsuario
+    Private Sub Button13_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button13.Click
+        TextBox26.Text = inicio1.nomUsuario
         TabControl1.SelectedTab = TabControl1.TabPages.Item(17)
 
         TextBox41.Text = ("")
@@ -1908,13 +1907,13 @@ Public Class matricula
         End If
     End Function
 
-    Private Sub Button7_Click_1(sender As System.Object, e As System.EventArgs) Handles Button7.Click
+    Private Sub Button7_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button7.Click
         conector.Close()
         Try
             rut_pdf_alumno = TextBox41.Text
             conector.Close()
             conector.Open()
-            Dim qry As String = "select alumno.rut_alumno ,alumno.nombres,alumno.apellidos,alumno.fecha_nacimiento, alumno.edad,curso.Nombre ,alumno.fono_urgencia ,alumno.fono_urgencia_otro,alumno.sexo,apoderado.rut_apoderado , apoderado.nombre_apoderado ,apoderado.domicilio , apoderado.fono  ,matricula.fecha_matricula ,matricula.escuela_procedencia ,matricula.cursos_repetidos ,matricula.domicilio_alumno ,matricula.alergico , matricula.grupo_sanguineo ,matricula.enfermedad ,matricula.grupo_pie ,matricula.nombre_padre ,matricula.nombre_madre ,matricula.rut_padre ,matricula.rut_madre ,matricula.trabajo_padre ,matricula.trabajo_madre ,matricula.escolaridad_padre ,matricula.escolaridad_madre ,matricula.vive_con ,matricula.casa_propia ,matricula.ingreso_mensual ,matricula.beneficio ,matricula.religion , usuario.nombre_usuario from alumno, apoderado, curso, matricula, usuario where matricula.rut_alumno = alumno.rut_alumno And apoderado.rut_apoderado = matricula.rut_apoderado And alumno.curso = curso.id_curso And matricula.id_usuario = usuario.id_usuario And matricula.rut_alumno =  '" & rut_pdf_alumno & "' "
+            Dim qry As String = "select alumno.rut_alumno ,alumno.nombres,alumno.apellidos,alumno.fecha_nacimiento, matricula.edad_alumno,curso.Nombre ,matricula.fono_urgencia_1 ,matricula.fono_urgencia_2,alumno.sexo,apoderado.rut_apoderado , apoderado.nombre_apoderado ,apoderado.domicilio , apoderado.fono  ,matricula.fecha_matricula ,matricula.escuela_procedencia ,matricula.cursos_repetidos ,matricula.domicilio_alumno ,matricula.alergico , matricula.grupo_sanguineo ,matricula.enfermedad ,matricula.grupo_pie ,matricula.nombre_padre ,matricula.nombre_madre ,matricula.rut_padre ,matricula.rut_madre ,matricula.trabajo_padre ,matricula.trabajo_madre ,matricula.escolaridad_padre ,matricula.escolaridad_madre ,matricula.vive_con ,matricula.casa_propia ,matricula.ingreso_mensual ,matricula.beneficio ,matricula.religion , usuario.nombre_usuario from alumno, apoderado, curso, matricula, usuario where matricula.rut_alumno = alumno.rut_alumno And apoderado.rut_apoderado = matricula.rut_apoderado And matricula.curso_alumno = curso.id_curso And matricula.id_usuario = usuario.id_usuario And matricula.rut_alumno ='" & rut_pdf_alumno & "' "
             Dim sqlcmd As New SqlCommand(qry, conector)
             Dim dr As SqlDataReader
             dr = sqlcmd.ExecuteReader
@@ -1923,10 +1922,10 @@ Public Class matricula
                 Form1.Label2.Text = dr("nombres")
                 Form1.Label3.Text = dr("apellidos")
                 Form1.Label4.Text = dr("fecha_nacimiento")
-                Form1.Label5.Text = dr("edad")
+                Form1.Label5.Text = dr("edad_alumno")
                 Form1.Label6.Text = dr("Nombre")
-                Form1.Label7.Text = dr("fono_urgencia")
-                Form1.Label8.Text = dr("fono_urgencia_otro")
+                Form1.Label7.Text = dr("fono_urgencia_1")
+                Form1.Label8.Text = dr("fono_urgencia_2")
                 Form1.Label67.Text = dr("sexo")
                 Form1.Label9.Text = dr("rut_apoderado")
                 Form1.Label10.Text = dr("nombre_apoderado")
@@ -1971,35 +1970,35 @@ Public Class matricula
 
     End Sub
 
-    Private Sub Button67_Click(sender As System.Object, e As System.EventArgs) Handles Button67.Click
+    Private Sub Button67_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button67.Click
         TabControl1.SelectedTab = TabControl1.TabPages.Item(0)
         conector.Close()
     End Sub
 
-    Private Sub TextBox28_TextChanged(sender As System.Object, e As System.EventArgs) Handles TextBox28.TextChanged
+    Private Sub TextBox28_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextBox28.TextChanged
         conector.Close()
     End Sub
 
-    Private Sub Button19_Click(sender As System.Object, e As System.EventArgs) Handles Button19.Click
+    Private Sub Button19_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button19.Click
         TabControl1.SelectedTab = TabControl1.TabPages.Item(3)
-        TextBox26.Text = inicio.nomUsuario
+        TextBox26.Text = inicio1.nomUsuario
         conector.Close()
     End Sub
 
-    Private Sub Button22_Click(sender As System.Object, e As System.EventArgs) Handles Button22.Click
-        TextBox26.Text = inicio.nomUsuario
+    Private Sub Button22_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button22.Click
+        TextBox26.Text = inicio1.nomUsuario
         conector.Close()
         TabControl1.SelectedTab = TabControl1.TabPages.Item(1)
     End Sub
 
-    Private Sub Button21_Click(sender As System.Object, e As System.EventArgs) Handles Button21.Click
-        TextBox26.Text = inicio.nomUsuario
+    Private Sub Button21_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button21.Click
+        TextBox26.Text = inicio1.nomUsuario
         TabControl1.SelectedTab = TabControl1.TabPages.Item(2)
         conector.Close()
     End Sub
 
-    Private Sub Button20_Click(sender As System.Object, e As System.EventArgs) Handles Button20.Click
-        TextBox26.Text = inicio.nomUsuario
+    Private Sub Button20_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button20.Click
+        TextBox26.Text = inicio1.nomUsuario
         TabControl1.SelectedTab = TabControl1.TabPages.Item(3)
         conector.Close()
     End Sub
@@ -2196,7 +2195,7 @@ Public Class matricula
         TextBox19.SelectionStart = TextBox19.TextLength + 1
     End Sub
 
-    Private Sub ComboBox1_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles ComboBox1.SelectedIndexChanged
+    Private Sub ComboBox1_SelectedIndexChanged(sender As System.Object, e As System.EventArgs)
 
     End Sub
 
@@ -2285,5 +2284,9 @@ Public Class matricula
 
         TextBox37.Text = UCase(TextBox37.Text)
         TextBox37.SelectionStart = TextBox37.TextLength + 1
+    End Sub
+
+    Private Sub TabPage1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TabPage1.Click
+
     End Sub
 End Class

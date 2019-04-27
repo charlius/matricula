@@ -24,26 +24,26 @@ Partial Class matricula
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(matricula))
-        Dim DataGridViewCellStyle201 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle202 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle203 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle204 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle205 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle206 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle207 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle208 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle209 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle210 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle211 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle212 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle213 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle214 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle215 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle216 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle217 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle218 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle219 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle220 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle17 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle18 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle19 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle20 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.Label46 = New System.Windows.Forms.Label()
@@ -60,24 +60,16 @@ Partial Class matricula
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.ComboBox6 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Label53 = New System.Windows.Forms.Label()
-        Me.Label38 = New System.Windows.Forms.Label()
-        Me.TextBox29 = New System.Windows.Forms.TextBox()
         Me.Button26 = New System.Windows.Forms.Button()
         Me.Button19 = New System.Windows.Forms.Button()
         Me.Button18 = New System.Windows.Forms.Button()
         Me.Button17 = New System.Windows.Forms.Button()
-        Me.Label37 = New System.Windows.Forms.Label()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
         Me.calendarn = New System.Windows.Forms.MonthCalendar()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button14 = New System.Windows.Forms.Button()
         Me.Button15 = New System.Windows.Forms.Button()
         Me.Button16 = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
@@ -103,6 +95,14 @@ Partial Class matricula
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Label38 = New System.Windows.Forms.Label()
+        Me.TextBox29 = New System.Windows.Forms.TextBox()
+        Me.Label37 = New System.Windows.Forms.Label()
+        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.CheckBox7 = New System.Windows.Forms.CheckBox()
         Me.CheckBox8 = New System.Windows.Forms.CheckBox()
         Me.TextBox37 = New System.Windows.Forms.TextBox()
@@ -226,16 +226,10 @@ Partial Class matricula
         Me.TabPage17 = New System.Windows.Forms.TabPage()
         Me.Button63 = New System.Windows.Forms.Button()
         Me.Button62 = New System.Windows.Forms.Button()
-        Me.TextBox36 = New System.Windows.Forms.TextBox()
-        Me.TextBox35 = New System.Windows.Forms.TextBox()
         Me.TextBox34 = New System.Windows.Forms.TextBox()
         Me.TextBox33 = New System.Windows.Forms.TextBox()
         Me.TextBox32 = New System.Windows.Forms.TextBox()
-        Me.TextBox31 = New System.Windows.Forms.TextBox()
-        Me.Label48 = New System.Windows.Forms.Label()
-        Me.Label47 = New System.Windows.Forms.Label()
         Me.Label44 = New System.Windows.Forms.Label()
-        Me.Label43 = New System.Windows.Forms.Label()
         Me.Label42 = New System.Windows.Forms.Label()
         Me.Label41 = New System.Windows.Forms.Label()
         Me.Button61 = New System.Windows.Forms.Button()
@@ -497,24 +491,16 @@ Partial Class matricula
         'TabPage2
         '
         Me.TabPage2.Controls.Add(Me.ComboBox6)
-        Me.TabPage2.Controls.Add(Me.ComboBox1)
         Me.TabPage2.Controls.Add(Me.Label53)
-        Me.TabPage2.Controls.Add(Me.Label38)
-        Me.TabPage2.Controls.Add(Me.TextBox29)
         Me.TabPage2.Controls.Add(Me.Button26)
         Me.TabPage2.Controls.Add(Me.Button19)
         Me.TabPage2.Controls.Add(Me.Button18)
         Me.TabPage2.Controls.Add(Me.Button17)
-        Me.TabPage2.Controls.Add(Me.Label37)
-        Me.TabPage2.Controls.Add(Me.TextBox5)
-        Me.TabPage2.Controls.Add(Me.Label8)
-        Me.TabPage2.Controls.Add(Me.Label7)
         Me.TabPage2.Controls.Add(Me.calendarn)
         Me.TabPage2.Controls.Add(Me.Button1)
         Me.TabPage2.Controls.Add(Me.Button14)
         Me.TabPage2.Controls.Add(Me.Button15)
         Me.TabPage2.Controls.Add(Me.Button16)
-        Me.TabPage2.Controls.Add(Me.TextBox1)
         Me.TabPage2.Controls.Add(Me.TextBox2)
         Me.TabPage2.Controls.Add(Me.TextBox3)
         Me.TabPage2.Controls.Add(Me.TextBox4)
@@ -537,51 +523,20 @@ Partial Class matricula
         Me.ComboBox6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox6.FormattingEnabled = True
         Me.ComboBox6.Items.AddRange(New Object() {"Hombre", "Mujer", "Otro"})
-        Me.ComboBox6.Location = New System.Drawing.Point(1053, 277)
+        Me.ComboBox6.Location = New System.Drawing.Point(513, 343)
         Me.ComboBox6.Name = "ComboBox6"
         Me.ComboBox6.Size = New System.Drawing.Size(121, 24)
         Me.ComboBox6.TabIndex = 160
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.BackColor = System.Drawing.SystemColors.ScrollBar
-        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"1 basico", "2 basico", "3 basico", "4 basico", "5 basico", "6 basico", "7 basico", "8 basico", "kinder", "pre-kinder"})
-        Me.ComboBox1.Location = New System.Drawing.Point(1057, 350)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(121, 24)
-        Me.ComboBox1.TabIndex = 159
         '
         'Label53
         '
         Me.Label53.AutoSize = True
         Me.Label53.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label53.Location = New System.Drawing.Point(985, 281)
+        Me.Label53.Location = New System.Drawing.Point(445, 347)
         Me.Label53.Name = "Label53"
         Me.Label53.Size = New System.Drawing.Size(42, 18)
         Me.Label53.TabIndex = 157
         Me.Label53.Text = "Sexo"
-        '
-        'Label38
-        '
-        Me.Label38.AutoSize = True
-        Me.Label38.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label38.Location = New System.Drawing.Point(985, 425)
-        Me.Label38.Name = "Label38"
-        Me.Label38.Size = New System.Drawing.Size(118, 18)
-        Me.Label38.TabIndex = 154
-        Me.Label38.Text = "Fono Urgencia 2"
-        '
-        'TextBox29
-        '
-        Me.TextBox29.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox29.Location = New System.Drawing.Point(1109, 423)
-        Me.TextBox29.MaxLength = 9
-        Me.TextBox29.Name = "TextBox29"
-        Me.TextBox29.Size = New System.Drawing.Size(140, 21)
-        Me.TextBox29.TabIndex = 153
         '
         'Button26
         '
@@ -640,45 +595,6 @@ Partial Class matricula
         Me.Button17.Text = "" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "ESTUDIANTE"
         Me.Button17.UseVisualStyleBackColor = True
         '
-        'Label37
-        '
-        Me.Label37.AutoSize = True
-        Me.Label37.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label37.Location = New System.Drawing.Point(480, 426)
-        Me.Label37.Name = "Label37"
-        Me.Label37.Size = New System.Drawing.Size(106, 18)
-        Me.Label37.TabIndex = 147
-        Me.Label37.Text = "Fono Urgencia"
-        '
-        'TextBox5
-        '
-        Me.TextBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox5.Location = New System.Drawing.Point(619, 423)
-        Me.TextBox5.MaxLength = 9
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(140, 21)
-        Me.TextBox5.TabIndex = 146
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(985, 356)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(49, 18)
-        Me.Label8.TabIndex = 144
-        Me.Label8.Text = "Curso"
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(461, 366)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(141, 18)
-        Me.Label7.TabIndex = 142
-        Me.Label7.Text = "Edad a 30 de Marzo"
-        '
         'calendarn
         '
         Me.calendarn.Location = New System.Drawing.Point(147, 324)
@@ -732,15 +648,6 @@ Partial Class matricula
         Me.Button16.TabIndex = 71
         Me.Button16.Text = "" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Guardar"
         Me.Button16.UseVisualStyleBackColor = True
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(619, 365)
-        Me.TextBox1.MaxLength = 99
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(214, 21)
-        Me.TextBox1.TabIndex = 70
         '
         'TextBox2
         '
@@ -1019,6 +926,14 @@ Partial Class matricula
         '
         'TabPage4
         '
+        Me.TabPage4.Controls.Add(Me.ComboBox1)
+        Me.TabPage4.Controls.Add(Me.Label38)
+        Me.TabPage4.Controls.Add(Me.TextBox29)
+        Me.TabPage4.Controls.Add(Me.Label37)
+        Me.TabPage4.Controls.Add(Me.TextBox5)
+        Me.TabPage4.Controls.Add(Me.Label8)
+        Me.TabPage4.Controls.Add(Me.Label7)
+        Me.TabPage4.Controls.Add(Me.TextBox1)
         Me.TabPage4.Controls.Add(Me.CheckBox7)
         Me.TabPage4.Controls.Add(Me.CheckBox8)
         Me.TabPage4.Controls.Add(Me.TextBox37)
@@ -1091,11 +1006,90 @@ Partial Class matricula
         Me.TabPage4.Text = "TabPage4"
         Me.TabPage4.UseVisualStyleBackColor = True
         '
+        'ComboBox1
+        '
+        Me.ComboBox1.BackColor = System.Drawing.SystemColors.ScrollBar
+        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Items.AddRange(New Object() {"1 basico", "2 basico", "3 basico", "4 basico", "5 basico", "6 basico", "7 basico", "8 basico", "kinder", "pre-kinder"})
+        Me.ComboBox1.Location = New System.Drawing.Point(1099, 216)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(121, 24)
+        Me.ComboBox1.TabIndex = 210
+        '
+        'Label38
+        '
+        Me.Label38.AutoSize = True
+        Me.Label38.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label38.Location = New System.Drawing.Point(714, 221)
+        Me.Label38.Name = "Label38"
+        Me.Label38.Size = New System.Drawing.Size(118, 18)
+        Me.Label38.TabIndex = 209
+        Me.Label38.Text = "Fono Urgencia 2"
+        '
+        'TextBox29
+        '
+        Me.TextBox29.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox29.Location = New System.Drawing.Point(838, 219)
+        Me.TextBox29.MaxLength = 9
+        Me.TextBox29.Name = "TextBox29"
+        Me.TextBox29.Size = New System.Drawing.Size(140, 21)
+        Me.TextBox29.TabIndex = 208
+        '
+        'Label37
+        '
+        Me.Label37.AutoSize = True
+        Me.Label37.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label37.Location = New System.Drawing.Point(415, 224)
+        Me.Label37.Name = "Label37"
+        Me.Label37.Size = New System.Drawing.Size(118, 18)
+        Me.Label37.TabIndex = 207
+        Me.Label37.Text = "Fono Urgencia 1"
+        '
+        'TextBox5
+        '
+        Me.TextBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox5.Location = New System.Drawing.Point(554, 221)
+        Me.TextBox5.MaxLength = 9
+        Me.TextBox5.Name = "TextBox5"
+        Me.TextBox5.Size = New System.Drawing.Size(140, 21)
+        Me.TextBox5.TabIndex = 206
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(1027, 222)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(49, 18)
+        Me.Label8.TabIndex = 205
+        Me.Label8.Text = "Curso"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(19, 225)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(141, 18)
+        Me.Label7.TabIndex = 204
+        Me.Label7.Text = "Edad a 30 de Marzo"
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1.Location = New System.Drawing.Point(177, 224)
+        Me.TextBox1.MaxLength = 99
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(214, 21)
+        Me.TextBox1.TabIndex = 203
+        '
         'CheckBox7
         '
         Me.CheckBox7.AutoSize = True
         Me.CheckBox7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox7.Location = New System.Drawing.Point(157, 491)
+        Me.CheckBox7.Location = New System.Drawing.Point(157, 510)
         Me.CheckBox7.Name = "CheckBox7"
         Me.CheckBox7.Size = New System.Drawing.Size(86, 20)
         Me.CheckBox7.TabIndex = 202
@@ -1106,7 +1100,7 @@ Partial Class matricula
         '
         Me.CheckBox8.AutoSize = True
         Me.CheckBox8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox8.Location = New System.Drawing.Point(257, 491)
+        Me.CheckBox8.Location = New System.Drawing.Point(257, 510)
         Me.CheckBox8.Name = "CheckBox8"
         Me.CheckBox8.Size = New System.Drawing.Size(39, 20)
         Me.CheckBox8.TabIndex = 201
@@ -1116,7 +1110,7 @@ Partial Class matricula
         'TextBox37
         '
         Me.TextBox37.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox37.Location = New System.Drawing.Point(330, 487)
+        Me.TextBox37.Location = New System.Drawing.Point(330, 506)
         Me.TextBox37.MaxLength = 199
         Me.TextBox37.Name = "TextBox37"
         Me.TextBox37.Size = New System.Drawing.Size(255, 22)
@@ -1126,7 +1120,7 @@ Partial Class matricula
         '
         Me.CheckBox5.AutoSize = True
         Me.CheckBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox5.Location = New System.Drawing.Point(483, 442)
+        Me.CheckBox5.Location = New System.Drawing.Point(482, 463)
         Me.CheckBox5.Name = "CheckBox5"
         Me.CheckBox5.Size = New System.Drawing.Size(47, 20)
         Me.CheckBox5.TabIndex = 199
@@ -1137,7 +1131,7 @@ Partial Class matricula
         '
         Me.CheckBox6.AutoSize = True
         Me.CheckBox6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox6.Location = New System.Drawing.Point(546, 442)
+        Me.CheckBox6.Location = New System.Drawing.Point(545, 463)
         Me.CheckBox6.Name = "CheckBox6"
         Me.CheckBox6.Size = New System.Drawing.Size(39, 20)
         Me.CheckBox6.TabIndex = 198
@@ -1148,7 +1142,7 @@ Partial Class matricula
         '
         Me.Label28.AutoSize = True
         Me.Label28.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label28.Location = New System.Drawing.Point(24, 490)
+        Me.Label28.Location = New System.Drawing.Point(24, 509)
         Me.Label28.Name = "Label28"
         Me.Label28.Size = New System.Drawing.Size(124, 18)
         Me.Label28.TabIndex = 195
@@ -1158,7 +1152,7 @@ Partial Class matricula
         '
         Me.CheckBox3.AutoSize = True
         Me.CheckBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox3.Location = New System.Drawing.Point(739, 224)
+        Me.CheckBox3.Location = New System.Drawing.Point(737, 269)
         Me.CheckBox3.Name = "CheckBox3"
         Me.CheckBox3.Size = New System.Drawing.Size(47, 20)
         Me.CheckBox3.TabIndex = 194
@@ -1169,7 +1163,7 @@ Partial Class matricula
         '
         Me.CheckBox4.AutoSize = True
         Me.CheckBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox4.Location = New System.Drawing.Point(804, 223)
+        Me.CheckBox4.Location = New System.Drawing.Point(802, 268)
         Me.CheckBox4.Name = "CheckBox4"
         Me.CheckBox4.Size = New System.Drawing.Size(39, 20)
         Me.CheckBox4.TabIndex = 193
@@ -1180,7 +1174,7 @@ Partial Class matricula
         '
         Me.CheckBox2.AutoSize = True
         Me.CheckBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox2.Location = New System.Drawing.Point(699, 256)
+        Me.CheckBox2.Location = New System.Drawing.Point(697, 310)
         Me.CheckBox2.Name = "CheckBox2"
         Me.CheckBox2.Size = New System.Drawing.Size(47, 20)
         Me.CheckBox2.TabIndex = 192
@@ -1191,7 +1185,7 @@ Partial Class matricula
         '
         Me.CheckBox1.AutoSize = True
         Me.CheckBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox1.Location = New System.Drawing.Point(778, 255)
+        Me.CheckBox1.Location = New System.Drawing.Point(776, 309)
         Me.CheckBox1.Name = "CheckBox1"
         Me.CheckBox1.Size = New System.Drawing.Size(39, 20)
         Me.CheckBox1.TabIndex = 191
@@ -1205,7 +1199,7 @@ Partial Class matricula
         Me.ComboBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox4.FormattingEnabled = True
         Me.ComboBox4.Items.AddRange(New Object() {"Catolica", "Evangelica", "Ateo", "Mormon", "Otro"})
-        Me.ComboBox4.Location = New System.Drawing.Point(680, 482)
+        Me.ComboBox4.Location = New System.Drawing.Point(680, 501)
         Me.ComboBox4.Name = "ComboBox4"
         Me.ComboBox4.Size = New System.Drawing.Size(121, 24)
         Me.ComboBox4.TabIndex = 190
@@ -1217,7 +1211,7 @@ Partial Class matricula
         Me.ComboBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox3.FormattingEnabled = True
         Me.ComboBox3.Items.AddRange(New Object() {"Propia", "Cedida", "Arrendada", "Allegado"})
-        Me.ComboBox3.Location = New System.Drawing.Point(68, 443)
+        Me.ComboBox3.Location = New System.Drawing.Point(67, 464)
         Me.ComboBox3.Name = "ComboBox3"
         Me.ComboBox3.Size = New System.Drawing.Size(93, 24)
         Me.ComboBox3.TabIndex = 189
@@ -1229,7 +1223,7 @@ Partial Class matricula
         Me.ComboBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox2.FormattingEnabled = True
         Me.ComboBox2.Items.AddRange(New Object() {"Si", "No"})
-        Me.ComboBox2.Location = New System.Drawing.Point(178, 251)
+        Me.ComboBox2.Location = New System.Drawing.Point(176, 305)
         Me.ComboBox2.Name = "ComboBox2"
         Me.ComboBox2.Size = New System.Drawing.Size(68, 24)
         Me.ComboBox2.TabIndex = 187
@@ -1306,7 +1300,7 @@ Partial Class matricula
         '
         Me.Label24.AutoSize = True
         Me.Label24.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label24.Location = New System.Drawing.Point(604, 487)
+        Me.Label24.Location = New System.Drawing.Point(604, 506)
         Me.Label24.Name = "Label24"
         Me.Label24.Size = New System.Drawing.Size(61, 18)
         Me.Label24.TabIndex = 180
@@ -1315,7 +1309,7 @@ Partial Class matricula
         'TextBox19
         '
         Me.TextBox19.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox19.Location = New System.Drawing.Point(607, 441)
+        Me.TextBox19.Location = New System.Drawing.Point(606, 462)
         Me.TextBox19.MaxLength = 199
         Me.TextBox19.Name = "TextBox19"
         Me.TextBox19.Size = New System.Drawing.Size(255, 21)
@@ -1324,7 +1318,7 @@ Partial Class matricula
         'TextBox18
         '
         Me.TextBox18.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox18.Location = New System.Drawing.Point(283, 442)
+        Me.TextBox18.Location = New System.Drawing.Point(282, 463)
         Me.TextBox18.MaxLength = 9
         Me.TextBox18.Name = "TextBox18"
         Me.TextBox18.Size = New System.Drawing.Size(97, 21)
@@ -1333,7 +1327,7 @@ Partial Class matricula
         'TextBox17
         '
         Me.TextBox17.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox17.Location = New System.Drawing.Point(979, 384)
+        Me.TextBox17.Location = New System.Drawing.Point(984, 425)
         Me.TextBox17.MaxLength = 190
         Me.TextBox17.Name = "TextBox17"
         Me.TextBox17.Size = New System.Drawing.Size(244, 21)
@@ -1342,7 +1336,7 @@ Partial Class matricula
         'TextBox16
         '
         Me.TextBox16.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox16.Location = New System.Drawing.Point(573, 386)
+        Me.TextBox16.Location = New System.Drawing.Point(578, 427)
         Me.TextBox16.MaxLength = 199
         Me.TextBox16.Name = "TextBox16"
         Me.TextBox16.Size = New System.Drawing.Size(254, 21)
@@ -1351,7 +1345,7 @@ Partial Class matricula
         'TextBox15
         '
         Me.TextBox15.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox15.Location = New System.Drawing.Point(154, 382)
+        Me.TextBox15.Location = New System.Drawing.Point(159, 423)
         Me.TextBox15.MaxLength = 199
         Me.TextBox15.Name = "TextBox15"
         Me.TextBox15.Size = New System.Drawing.Size(254, 21)
@@ -1360,7 +1354,7 @@ Partial Class matricula
         'TextBox14
         '
         Me.TextBox14.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox14.Location = New System.Drawing.Point(976, 332)
+        Me.TextBox14.Location = New System.Drawing.Point(982, 382)
         Me.TextBox14.MaxLength = 199
         Me.TextBox14.Name = "TextBox14"
         Me.TextBox14.Size = New System.Drawing.Size(247, 21)
@@ -1369,7 +1363,7 @@ Partial Class matricula
         'TextBox13
         '
         Me.TextBox13.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox13.Location = New System.Drawing.Point(517, 333)
+        Me.TextBox13.Location = New System.Drawing.Point(523, 383)
         Me.TextBox13.MaxLength = 199
         Me.TextBox13.Name = "TextBox13"
         Me.TextBox13.Size = New System.Drawing.Size(240, 21)
@@ -1378,7 +1372,7 @@ Partial Class matricula
         'TextBox12
         '
         Me.TextBox12.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox12.Location = New System.Drawing.Point(101, 333)
+        Me.TextBox12.Location = New System.Drawing.Point(107, 383)
         Me.TextBox12.MaxLength = 10
         Me.TextBox12.Name = "TextBox12"
         Me.TextBox12.Size = New System.Drawing.Size(78, 21)
@@ -1387,7 +1381,7 @@ Partial Class matricula
         'TextBox11
         '
         Me.TextBox11.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox11.Location = New System.Drawing.Point(306, 333)
+        Me.TextBox11.Location = New System.Drawing.Point(312, 383)
         Me.TextBox11.MaxLength = 10
         Me.TextBox11.Name = "TextBox11"
         Me.TextBox11.Size = New System.Drawing.Size(102, 21)
@@ -1396,7 +1390,7 @@ Partial Class matricula
         'TextBox10
         '
         Me.TextBox10.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox10.Location = New System.Drawing.Point(884, 291)
+        Me.TextBox10.Location = New System.Drawing.Point(883, 348)
         Me.TextBox10.MaxLength = 199
         Me.TextBox10.Name = "TextBox10"
         Me.TextBox10.Size = New System.Drawing.Size(339, 21)
@@ -1405,7 +1399,7 @@ Partial Class matricula
         'TextBox20
         '
         Me.TextBox20.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox20.Location = New System.Drawing.Point(199, 292)
+        Me.TextBox20.Location = New System.Drawing.Point(198, 349)
         Me.TextBox20.MaxLength = 199
         Me.TextBox20.Name = "TextBox20"
         Me.TextBox20.Size = New System.Drawing.Size(337, 21)
@@ -1414,7 +1408,7 @@ Partial Class matricula
         'TextBox21
         '
         Me.TextBox21.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox21.Location = New System.Drawing.Point(396, 254)
+        Me.TextBox21.Location = New System.Drawing.Point(394, 308)
         Me.TextBox21.MaxLength = 199
         Me.TextBox21.Name = "TextBox21"
         Me.TextBox21.Size = New System.Drawing.Size(140, 21)
@@ -1423,7 +1417,7 @@ Partial Class matricula
         'TextBox22
         '
         Me.TextBox22.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox22.Location = New System.Drawing.Point(855, 219)
+        Me.TextBox22.Location = New System.Drawing.Point(853, 264)
         Me.TextBox22.MaxLength = 199
         Me.TextBox22.Name = "TextBox22"
         Me.TextBox22.Size = New System.Drawing.Size(368, 21)
@@ -1432,7 +1426,7 @@ Partial Class matricula
         'TextBox23
         '
         Me.TextBox23.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox23.Location = New System.Drawing.Point(855, 255)
+        Me.TextBox23.Location = New System.Drawing.Point(853, 309)
         Me.TextBox23.MaxLength = 99
         Me.TextBox23.Name = "TextBox23"
         Me.TextBox23.Size = New System.Drawing.Size(368, 21)
@@ -1441,7 +1435,7 @@ Partial Class matricula
         'TextBox24
         '
         Me.TextBox24.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox24.Location = New System.Drawing.Point(462, 220)
+        Me.TextBox24.Location = New System.Drawing.Point(460, 265)
         Me.TextBox24.MaxLength = 99
         Me.TextBox24.Name = "TextBox24"
         Me.TextBox24.Size = New System.Drawing.Size(200, 21)
@@ -1450,7 +1444,7 @@ Partial Class matricula
         'TextBox25
         '
         Me.TextBox25.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox25.Location = New System.Drawing.Point(178, 219)
+        Me.TextBox25.Location = New System.Drawing.Point(176, 264)
         Me.TextBox25.MaxLength = 99
         Me.TextBox25.Name = "TextBox25"
         Me.TextBox25.Size = New System.Drawing.Size(148, 21)
@@ -1484,7 +1478,7 @@ Partial Class matricula
         '
         Me.Label23.AutoSize = True
         Me.Label23.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label23.Location = New System.Drawing.Point(397, 443)
+        Me.Label23.Location = New System.Drawing.Point(396, 464)
         Me.Label23.Name = "Label23"
         Me.Label23.Size = New System.Drawing.Size(77, 18)
         Me.Label23.TabIndex = 178
@@ -1494,7 +1488,7 @@ Partial Class matricula
         '
         Me.Label22.AutoSize = True
         Me.Label22.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label22.Location = New System.Drawing.Point(167, 444)
+        Me.Label22.Location = New System.Drawing.Point(166, 465)
         Me.Label22.Name = "Label22"
         Me.Label22.Size = New System.Drawing.Size(117, 18)
         Me.Label22.TabIndex = 176
@@ -1504,7 +1498,7 @@ Partial Class matricula
         '
         Me.Label21.AutoSize = True
         Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label21.Location = New System.Drawing.Point(19, 444)
+        Me.Label21.Location = New System.Drawing.Point(18, 465)
         Me.Label21.Name = "Label21"
         Me.Label21.Size = New System.Drawing.Size(43, 18)
         Me.Label21.TabIndex = 174
@@ -1514,7 +1508,7 @@ Partial Class matricula
         '
         Me.Label20.AutoSize = True
         Me.Label20.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label20.Location = New System.Drawing.Point(852, 384)
+        Me.Label20.Location = New System.Drawing.Point(857, 425)
         Me.Label20.Name = "Label20"
         Me.Label20.Size = New System.Drawing.Size(121, 18)
         Me.Label20.TabIndex = 172
@@ -1524,7 +1518,7 @@ Partial Class matricula
         '
         Me.Label19.AutoSize = True
         Me.Label19.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label19.Location = New System.Drawing.Point(435, 385)
+        Me.Label19.Location = New System.Drawing.Point(440, 426)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(132, 18)
         Me.Label19.TabIndex = 170
@@ -1534,7 +1528,7 @@ Partial Class matricula
         '
         Me.Label18.AutoSize = True
         Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.Location = New System.Drawing.Point(19, 385)
+        Me.Label18.Location = New System.Drawing.Point(24, 426)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(129, 18)
         Me.Label18.TabIndex = 168
@@ -1544,7 +1538,7 @@ Partial Class matricula
         '
         Me.Label17.AutoSize = True
         Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.Location = New System.Drawing.Point(852, 334)
+        Me.Label17.Location = New System.Drawing.Point(858, 384)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(104, 18)
         Me.Label17.TabIndex = 166
@@ -1554,7 +1548,7 @@ Partial Class matricula
         '
         Me.Label16.AutoSize = True
         Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.Location = New System.Drawing.Point(414, 335)
+        Me.Label16.Location = New System.Drawing.Point(420, 385)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(101, 18)
         Me.Label16.TabIndex = 164
@@ -1564,7 +1558,7 @@ Partial Class matricula
         '
         Me.Label15.AutoSize = True
         Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.Location = New System.Drawing.Point(18, 335)
+        Me.Label15.Location = New System.Drawing.Point(24, 385)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(77, 18)
         Me.Label15.TabIndex = 162
@@ -1574,7 +1568,7 @@ Partial Class matricula
         '
         Me.Label14.AutoSize = True
         Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(222, 335)
+        Me.Label14.Location = New System.Drawing.Point(228, 385)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(74, 18)
         Me.Label14.TabIndex = 160
@@ -1584,7 +1578,7 @@ Partial Class matricula
         '
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(696, 291)
+        Me.Label13.Location = New System.Drawing.Point(695, 348)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(177, 18)
         Me.Label13.TabIndex = 158
@@ -1594,7 +1588,7 @@ Partial Class matricula
         '
         Me.Label25.AutoSize = True
         Me.Label25.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label25.Location = New System.Drawing.Point(19, 291)
+        Me.Label25.Location = New System.Drawing.Point(18, 348)
         Me.Label25.Name = "Label25"
         Me.Label25.Size = New System.Drawing.Size(174, 18)
         Me.Label25.TabIndex = 156
@@ -1604,7 +1598,7 @@ Partial Class matricula
         '
         Me.Label26.AutoSize = True
         Me.Label26.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label26.Location = New System.Drawing.Point(20, 254)
+        Me.Label26.Location = New System.Drawing.Point(18, 308)
         Me.Label26.Name = "Label26"
         Me.Label26.Size = New System.Drawing.Size(159, 18)
         Me.Label26.TabIndex = 154
@@ -1614,7 +1608,7 @@ Partial Class matricula
         '
         Me.Label27.AutoSize = True
         Me.Label27.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label27.Location = New System.Drawing.Point(248, 254)
+        Me.Label27.Location = New System.Drawing.Point(246, 308)
         Me.Label27.Name = "Label27"
         Me.Label27.Size = New System.Drawing.Size(142, 18)
         Me.Label27.TabIndex = 152
@@ -1624,7 +1618,7 @@ Partial Class matricula
         '
         Me.Label29.AutoSize = True
         Me.Label29.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label29.Location = New System.Drawing.Point(668, 223)
+        Me.Label29.Location = New System.Drawing.Point(666, 268)
         Me.Label29.Name = "Label29"
         Me.Label29.Size = New System.Drawing.Size(61, 18)
         Me.Label29.TabIndex = 148
@@ -1671,7 +1665,7 @@ Partial Class matricula
         '
         Me.Label30.AutoSize = True
         Me.Label30.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label30.Location = New System.Drawing.Point(332, 222)
+        Me.Label30.Location = New System.Drawing.Point(330, 267)
         Me.Label30.Name = "Label30"
         Me.Label30.Size = New System.Drawing.Size(124, 18)
         Me.Label30.TabIndex = 141
@@ -1679,7 +1673,7 @@ Partial Class matricula
         '
         'calen
         '
-        Me.calen.Location = New System.Drawing.Point(1012, 433)
+        Me.calen.Location = New System.Drawing.Point(1011, 454)
         Me.calen.Name = "calen"
         Me.calen.TabIndex = 140
         '
@@ -1687,7 +1681,7 @@ Partial Class matricula
         '
         Me.Label31.AutoSize = True
         Me.Label31.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label31.Location = New System.Drawing.Point(552, 255)
+        Me.Label31.Location = New System.Drawing.Point(550, 309)
         Me.Label31.Name = "Label31"
         Me.Label31.Size = New System.Drawing.Size(128, 18)
         Me.Label31.TabIndex = 139
@@ -1697,7 +1691,7 @@ Partial Class matricula
         '
         Me.Label32.AutoSize = True
         Me.Label32.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label32.Location = New System.Drawing.Point(20, 221)
+        Me.Label32.Location = New System.Drawing.Point(18, 266)
         Me.Label32.Name = "Label32"
         Me.Label32.Size = New System.Drawing.Size(148, 18)
         Me.Label32.TabIndex = 137
@@ -1707,7 +1701,7 @@ Partial Class matricula
         '
         Me.Label33.AutoSize = True
         Me.Label33.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label33.Location = New System.Drawing.Point(881, 444)
+        Me.Label33.Location = New System.Drawing.Point(880, 465)
         Me.Label33.Name = "Label33"
         Me.Label33.Size = New System.Drawing.Size(113, 18)
         Me.Label33.TabIndex = 136
@@ -1965,27 +1959,27 @@ Partial Class matricula
         '
         Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.Window
         Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        DataGridViewCellStyle201.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle201.BackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle201.Font = New System.Drawing.Font("Perpetua Titling MT", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle201.ForeColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle201.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle201.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle201.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle201
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Perpetua Titling MT", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.EnableHeadersVisualStyles = False
         Me.DataGridView1.Location = New System.Drawing.Point(124, 132)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
-        DataGridViewCellStyle202.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle202.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle202.Font = New System.Drawing.Font("Palatino Linotype", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle202.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle202.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle202.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle202.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle202
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Palatino Linotype", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.DataGridView1.Size = New System.Drawing.Size(1060, 560)
         Me.DataGridView1.TabIndex = 0
         '
@@ -2027,27 +2021,27 @@ Partial Class matricula
         '
         Me.DataGridView2.BackgroundColor = System.Drawing.SystemColors.Window
         Me.DataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None
-        DataGridViewCellStyle203.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle203.BackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle203.Font = New System.Drawing.Font("Perpetua Titling MT", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle203.ForeColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle203.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle203.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle203.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView2.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle203
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Perpetua Titling MT", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView2.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView2.EnableHeadersVisualStyles = False
         Me.DataGridView2.Location = New System.Drawing.Point(100, 165)
         Me.DataGridView2.Name = "DataGridView2"
         Me.DataGridView2.ReadOnly = True
-        DataGridViewCellStyle204.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle204.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle204.Font = New System.Drawing.Font("Palatino Linotype", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle204.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle204.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle204.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle204.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView2.RowHeadersDefaultCellStyle = DataGridViewCellStyle204
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Palatino Linotype", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView2.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
         Me.DataGridView2.Size = New System.Drawing.Size(1069, 560)
         Me.DataGridView2.TabIndex = 1
         '
@@ -2089,27 +2083,27 @@ Partial Class matricula
         '
         Me.DataGridView3.BackgroundColor = System.Drawing.SystemColors.Window
         Me.DataGridView3.BorderStyle = System.Windows.Forms.BorderStyle.None
-        DataGridViewCellStyle205.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle205.BackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle205.Font = New System.Drawing.Font("Perpetua Titling MT", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle205.ForeColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle205.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle205.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle205.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView3.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle205
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Perpetua Titling MT", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView3.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
         Me.DataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView3.EnableHeadersVisualStyles = False
         Me.DataGridView3.Location = New System.Drawing.Point(71, 191)
         Me.DataGridView3.Name = "DataGridView3"
         Me.DataGridView3.ReadOnly = True
-        DataGridViewCellStyle206.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle206.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle206.Font = New System.Drawing.Font("Palatino Linotype", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle206.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle206.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle206.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle206.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView3.RowHeadersDefaultCellStyle = DataGridViewCellStyle206
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Palatino Linotype", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView3.RowHeadersDefaultCellStyle = DataGridViewCellStyle6
         Me.DataGridView3.Size = New System.Drawing.Size(1107, 564)
         Me.DataGridView3.TabIndex = 2
         '
@@ -2151,27 +2145,27 @@ Partial Class matricula
         '
         Me.DataGridView4.BackgroundColor = System.Drawing.SystemColors.Window
         Me.DataGridView4.BorderStyle = System.Windows.Forms.BorderStyle.None
-        DataGridViewCellStyle207.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle207.BackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle207.Font = New System.Drawing.Font("Perpetua Titling MT", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle207.ForeColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle207.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle207.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle207.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView4.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle207
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Perpetua Titling MT", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView4.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
         Me.DataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView4.EnableHeadersVisualStyles = False
         Me.DataGridView4.Location = New System.Drawing.Point(79, 182)
         Me.DataGridView4.Name = "DataGridView4"
         Me.DataGridView4.ReadOnly = True
-        DataGridViewCellStyle208.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle208.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle208.Font = New System.Drawing.Font("Palatino Linotype", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle208.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle208.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle208.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle208.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView4.RowHeadersDefaultCellStyle = DataGridViewCellStyle208
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Palatino Linotype", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView4.RowHeadersDefaultCellStyle = DataGridViewCellStyle8
         Me.DataGridView4.Size = New System.Drawing.Size(1112, 567)
         Me.DataGridView4.TabIndex = 2
         '
@@ -2213,27 +2207,27 @@ Partial Class matricula
         '
         Me.DataGridView5.BackgroundColor = System.Drawing.SystemColors.Window
         Me.DataGridView5.BorderStyle = System.Windows.Forms.BorderStyle.None
-        DataGridViewCellStyle209.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle209.BackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle209.Font = New System.Drawing.Font("Perpetua Titling MT", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle209.ForeColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle209.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle209.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle209.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView5.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle209
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle9.Font = New System.Drawing.Font("Perpetua Titling MT", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView5.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle9
         Me.DataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView5.EnableHeadersVisualStyles = False
         Me.DataGridView5.Location = New System.Drawing.Point(70, 183)
         Me.DataGridView5.Name = "DataGridView5"
         Me.DataGridView5.ReadOnly = True
-        DataGridViewCellStyle210.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle210.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle210.Font = New System.Drawing.Font("Palatino Linotype", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle210.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle210.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle210.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle210.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView5.RowHeadersDefaultCellStyle = DataGridViewCellStyle210
+        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle10.Font = New System.Drawing.Font("Palatino Linotype", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView5.RowHeadersDefaultCellStyle = DataGridViewCellStyle10
         Me.DataGridView5.Size = New System.Drawing.Size(1126, 568)
         Me.DataGridView5.TabIndex = 2
         '
@@ -2275,27 +2269,27 @@ Partial Class matricula
         '
         Me.DataGridView6.BackgroundColor = System.Drawing.SystemColors.Window
         Me.DataGridView6.BorderStyle = System.Windows.Forms.BorderStyle.None
-        DataGridViewCellStyle211.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle211.BackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle211.Font = New System.Drawing.Font("Perpetua Titling MT", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle211.ForeColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle211.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle211.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle211.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView6.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle211
+        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle11.Font = New System.Drawing.Font("Perpetua Titling MT", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView6.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle11
         Me.DataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView6.EnableHeadersVisualStyles = False
         Me.DataGridView6.Location = New System.Drawing.Point(86, 195)
         Me.DataGridView6.Name = "DataGridView6"
         Me.DataGridView6.ReadOnly = True
-        DataGridViewCellStyle212.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle212.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle212.Font = New System.Drawing.Font("Palatino Linotype", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle212.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle212.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle212.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle212.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView6.RowHeadersDefaultCellStyle = DataGridViewCellStyle212
+        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle12.Font = New System.Drawing.Font("Palatino Linotype", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView6.RowHeadersDefaultCellStyle = DataGridViewCellStyle12
         Me.DataGridView6.Size = New System.Drawing.Size(1100, 574)
         Me.DataGridView6.TabIndex = 2
         '
@@ -2337,27 +2331,27 @@ Partial Class matricula
         '
         Me.DataGridView7.BackgroundColor = System.Drawing.SystemColors.Window
         Me.DataGridView7.BorderStyle = System.Windows.Forms.BorderStyle.None
-        DataGridViewCellStyle213.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle213.BackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle213.Font = New System.Drawing.Font("Perpetua Titling MT", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle213.ForeColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle213.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle213.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle213.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView7.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle213
+        DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle13.Font = New System.Drawing.Font("Perpetua Titling MT", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView7.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle13
         Me.DataGridView7.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView7.EnableHeadersVisualStyles = False
         Me.DataGridView7.Location = New System.Drawing.Point(79, 217)
         Me.DataGridView7.Name = "DataGridView7"
         Me.DataGridView7.ReadOnly = True
-        DataGridViewCellStyle214.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle214.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle214.Font = New System.Drawing.Font("Palatino Linotype", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle214.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle214.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle214.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle214.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView7.RowHeadersDefaultCellStyle = DataGridViewCellStyle214
+        DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle14.Font = New System.Drawing.Font("Palatino Linotype", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView7.RowHeadersDefaultCellStyle = DataGridViewCellStyle14
         Me.DataGridView7.Size = New System.Drawing.Size(1144, 610)
         Me.DataGridView7.TabIndex = 2
         '
@@ -2399,27 +2393,27 @@ Partial Class matricula
         '
         Me.DataGridView8.BackgroundColor = System.Drawing.SystemColors.Window
         Me.DataGridView8.BorderStyle = System.Windows.Forms.BorderStyle.None
-        DataGridViewCellStyle215.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle215.BackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle215.Font = New System.Drawing.Font("Perpetua Titling MT", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle215.ForeColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle215.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle215.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle215.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView8.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle215
+        DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle15.Font = New System.Drawing.Font("Perpetua Titling MT", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView8.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle15
         Me.DataGridView8.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView8.EnableHeadersVisualStyles = False
         Me.DataGridView8.Location = New System.Drawing.Point(81, 162)
         Me.DataGridView8.Name = "DataGridView8"
         Me.DataGridView8.ReadOnly = True
-        DataGridViewCellStyle216.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle216.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle216.Font = New System.Drawing.Font("Palatino Linotype", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle216.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle216.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle216.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle216.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView8.RowHeadersDefaultCellStyle = DataGridViewCellStyle216
+        DataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle16.Font = New System.Drawing.Font("Palatino Linotype", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView8.RowHeadersDefaultCellStyle = DataGridViewCellStyle16
         Me.DataGridView8.Size = New System.Drawing.Size(1124, 563)
         Me.DataGridView8.TabIndex = 2
         '
@@ -2461,27 +2455,27 @@ Partial Class matricula
         '
         Me.DataGridView9.BackgroundColor = System.Drawing.SystemColors.Window
         Me.DataGridView9.BorderStyle = System.Windows.Forms.BorderStyle.None
-        DataGridViewCellStyle217.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle217.BackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle217.Font = New System.Drawing.Font("Perpetua Titling MT", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle217.ForeColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle217.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle217.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle217.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView9.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle217
+        DataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle17.Font = New System.Drawing.Font("Perpetua Titling MT", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView9.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle17
         Me.DataGridView9.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView9.EnableHeadersVisualStyles = False
         Me.DataGridView9.Location = New System.Drawing.Point(80, 164)
         Me.DataGridView9.Name = "DataGridView9"
         Me.DataGridView9.ReadOnly = True
-        DataGridViewCellStyle218.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle218.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle218.Font = New System.Drawing.Font("Palatino Linotype", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle218.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle218.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle218.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle218.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView9.RowHeadersDefaultCellStyle = DataGridViewCellStyle218
+        DataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle18.Font = New System.Drawing.Font("Palatino Linotype", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView9.RowHeadersDefaultCellStyle = DataGridViewCellStyle18
         Me.DataGridView9.Size = New System.Drawing.Size(1127, 625)
         Me.DataGridView9.TabIndex = 2
         '
@@ -2523,27 +2517,27 @@ Partial Class matricula
         '
         Me.DataGridView10.BackgroundColor = System.Drawing.SystemColors.Window
         Me.DataGridView10.BorderStyle = System.Windows.Forms.BorderStyle.None
-        DataGridViewCellStyle219.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle219.BackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle219.Font = New System.Drawing.Font("Perpetua Titling MT", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle219.ForeColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle219.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle219.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle219.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView10.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle219
+        DataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle19.Font = New System.Drawing.Font("Perpetua Titling MT", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView10.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle19
         Me.DataGridView10.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView10.EnableHeadersVisualStyles = False
         Me.DataGridView10.Location = New System.Drawing.Point(66, 150)
         Me.DataGridView10.Name = "DataGridView10"
         Me.DataGridView10.ReadOnly = True
-        DataGridViewCellStyle220.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle220.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle220.Font = New System.Drawing.Font("Palatino Linotype", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle220.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle220.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle220.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle220.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView10.RowHeadersDefaultCellStyle = DataGridViewCellStyle220
+        DataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle20.Font = New System.Drawing.Font("Palatino Linotype", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView10.RowHeadersDefaultCellStyle = DataGridViewCellStyle20
         Me.DataGridView10.Size = New System.Drawing.Size(1134, 608)
         Me.DataGridView10.TabIndex = 2
         '
@@ -2551,16 +2545,10 @@ Partial Class matricula
         '
         Me.TabPage17.Controls.Add(Me.Button63)
         Me.TabPage17.Controls.Add(Me.Button62)
-        Me.TabPage17.Controls.Add(Me.TextBox36)
-        Me.TabPage17.Controls.Add(Me.TextBox35)
         Me.TabPage17.Controls.Add(Me.TextBox34)
         Me.TabPage17.Controls.Add(Me.TextBox33)
         Me.TabPage17.Controls.Add(Me.TextBox32)
-        Me.TabPage17.Controls.Add(Me.TextBox31)
-        Me.TabPage17.Controls.Add(Me.Label48)
-        Me.TabPage17.Controls.Add(Me.Label47)
         Me.TabPage17.Controls.Add(Me.Label44)
-        Me.TabPage17.Controls.Add(Me.Label43)
         Me.TabPage17.Controls.Add(Me.Label42)
         Me.TabPage17.Controls.Add(Me.Label41)
         Me.TabPage17.Controls.Add(Me.Button61)
@@ -2591,29 +2579,15 @@ Partial Class matricula
         Me.Button62.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button62.Font = New System.Drawing.Font("Tahoma", 14.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button62.Image = CType(resources.GetObject("Button62.Image"), System.Drawing.Image)
-        Me.Button62.Location = New System.Drawing.Point(520, 249)
+        Me.Button62.Location = New System.Drawing.Point(522, 190)
         Me.Button62.Name = "Button62"
         Me.Button62.Size = New System.Drawing.Size(71, 76)
         Me.Button62.TabIndex = 18
         Me.Button62.UseVisualStyleBackColor = True
         '
-        'TextBox36
-        '
-        Me.TextBox36.Location = New System.Drawing.Point(385, 305)
-        Me.TextBox36.Name = "TextBox36"
-        Me.TextBox36.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox36.TabIndex = 16
-        '
-        'TextBox35
-        '
-        Me.TextBox35.Location = New System.Drawing.Point(385, 280)
-        Me.TextBox35.Name = "TextBox35"
-        Me.TextBox35.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox35.TabIndex = 15
-        '
         'TextBox34
         '
-        Me.TextBox34.Location = New System.Drawing.Point(385, 230)
+        Me.TextBox34.Location = New System.Drawing.Point(385, 234)
         Me.TextBox34.Name = "TextBox34"
         Me.TextBox34.Size = New System.Drawing.Size(100, 20)
         Me.TextBox34.TabIndex = 14
@@ -2632,31 +2606,6 @@ Partial Class matricula
         Me.TextBox32.Size = New System.Drawing.Size(100, 20)
         Me.TextBox32.TabIndex = 12
         '
-        'TextBox31
-        '
-        Me.TextBox31.Location = New System.Drawing.Point(385, 254)
-        Me.TextBox31.Name = "TextBox31"
-        Me.TextBox31.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox31.TabIndex = 11
-        '
-        'Label48
-        '
-        Me.Label48.AutoSize = True
-        Me.Label48.Location = New System.Drawing.Point(225, 287)
-        Me.Label48.Name = "Label48"
-        Me.Label48.Size = New System.Drawing.Size(45, 13)
-        Me.Label48.TabIndex = 10
-        Me.Label48.Text = "CURSO"
-        '
-        'Label47
-        '
-        Me.Label47.AutoSize = True
-        Me.Label47.Location = New System.Drawing.Point(225, 312)
-        Me.Label47.Name = "Label47"
-        Me.Label47.Size = New System.Drawing.Size(108, 13)
-        Me.Label47.TabIndex = 9
-        Me.Label47.Text = "FONO CONTACTO 1"
-        '
         'Label44
         '
         Me.Label44.AutoSize = True
@@ -2666,19 +2615,10 @@ Partial Class matricula
         Me.Label44.TabIndex = 6
         Me.Label44.Text = "NOMBRE DEL ALUMNO"
         '
-        'Label43
-        '
-        Me.Label43.AutoSize = True
-        Me.Label43.Location = New System.Drawing.Point(225, 261)
-        Me.Label43.Name = "Label43"
-        Me.Label43.Size = New System.Drawing.Size(37, 13)
-        Me.Label43.TabIndex = 5
-        Me.Label43.Text = "EDAD"
-        '
         'Label42
         '
         Me.Label42.AutoSize = True
-        Me.Label42.Location = New System.Drawing.Point(225, 237)
+        Me.Label42.Location = New System.Drawing.Point(225, 241)
         Me.Label42.Name = "Label42"
         Me.Label42.Size = New System.Drawing.Size(112, 13)
         Me.Label42.TabIndex = 4
@@ -2952,16 +2892,11 @@ Partial Class matricula
     Friend WithEvents Label35 As System.Windows.Forms.Label
     Friend WithEvents Label36 As System.Windows.Forms.Label
     Friend WithEvents TabPage5 As System.Windows.Forms.TabPage
-    Friend WithEvents Label37 As System.Windows.Forms.Label
-    Friend WithEvents TextBox5 As System.Windows.Forms.TextBox
-    Friend WithEvents Label8 As System.Windows.Forms.Label
-    Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents calendarn As System.Windows.Forms.MonthCalendar
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Button14 As System.Windows.Forms.Button
     Friend WithEvents Button15 As System.Windows.Forms.Button
     Friend WithEvents Button16 As System.Windows.Forms.Button
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
@@ -2985,8 +2920,6 @@ Partial Class matricula
     Friend WithEvents Button26 As System.Windows.Forms.Button
     Friend WithEvents Button27 As System.Windows.Forms.Button
     Friend WithEvents Button28 As System.Windows.Forms.Button
-    Friend WithEvents Label38 As System.Windows.Forms.Label
-    Friend WithEvents TextBox29 As System.Windows.Forms.TextBox
     Friend WithEvents TabPage6 As System.Windows.Forms.TabPage
     Friend WithEvents Panel5 As System.Windows.Forms.Panel
     Friend WithEvents Button29 As System.Windows.Forms.Button
@@ -3046,16 +2979,10 @@ Partial Class matricula
     Friend WithEvents Button60 As System.Windows.Forms.Button
     Friend WithEvents TabPage17 As System.Windows.Forms.TabPage
     Friend WithEvents Button62 As System.Windows.Forms.Button
-    Friend WithEvents TextBox36 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox35 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox34 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox33 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox32 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox31 As System.Windows.Forms.TextBox
-    Friend WithEvents Label48 As System.Windows.Forms.Label
-    Friend WithEvents Label47 As System.Windows.Forms.Label
     Friend WithEvents Label44 As System.Windows.Forms.Label
-    Friend WithEvents Label43 As System.Windows.Forms.Label
     Friend WithEvents Label42 As System.Windows.Forms.Label
     Friend WithEvents Label41 As System.Windows.Forms.Label
     Friend WithEvents Button61 As System.Windows.Forms.Button
@@ -3077,7 +3004,6 @@ Partial Class matricula
     Friend WithEvents Label46 As System.Windows.Forms.Label
     Friend WithEvents Label45 As System.Windows.Forms.Label
     Friend WithEvents ComboBox6 As System.Windows.Forms.ComboBox
-    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
     Friend WithEvents ComboBox4 As System.Windows.Forms.ComboBox
     Friend WithEvents ComboBox3 As System.Windows.Forms.ComboBox
     Friend WithEvents ComboBox2 As System.Windows.Forms.ComboBox
@@ -3091,4 +3017,12 @@ Partial Class matricula
     Friend WithEvents CheckBox7 As System.Windows.Forms.CheckBox
     Friend WithEvents CheckBox8 As System.Windows.Forms.CheckBox
     Friend WithEvents TextBox37 As System.Windows.Forms.TextBox
+    Friend WithEvents Label7 As System.Windows.Forms.Label
+    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
+    Friend WithEvents Label38 As System.Windows.Forms.Label
+    Friend WithEvents TextBox29 As System.Windows.Forms.TextBox
+    Friend WithEvents Label37 As System.Windows.Forms.Label
+    Friend WithEvents TextBox5 As System.Windows.Forms.TextBox
+    Friend WithEvents Label8 As System.Windows.Forms.Label
 End Class

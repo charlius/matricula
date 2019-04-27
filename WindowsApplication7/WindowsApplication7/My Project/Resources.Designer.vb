@@ -73,9 +73,9 @@ Namespace My.Resources
         '''<summary>
         '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property icon() As System.Drawing.Bitmap
+        Friend ReadOnly Property boton_de_minimizar() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("icon", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("boton-de-minimizar", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -83,9 +83,9 @@ Namespace My.Resources
         '''<summary>
         '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property logo() As System.Drawing.Bitmap
+        Friend ReadOnly Property icon() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("logo", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("icon", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

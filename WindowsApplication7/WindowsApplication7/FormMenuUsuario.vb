@@ -1,14 +1,16 @@
 ﻿Imports System.Runtime.InteropServices
 Imports System.Data.SqlClient
 Public Class FormMenuUsuario
-    Public nomUsuario As String
-    Public nombre_del_usuario_mod As String
-    Dim ipServidor As String = "DESKTOP-AVV9E8Q"
-    Dim claveBD As String
-    Dim servidorSQL As String
-    Dim basededatos As String = "matriculas_ll"
-    Dim usuarioBD As String = "charles"
+    Dim ipServidor As String = datos_conn.getservidor()
+    Dim puerto As String = datos_conn.getpuerto()
+    Dim claveBD As String = datos_conn.getpass()
+    Dim basededatos As String = datos_conn.getbd()
+    Dim usuarioBD As String = datos_conn.getuser()
     Dim strcon As String
+    Public dreader As SqlDataReader
+    Dim conector As New SqlConnection("server=" + ipServidor + "  ;user='" + usuarioBD + "';password= '" + claveBD + "' ; database=" + basededatos + "")
+
+    Public nombre_del_usuario_mod As String
 
 
     Dim dt As DataTable
@@ -16,8 +18,8 @@ Public Class FormMenuUsuario
 
 
 
-    Public dreader As SqlDataReader
-    Dim conector As New SqlConnection("server=DESKTOP-AVV9E8Q  ;user='charles';password= '199314' ; database=matriculas_ll")
+
+
 
 
 
@@ -49,25 +51,25 @@ Public Class FormMenuUsuario
     End Sub
 
     Private Sub Button5_Click(sender As System.Object, e As System.EventArgs) Handles Button5.Click
-        inicio.Enabled = True
-        inicio.Show()
+        inicio1.Enabled = True
+        inicio1.Show()
         Me.Hide()
-        FormEntrarUsuarios.TextBox1.Text = ""
-        FormEntrarUsuarios.TextBox2.Text = ""
+        FormEntrarUsuarios.txtuser.Text = ""
+        FormEntrarUsuarios.txtpass.Text = ""
 
     End Sub
 
-    Private Sub Button4_Click(sender As System.Object, e As System.EventArgs) Handles Button4.Click
+    Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.Click
         TabControl1.SelectedTab = TabControl1.TabPages.Item(0)
     End Sub
 
-    Private Sub Button6_Click(sender As System.Object, e As System.EventArgs) Handles Button6.Click
+    Private Sub Button6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button6.Click
         TabControl1.SelectedTab = TabControl1.TabPages.Item(0)
         TextBox3.Text = ""
         TextBox4.Text = ""
     End Sub
 
-    Private Sub Button2_Click(sender As System.Object, e As System.EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
 
         conector.Close()
 
@@ -85,7 +87,7 @@ Public Class FormMenuUsuario
             Dim dr As SqlDataReader
             dr = sqlcmd.ExecuteReader
             If dr.Read() Then
-               
+
                 conector.Close()
 
                 MsgBox("Nombre de Usuario ya Registrado", MsgBoxStyle.Critical, "ALERTA")
@@ -119,16 +121,15 @@ Public Class FormMenuUsuario
         End If
     End Sub
 
-    Private Sub FormMenuUsuario_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
-        claveBD = "1234321"
-        servidorSQL = "192.168.1.55"
-        strcon = "Provider=SQLOLEDB.1;Password=" & claveBD & ";Persist Security Info=True;User ID=" & usuarioBD & ";Initial Catalog=" & basededatos & ";Data Source=" & servidorSQL & ""
+    Private Sub FormMenuUsuario_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        
+        strcon = "Provider=SQLOLEDB.1;Password=" & claveBD & ";Persist Security Info=True;User ID=" & usuarioBD & ";Initial Catalog=" & basededatos & ";Data Source=" & servidor & ""
 
 
         conector.Close()
     End Sub
 
-    Private Sub Button8_Click(sender As System.Object, e As System.EventArgs) Handles Button8.Click
+    Private Sub Button8_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button8.Click
         Try
             conector.Open()
             Dim qry As String = "select usuario.nombre_usuario, usuario.pass, usuario.tipo_usuario from usuario where usuario.nombre_usuario ='" & TextBox4.Text & "' "
@@ -139,7 +140,7 @@ Public Class FormMenuUsuario
                 nombre_del_usuario_mod = dr("nombre_usuario")
                 TextBox3.Text = dr("pass")
                 ComboBox2.Text = dr("tipo_usuario")
-               
+
 
                 conector.Close()
                 Button7.Visible = True
@@ -157,7 +158,7 @@ Public Class FormMenuUsuario
         End Try
     End Sub
 
-    Private Sub Button7_Click(sender As System.Object, e As System.EventArgs) Handles Button7.Click
+    Private Sub Button7_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button7.Click
         conector.Close()
 
         If (TextBox3.Text = "" Or TextBox3.Text = "" Or ComboBox2.Text = "") Then
@@ -178,7 +179,7 @@ Public Class FormMenuUsuario
                 Button7.Visible = False
                 Label8.Enabled = False
 
-              
+
             Catch ex As Exception
                 conector.Close()
             End Try
@@ -186,21 +187,21 @@ Public Class FormMenuUsuario
         End If
     End Sub
 
-    Private Sub Panel1_Paint(sender As System.Object, e As System.Windows.Forms.PaintEventArgs)
+    Private Sub Panel1_Paint(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PaintEventArgs)
 
     End Sub
 
-    Private Sub Label39_Click(sender As System.Object, e As System.EventArgs)
+    Private Sub Label39_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
     End Sub
 
-    Private Sub PictureBox1_Click_1(sender As System.Object, e As System.EventArgs) Handles PictureBox1.Click
+    Private Sub PictureBox1_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox1.Click
         conector.Close()
         conector.Close()
         conector.Close()
         If MsgBox("¿ Seguro que desea salir ?", vbQuestion + vbYesNo, "Pregunta") = vbYes Then
-            inicio.Enabled = True
-            inicio.Show()
+            inicio1.Enabled = True
+            inicio1.Show()
             Me.Hide()
         End If
     End Sub
