@@ -24,17 +24,32 @@ Public Class SeleccionarAñoCurso
 
         conector.Close()
         conector.Open()
-        Dim qry As String = "select year(matricula.fecha_matricula) from matricula,alumno where alumno.rut_alumno = matricula.rut_alumno and alumno.estado='activo'"
+        Dim qry As String = "select DISTINCT year(matricula.fecha_matricula) from matricula,alumno where alumno.rut_alumno = matricula.rut_alumno and alumno.estado= 'activo' ORDER BY year(fecha_matricula)"
         Dim sqlcmd As New SqlCommand(qry, conector)
-        Dim drc As Integer
-        drc = sqlcmd.ExecuteScalar
-        ComboBox1.SelectionStart = drc.ToString
-        conector.Close()
-        conector.Close()
-        conector.Close()
+        'Dim drc As String
+        Dim da As SqlDataAdapter = New SqlDataAdapter(sqlcmd)
+        Dim ds As DataSet = New DataSet()
 
+        Dim drc = sqlcmd.ExecuteReader
+        conector.Close()
+        da.Fill(ds)
+
+        ComboBox1.DataSource = ds.Tables(0)
+        ComboBox1.DisplayMember = drc.ToString
+        ComboBox1.SelectedIndex = 0
 
     End Sub
 
 
+    Private Sub Button3_Click(sender As System.Object, e As System.EventArgs) Handles Button3.Click
+        conector.Close()
+        conector.Close()
+        conector.Close()
+        If MsgBox("¿ Seguro que desea salir ?", vbQuestion + vbYesNo, "Pregunta") = vbYes Then
+            matricula.Enabled = True
+            matricula.Show()
+            Me.Hide()
+
+        End If
+    End Sub
 End Class
