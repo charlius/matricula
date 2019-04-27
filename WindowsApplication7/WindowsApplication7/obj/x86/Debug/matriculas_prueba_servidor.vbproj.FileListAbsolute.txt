@@ -128,3 +128,18 @@ D:\matricula llankanao\app para hp\WindowsApplication7\WindowsApplication7\obj\x
 D:\matricula llankanao\app para hp\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication1.matricula.resources
 D:\matricula llankanao\app para hp\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication1.Resources.resources
 D:\matricula llankanao\app para hp\WindowsApplication7\WindowsApplication7\obj\x86\Debug\matriculas_prueba_servidor.vbproj.GenerateResource.Cache
+C:\Users\user\Documents\GitHub\matricula\WindowsApplication7\WindowsApplication7\bin\Debug\WindowsApplication7.exe.config
+C:\Users\user\Documents\GitHub\matricula\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication7.exe
+C:\Users\user\Documents\GitHub\matricula\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication7.xml
+C:\Users\user\Documents\GitHub\matricula\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication7.pdb
+C:\Users\user\Documents\GitHub\matricula\WindowsApplication7\WindowsApplication7\bin\Debug\WindowsApplication7.exe
+C:\Users\user\Documents\GitHub\matricula\WindowsApplication7\WindowsApplication7\bin\Debug\WindowsApplication7.pdb
+C:\Users\user\Documents\GitHub\matricula\WindowsApplication7\WindowsApplication7\bin\Debug\WindowsApplication7.xml
+C:\Users\user\Documents\GitHub\matricula\WindowsApplication7\WindowsApplication7\obj\x86\Debug\matriculas_prueba_servidor.vbprojResolveAssemblyReference.cache
+C:\Users\user\Documents\GitHub\matricula\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication1.Form1.resources
+C:\Users\user\Documents\GitHub\matricula\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication1.FormEntrarUsuarios.resources
+C:\Users\user\Documents\GitHub\matricula\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication1.FormMenuUsuario.resources
+C:\Users\user\Documents\GitHub\matricula\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication1.inicio.resources
+C:\Users\user\Documents\GitHub\matricula\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication1.matricula.resources
+C:\Users\user\Documents\GitHub\matricula\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication1.Resources.resources
+C:\Users\user\Documents\GitHub\matricula\WindowsApplication7\WindowsApplication7\obj\x86\Debug\matriculas_prueba_servidor.vbproj.GenerateResource.Cache

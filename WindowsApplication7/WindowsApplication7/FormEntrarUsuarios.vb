@@ -6,7 +6,7 @@ Public Class FormEntrarUsuarios
     Dim claveBD As String
     Dim servidorSQL As String
     Dim basededatos As String = "matriculas_ll"
-    Dim usuarioBD As String = "servidorbdd"
+    Dim usuarioBD As String = "charles"
     Dim strcon As String
 
 
@@ -16,12 +16,12 @@ Public Class FormEntrarUsuarios
 
 
     Public dreader As SqlDataReader
-    Dim conector As New SqlConnection("server=192.168.1.55,1433  ;user='servidorbdd';password= '1234321' ; database=matriculas_ll")
+    Dim conector As New SqlConnection("server=DESKTOP-AVV9E8Q  ;user='charles';password= '199314' ; database=matriculas_ll")
 
 
     Private Sub FormEntrarUsuarios_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
-        claveBD = "1234321"
-        servidorSQL = "192.168.1.55"
+        claveBD = "199314"
+        servidorSQL = "DESKTOP-AVV9E8Q"
         strcon = "Provider=SQLOLEDB.1;Password=" & claveBD & ";Persist Security Info=True;User ID=" & usuarioBD & ";Initial Catalog=" & basededatos & ";Data Source=" & servidorSQL & ""
 
 

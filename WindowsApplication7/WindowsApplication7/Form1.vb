@@ -11,14 +11,14 @@ Public Class Form1
     Public FechaNa As Date
     Public FechaMa As Date
 
-    Dim ipServidor As String = "192.168.1.55"
+    Dim ipServidor As String = "DESKTOP-AVV9E8Q"
     Dim claveBD As String
     Dim servidorSQL As String
     Dim basededatos As String = "matriculas_ll"
-    Dim usuarioBD As String = "servidorbdd"
+    Dim usuarioBD As String = "charles"
     Dim strcon As String
     Public dreader As SqlDataReader
-    Dim conector As New SqlConnection("server= 192.168.1.55,1433 ;user='servidorbdd';password= '1234321' ; database=matriculas_ll")
+    Dim conector As New SqlConnection("server=DESKTOP-AVV9E8Q ;user='charles';password= '199314' ; database=matriculas_ll")
 
     Dim cmd As OleDbDataAdapter
     Dim cnn As OleDbConnection

@@ -173,6 +173,9 @@
   <ItemGroup>
     <Content Include="descarga.ico" />
     <Content Include="iconoEjecutar.ico" />
+    <None Include="Resources\icon.png" />
+    <None Include="Resourses\1.png" />
+    <None Include="Resourses\logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -3,11 +3,11 @@ Imports System.Data.SqlClient
 Public Class FormMenuUsuario
     Public nomUsuario As String
     Public nombre_del_usuario_mod As String
-    Dim ipServidor As String = "192.168.1.55"
+    Dim ipServidor As String = "DESKTOP-AVV9E8Q"
     Dim claveBD As String
     Dim servidorSQL As String
     Dim basededatos As String = "matriculas_ll"
-    Dim usuarioBD As String = "servidorbdd"
+    Dim usuarioBD As String = "charles"
     Dim strcon As String
 
 
@@ -17,7 +17,7 @@ Public Class FormMenuUsuario
 
 
     Public dreader As SqlDataReader
-    Dim conector As New SqlConnection("server=192.168.1.55,1433  ;user='servidorbdd';password= '1234321' ; database=matriculas_ll")
+    Dim conector As New SqlConnection("server=DESKTOP-AVV9E8Q  ;user='charles';password= '199314' ; database=matriculas_ll")
 
 
 
@@ -227,5 +227,9 @@ Public Class FormMenuUsuario
         TextBox4.Text = ""
         ComboBox1.Text = ""
         ComboBox2.Text = ""
+    End Sub
+
+    Private Sub TabPage1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TabPage1.Click
+
     End Sub
 End Class
