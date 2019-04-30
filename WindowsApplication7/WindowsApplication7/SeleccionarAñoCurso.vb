@@ -24,7 +24,7 @@ Public Class SeleccionarAñoCurso
 
         conector.Close()
         conector.Open()
-        Dim qry As String = "select DISTINCT year(matricula.fecha_matricula) from matricula,alumno where alumno.rut_alumno = matricula.rut_alumno and alumno.estado= 'activo' ORDER BY year(fecha_matricula)"
+        Dim qry As String = "select DISTINCT year(matricula.fecha_matricula) as año from matricula,alumno where alumno.rut_alumno = matricula.rut_alumno and alumno.estado= 'activo' ORDER BY year(fecha_matricula)"
         Dim sqlcmd As New SqlCommand(qry, conector)
         'Dim drc As String
         Dim da As SqlDataAdapter = New SqlDataAdapter(sqlcmd)
@@ -35,7 +35,7 @@ Public Class SeleccionarAñoCurso
         da.Fill(ds)
 
         ComboBox1.DataSource = ds.Tables(0)
-        ComboBox1.DisplayMember = drc.ToString
+        ComboBox1.DisplayMember = "año"
         ComboBox1.SelectedIndex = 0
 
     End Sub
