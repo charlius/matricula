@@ -192,3 +192,5 @@ C:\Users\user\Documents\GitHub\matricula\WindowsApplication7\WindowsApplication7
 C:\Users\user\Documents\GitHub\matricula\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication1.Resources.resources
 C:\Users\user\Documents\GitHub\matricula\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication1.SeleccionarAñoCurso.resources
 C:\Users\user\Documents\GitHub\matricula\WindowsApplication7\WindowsApplication7\obj\x86\Debug\matriculas_prueba_servidor.vbproj.GenerateResource.Cache
+C:\Users\Roy\Documents\GitHub\matricula\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication1.Seleccion_Tipo_Matricula.resources
+C:\Users\Roy\Documents\GitHub\matricula\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication1.Ingreso_Rut_Matricula.resources

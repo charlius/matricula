@@ -103,6 +103,12 @@
     <Compile Include="FormMenuUsuario.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Ingreso_Rut_Matricula.Designer.vb">
+      <DependentUpon>Ingreso_Rut_Matricula.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ingreso_Rut_Matricula.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="inicio1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -138,6 +144,12 @@
     <Compile Include="SeleccionarAñoCurso.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Seleccion_Tipo_Matricula.Designer.vb">
+      <DependentUpon>Seleccion_Tipo_Matricula.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Seleccion_Tipo_Matricula.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Form1.resx">
@@ -148,6 +160,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMenuUsuario.resx">
       <DependentUpon>FormMenuUsuario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ingreso_Rut_Matricula.resx">
+      <DependentUpon>Ingreso_Rut_Matricula.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="inicio1.resx">
       <DependentUpon>inicio1.vb</DependentUpon>
@@ -163,6 +178,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SeleccionarAñoCurso.resx">
       <DependentUpon>SeleccionarAñoCurso.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Seleccion_Tipo_Matricula.resx">
+      <DependentUpon>Seleccion_Tipo_Matricula.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

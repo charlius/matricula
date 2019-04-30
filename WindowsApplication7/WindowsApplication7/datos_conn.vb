@@ -1,9 +1,9 @@
 ﻿Module datos_conn
-    Public servidor = "DESKTOP-AVV9E8Q"
+    Public servidor = "192.168.1.55"
     Public puerto = "1433"
     Public bd = "matriculas_ll"
-    Public user = "charles"
-    Public pass = "199314"
+    Public user = "servidorbdd"
+    Public pass = "1234321"
 
     Public Function getservidor() As String
         Return servidor

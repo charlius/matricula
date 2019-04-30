@@ -175,19 +175,16 @@ Public Class Form1
 
         PictureBox1.Enabled = False
 
-        matricula.matriculas_activas()
-        matricula.matriculas_total()
-        matricula.primero_activas()
-        matricula.segundo_activas()
-        matricula.tercero_activas()
-        matricula.cuarto_activas()
-        matricula.quinto_activas()
-        matricula.sexto_activas()
-        matricula.septimo_activas()
-        matricula.octavo_activas()
-        matricula.kinder_activas()
-        matricula.prekinder_activas()
-
+           SeleccionarAñoCurso.primero_activas()
+        SeleccionarAñoCurso.segundo_activas()
+        SeleccionarAñoCurso.tercero_activas()
+        SeleccionarAñoCurso.cuarto_activas()
+        SeleccionarAñoCurso.quinto_activas()
+        SeleccionarAñoCurso.sexto_activas()
+        SeleccionarAñoCurso.septimo_activas()
+        SeleccionarAñoCurso.octavo_activas()
+        SeleccionarAñoCurso.kinder_activas()
+        SeleccionarAñoCurso.prekinder_activas()
 
        
        

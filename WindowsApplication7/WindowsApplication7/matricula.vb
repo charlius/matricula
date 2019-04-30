@@ -20,6 +20,10 @@ Public Class matricula
     Public rut_completo_buscar As String
     Public rut_completo_apoderado As String
     Public rut_pdf_alumno As String
+    Public seleccion_año As String
+    Public ingreso_rut_buscador As String
+    Public int_año As Integer
+
 
     Public fechadenaci As Date
     Public fechadematri As Date
@@ -95,6 +99,16 @@ Public Class matricula
         mostraralumnocursoprekinder()
         matriculas_activas()
         matriculas_total()
+        'SeleccionarAñoCurso.primero_activas()
+        'SeleccionarAñoCurso.segundo_activas()
+        'SeleccionarAñoCurso.tercero_activas()
+        ' SeleccionarAñoCurso.cuarto_activas()
+        ' SeleccionarAñoCurso.quinto_activas()
+        ' SeleccionarAñoCurso.sexto_activas()
+        ' SeleccionarAñoCurso.septimo_activas()
+        ' SeleccionarAñoCurso.octavo_activas()
+        ' SeleccionarAñoCurso.kinder_activas()
+        ' SeleccionarAñoCurso.prekinder_activas()
 
 
        
@@ -108,10 +122,11 @@ Public Class matricula
   
     Sub matriculas_activas()
         conector.Close()
+        Dim año_actual = Year(Now)
         Try
             conector.Close()
             conector.Open()
-            Dim qryc As String = "SELECT count(matricula.rut_alumno) FROM matricula,alumno where matricula.rut_alumno= alumno.rut_alumno and alumno.estado='activo'"
+            Dim qryc As String = "SELECT count(matricula.rut_alumno) FROM matricula,alumno where matricula.rut_alumno= alumno.rut_alumno and alumno.estado='activo' and year (matricula.fecha_matricula) = " & año_actual & ""
             Dim sqlcmdc As New SqlCommand(qryc, conector)
             Dim drc As Integer
             drc = sqlcmdc.ExecuteScalar
@@ -165,157 +180,39 @@ Public Class matricula
     End Sub
 
     Private Sub Button11_Click(sender As System.Object, e As System.EventArgs) Handles Button11.Click
-        TabControl1.SelectedTab = TabControl1.TabPages.Item(1)
+        'TabControl1.SelectedTab = TabControl1.TabPages.Item(1)
         TextBox26.Text = inicio1.nomUsuario
-        conector.Close()
-
-        Button14.Visible = False
-        Button15.Visible = False
-        Button4.Visible = False
-        Button8.Visible = False
-
-        Button16.Visible = True
-        Button5.Visible = True
-        Button9.Visible = True
-
-        TextBox1.Enabled = True
-        TextBox2.Enabled = True
-        TextBox3.Enabled = True
-        TextBox4.Enabled = True
-        TextBox5.Enabled = True
-        TextBox6.Enabled = True
-        TextBox7.Enabled = True
-        TextBox8.Enabled = True
-        TextBox9.Enabled = True
-        TextBox10.Enabled = True
-        TextBox11.Enabled = True
-        TextBox12.Enabled = True
-        TextBox13.Enabled = True
-        TextBox14.Enabled = True
-        TextBox15.Enabled = True
-        TextBox16.Enabled = True
-        TextBox17.Enabled = True
-        TextBox18.Enabled = True
-        TextBox19.Enabled = False
-        TextBox20.Enabled = True
-        TextBox21.Enabled = True
-        TextBox22.Enabled = False
-        TextBox23.Enabled = False
-        TextBox24.Enabled = True
-        TextBox25.Enabled = True
-        TextBox26.Enabled = True
-        TextBox27.Enabled = True
-        TextBox28.Enabled = True
-        TextBox29.Enabled = True
-        TextBox30.Enabled = True
-        TextBox37.Enabled = False
-
-        ComboBox1.Enabled = True
-        ComboBox2.Enabled = True
-        ComboBox3.Enabled = True
-        ComboBox4.Enabled = True
-        ComboBox6.Enabled = True
-
-        CheckBox1.Enabled = True
-        CheckBox2.Enabled = True
-        CheckBox3.Enabled = True
-        CheckBox4.Enabled = True
-        CheckBox5.Enabled = True
-        CheckBox6.Enabled = True
-        CheckBox7.Enabled = True
-        CheckBox8.Enabled = True
-
-        CheckBox1.CheckState = False
-        CheckBox2.CheckState = False
-        CheckBox3.CheckState = False
-        CheckBox4.CheckState = False
-        CheckBox5.CheckState = False
-        CheckBox6.CheckState = False
-        CheckBox7.CheckState = False
-        CheckBox8.CheckState = False
-
-        calendarn.Enabled = True
-        calen.Enabled = True
-
-        ComboBox1.Text = ("")
-        ComboBox2.Text = ("")
-        ComboBox3.Text = ("")
-        ComboBox4.Text = ("")
-
-        ComboBox6.Text = ("")
-
-        TextBox1.Text = ("")
-        TextBox2.Text = ("")
-        TextBox3.Text = ("")
-        TextBox4.Text = ("")
-        TextBox5.Text = ("")
-        TextBox6.Text = ("")
-        TextBox7.Text = ("")
-        TextBox8.Text = ("")
-        TextBox9.Text = ("")
-        TextBox10.Text = ("")
-        TextBox11.Text = ("")
-        TextBox12.Text = ("")
-        TextBox13.Text = ("")
-        TextBox14.Text = ("")
-        TextBox15.Text = ("")
-        TextBox16.Text = ("")
-        TextBox17.Text = ("")
-        TextBox18.Text = ("")
-        TextBox19.Text = ("")
-        TextBox20.Text = ("")
-        TextBox21.Text = ("")
-        TextBox22.Text = ("")
-        TextBox23.Text = ("")
-        TextBox24.Text = ("")
-        TextBox25.Text = ("")
-        TextBox26.Text = ("")
-        TextBox27.Text = ("")
-        TextBox28.Text = ("")
-        TextBox29.Text = ("")
-        TextBox30.Text = ("")
-        TextBox37.Text = ("")
-
-        conector.Close()
-
+       
+        Seleccion_Tipo_Matricula.Show()
+        Me.Enabled = False
 
     End Sub
 
     Private Sub Button14_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button14.Click
         TextBox26.Text = inicio1.nomUsuario
         TabControl1.SelectedTab = TabControl1.TabPages.Item(2)
-        Button3.Visible = False
+
         conector.Close()
 
-        If TextBox9.Enabled = False Then
-            Button3.Visible = True
-        End If
-        If TextBox9.Enabled = True Then
-
-            Button3.Visible = False
-        End If
-
+       
+    
 
     End Sub
 
     Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
         TextBox26.Text = inicio1.nomUsuario
         TabControl1.SelectedTab = TabControl1.TabPages.Item(3)
-        Button65.Visible = False
-        Button9.Visible = True
-        Button8.Visible = False
+
         TextBox23.Enabled = False
         TextBox19.Enabled = False
         TextBox22.Enabled = False
+
+        TextBox26.Enabled = False
+        TextBox27.Enabled = False
+        TextBox28.Enabled = False
         conector.Close()
 
-        If TextBox28.Enabled = False Then
-            Button65.Visible = True
-        End If
-        If TextBox28.Enabled = True Then
-
-            Button65.Visible = False
-        End If
+       
     End Sub
 
     Private Sub Button7_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
@@ -325,30 +222,18 @@ Public Class matricula
     End Sub
 
     Private Sub Button6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button6.Click
-        Button3.Visible = True
+
         TabControl1.SelectedTab = TabControl1.TabPages.Item(2)
         conector.Close()
 
-        If TextBox9.Enabled = False Then
-            Button3.Visible = True
-        End If
-        If TextBox9.Enabled = True Then
-
-            Button3.Visible = False
-        End If
+        
     End Sub
 
     Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
-        Button14.Visible = True
+
         TabControl1.SelectedTab = TabControl1.TabPages.Item(1)
         conector.Close()
-        If TextBox4.Enabled = False Then
-            Button14.Visible = True
-        End If
-        If TextBox4.Enabled = True Then
-
-            Button14.Visible = False
-        End If
+       
 
     End Sub
 
@@ -966,246 +851,7 @@ Public Class matricula
             TextBox37.Enabled = True
         End If
     End Sub
-    Sub primero_activas()
-        conector.Close()
-        Try
-            conector.Close()
-            conector.Open()
-            Dim qryc As String = "select count (alumno.rut_alumno) from matricula,alumno where alumno.estado='activo' and matricula.curso_alumno= 1 and matricula.rut_alumno=alumno.rut_alumno"
-            Dim sqlcmdc As New SqlCommand(qryc, conector)
-            Dim drc As Integer
-            drc = sqlcmdc.ExecuteScalar
-
-
-
-
-            Button29.Text = "1° Basico" + vbCrLf + "(" + drc.ToString + " Alumnos)"
-
-
-            conector.Close()
-            conector.Close()
-
-        Catch ex As Exception
-            conector.Close()
-            MsgBox("error fun" & vbCrLf & ex.Message)
-        End Try
-    End Sub
-    Sub segundo_activas()
-        conector.Close()
-        Try
-            conector.Close()
-            conector.Open()
-            Dim qryc As String = "select count (alumno.rut_alumno) from matricula,alumno where alumno.estado='activo' and matricula.curso_alumno=2 and matricula.rut_alumno=alumno.rut_alumno"
-            Dim sqlcmdc As New SqlCommand(qryc, conector)
-            Dim drc As Integer
-            drc = sqlcmdc.ExecuteScalar
-
-
-
-
-            Button30.Text = "2° Basico" + vbCrLf + "(" + drc.ToString + " Alumnos)"
-
-
-            conector.Close()
-            conector.Close()
-
-        Catch ex As Exception
-            conector.Close()
-            MsgBox("error fun" & vbCrLf & ex.Message)
-        End Try
-    End Sub
-    Sub tercero_activas()
-        conector.Close()
-        Try
-            conector.Close()
-            conector.Open()
-            Dim qryc As String = "select count (alumno.rut_alumno) from matricula,alumno where alumno.estado='activo' and matricula.curso_alumno=3 and matricula.rut_alumno=alumno.rut_alumno"
-            Dim sqlcmdc As New SqlCommand(qryc, conector)
-            Dim drc As Integer
-            drc = sqlcmdc.ExecuteScalar
-
-
-
-
-            Button33.Text = "3° Basico" + vbCrLf + "(" + drc.ToString + " Alumnos)"
-
-
-            conector.Close()
-            conector.Close()
-
-        Catch ex As Exception
-            conector.Close()
-            MsgBox("error fun" & vbCrLf & ex.Message)
-        End Try
-    End Sub
-    Sub cuarto_activas()
-        conector.Close()
-        Try
-            conector.Close()
-            conector.Open()
-            Dim qryc As String = "select count (alumno.rut_alumno) from matricula,alumno where alumno.estado='activo' and matricula.curso_alumno=4 and matricula.rut_alumno=alumno.rut_alumno"
-            Dim sqlcmdc As New SqlCommand(qryc, conector)
-            Dim drc As Integer
-            drc = sqlcmdc.ExecuteScalar
-
-
-
-
-            Button34.Text = "4° Basico" + vbCrLf + "(" + drc.ToString + " Alumnos)"
-
-
-            conector.Close()
-            conector.Close()
-
-        Catch ex As Exception
-            conector.Close()
-            MsgBox("error fun" & vbCrLf & ex.Message)
-        End Try
-    End Sub
-    Sub quinto_activas()
-        conector.Close()
-        Try
-            conector.Close()
-            conector.Open()
-            Dim qryc As String = "select count (alumno.rut_alumno) from matricula,alumno where alumno.estado='activo' and matricula.curso_alumno=5 and matricula.rut_alumno=alumno.rut_alumno"
-            Dim sqlcmdc As New SqlCommand(qryc, conector)
-            Dim drc As Integer
-            drc = sqlcmdc.ExecuteScalar
-
-
-
-
-            Button31.Text = "5° Basico" + vbCrLf + "(" + drc.ToString + " Alumnos)"
-
-
-            conector.Close()
-            conector.Close()
-
-        Catch ex As Exception
-            conector.Close()
-            MsgBox("error fun" & vbCrLf & ex.Message)
-        End Try
-    End Sub
-    Sub sexto_activas()
-        conector.Close()
-        Try
-            conector.Close()
-            conector.Open()
-            Dim qryc As String = "select count (alumno.rut_alumno) from matricula,alumno where alumno.estado='activo' and matricula.curso_alumno=6 and matricula.rut_alumno=alumno.rut_alumno"
-            Dim sqlcmdc As New SqlCommand(qryc, conector)
-            Dim drc As Integer
-            drc = sqlcmdc.ExecuteScalar
-
-
-
-
-            Button32.Text = "6° Basico" + vbCrLf + "(" + drc.ToString + " Alumnos)"
-
-
-            conector.Close()
-            conector.Close()
-
-        Catch ex As Exception
-            conector.Close()
-            MsgBox("error fun" & vbCrLf & ex.Message)
-        End Try
-    End Sub
-    Sub septimo_activas()
-        conector.Close()
-        Try
-            conector.Close()
-            conector.Open()
-            Dim qryc As String = "select count (alumno.rut_alumno) from matricula,alumno where alumno.estado='activo' and matricula.curso_alumno=7 and matricula.rut_alumno=alumno.rut_alumno"
-            Dim sqlcmdc As New SqlCommand(qryc, conector)
-            Dim drc As Integer
-            drc = sqlcmdc.ExecuteScalar
-
-
-
-
-            Button35.Text = "7° Basico" + vbCrLf + "(" + drc.ToString + " Alumnos)"
-
-
-            conector.Close()
-            conector.Close()
-
-        Catch ex As Exception
-            conector.Close()
-            MsgBox("error fun" & vbCrLf & ex.Message)
-        End Try
-    End Sub
-    Sub octavo_activas()
-        conector.Close()
-        Try
-            conector.Close()
-            conector.Open()
-            Dim qryc As String = "select count (alumno.rut_alumno) from matricula,alumno where alumno.estado='activo' and matricula.curso_alumno=8 and matricula.rut_alumno=alumno.rut_alumno"
-            Dim sqlcmdc As New SqlCommand(qryc, conector)
-            Dim drc As Integer
-            drc = sqlcmdc.ExecuteScalar
-
-
-
-
-            Button36.Text = "8° Basico" + vbCrLf + "(" + drc.ToString + " Alumnos)"
-
-
-            conector.Close()
-            conector.Close()
-
-        Catch ex As Exception
-            conector.Close()
-            MsgBox("error fun" & vbCrLf & ex.Message)
-        End Try
-    End Sub
-    Sub kinder_activas()
-        conector.Close()
-        Try
-            conector.Close()
-            conector.Open()
-            Dim qryc As String = "select count (alumno.rut_alumno) from matricula,alumno where alumno.estado='activo' and matricula.curso_alumno=9 and matricula.rut_alumno=alumno.rut_alumno"
-            Dim sqlcmdc As New SqlCommand(qryc, conector)
-            Dim drc As Integer
-            drc = sqlcmdc.ExecuteScalar
-
-
-
-
-            Button37.Text = "Kinder" + vbCrLf + "(" + drc.ToString + " Alumnos)"
-
-
-            conector.Close()
-            conector.Close()
-
-        Catch ex As Exception
-            conector.Close()
-            MsgBox("error fun" & vbCrLf & ex.Message)
-        End Try
-    End Sub
-    Sub prekinder_activas()
-        conector.Close()
-        Try
-            conector.Close()
-            conector.Open()
-            Dim qryc As String = "select count (alumno.rut_alumno) from matricula,alumno where alumno.estado='activo' and matricula.curso_alumno=10 and matricula.rut_alumno=alumno.rut_alumno"
-            Dim sqlcmdc As New SqlCommand(qryc, conector)
-            Dim drc As Integer
-            drc = sqlcmdc.ExecuteScalar
-
-
-
-
-            Button38.Text = "Pre-Kinder" + vbCrLf + "(" + drc.ToString + " Alumnos)"
-
-
-            conector.Close()
-            conector.Close()
-
-        Catch ex As Exception
-            conector.Close()
-            MsgBox("error fun" & vbCrLf & ex.Message)
-        End Try
-    End Sub
+   
     Private Sub Button12_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button12.Click
         'TabControl1.SelectedTab = TabControl1.TabPages.Item(5)
         'primero_activas()
@@ -1219,6 +865,13 @@ Public Class matricula
         'kinder_activas()
         'prekinder_activas()
 
+        SeleccionarAñoCurso.MostrarAñoParaCurso()
+        SeleccionarAñoCurso.TextBox1.Visible = False
+        SeleccionarAñoCurso.Button2.Visible = False
+        SeleccionarAñoCurso.ComboBox1.Visible = True
+        SeleccionarAñoCurso.Button1.Visible = True
+        SeleccionarAñoCurso.Label1.Text = "SELECCIONE AÑO"
+
         SeleccionarAñoCurso.Show()
         Me.Enabled = False
 
@@ -1226,7 +879,8 @@ Public Class matricula
     End Sub
     Sub mostraralumnocursosegundo()
         conector.Close()
-        Dim da As New SqlDataAdapter("select alumno.rut_alumno'Rut del Alumno', alumno.nombres'Nombre',alumno.apellidos'Apellidos',alumno.fecha_nacimiento'Fecha Nacimiento',matricula.edad_alumno'Edad',matricula.fono_urgencia_1'Fono Urgencia 1',matricula.fono_urgencia_2'Fono Ugencia 2' from alumno,matricula where matricula.curso_alumno= 2 and alumno.estado= 'activo' and matricula.rut_alumno = alumno.rut_alumno ", conector)
+        int_año = (seleccion_año)
+        Dim da As New SqlDataAdapter("select alumno.rut_alumno'Rut del Alumno', alumno.nombres'Nombre',alumno.apellidos'Apellidos',alumno.fecha_nacimiento'Fecha Nacimiento',matricula.edad_alumno'Edad',matricula.fono_urgencia_1'Fono Urgencia 1',matricula.fono_urgencia_2'Fono Ugencia 2' from alumno,matricula where matricula.curso_alumno= 2 and alumno.estado= 'activo' and matricula.rut_alumno = alumno.rut_alumno and year(matricula.fecha_matricula) = " & int_año & "", conector)
         Dim ds As New DataSet
         conector.Open()
 
@@ -1238,7 +892,8 @@ Public Class matricula
 
     Sub mostraralumnocursotercero()
         conector.Close()
-        Dim da As New SqlDataAdapter("select alumno.rut_alumno'Rut del Alumno', alumno.nombres'Nombre',alumno.apellidos'Apellidos',alumno.fecha_nacimiento'Fecha Nacimiento',matricula.edad_alumno'Edad',matricula.fono_urgencia_1'Fono Urgencia 1',matricula.fono_urgencia_2'Fono Ugencia 2' from alumno,matricula where matricula.curso_alumno= 3 and alumno.estado= 'activo' and matricula.rut_alumno = alumno.rut_alumno ", conector)
+        int_año = (seleccion_año)
+        Dim da As New SqlDataAdapter("select alumno.rut_alumno'Rut del Alumno', alumno.nombres'Nombre',alumno.apellidos'Apellidos',alumno.fecha_nacimiento'Fecha Nacimiento',matricula.edad_alumno'Edad',matricula.fono_urgencia_1'Fono Urgencia 1',matricula.fono_urgencia_2'Fono Ugencia 2' from alumno,matricula where matricula.curso_alumno= 3 and alumno.estado= 'activo' and matricula.rut_alumno = alumno.rut_alumno and year(matricula.fecha_matricula) = " & int_año & "", conector)
         Dim ds As New DataSet
         conector.Open()
 
@@ -1249,7 +904,8 @@ Public Class matricula
     End Sub
     Sub mostraralumnocursocuarto()
         conector.Close()
-        Dim da As New SqlDataAdapter("select alumno.rut_alumno'Rut del Alumno', alumno.nombres'Nombre',alumno.apellidos'Apellidos',alumno.fecha_nacimiento'Fecha Nacimiento',matricula.edad_alumno'Edad',matricula.fono_urgencia_1'Fono Urgencia 1',matricula.fono_urgencia_2'Fono Ugencia 2' from alumno,matricula where matricula.curso_alumno= 4 and alumno.estado= 'activo' and matricula.rut_alumno = alumno.rut_alumno ", conector)
+        int_año = (seleccion_año)
+        Dim da As New SqlDataAdapter("select alumno.rut_alumno'Rut del Alumno', alumno.nombres'Nombre',alumno.apellidos'Apellidos',alumno.fecha_nacimiento'Fecha Nacimiento',matricula.edad_alumno'Edad',matricula.fono_urgencia_1'Fono Urgencia 1',matricula.fono_urgencia_2'Fono Ugencia 2' from alumno,matricula where matricula.curso_alumno= 4 and alumno.estado= 'activo' and matricula.rut_alumno = alumno.rut_alumno and year(matricula.fecha_matricula) = " & int_año & "", conector)
         Dim ds As New DataSet
         conector.Open()
 
@@ -1260,7 +916,8 @@ Public Class matricula
     End Sub
     Sub mostraralumnocursosexto()
         conector.Close()
-        Dim da As New SqlDataAdapter("select alumno.rut_alumno'Rut del Alumno', alumno.nombres'Nombre',alumno.apellidos'Apellidos',alumno.fecha_nacimiento'Fecha Nacimiento',matricula.edad_alumno'Edad',matricula.fono_urgencia_1'Fono Urgencia 1',matricula.fono_urgencia_2'Fono Ugencia 2' from alumno,matricula where matricula.curso_alumno= 6 and alumno.estado= 'activo' and matricula.rut_alumno = alumno.rut_alumno ", conector)
+        int_año = (seleccion_año)
+        Dim da As New SqlDataAdapter("select alumno.rut_alumno'Rut del Alumno', alumno.nombres'Nombre',alumno.apellidos'Apellidos',alumno.fecha_nacimiento'Fecha Nacimiento',matricula.edad_alumno'Edad',matricula.fono_urgencia_1'Fono Urgencia 1',matricula.fono_urgencia_2'Fono Ugencia 2' from alumno,matricula where matricula.curso_alumno= 6 and alumno.estado= 'activo' and matricula.rut_alumno = alumno.rut_alumno and year(matricula.fecha_matricula) = " & int_año & "", conector)
         Dim ds As New DataSet
         conector.Open()
 
@@ -1271,7 +928,8 @@ Public Class matricula
     End Sub
     Sub mostraralumnocursoquinto()
         conector.Close()
-        Dim da As New SqlDataAdapter("select alumno.rut_alumno'Rut del Alumno', alumno.nombres'Nombre',alumno.apellidos'Apellidos',alumno.fecha_nacimiento'Fecha Nacimiento',matricula.edad_alumno'Edad',matricula.fono_urgencia_1'Fono Urgencia 1',matricula.fono_urgencia_2'Fono Ugencia 2' from alumno,matricula where matricula.curso_alumno= 5 and alumno.estado= 'activo' and matricula.rut_alumno = alumno.rut_alumno ", conector)
+        int_año = (seleccion_año)
+        Dim da As New SqlDataAdapter("select alumno.rut_alumno'Rut del Alumno', alumno.nombres'Nombre',alumno.apellidos'Apellidos',alumno.fecha_nacimiento'Fecha Nacimiento',matricula.edad_alumno'Edad',matricula.fono_urgencia_1'Fono Urgencia 1',matricula.fono_urgencia_2'Fono Ugencia 2' from alumno,matricula where matricula.curso_alumno= 5 and alumno.estado= 'activo' and matricula.rut_alumno = alumno.rut_alumno and year(matricula.fecha_matricula) = " & int_año & "", conector)
         Dim ds As New DataSet
         conector.Open()
 
@@ -1282,7 +940,8 @@ Public Class matricula
     End Sub
     Sub mostraralumnocursoseptimo()
         conector.Close()
-        Dim da As New SqlDataAdapter("select alumno.rut_alumno'Rut del Alumno', alumno.nombres'Nombre',alumno.apellidos'Apellidos',alumno.fecha_nacimiento'Fecha Nacimiento',matricula.edad_alumno'Edad',matricula.fono_urgencia_1'Fono Urgencia 1',matricula.fono_urgencia_2'Fono Ugencia 2' from alumno,matricula where matricula.curso_alumno= 7 and alumno.estado= 'activo' and matricula.rut_alumno = alumno.rut_alumno ", conector)
+        int_año = (seleccion_año)
+        Dim da As New SqlDataAdapter("select alumno.rut_alumno'Rut del Alumno', alumno.nombres'Nombre',alumno.apellidos'Apellidos',alumno.fecha_nacimiento'Fecha Nacimiento',matricula.edad_alumno'Edad',matricula.fono_urgencia_1'Fono Urgencia 1',matricula.fono_urgencia_2'Fono Ugencia 2' from alumno,matricula where matricula.curso_alumno= 7 and alumno.estado= 'activo' and matricula.rut_alumno = alumno.rut_alumno and year(matricula.fecha_matricula) = " & int_año & "", conector)
         Dim ds As New DataSet
         conector.Open()
 
@@ -1293,7 +952,8 @@ Public Class matricula
     End Sub
     Sub mostraralumnocursooctavo()
         conector.Close()
-        Dim da As New SqlDataAdapter("select alumno.rut_alumno'Rut del Alumno', alumno.nombres'Nombre',alumno.apellidos'Apellidos',alumno.fecha_nacimiento'Fecha Nacimiento',matricula.edad_alumno'Edad',matricula.fono_urgencia_1'Fono Urgencia 1',matricula.fono_urgencia_2'Fono Ugencia 2' from alumno,matricula where matricula.curso_alumno= 8 and alumno.estado= 'activo' and matricula.rut_alumno = alumno.rut_alumno ", conector)
+        int_año = (seleccion_año)
+        Dim da As New SqlDataAdapter("select alumno.rut_alumno'Rut del Alumno', alumno.nombres'Nombre',alumno.apellidos'Apellidos',alumno.fecha_nacimiento'Fecha Nacimiento',matricula.edad_alumno'Edad',matricula.fono_urgencia_1'Fono Urgencia 1',matricula.fono_urgencia_2'Fono Ugencia 2' from alumno,matricula where matricula.curso_alumno= 8 and alumno.estado= 'activo' and matricula.rut_alumno = alumno.rut_alumno and year(matricula.fecha_matricula) = " & int_año & "", conector)
         Dim ds As New DataSet
         conector.Open()
 
@@ -1304,7 +964,8 @@ Public Class matricula
     End Sub
     Sub mostraralumnocursokinder()
         conector.Close()
-        Dim da As New SqlDataAdapter("select alumno.rut_alumno'Rut del Alumno', alumno.nombres'Nombre',alumno.apellidos'Apellidos',alumno.fecha_nacimiento'Fecha Nacimiento',matricula.edad_alumno'Edad',matricula.fono_urgencia_1'Fono Urgencia 1',matricula.fono_urgencia_2'Fono Ugencia 2' from alumno,matricula where matricula.curso_alumno= 9 and alumno.estado= 'activo' and matricula.rut_alumno = alumno.rut_alumno ", conector)
+        int_año = (seleccion_año)
+        Dim da As New SqlDataAdapter("select alumno.rut_alumno'Rut del Alumno', alumno.nombres'Nombre',alumno.apellidos'Apellidos',alumno.fecha_nacimiento'Fecha Nacimiento',matricula.edad_alumno'Edad',matricula.fono_urgencia_1'Fono Urgencia 1',matricula.fono_urgencia_2'Fono Ugencia 2' from alumno,matricula where matricula.curso_alumno= 9 and alumno.estado= 'activo' and matricula.rut_alumno = alumno.rut_alumno and year(matricula.fecha_matricula) = " & int_año & "", conector)
         Dim ds As New DataSet
         conector.Open()
 
@@ -1315,7 +976,8 @@ Public Class matricula
     End Sub
     Sub mostraralumnocursoprekinder()
         conector.Close()
-        Dim da As New SqlDataAdapter("select alumno.rut_alumno'Rut del Alumno', alumno.nombres'Nombre',alumno.apellidos'Apellidos',alumno.fecha_nacimiento'Fecha Nacimiento',matricula.edad_alumno'Edad',matricula.fono_urgencia_1'Fono Urgencia 1',matricula.fono_urgencia_2'Fono Ugencia 2' from alumno,matricula where matricula.curso_alumno= 10 and alumno.estado= 'activo' and matricula.rut_alumno = alumno.rut_alumno ", conector)
+        int_año = (seleccion_año)
+        Dim da As New SqlDataAdapter("select alumno.rut_alumno'Rut del Alumno', alumno.nombres'Nombre',alumno.apellidos'Apellidos',alumno.fecha_nacimiento'Fecha Nacimiento',matricula.edad_alumno'Edad',matricula.fono_urgencia_1'Fono Urgencia 1',matricula.fono_urgencia_2'Fono Ugencia 2' from alumno,matricula where matricula.curso_alumno= 10 and alumno.estado= 'activo' and matricula.rut_alumno = alumno.rut_alumno and year(matricula.fecha_matricula) = " & int_año & "", conector)
         Dim ds As New DataSet
         conector.Open()
 
@@ -1327,7 +989,8 @@ Public Class matricula
     End Sub
     Sub mostraralumnocursoprimero()
         conector.Close()
-        Dim da As New SqlDataAdapter("select alumno.rut_alumno'Rut del Alumno', alumno.nombres'Nombre',alumno.apellidos'Apellidos',alumno.fecha_nacimiento'Fecha Nacimiento',matricula.edad_alumno'Edad',matricula.fono_urgencia_1'Fono Urgencia 1',matricula.fono_urgencia_2'Fono Ugencia 2' from alumno,matricula where matricula.curso_alumno= 1 and alumno.estado= 'activo' and matricula.rut_alumno = alumno.rut_alumno ", conector)
+        int_año = (seleccion_año)
+        Dim da As New SqlDataAdapter("select alumno.rut_alumno'Rut del Alumno', alumno.nombres'Nombre',alumno.apellidos'Apellidos',alumno.fecha_nacimiento'Fecha Nacimiento',matricula.edad_alumno'Edad',matricula.fono_urgencia_1'Fono Urgencia 1',matricula.fono_urgencia_2'Fono Ugencia 2' from alumno,matricula where matricula.curso_alumno= 1 and alumno.estado= 'activo' and matricula.rut_alumno = alumno.rut_alumno and year(matricula.fecha_matricula) = " & int_año & "", conector)
         Dim ds As New DataSet
         conector.Open()
 
@@ -1406,16 +1069,16 @@ Public Class matricula
 
     Private Sub Button41_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button41.Click
         TabControl1.SelectedTab = TabControl1.TabPages.Item(5)
-        primero_activas()
-        segundo_activas()
-        tercero_activas()
-        cuarto_activas()
-        quinto_activas()
-        sexto_activas()
-        septimo_activas()
-        octavo_activas()
-        kinder_activas()
-        prekinder_activas()
+        SeleccionarAñoCurso.primero_activas()
+        SeleccionarAñoCurso.segundo_activas()
+        SeleccionarAñoCurso.tercero_activas()
+        SeleccionarAñoCurso.cuarto_activas()
+        SeleccionarAñoCurso.quinto_activas()
+        SeleccionarAñoCurso.sexto_activas()
+        SeleccionarAñoCurso.septimo_activas()
+        SeleccionarAñoCurso.octavo_activas()
+        SeleccionarAñoCurso.kinder_activas()
+        SeleccionarAñoCurso.prekinder_activas()
 
         conector.Close()
     End Sub
@@ -1423,144 +1086,144 @@ Public Class matricula
     Private Sub Button40_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button40.Click
         TabControl1.SelectedTab = TabControl1.TabPages.Item(5)
         conector.Close()
-        primero_activas()
-        segundo_activas()
-        tercero_activas()
-        cuarto_activas()
-        quinto_activas()
-        sexto_activas()
-        septimo_activas()
-        octavo_activas()
-        kinder_activas()
-        prekinder_activas()
+        SeleccionarAñoCurso.primero_activas()
+        SeleccionarAñoCurso.segundo_activas()
+        SeleccionarAñoCurso.tercero_activas()
+        SeleccionarAñoCurso.cuarto_activas()
+        SeleccionarAñoCurso.quinto_activas()
+        SeleccionarAñoCurso.sexto_activas()
+        SeleccionarAñoCurso.septimo_activas()
+        SeleccionarAñoCurso.octavo_activas()
+        SeleccionarAñoCurso.kinder_activas()
+        SeleccionarAñoCurso.prekinder_activas()
 
     End Sub
 
     Private Sub Button42_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button42.Click
         TabControl1.SelectedTab = TabControl1.TabPages.Item(5)
         conector.Close()
-        primero_activas()
-        segundo_activas()
-        tercero_activas()
-        cuarto_activas()
-        quinto_activas()
-        sexto_activas()
-        septimo_activas()
-        octavo_activas()
-        kinder_activas()
-        prekinder_activas()
+        SeleccionarAñoCurso.primero_activas()
+        SeleccionarAñoCurso.segundo_activas()
+        SeleccionarAñoCurso.tercero_activas()
+        SeleccionarAñoCurso.cuarto_activas()
+        SeleccionarAñoCurso.quinto_activas()
+        SeleccionarAñoCurso.sexto_activas()
+        SeleccionarAñoCurso.septimo_activas()
+        SeleccionarAñoCurso.octavo_activas()
+        SeleccionarAñoCurso.kinder_activas()
+        SeleccionarAñoCurso.prekinder_activas()
 
     End Sub
 
     Private Sub Button43_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button43.Click
         TabControl1.SelectedTab = TabControl1.TabPages.Item(5)
         conector.Close()
-        primero_activas()
-        segundo_activas()
-        tercero_activas()
-        cuarto_activas()
-        quinto_activas()
-        sexto_activas()
-        septimo_activas()
-        octavo_activas()
-        kinder_activas()
-        prekinder_activas()
+        SeleccionarAñoCurso.primero_activas()
+        SeleccionarAñoCurso.segundo_activas()
+        SeleccionarAñoCurso.tercero_activas()
+        SeleccionarAñoCurso.cuarto_activas()
+        SeleccionarAñoCurso.quinto_activas()
+        SeleccionarAñoCurso.sexto_activas()
+        SeleccionarAñoCurso.septimo_activas()
+        SeleccionarAñoCurso.octavo_activas()
+        SeleccionarAñoCurso.kinder_activas()
+        SeleccionarAñoCurso.prekinder_activas()
 
     End Sub
 
     Private Sub Button44_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button44.Click
         TabControl1.SelectedTab = TabControl1.TabPages.Item(5)
         conector.Close()
-        primero_activas()
-        segundo_activas()
-        tercero_activas()
-        cuarto_activas()
-        quinto_activas()
-        sexto_activas()
-        septimo_activas()
-        octavo_activas()
-        kinder_activas()
-        prekinder_activas()
+        SeleccionarAñoCurso.primero_activas()
+        SeleccionarAñoCurso.segundo_activas()
+        SeleccionarAñoCurso.tercero_activas()
+        SeleccionarAñoCurso.cuarto_activas()
+        SeleccionarAñoCurso.quinto_activas()
+        SeleccionarAñoCurso.sexto_activas()
+        SeleccionarAñoCurso.septimo_activas()
+        SeleccionarAñoCurso.octavo_activas()
+        SeleccionarAñoCurso.kinder_activas()
+        SeleccionarAñoCurso.prekinder_activas()
 
     End Sub
 
     Private Sub Button45_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button45.Click
         TabControl1.SelectedTab = TabControl1.TabPages.Item(5)
         conector.Close()
-        primero_activas()
-        segundo_activas()
-        tercero_activas()
-        cuarto_activas()
-        quinto_activas()
-        sexto_activas()
-        septimo_activas()
-        octavo_activas()
-        kinder_activas()
-        prekinder_activas()
+        SeleccionarAñoCurso.primero_activas()
+        SeleccionarAñoCurso.segundo_activas()
+        SeleccionarAñoCurso.tercero_activas()
+        SeleccionarAñoCurso.cuarto_activas()
+        SeleccionarAñoCurso.quinto_activas()
+        SeleccionarAñoCurso.sexto_activas()
+        SeleccionarAñoCurso.septimo_activas()
+        SeleccionarAñoCurso.octavo_activas()
+        SeleccionarAñoCurso.kinder_activas()
+        SeleccionarAñoCurso.prekinder_activas()
 
     End Sub
 
     Private Sub Button46_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button46.Click
         TabControl1.SelectedTab = TabControl1.TabPages.Item(5)
         conector.Close()
-        primero_activas()
-        segundo_activas()
-        tercero_activas()
-        cuarto_activas()
-        quinto_activas()
-        sexto_activas()
-        septimo_activas()
-        octavo_activas()
-        kinder_activas()
-        prekinder_activas()
+        SeleccionarAñoCurso.primero_activas()
+        SeleccionarAñoCurso.segundo_activas()
+        SeleccionarAñoCurso.tercero_activas()
+        SeleccionarAñoCurso.cuarto_activas()
+        SeleccionarAñoCurso.quinto_activas()
+        SeleccionarAñoCurso.sexto_activas()
+        SeleccionarAñoCurso.septimo_activas()
+        SeleccionarAñoCurso.octavo_activas()
+        SeleccionarAñoCurso.kinder_activas()
+        SeleccionarAñoCurso.prekinder_activas()
 
     End Sub
 
     Private Sub Button47_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button47.Click
         TabControl1.SelectedTab = TabControl1.TabPages.Item(5)
         conector.Close()
-        primero_activas()
-        segundo_activas()
-        tercero_activas()
-        cuarto_activas()
-        quinto_activas()
-        sexto_activas()
-        septimo_activas()
-        octavo_activas()
-        kinder_activas()
-        prekinder_activas()
+        SeleccionarAñoCurso.primero_activas()
+        SeleccionarAñoCurso.segundo_activas()
+        SeleccionarAñoCurso.tercero_activas()
+        SeleccionarAñoCurso.cuarto_activas()
+        SeleccionarAñoCurso.quinto_activas()
+        SeleccionarAñoCurso.sexto_activas()
+        SeleccionarAñoCurso.septimo_activas()
+        SeleccionarAñoCurso.octavo_activas()
+        SeleccionarAñoCurso.kinder_activas()
+        SeleccionarAñoCurso.prekinder_activas()
 
     End Sub
 
     Private Sub Button48_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button48.Click
         TabControl1.SelectedTab = TabControl1.TabPages.Item(5)
         conector.Close()
-        primero_activas()
-        segundo_activas()
-        tercero_activas()
-        cuarto_activas()
-        quinto_activas()
-        sexto_activas()
-        septimo_activas()
-        octavo_activas()
-        kinder_activas()
-        prekinder_activas()
+        SeleccionarAñoCurso.primero_activas()
+        SeleccionarAñoCurso.segundo_activas()
+        SeleccionarAñoCurso.tercero_activas()
+        SeleccionarAñoCurso.cuarto_activas()
+        SeleccionarAñoCurso.quinto_activas()
+        SeleccionarAñoCurso.sexto_activas()
+        SeleccionarAñoCurso.septimo_activas()
+        SeleccionarAñoCurso.octavo_activas()
+        SeleccionarAñoCurso.kinder_activas()
+        SeleccionarAñoCurso.prekinder_activas()
 
     End Sub
 
     Private Sub Button49_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button49.Click
         TabControl1.SelectedTab = TabControl1.TabPages.Item(5)
         conector.Close()
-        primero_activas()
-        segundo_activas()
-        tercero_activas()
-        cuarto_activas()
-        quinto_activas()
-        sexto_activas()
-        septimo_activas()
-        octavo_activas()
-        kinder_activas()
-        prekinder_activas()
+        SeleccionarAñoCurso.primero_activas()
+        SeleccionarAñoCurso.segundo_activas()
+        SeleccionarAñoCurso.tercero_activas()
+        SeleccionarAñoCurso.cuarto_activas()
+        SeleccionarAñoCurso.quinto_activas()
+        SeleccionarAñoCurso.sexto_activas()
+        SeleccionarAñoCurso.septimo_activas()
+        SeleccionarAñoCurso.octavo_activas()
+        SeleccionarAñoCurso.kinder_activas()
+        SeleccionarAñoCurso.prekinder_activas()
 
     End Sub
 
@@ -1630,16 +1293,16 @@ Public Class matricula
         conector.Close()
         matriculas_activas()
         matriculas_total()
-        primero_activas()
-        segundo_activas()
-        tercero_activas()
-        cuarto_activas()
-        quinto_activas()
-        sexto_activas()
-        septimo_activas()
-        octavo_activas()
-        kinder_activas()
-        prekinder_activas()
+        SeleccionarAñoCurso.primero_activas()
+        SeleccionarAñoCurso.segundo_activas()
+        SeleccionarAñoCurso.tercero_activas()
+        SeleccionarAñoCurso.cuarto_activas()
+        SeleccionarAñoCurso.quinto_activas()
+        SeleccionarAñoCurso.sexto_activas()
+        SeleccionarAñoCurso.septimo_activas()
+        SeleccionarAñoCurso.octavo_activas()
+        SeleccionarAñoCurso.kinder_activas()
+        SeleccionarAñoCurso.prekinder_activas()
 
     End Sub
 
@@ -1868,10 +1531,22 @@ Public Class matricula
 
     Private Sub Button13_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button13.Click
         TextBox26.Text = inicio1.nomUsuario
-        TabControl1.SelectedTab = TabControl1.TabPages.Item(17)
+        'TabControl1.SelectedTab = TabControl1.TabPages.Item(17)
 
-        TextBox41.Text = ("")
+        'TextBox41.Text = ("")
         conector.Close()
+
+        SeleccionarAñoCurso.MostrarAñoParaCurso()
+
+        SeleccionarAñoCurso.TextBox1.Text = ""
+        SeleccionarAñoCurso.ComboBox1.Visible = True
+        SeleccionarAñoCurso.TextBox1.Visible = True
+        SeleccionarAñoCurso.Button2.Visible = True
+        SeleccionarAñoCurso.Button1.Visible = False
+        SeleccionarAñoCurso.Label1.Text = "INGRESE RUT ALUMNO" & vbCr & "Y AÑO DE MATRICULA"
+
+        SeleccionarAñoCurso.Show()
+        Me.Enabled = False
     End Sub
     Public Function ValidaRut(ByVal ElNumero As String) As String
         Try
