@@ -34,6 +34,7 @@ Partial Class SeleccionarAñoCurso
         'ComboBox1
         '
         Me.ComboBox1.BackColor = System.Drawing.Color.Gold
+        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox1.Font = New System.Drawing.Font("Perpetua Titling MT", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Location = New System.Drawing.Point(114, 84)
@@ -44,7 +45,8 @@ Partial Class SeleccionarAñoCurso
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.SystemColors.Highlight
+        Me.Label1.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.Label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Gold
         Me.Label1.Location = New System.Drawing.Point(99, 7)
@@ -54,6 +56,7 @@ Partial Class SeleccionarAñoCurso
         '
         'Button1
         '
+        Me.Button1.BackColor = System.Drawing.Color.DarkBlue
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.Gold
@@ -62,18 +65,21 @@ Partial Class SeleccionarAñoCurso
         Me.Button1.Size = New System.Drawing.Size(180, 38)
         Me.Button1.TabIndex = 2
         Me.Button1.Text = "BUSCAR CURSOS"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'TextBox1
         '
         Me.TextBox1.BackColor = System.Drawing.Color.Gold
-        Me.TextBox1.Location = New System.Drawing.Point(114, 58)
+        Me.TextBox1.Font = New System.Drawing.Font("Palatino Linotype", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1.Location = New System.Drawing.Point(114, 53)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(171, 20)
+        Me.TextBox1.Size = New System.Drawing.Size(171, 25)
         Me.TextBox1.TabIndex = 12
+        Me.TextBox1.Text = "INGRESE RUT ALUMNO"
         '
         'Button2
         '
+        Me.Button2.BackColor = System.Drawing.Color.DarkBlue
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.ForeColor = System.Drawing.Color.Gold
@@ -82,7 +88,7 @@ Partial Class SeleccionarAñoCurso
         Me.Button2.Size = New System.Drawing.Size(180, 29)
         Me.Button2.TabIndex = 13
         Me.Button2.Text = "BUSCAR ALUMNO"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.Button2.UseVisualStyleBackColor = False
         '
         'Button3
         '
@@ -99,7 +105,7 @@ Partial Class SeleccionarAñoCurso
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.Highlight
+        Me.BackColor = System.Drawing.SystemColors.HotTrack
         Me.ClientSize = New System.Drawing.Size(421, 200)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.TextBox1)

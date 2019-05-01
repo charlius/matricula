@@ -28,8 +28,8 @@ Partial Class inicio1
         Me.txtpass = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -39,7 +39,7 @@ Partial Class inicio1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Goudy Stout", 21.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.LightGray
+        Me.Label1.ForeColor = System.Drawing.Color.Gold
         Me.Label1.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.Label1.Location = New System.Drawing.Point(307, 35)
         Me.Label1.Name = "Label1"
@@ -49,7 +49,7 @@ Partial Class inicio1
         '
         'txtuser
         '
-        Me.txtuser.BackColor = System.Drawing.Color.Yellow
+        Me.txtuser.BackColor = System.Drawing.Color.Gold
         Me.txtuser.CausesValidation = False
         Me.txtuser.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.txtuser.ForeColor = System.Drawing.Color.Gray
@@ -61,7 +61,7 @@ Partial Class inicio1
         '
         'txtpass
         '
-        Me.txtpass.BackColor = System.Drawing.Color.Yellow
+        Me.txtpass.BackColor = System.Drawing.Color.Gold
         Me.txtpass.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.txtpass.ForeColor = System.Drawing.Color.Gray
         Me.txtpass.Location = New System.Drawing.Point(348, 143)
@@ -73,15 +73,17 @@ Partial Class inicio1
         '
         'Button1
         '
-        Me.Button1.BackColor = System.Drawing.Color.Yellow
-        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.BackColor = System.Drawing.Color.DarkBlue
+        Me.Button1.FlatAppearance.BorderSize = 2
         Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
         Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Perpetua Titling MT", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.Color.Gold
         Me.Button1.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Button1.Location = New System.Drawing.Point(392, 213)
+        Me.Button1.Location = New System.Drawing.Point(405, 224)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(160, 32)
+        Me.Button1.Size = New System.Drawing.Size(160, 38)
         Me.Button1.TabIndex = 6
         Me.Button1.Text = "INGRESAR"
         Me.Button1.UseVisualStyleBackColor = False
@@ -96,6 +98,16 @@ Partial Class inicio1
         Me.Panel1.Size = New System.Drawing.Size(301, 359)
         Me.Panel1.TabIndex = 9
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.WindowsApplication1.My.Resources.Resources._1
+        Me.PictureBox1.Location = New System.Drawing.Point(66, 76)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(168, 194)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
+        '
         'Button2
         '
         Me.Button2.FlatAppearance.BorderSize = 0
@@ -107,21 +119,12 @@ Partial Class inicio1
         Me.Button2.TabIndex = 10
         Me.Button2.UseVisualStyleBackColor = True
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.WindowsApplication1.My.Resources.Resources._1
-        Me.PictureBox1.Location = New System.Drawing.Point(66, 76)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(168, 194)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
-        '
         'Button3
         '
         Me.Button3.BackgroundImage = CType(resources.GetObject("Button3.BackgroundImage"), System.Drawing.Image)
-        Me.Button3.FlatAppearance.BorderSize = 0
+        Me.Button3.FlatAppearance.BorderSize = 2
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button3.ForeColor = System.Drawing.Color.DarkBlue
         Me.Button3.Location = New System.Drawing.Point(761, 295)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(102, 52)

@@ -1,8 +1,8 @@
 ﻿Module datos_conn
-    Public servidor = "192.168.1.55"
+    Public servidor = "HP_ROY\SQLEXP"
     Public puerto = "1433"
     Public bd = "matriculas_ll"
-    Public user = "servidorbdd"
+    Public user = "sa"
     Public pass = "1234321"
 
     Public Function getservidor() As String

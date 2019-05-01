@@ -31,8 +31,12 @@ Public Class Ingreso_Rut_Matricula
 
     End Sub
 
-    Private Sub Ingreso_Rut_Matricula_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
+    Private Sub textbox1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextBox1.Click, TextBox1.Click
 
+        If TextBox1.Text = "INGRESE RUT ALUMNO" Then
+            TextBox1.Clear()
+        End If
+        
     End Sub
 
     Private Sub Button1_Click(sender As System.Object, e As System.EventArgs) Handles Button1.Click
@@ -129,6 +133,9 @@ Public Class Ingreso_Rut_Matricula
                 matricula.ComboBox3.Enabled = True
                 matricula.ComboBox4.Enabled = True
 
+                matricula.calendarn.Enabled = True
+                matricula.calen.Enabled = True
+
                 matricula.ComboBox6.Enabled = True
 
               
@@ -136,18 +143,35 @@ Public Class Ingreso_Rut_Matricula
                 Form1.check_campos()
 
                 matricula.Button26.Visible = False
-                matricula.Button27.Visible = False
-                matricula.Button28.Visible = False
-                matricula.Button8.Visible = False
-                matricula.Button5.Visible = False
                 matricula.Button16.Visible = False
+                matricula.Button1.Visible = True
+                matricula.Button15.Visible = True
+                matricula.Button14.Visible = True
+
+                matricula.Button5.Visible = True
+                matricula.Button27.Visible = False
+                matricula.Button2.Visible = True
+                matricula.Button3.Visible = True
+                matricula.Button4.Visible = True
+
                 matricula.Button8.Visible = False
+                matricula.Button6.Visible = True
+                matricula.Button9.Visible = True
+                matricula.Button28.Visible = True
+                matricula.Button65.Visible = True
+
+               
 
                 matricula.Enabled = True
                 Seleccion_Tipo_Matricula.Enabled = True
                 Seleccion_Tipo_Matricula.Hide()
-                matricula.TabControl1.SelectedIndex = 1
+                Seleccion_Tipo_Matricula.Close()
+                Form1.Hide()
+                Form1.Close()
                 Me.Hide()
+                Me.Close()
+
+                matricula.TabControl1.SelectedIndex = 1
                 matricula.Show()
                 conector.Close()
 
@@ -158,4 +182,30 @@ Public Class Ingreso_Rut_Matricula
             conector.Close()
         End Try
     End Sub
+
+    Private Sub TextBox1_TextChanged(sender As System.Object, e As System.EventArgs) Handles TextBox1.TextChanged
+        conector.Close()
+        If TextBox1.TextLength = 8 Then TextBox1.Text = ValidaRut(TextBox1.Text)
+    End Sub
+    Public Function ValidaRut(ByVal ElNumero As String) As String
+        Try
+            Dim Resultado As String = ""
+            Dim Multiplicador As Integer = 2
+            Dim iNum As Integer = 0
+            Dim Suma As Integer = 0
+
+            For i As Integer = 8 To 1 Step -1
+                iNum = Mid(ElNumero, i, 1)
+                Suma += iNum * Multiplicador
+                Multiplicador += 1
+                If Multiplicador = 8 Then Multiplicador = 2
+            Next
+            Resultado = CStr(11 - (Suma Mod 11))
+            If Resultado = "10" Then Resultado = "K"
+            If Resultado = "11" Then Resultado = "0"
+            Return ElNumero & "-" & Resultado
+        Catch ex As Exception
+            conector.Close()
+        End Try
+    End Function
 End Class

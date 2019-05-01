@@ -20,12 +20,16 @@ Public Class Seleccion_Tipo_Matricula
         conector.Close()
         conector.Close()
         conector.Close()
-        If MsgBox("¿ Seguro que desea salir ?", vbQuestion + vbYesNo, "Pregunta") = vbYes Then
-            matricula.Enabled = True
-            matricula.Show()
-            Me.Hide()
 
-        End If
+        matricula.Enabled = True
+        matricula.Show()
+        Me.Hide()
+        Form1.Hide()
+        Form1.Close()
+        Ingreso_Rut_Matricula.Hide()
+        Ingreso_Rut_Matricula.Close()
+
+
     End Sub
 
     Private Sub Button1_Click(sender As System.Object, e As System.EventArgs) Handles Button1.Click
@@ -142,12 +146,19 @@ Public Class Seleccion_Tipo_Matricula
 
         conector.Close()
         conector.Close()
+
         matricula.TabControl1.SelectedTab = matricula.TabControl1.TabPages.Item(1)
         matricula.Enabled = True
+        matricula.Show()
+
+        Form1.Hide()
+        Form1.Close()
         Me.Hide()
+        Me.Close()
     End Sub
 
     Private Sub Button2_Click(sender As System.Object, e As System.EventArgs) Handles Button2.Click
+
         matricula.Enabled = False
         Me.Enabled = False
         Ingreso_Rut_Matricula.Show()

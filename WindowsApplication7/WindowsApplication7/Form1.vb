@@ -175,7 +175,7 @@ Public Class Form1
 
         PictureBox1.Enabled = False
 
-           SeleccionarAñoCurso.primero_activas()
+        SeleccionarAñoCurso.primero_activas()
         SeleccionarAñoCurso.segundo_activas()
         SeleccionarAñoCurso.tercero_activas()
         SeleccionarAñoCurso.cuarto_activas()
@@ -186,6 +186,8 @@ Public Class Form1
         SeleccionarAñoCurso.kinder_activas()
         SeleccionarAñoCurso.prekinder_activas()
 
+        matricula.matriculas_activas()
+
        
        
     End Sub
@@ -195,9 +197,7 @@ Public Class Form1
         Try
             conector.Close()
 
-            matricula.Show()
-            matricula.TabControl1.SelectedIndex = 1
-            Me.Hide()
+            
 
             Label1.Text = "XXXX"
             Label2.Text = "XXXX"
@@ -346,6 +346,8 @@ Public Class Form1
             matricula.Button5.Visible = True
             matricula.Button9.Visible = True
 
+            Seleccion_Tipo_Matricula.Show()
+            Me.Enabled = False
 
         Catch ex As Exception
             MsgBox(ex.Message)
@@ -387,7 +389,7 @@ Public Class Form1
         Try
             conector.Close()
 
-            Dim qry As String = "select alumno.rut_alumno ,alumno.nombres,alumno.apellidos,alumno.fecha_nacimiento, matricula.edad_alumno,curso.Nombre ,matricula.fono_urgencia_1 ,matricula.fono_urgencia_2,alumno.sexo,apoderado.rut_apoderado , apoderado.nombre_apoderado ,apoderado.domicilio , apoderado.fono  ,matricula.fecha_matricula ,matricula.escuela_procedencia ,matricula.cursos_repetidos ,matricula.domicilio_alumno ,matricula.alergico , matricula.grupo_sanguineo ,matricula.enfermedad ,matricula.grupo_pie ,matricula.nombre_padre ,matricula.nombre_madre ,matricula.rut_padre ,matricula.rut_madre ,matricula.trabajo_padre ,matricula.trabajo_madre ,matricula.escolaridad_padre ,matricula.escolaridad_madre ,matricula.vive_con ,matricula.casa_propia ,matricula.ingreso_mensual ,matricula.beneficio ,matricula.religion , usuario.nombre_usuario from alumno, apoderado, curso, matricula, usuario where matricula.rut_alumno = alumno.rut_alumno And apoderado.rut_apoderado = matricula.rut_apoderado And matricula.curso_alumno = curso.id_curso And matricula.id_usuario = usuario.id_usuario And matricula.rut_alumno ='" & Label1.Text & "'"
+            Dim qry As String = "select alumno.rut_alumno ,alumno.nombres,alumno.apellidos,alumno.fecha_nacimiento, matricula.edad_alumno,curso.Nombre ,matricula.fono_urgencia_1 ,matricula.fono_urgencia_2,alumno.sexo,apoderado.rut_apoderado , apoderado.nombre_apoderado ,apoderado.domicilio , apoderado.fono  ,matricula.fecha_matricula ,matricula.escuela_procedencia ,matricula.cursos_repetidos ,matricula.domicilio_alumno ,matricula.alergico , matricula.grupo_sanguineo ,matricula.enfermedad ,matricula.grupo_pie ,matricula.nombre_padre ,matricula.nombre_madre ,matricula.rut_padre ,matricula.rut_madre ,matricula.trabajo_padre ,matricula.trabajo_madre ,matricula.escolaridad_padre ,matricula.escolaridad_madre ,matricula.vive_con ,matricula.casa_propia ,matricula.ingreso_mensual ,matricula.beneficio ,matricula.religion , usuario.nombre_usuario from alumno, apoderado, curso, matricula, usuario where matricula.rut_alumno = alumno.rut_alumno And apoderado.rut_apoderado = matricula.rut_apoderado And matricula.curso_alumno = curso.id_curso And matricula.id_usuario = usuario.id_usuario And matricula.rut_alumno ='" & Label1.Text & "' and matricula.fecha_matricula= '" & Label13.Text & "'"
             conector.Open()
             Dim sqlcmd As New SqlCommand(qry, conector)
             Dim dr As SqlDataReader
@@ -488,6 +490,20 @@ Public Class Form1
                 matricula.CheckBox7.Enabled = False
                 matricula.CheckBox8.Enabled = False
 
+                matricula.Button26.Visible = True
+                matricula.Button27.Visible = True
+                matricula.Button28.Visible = True
+
+                matricula.Button5.Visible = False
+                matricula.Button9.Visible = False
+                matricula.Button16.Visible = False
+
+                matricula.Button4.Visible = False
+                matricula.Button8.Visible = False
+                matricula.Button15.Visible = False
+               
+                conector.Close()
+
                 check_campos()
 
                 matricula.calendarn.Enabled = False
@@ -496,13 +512,15 @@ Public Class Form1
                 matricula.TabControl1.SelectedIndex = 3
                 Me.Hide()
                 conector.Close()
+                conector.Close()
             End If
 
         Catch ex As Exception
+            conector.Close()
             MsgBox("ERROR" & vbCrLf & ex.Message)
             conector.Close()
         End Try
-
+        conector.Close()
       
     End Sub
 
