@@ -2,17 +2,17 @@
 Imports System.Data.SqlClient
 
 Public Class inicio1
-    Dim ipServidor As String = datos_conn.getservidor()
-    Dim puerto As String = datos_conn.getpuerto()
-    Dim claveBD As String = datos_conn.getpass()
-    Dim basededatos As String = datos_conn.getbd()
-    Dim usuarioBD As String = datos_conn.getuser()
+    Dim ipServidor As String
+    Dim puerto As String
+    Dim claveBD As String
+    Dim basededatos As String
+    Dim usuarioBD As String
 
     Dim strcon As String
     Public dreader As SqlDataReader
     Public nomUsuario As String
-    Dim conector As New SqlConnection("server=" + ipServidor + "  ;user='" + usuarioBD + "';password= '" + claveBD + "' ; database=" + basededatos + "")
 
+    Dim conector As New SqlConnection
 
     Dim dt As DataTable
 
@@ -76,12 +76,39 @@ Public Class inicio1
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         
         strcon = "Provider=SQLOLEDB.1;Password=" & claveBD & ";Persist Security Info=True;User ID=" & usuarioBD & ";Initial Catalog=" & basededatos & ";Data Source=" & servidor & ""
-
-
         conector.Close()
+
+        Try
+            cargardatos()
+            conector.Open()
+            Dim qry As String = "select * from usuario "
+            Dim sqlcmd As New SqlCommand(qry, conector)
+            Dim dr As SqlDataReader
+            dr = sqlcmd.ExecuteReader
+
+
+            If dr.Read() Then
+                ' todo bien con la coneccion
+            End If
+            conector.Close()
+        Catch ex As Exception
+            conector.Close()
+            MsgBox("Porfavor contacte al administrador y revise la coneccion ala base de datos...")
+
+        End Try
 
     End Sub
 
+    Public Sub cargardatos()
+        datos_conn.cargardatos()
+        ipServidor = datos_conn.getservidor()
+        puerto = datos_conn.getpuerto()
+        claveBD = datos_conn.getpass()
+        basededatos = datos_conn.getbd()
+        usuarioBD = datos_conn.getuser()
+        conector = New SqlConnection("server=" + ipServidor + "  ;user='" + usuarioBD + "';password= '" + claveBD + "' ; database=" + basededatos + "")
+
+    End Sub
     
 
 

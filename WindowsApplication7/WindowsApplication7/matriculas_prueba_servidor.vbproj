@@ -150,6 +150,12 @@
     <Compile Include="Seleccion_Tipo_Matricula.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="server.Designer.vb">
+      <DependentUpon>server.vb</DependentUpon>
+    </Compile>
+    <Compile Include="server.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Form1.resx">
@@ -181,6 +187,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Seleccion_Tipo_Matricula.resx">
       <DependentUpon>Seleccion_Tipo_Matricula.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="server.resx">
+      <DependentUpon>server.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

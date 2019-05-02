@@ -233,4 +233,17 @@ Public Class FormMenuUsuario
     Private Sub TabPage1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TabPage1.Click
 
     End Sub
+
+    Private Sub config_MouseHover(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles config.MouseHover
+        config.ForeColor = Color.Blue
+    End Sub
+
+    Private Sub config_MouseLeave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles config.MouseLeave
+        config.ForeColor = Color.DarkSlateGray
+    End Sub
+
+    Private Sub config_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles config.Click
+        server.Show()
+
+    End Sub
 End Class

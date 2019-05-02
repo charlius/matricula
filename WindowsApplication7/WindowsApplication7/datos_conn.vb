@@ -1,9 +1,23 @@
-﻿Module datos_conn
-    Public servidor = "HP_ROY\SQLEXP"
-    Public puerto = "1433"
-    Public bd = "matriculas_ll"
-    Public user = "sa"
-    Public pass = "1234321"
+﻿Imports System.IO
+
+Module datos_conn
+    Public servidor As String
+    Public puerto As String
+    Public bd As String
+    Public user As String
+    Public pass As String
+
+    Public Sub cargardatos()
+        Dim objStreamReader As StreamReader
+        objStreamReader = New StreamReader(Directory.GetCurrentDirectory() + "\Testfile.txt")
+        servidor = objStreamReader.ReadLine
+        puerto = objStreamReader.ReadLine
+        bd = objStreamReader.ReadLine
+        user = objStreamReader.ReadLine
+        pass = objStreamReader.ReadLine
+        objStreamReader.Close()
+
+    End Sub
 
     Public Function getservidor() As String
         Return servidor

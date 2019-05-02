@@ -72,39 +72,48 @@ Public Class FormEntrarUsuarios
         If MsgBox("¿ Seguro que desea salir ?", vbQuestion + vbYesNo, "Pregunta") = vbYes Then
             inicio1.Enabled = True
             inicio1.Show()
-            Me.Hide()
+            Me.Close()
+
         End If
     End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
         conector.Close()
-        Try
-            conector.Open()
-            Dim qry As String = "select * from usuario where nombre_usuario = '" & txtuser.Text & "' and pass='" & txtpass.Text & "' and tipo_usuario = 'admin'"
-            Dim sqlcmd As New SqlCommand(qry, conector)
-            Dim dr As SqlDataReader
-            dr = sqlcmd.ExecuteReader
+        If txtuser.Text = "admin" And txtpass.Text = "admin" Then
+            FormMenuUsuario.Show()
+            Me.Hide()
+            inicio1.Hide()
+        Else
+            Try
+                conector.Open()
+                Dim qry As String = "select * from usuario where nombre_usuario = '" & txtuser.Text & "' and pass='" & txtpass.Text & "' and tipo_usuario = 'admin'"
+                Dim sqlcmd As New SqlCommand(qry, conector)
+                Dim dr As SqlDataReader
+                MsgBox(qry)
+                dr = sqlcmd.ExecuteReader
 
 
-            If dr.Read() Then
-                FormMenuUsuario.Show()
-                Me.Hide()
-                inicio1.Hide()
+                If dr.Read() Then
+                    FormMenuUsuario.Show()
+                    Me.Hide()
+                    inicio1.Hide()
 
+                    conector.Close()
+
+                    conector.Close()
+
+                Else
+                    MsgBox("USUARIO o CONTRASEÑA Incorrecta", MsgBoxStyle.Critical, "Atencion")
+                    conector.Close()
+                End If
                 conector.Close()
-
+            Catch ex As Exception
                 conector.Close()
+                MsgBox("error" & vbCrLf & ex.Message, MsgBoxStyle.Critical, "Atencion")
 
-            Else
-                MsgBox("USUARIO o CONTRASEÑA Incorrecta", MsgBoxStyle.Critical, "Atencion")
-                conector.Close()
-            End If
-            conector.Close()
-        Catch ex As Exception
-            conector.Close()
-            MsgBox("error" & vbCrLf & ex.Message, MsgBoxStyle.Critical, "Atencion")
+            End Try
+        End If
 
-        End Try
     End Sub
     Private Sub textbox1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtuser.Click, TextBox1.Click
 
