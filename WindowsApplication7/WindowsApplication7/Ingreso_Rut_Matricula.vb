@@ -114,11 +114,11 @@ Public Class Ingreso_Rut_Matricula
                 matricula.TextBox16.Enabled = True
                 matricula.TextBox17.Enabled = True
                 matricula.TextBox18.Enabled = True
-                matricula.TextBox19.Enabled = True
+                matricula.TextBox19.Enabled = False
                 matricula.TextBox20.Enabled = True
                 matricula.TextBox21.Enabled = True
-                matricula.TextBox22.Enabled = True
-                matricula.TextBox23.Enabled = True
+                matricula.TextBox22.Enabled = False
+                matricula.TextBox23.Enabled = False
                 matricula.TextBox24.Enabled = True
                 matricula.TextBox25.Enabled = True
                 matricula.TextBox26.Enabled = True
@@ -126,7 +126,7 @@ Public Class Ingreso_Rut_Matricula
                 matricula.TextBox28.Enabled = True
                 matricula.TextBox29.Enabled = True
                 matricula.TextBox30.Enabled = True
-                matricula.TextBox37.Enabled = True
+                matricula.TextBox37.Enabled = False
 
                 matricula.ComboBox1.Enabled = True
                 matricula.ComboBox2.Enabled = True
@@ -142,22 +142,20 @@ Public Class Ingreso_Rut_Matricula
 
                 Form1.check_campos()
 
-                matricula.Button26.Visible = False
-                matricula.Button16.Visible = False
+                
                 matricula.Button1.Visible = True
-                matricula.Button15.Visible = True
+
                 matricula.Button14.Visible = True
 
-                matricula.Button5.Visible = True
-                matricula.Button27.Visible = False
+
                 matricula.Button2.Visible = True
                 matricula.Button3.Visible = True
-                matricula.Button4.Visible = True
+
 
                 matricula.Button8.Visible = False
                 matricula.Button6.Visible = True
                 matricula.Button9.Visible = True
-                matricula.Button28.Visible = True
+                matricula.Button28.Visible = False
                 matricula.Button65.Visible = True
 
                

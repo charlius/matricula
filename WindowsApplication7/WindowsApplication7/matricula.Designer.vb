@@ -24,26 +24,26 @@ Partial Class matricula
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(matricula))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle17 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle18 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle19 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle20 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle141 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle142 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle143 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle144 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle145 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle146 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle147 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle148 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle149 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle150 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle151 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle152 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle153 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle154 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle155 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle156 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle157 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle158 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle159 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle160 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.Label46 = New System.Windows.Forms.Label()
@@ -61,15 +61,12 @@ Partial Class matricula
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.ComboBox6 = New System.Windows.Forms.ComboBox()
         Me.Label53 = New System.Windows.Forms.Label()
-        Me.Button26 = New System.Windows.Forms.Button()
         Me.Button19 = New System.Windows.Forms.Button()
         Me.Button18 = New System.Windows.Forms.Button()
         Me.Button17 = New System.Windows.Forms.Button()
         Me.calendarn = New System.Windows.Forms.MonthCalendar()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button14 = New System.Windows.Forms.Button()
-        Me.Button15 = New System.Windows.Forms.Button()
-        Me.Button16 = New System.Windows.Forms.Button()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
@@ -78,14 +75,11 @@ Partial Class matricula
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
-        Me.Button27 = New System.Windows.Forms.Button()
         Me.Button20 = New System.Windows.Forms.Button()
         Me.Button21 = New System.Windows.Forms.Button()
         Me.Button22 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
         Me.TextBox6 = New System.Windows.Forms.TextBox()
         Me.TextBox7 = New System.Windows.Forms.TextBox()
         Me.TextBox8 = New System.Windows.Forms.TextBox()
@@ -493,15 +487,12 @@ Partial Class matricula
         '
         Me.TabPage2.Controls.Add(Me.ComboBox6)
         Me.TabPage2.Controls.Add(Me.Label53)
-        Me.TabPage2.Controls.Add(Me.Button26)
         Me.TabPage2.Controls.Add(Me.Button19)
         Me.TabPage2.Controls.Add(Me.Button18)
         Me.TabPage2.Controls.Add(Me.Button17)
         Me.TabPage2.Controls.Add(Me.calendarn)
         Me.TabPage2.Controls.Add(Me.Button1)
         Me.TabPage2.Controls.Add(Me.Button14)
-        Me.TabPage2.Controls.Add(Me.Button15)
-        Me.TabPage2.Controls.Add(Me.Button16)
         Me.TabPage2.Controls.Add(Me.TextBox2)
         Me.TabPage2.Controls.Add(Me.TextBox3)
         Me.TabPage2.Controls.Add(Me.TextBox4)
@@ -538,19 +529,6 @@ Partial Class matricula
         Me.Label53.Size = New System.Drawing.Size(42, 18)
         Me.Label53.TabIndex = 157
         Me.Label53.Text = "Sexo"
-        '
-        'Button26
-        '
-        Me.Button26.FlatAppearance.BorderSize = 0
-        Me.Button26.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button26.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button26.Image = CType(resources.GetObject("Button26.Image"), System.Drawing.Image)
-        Me.Button26.Location = New System.Drawing.Point(682, 536)
-        Me.Button26.Name = "Button26"
-        Me.Button26.Size = New System.Drawing.Size(116, 156)
-        Me.Button26.TabIndex = 152
-        Me.Button26.Text = "" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Desbloquear Campos"
-        Me.Button26.UseVisualStyleBackColor = True
         '
         'Button19
         '
@@ -627,32 +605,6 @@ Partial Class matricula
         Me.Button14.TabIndex = 73
         Me.Button14.UseVisualStyleBackColor = True
         '
-        'Button15
-        '
-        Me.Button15.FlatAppearance.BorderSize = 0
-        Me.Button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button15.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button15.Image = CType(resources.GetObject("Button15.Image"), System.Drawing.Image)
-        Me.Button15.Location = New System.Drawing.Point(572, 558)
-        Me.Button15.Name = "Button15"
-        Me.Button15.Size = New System.Drawing.Size(104, 134)
-        Me.Button15.TabIndex = 72
-        Me.Button15.Text = "" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Modificar"
-        Me.Button15.UseVisualStyleBackColor = True
-        '
-        'Button16
-        '
-        Me.Button16.FlatAppearance.BorderSize = 0
-        Me.Button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button16.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button16.Image = CType(resources.GetObject("Button16.Image"), System.Drawing.Image)
-        Me.Button16.Location = New System.Drawing.Point(473, 555)
-        Me.Button16.Name = "Button16"
-        Me.Button16.Size = New System.Drawing.Size(81, 136)
-        Me.Button16.TabIndex = 71
-        Me.Button16.Text = "" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Guardar"
-        Me.Button16.UseVisualStyleBackColor = True
-        '
         'TextBox2
         '
         Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -722,14 +674,11 @@ Partial Class matricula
         '
         'TabPage3
         '
-        Me.TabPage3.Controls.Add(Me.Button27)
         Me.TabPage3.Controls.Add(Me.Button20)
         Me.TabPage3.Controls.Add(Me.Button21)
         Me.TabPage3.Controls.Add(Me.Button22)
         Me.TabPage3.Controls.Add(Me.Button2)
         Me.TabPage3.Controls.Add(Me.Button3)
-        Me.TabPage3.Controls.Add(Me.Button4)
-        Me.TabPage3.Controls.Add(Me.Button5)
         Me.TabPage3.Controls.Add(Me.TextBox6)
         Me.TabPage3.Controls.Add(Me.TextBox7)
         Me.TabPage3.Controls.Add(Me.TextBox8)
@@ -745,20 +694,6 @@ Partial Class matricula
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "TabPage3"
         Me.TabPage3.UseVisualStyleBackColor = True
-        '
-        'Button27
-        '
-        Me.Button27.Anchor = System.Windows.Forms.AnchorStyles.Bottom
-        Me.Button27.FlatAppearance.BorderSize = 0
-        Me.Button27.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button27.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button27.Image = CType(resources.GetObject("Button27.Image"), System.Drawing.Image)
-        Me.Button27.Location = New System.Drawing.Point(674, 514)
-        Me.Button27.Name = "Button27"
-        Me.Button27.Size = New System.Drawing.Size(119, 155)
-        Me.Button27.TabIndex = 155
-        Me.Button27.Text = "" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Desbloquear Campos"
-        Me.Button27.UseVisualStyleBackColor = True
         '
         'Button20
         '
@@ -830,35 +765,6 @@ Partial Class matricula
         Me.Button3.Size = New System.Drawing.Size(206, 128)
         Me.Button3.TabIndex = 61
         Me.Button3.UseVisualStyleBackColor = True
-        '
-        'Button4
-        '
-        Me.Button4.Anchor = System.Windows.Forms.AnchorStyles.Bottom
-        Me.Button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.Button4.FlatAppearance.BorderSize = 0
-        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button4.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.Image = CType(resources.GetObject("Button4.Image"), System.Drawing.Image)
-        Me.Button4.Location = New System.Drawing.Point(570, 525)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(89, 144)
-        Me.Button4.TabIndex = 60
-        Me.Button4.Text = "" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Modificar"
-        Me.Button4.UseVisualStyleBackColor = True
-        '
-        'Button5
-        '
-        Me.Button5.Anchor = System.Windows.Forms.AnchorStyles.Bottom
-        Me.Button5.FlatAppearance.BorderSize = 0
-        Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button5.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button5.Image = CType(resources.GetObject("Button5.Image"), System.Drawing.Image)
-        Me.Button5.Location = New System.Drawing.Point(448, 489)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(105, 217)
-        Me.Button5.TabIndex = 59
-        Me.Button5.Text = "" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Guardar Nuevo Apoderado"
-        Me.Button5.UseVisualStyleBackColor = True
         '
         'TextBox6
         '
@@ -1257,9 +1163,9 @@ Partial Class matricula
         Me.Button28.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button28.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button28.Image = CType(resources.GetObject("Button28.Image"), System.Drawing.Image)
-        Me.Button28.Location = New System.Drawing.Point(661, 541)
+        Me.Button28.Location = New System.Drawing.Point(669, 541)
         Me.Button28.Name = "Button28"
-        Me.Button28.Size = New System.Drawing.Size(140, 153)
+        Me.Button28.Size = New System.Drawing.Size(115, 153)
         Me.Button28.TabIndex = 185
         Me.Button28.Text = "" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Desbloquear Campos"
         Me.Button28.UseVisualStyleBackColor = True
@@ -2022,27 +1928,27 @@ Partial Class matricula
         '
         Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.Window
         Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Perpetua Titling MT", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle141.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle141.BackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle141.Font = New System.Drawing.Font("Perpetua Titling MT", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle141.ForeColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle141.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle141.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle141.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle141
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.EnableHeadersVisualStyles = False
         Me.DataGridView1.Location = New System.Drawing.Point(124, 132)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Palatino Linotype", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle142.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle142.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle142.Font = New System.Drawing.Font("Palatino Linotype", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle142.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle142.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle142.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle142.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle142
         Me.DataGridView1.Size = New System.Drawing.Size(1060, 560)
         Me.DataGridView1.TabIndex = 0
         '
@@ -2084,27 +1990,27 @@ Partial Class matricula
         '
         Me.DataGridView2.BackgroundColor = System.Drawing.SystemColors.Window
         Me.DataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Perpetua Titling MT", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView2.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle143.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle143.BackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle143.Font = New System.Drawing.Font("Perpetua Titling MT", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle143.ForeColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle143.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle143.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle143.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView2.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle143
         Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView2.EnableHeadersVisualStyles = False
         Me.DataGridView2.Location = New System.Drawing.Point(100, 165)
         Me.DataGridView2.Name = "DataGridView2"
         Me.DataGridView2.ReadOnly = True
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Palatino Linotype", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView2.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle144.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle144.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle144.Font = New System.Drawing.Font("Palatino Linotype", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle144.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle144.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle144.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle144.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView2.RowHeadersDefaultCellStyle = DataGridViewCellStyle144
         Me.DataGridView2.Size = New System.Drawing.Size(1069, 560)
         Me.DataGridView2.TabIndex = 1
         '
@@ -2146,27 +2052,27 @@ Partial Class matricula
         '
         Me.DataGridView3.BackgroundColor = System.Drawing.SystemColors.Window
         Me.DataGridView3.BorderStyle = System.Windows.Forms.BorderStyle.None
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Perpetua Titling MT", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView3.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle145.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle145.BackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle145.Font = New System.Drawing.Font("Perpetua Titling MT", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle145.ForeColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle145.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle145.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle145.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView3.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle145
         Me.DataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView3.EnableHeadersVisualStyles = False
         Me.DataGridView3.Location = New System.Drawing.Point(71, 191)
         Me.DataGridView3.Name = "DataGridView3"
         Me.DataGridView3.ReadOnly = True
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Palatino Linotype", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView3.RowHeadersDefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle146.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle146.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle146.Font = New System.Drawing.Font("Palatino Linotype", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle146.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle146.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle146.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle146.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView3.RowHeadersDefaultCellStyle = DataGridViewCellStyle146
         Me.DataGridView3.Size = New System.Drawing.Size(1107, 564)
         Me.DataGridView3.TabIndex = 2
         '
@@ -2208,27 +2114,27 @@ Partial Class matricula
         '
         Me.DataGridView4.BackgroundColor = System.Drawing.SystemColors.Window
         Me.DataGridView4.BorderStyle = System.Windows.Forms.BorderStyle.None
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle7.Font = New System.Drawing.Font("Perpetua Titling MT", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView4.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle147.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle147.BackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle147.Font = New System.Drawing.Font("Perpetua Titling MT", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle147.ForeColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle147.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle147.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle147.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView4.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle147
         Me.DataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView4.EnableHeadersVisualStyles = False
         Me.DataGridView4.Location = New System.Drawing.Point(79, 182)
         Me.DataGridView4.Name = "DataGridView4"
         Me.DataGridView4.ReadOnly = True
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Palatino Linotype", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView4.RowHeadersDefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle148.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle148.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle148.Font = New System.Drawing.Font("Palatino Linotype", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle148.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle148.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle148.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle148.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView4.RowHeadersDefaultCellStyle = DataGridViewCellStyle148
         Me.DataGridView4.Size = New System.Drawing.Size(1112, 567)
         Me.DataGridView4.TabIndex = 2
         '
@@ -2270,27 +2176,27 @@ Partial Class matricula
         '
         Me.DataGridView5.BackgroundColor = System.Drawing.SystemColors.Window
         Me.DataGridView5.BorderStyle = System.Windows.Forms.BorderStyle.None
-        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle9.Font = New System.Drawing.Font("Perpetua Titling MT", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView5.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle9
+        DataGridViewCellStyle149.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle149.BackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle149.Font = New System.Drawing.Font("Perpetua Titling MT", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle149.ForeColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle149.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle149.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle149.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView5.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle149
         Me.DataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView5.EnableHeadersVisualStyles = False
         Me.DataGridView5.Location = New System.Drawing.Point(70, 183)
         Me.DataGridView5.Name = "DataGridView5"
         Me.DataGridView5.ReadOnly = True
-        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle10.Font = New System.Drawing.Font("Palatino Linotype", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView5.RowHeadersDefaultCellStyle = DataGridViewCellStyle10
+        DataGridViewCellStyle150.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle150.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle150.Font = New System.Drawing.Font("Palatino Linotype", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle150.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle150.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle150.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle150.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView5.RowHeadersDefaultCellStyle = DataGridViewCellStyle150
         Me.DataGridView5.Size = New System.Drawing.Size(1126, 568)
         Me.DataGridView5.TabIndex = 2
         '
@@ -2332,27 +2238,27 @@ Partial Class matricula
         '
         Me.DataGridView6.BackgroundColor = System.Drawing.SystemColors.Window
         Me.DataGridView6.BorderStyle = System.Windows.Forms.BorderStyle.None
-        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle11.Font = New System.Drawing.Font("Perpetua Titling MT", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView6.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle11
+        DataGridViewCellStyle151.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle151.BackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle151.Font = New System.Drawing.Font("Perpetua Titling MT", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle151.ForeColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle151.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle151.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle151.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView6.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle151
         Me.DataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView6.EnableHeadersVisualStyles = False
         Me.DataGridView6.Location = New System.Drawing.Point(86, 195)
         Me.DataGridView6.Name = "DataGridView6"
         Me.DataGridView6.ReadOnly = True
-        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle12.Font = New System.Drawing.Font("Palatino Linotype", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView6.RowHeadersDefaultCellStyle = DataGridViewCellStyle12
+        DataGridViewCellStyle152.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle152.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle152.Font = New System.Drawing.Font("Palatino Linotype", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle152.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle152.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle152.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle152.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView6.RowHeadersDefaultCellStyle = DataGridViewCellStyle152
         Me.DataGridView6.Size = New System.Drawing.Size(1100, 574)
         Me.DataGridView6.TabIndex = 2
         '
@@ -2394,27 +2300,27 @@ Partial Class matricula
         '
         Me.DataGridView7.BackgroundColor = System.Drawing.SystemColors.Window
         Me.DataGridView7.BorderStyle = System.Windows.Forms.BorderStyle.None
-        DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle13.Font = New System.Drawing.Font("Perpetua Titling MT", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView7.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle13
+        DataGridViewCellStyle153.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle153.BackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle153.Font = New System.Drawing.Font("Perpetua Titling MT", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle153.ForeColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle153.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle153.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle153.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView7.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle153
         Me.DataGridView7.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView7.EnableHeadersVisualStyles = False
         Me.DataGridView7.Location = New System.Drawing.Point(79, 217)
         Me.DataGridView7.Name = "DataGridView7"
         Me.DataGridView7.ReadOnly = True
-        DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle14.Font = New System.Drawing.Font("Palatino Linotype", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView7.RowHeadersDefaultCellStyle = DataGridViewCellStyle14
+        DataGridViewCellStyle154.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle154.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle154.Font = New System.Drawing.Font("Palatino Linotype", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle154.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle154.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle154.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle154.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView7.RowHeadersDefaultCellStyle = DataGridViewCellStyle154
         Me.DataGridView7.Size = New System.Drawing.Size(1144, 610)
         Me.DataGridView7.TabIndex = 2
         '
@@ -2456,27 +2362,27 @@ Partial Class matricula
         '
         Me.DataGridView8.BackgroundColor = System.Drawing.SystemColors.Window
         Me.DataGridView8.BorderStyle = System.Windows.Forms.BorderStyle.None
-        DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle15.Font = New System.Drawing.Font("Perpetua Titling MT", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView8.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle15
+        DataGridViewCellStyle155.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle155.BackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle155.Font = New System.Drawing.Font("Perpetua Titling MT", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle155.ForeColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle155.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle155.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle155.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView8.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle155
         Me.DataGridView8.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView8.EnableHeadersVisualStyles = False
         Me.DataGridView8.Location = New System.Drawing.Point(81, 162)
         Me.DataGridView8.Name = "DataGridView8"
         Me.DataGridView8.ReadOnly = True
-        DataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle16.Font = New System.Drawing.Font("Palatino Linotype", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView8.RowHeadersDefaultCellStyle = DataGridViewCellStyle16
+        DataGridViewCellStyle156.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle156.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle156.Font = New System.Drawing.Font("Palatino Linotype", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle156.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle156.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle156.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle156.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView8.RowHeadersDefaultCellStyle = DataGridViewCellStyle156
         Me.DataGridView8.Size = New System.Drawing.Size(1124, 563)
         Me.DataGridView8.TabIndex = 2
         '
@@ -2518,27 +2424,27 @@ Partial Class matricula
         '
         Me.DataGridView9.BackgroundColor = System.Drawing.SystemColors.Window
         Me.DataGridView9.BorderStyle = System.Windows.Forms.BorderStyle.None
-        DataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle17.Font = New System.Drawing.Font("Perpetua Titling MT", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView9.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle17
+        DataGridViewCellStyle157.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle157.BackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle157.Font = New System.Drawing.Font("Perpetua Titling MT", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle157.ForeColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle157.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle157.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle157.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView9.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle157
         Me.DataGridView9.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView9.EnableHeadersVisualStyles = False
         Me.DataGridView9.Location = New System.Drawing.Point(80, 164)
         Me.DataGridView9.Name = "DataGridView9"
         Me.DataGridView9.ReadOnly = True
-        DataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle18.Font = New System.Drawing.Font("Palatino Linotype", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView9.RowHeadersDefaultCellStyle = DataGridViewCellStyle18
+        DataGridViewCellStyle158.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle158.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle158.Font = New System.Drawing.Font("Palatino Linotype", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle158.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle158.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle158.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle158.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView9.RowHeadersDefaultCellStyle = DataGridViewCellStyle158
         Me.DataGridView9.Size = New System.Drawing.Size(1127, 625)
         Me.DataGridView9.TabIndex = 2
         '
@@ -2580,27 +2486,27 @@ Partial Class matricula
         '
         Me.DataGridView10.BackgroundColor = System.Drawing.SystemColors.Window
         Me.DataGridView10.BorderStyle = System.Windows.Forms.BorderStyle.None
-        DataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle19.Font = New System.Drawing.Font("Perpetua Titling MT", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView10.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle19
+        DataGridViewCellStyle159.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle159.BackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle159.Font = New System.Drawing.Font("Perpetua Titling MT", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle159.ForeColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle159.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle159.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle159.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView10.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle159
         Me.DataGridView10.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView10.EnableHeadersVisualStyles = False
         Me.DataGridView10.Location = New System.Drawing.Point(66, 150)
         Me.DataGridView10.Name = "DataGridView10"
         Me.DataGridView10.ReadOnly = True
-        DataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle20.Font = New System.Drawing.Font("Palatino Linotype", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView10.RowHeadersDefaultCellStyle = DataGridViewCellStyle20
+        DataGridViewCellStyle160.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle160.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle160.Font = New System.Drawing.Font("Palatino Linotype", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle160.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle160.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle160.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle160.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView10.RowHeadersDefaultCellStyle = DataGridViewCellStyle160
         Me.DataGridView10.Size = New System.Drawing.Size(1134, 608)
         Me.DataGridView10.TabIndex = 2
         '
@@ -2899,8 +2805,6 @@ Partial Class matricula
     Friend WithEvents TabPage2 As System.Windows.Forms.TabPage
     Friend WithEvents TabPage3 As System.Windows.Forms.TabPage
     Friend WithEvents Button3 As System.Windows.Forms.Button
-    Friend WithEvents Button4 As System.Windows.Forms.Button
-    Friend WithEvents Button5 As System.Windows.Forms.Button
     Friend WithEvents TextBox6 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox7 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox8 As System.Windows.Forms.TextBox
@@ -2960,8 +2864,6 @@ Partial Class matricula
     Friend WithEvents calendarn As System.Windows.Forms.MonthCalendar
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Button14 As System.Windows.Forms.Button
-    Friend WithEvents Button15 As System.Windows.Forms.Button
-    Friend WithEvents Button16 As System.Windows.Forms.Button
     Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
@@ -2982,8 +2884,6 @@ Partial Class matricula
     Friend WithEvents Button24 As System.Windows.Forms.Button
     Friend WithEvents Button25 As System.Windows.Forms.Button
     Friend WithEvents Button2 As System.Windows.Forms.Button
-    Friend WithEvents Button26 As System.Windows.Forms.Button
-    Friend WithEvents Button27 As System.Windows.Forms.Button
     Friend WithEvents Button28 As System.Windows.Forms.Button
     Friend WithEvents TabPage6 As System.Windows.Forms.TabPage
     Friend WithEvents Panel5 As System.Windows.Forms.Panel

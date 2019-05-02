@@ -37,14 +37,7 @@ Public Class Seleccion_Tipo_Matricula
         matricula.TextBox26.Text = inicio1.nomUsuario
         conector.Close()
 
-        matricula.Button14.Visible = False
-        matricula.Button15.Visible = False
-        matricula.Button4.Visible = False
-        matricula.Button8.Visible = False
-
-        matricula.Button16.Visible = True
-        matricula.Button5.Visible = True
-        matricula.Button9.Visible = True
+        
 
         matricula.TextBox1.Enabled = True
         matricula.TextBox2.Enabled = True
@@ -104,6 +97,17 @@ Public Class Seleccion_Tipo_Matricula
 
         matricula.calendarn.Enabled = True
         matricula.calen.Enabled = True
+
+        matricula.Button1.Visible = True
+        matricula.Button14.Visible = True
+        matricula.Button2.Visible = True
+        matricula.Button3.Visible = True
+        matricula.Button6.Visible = True
+        matricula.Button65.Visible = True
+        matricula.Button9.Visible = True
+
+        matricula.Button8.Visible = False
+        matricula.Button28.Visible = False
 
         matricula.ComboBox1.Text = ("")
         matricula.ComboBox2.Text = ("")

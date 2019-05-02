@@ -338,12 +338,11 @@ Public Class Form1
             matricula.calendarn.Enabled = True
 
 
-            matricula.Button16.Visible = True
-            matricula.Button15.Visible = False
+          
             matricula.Button14.Visible = False
-            matricula.Button4.Visible = False
+
             matricula.Button8.Visible = False
-            matricula.Button5.Visible = True
+
             matricula.Button9.Visible = True
 
             Seleccion_Tipo_Matricula.Show()
@@ -442,44 +441,44 @@ Public Class Form1
 
                 PictureBox1.Enabled = False
 
-                matricula.TextBox1.Enabled = False
-                matricula.TextBox2.Enabled = False
-                matricula.TextBox3.Enabled = False
-                matricula.TextBox4.Enabled = False
-                matricula.TextBox5.Enabled = False
-                matricula.TextBox6.Enabled = False
-                matricula.TextBox7.Enabled = False
-                matricula.TextBox8.Enabled = False
-                matricula.TextBox9.Enabled = False
-                matricula.TextBox10.Enabled = False
-                matricula.TextBox11.Enabled = False
-                matricula.TextBox12.Enabled = False
-                matricula.TextBox13.Enabled = False
-                matricula.TextBox14.Enabled = False
-                matricula.TextBox15.Enabled = False
-                matricula.TextBox16.Enabled = False
-                matricula.TextBox17.Enabled = False
-                matricula.TextBox18.Enabled = False
+                matricula.TextBox1.Enabled = True
+                matricula.TextBox2.Enabled = True
+                matricula.TextBox3.Enabled = True
+                matricula.TextBox4.Enabled = True
+                matricula.TextBox5.Enabled = True
+                matricula.TextBox6.Enabled = True
+                matricula.TextBox7.Enabled = True
+                matricula.TextBox8.Enabled = True
+                matricula.TextBox9.Enabled = True
+                matricula.TextBox10.Enabled = True
+                matricula.TextBox11.Enabled = True
+                matricula.TextBox12.Enabled = True
+                matricula.TextBox13.Enabled = True
+                matricula.TextBox14.Enabled = True
+                matricula.TextBox15.Enabled = True
+                matricula.TextBox16.Enabled = True
+                matricula.TextBox17.Enabled = True
+                matricula.TextBox18.Enabled = True
                 matricula.TextBox19.Enabled = False
-                matricula.TextBox20.Enabled = False
-                matricula.TextBox21.Enabled = False
+                matricula.TextBox20.Enabled = True
+                matricula.TextBox21.Enabled = True
                 matricula.TextBox22.Enabled = False
                 matricula.TextBox23.Enabled = False
-                matricula.TextBox24.Enabled = False
-                matricula.TextBox25.Enabled = False
-                matricula.TextBox26.Enabled = False
-                matricula.TextBox27.Enabled = False
-                matricula.TextBox28.Enabled = False
-                matricula.TextBox29.Enabled = False
-                matricula.TextBox30.Enabled = False
+                matricula.TextBox24.Enabled = True
+                matricula.TextBox25.Enabled = True
+                matricula.TextBox26.Enabled = True
+                matricula.TextBox27.Enabled = True
+                matricula.TextBox28.Enabled = True
+                matricula.TextBox29.Enabled = True
+                matricula.TextBox30.Enabled = True
                 matricula.TextBox37.Enabled = False
 
-                matricula.ComboBox1.Enabled = False
-                matricula.ComboBox2.Enabled = False
-                matricula.ComboBox3.Enabled = False
-                matricula.ComboBox4.Enabled = False
+                matricula.ComboBox1.Enabled = True
+                matricula.ComboBox2.Enabled = True
+                matricula.ComboBox3.Enabled = True
+                matricula.ComboBox4.Enabled = True
 
-                matricula.ComboBox6.Enabled = False
+                matricula.ComboBox6.Enabled = True
 
                 matricula.CheckBox1.Enabled = False
                 matricula.CheckBox2.Enabled = False
@@ -490,23 +489,20 @@ Public Class Form1
                 matricula.CheckBox7.Enabled = False
                 matricula.CheckBox8.Enabled = False
 
-                matricula.Button26.Visible = True
-                matricula.Button27.Visible = True
-                matricula.Button28.Visible = True
+                
+                matricula.Button28.Visible = False
 
-                matricula.Button5.Visible = False
+
                 matricula.Button9.Visible = False
-                matricula.Button16.Visible = False
-
-                matricula.Button4.Visible = False
-                matricula.Button8.Visible = False
-                matricula.Button15.Visible = False
                
+
+                matricula.Button8.Visible = True
+              
                 conector.Close()
 
                 check_campos()
 
-                matricula.calendarn.Enabled = False
+                matricula.calendarn.Enabled = True
                 matricula.calen.Enabled = False
                 matricula.Show()
                 matricula.TabControl1.SelectedIndex = 3
