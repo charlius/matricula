@@ -89,7 +89,7 @@ Public Class FormEntrarUsuarios
                 Dim qry As String = "select * from usuario where nombre_usuario = '" & txtuser.Text & "' and pass='" & txtpass.Text & "' and tipo_usuario = 'admin'"
                 Dim sqlcmd As New SqlCommand(qry, conector)
                 Dim dr As SqlDataReader
-                MsgBox(qry)
+
                 dr = sqlcmd.ExecuteReader
 
 
