@@ -26,8 +26,6 @@ Partial Class SeleccionarAñoCurso
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
@@ -37,7 +35,7 @@ Partial Class SeleccionarAñoCurso
         Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox1.Font = New System.Drawing.Font("Perpetua Titling MT", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(114, 84)
+        Me.ComboBox1.Location = New System.Drawing.Point(114, 71)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(171, 31)
         Me.ComboBox1.TabIndex = 0
@@ -67,29 +65,6 @@ Partial Class SeleccionarAñoCurso
         Me.Button1.Text = "BUSCAR CURSOS"
         Me.Button1.UseVisualStyleBackColor = False
         '
-        'TextBox1
-        '
-        Me.TextBox1.BackColor = System.Drawing.Color.Gold
-        Me.TextBox1.Font = New System.Drawing.Font("Palatino Linotype", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(114, 53)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(171, 25)
-        Me.TextBox1.TabIndex = 12
-        Me.TextBox1.Text = "INGRESE RUT ALUMNO"
-        '
-        'Button2
-        '
-        Me.Button2.BackColor = System.Drawing.Color.DarkBlue
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.ForeColor = System.Drawing.Color.Gold
-        Me.Button2.Location = New System.Drawing.Point(105, 165)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(180, 29)
-        Me.Button2.TabIndex = 13
-        Me.Button2.Text = "BUSCAR ALUMNO"
-        Me.Button2.UseVisualStyleBackColor = False
-        '
         'Button3
         '
         Me.Button3.FlatAppearance.BorderSize = 0
@@ -107,8 +82,6 @@ Partial Class SeleccionarAñoCurso
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.HotTrack
         Me.ClientSize = New System.Drawing.Size(421, 200)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label1)
@@ -126,6 +99,4 @@ Partial Class SeleccionarAñoCurso
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Button3 As System.Windows.Forms.Button
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
-    Friend WithEvents Button2 As System.Windows.Forms.Button
 End Class

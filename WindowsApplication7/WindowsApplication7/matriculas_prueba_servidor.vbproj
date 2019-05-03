@@ -85,10 +85,22 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BuscadorAlumno.Designer.vb">
+      <DependentUpon>BuscadorAlumno.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BuscadorAlumno.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form1.designer.vb">
       <DependentUpon>Form1.vb</DependentUpon>
     </Compile>
     <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAñoAcademico.Designer.vb">
+      <DependentUpon>FormAñoAcademico.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormAñoAcademico.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormEntrarUsuarios.Designer.vb">
@@ -158,8 +170,14 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="BuscadorAlumno.resx">
+      <DependentUpon>BuscadorAlumno.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAñoAcademico.resx">
+      <DependentUpon>FormAñoAcademico.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormEntrarUsuarios.resx">
       <DependentUpon>FormEntrarUsuarios.vb</DependentUpon>

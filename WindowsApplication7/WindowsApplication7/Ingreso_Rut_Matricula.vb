@@ -164,6 +164,8 @@ Public Class Ingreso_Rut_Matricula
                 Seleccion_Tipo_Matricula.Enabled = True
                 Seleccion_Tipo_Matricula.Hide()
                 Seleccion_Tipo_Matricula.Close()
+                FormAñoAcademico.Close()
+                FormAñoAcademico.Hide()
                 Form1.Hide()
                 Form1.Close()
                 Me.Hide()

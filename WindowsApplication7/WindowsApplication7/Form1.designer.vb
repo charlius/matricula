@@ -103,6 +103,8 @@ Partial Class Form1
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.Label68 = New System.Windows.Forms.Label()
+        Me.Label69 = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -958,12 +960,35 @@ Partial Class Form1
         Me.PictureBox2.TabIndex = 9
         Me.PictureBox2.TabStop = False
         '
+        'Label68
+        '
+        Me.Label68.AutoSize = True
+        Me.Label68.ForeColor = System.Drawing.Color.DarkSlateGray
+        Me.Label68.Location = New System.Drawing.Point(1150, 375)
+        Me.Label68.Name = "Label68"
+        Me.Label68.Size = New System.Drawing.Size(117, 16)
+        Me.Label68.TabIndex = 196
+        Me.Label68.Text = "Año Academico"
+        '
+        'Label69
+        '
+        Me.Label69.AutoSize = True
+        Me.Label69.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label69.ForeColor = System.Drawing.Color.DarkSlateGray
+        Me.Label69.Location = New System.Drawing.Point(1160, 391)
+        Me.Label69.Name = "Label69"
+        Me.Label69.Size = New System.Drawing.Size(43, 15)
+        Me.Label69.TabIndex = 195
+        Me.Label69.Text = "XXXX"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Control
         Me.ClientSize = New System.Drawing.Size(1310, 695)
+        Me.Controls.Add(Me.Label68)
+        Me.Controls.Add(Me.Label69)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Label36)
         Me.Controls.Add(Me.Label67)
@@ -1136,5 +1161,7 @@ End Sub
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents PictureBox3 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
+    Friend WithEvents Label68 As System.Windows.Forms.Label
+    Friend WithEvents Label69 As System.Windows.Forms.Label
 
 End Class

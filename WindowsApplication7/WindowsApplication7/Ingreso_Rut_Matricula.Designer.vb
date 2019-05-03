@@ -45,7 +45,7 @@ Partial Class Ingreso_Rut_Matricula
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Perpetua Titling MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.Gold
-        Me.Button1.Location = New System.Drawing.Point(77, 104)
+        Me.Button1.Location = New System.Drawing.Point(73, 114)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(191, 57)
         Me.Button1.TabIndex = 1

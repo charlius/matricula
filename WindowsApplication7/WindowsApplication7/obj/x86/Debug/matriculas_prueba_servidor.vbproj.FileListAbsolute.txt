@@ -198,3 +198,5 @@ C:\Users\user\Documents\GitHub\matricula\WindowsApplication7\WindowsApplication7
 C:\Users\user\Documents\GitHub\matricula\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication1.Seleccion_Tipo_Matricula.resources
 C:\Users\user\Documents\GitHub\matricula\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication1.server.resources
 C:\Users\Roy\Documents\GitHub\matricula\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication1.server.resources
+C:\Users\Roy\Documents\GitHub\matricula\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication1.FormAñoAcademico.resources
+C:\Users\Roy\Documents\GitHub\matricula\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication1.BuscadorAlumno.resources

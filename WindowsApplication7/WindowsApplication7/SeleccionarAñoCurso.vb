@@ -25,18 +25,12 @@ Public Class SeleccionarAñoCurso
         MostrarAñoParaCurso()
 
     End Sub
-    Private Sub textbox1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextBox1.Click, TextBox1.Click
-
-        If TextBox1.Text = "INGRESE RUT ALUMNO" Then
-            TextBox1.Clear()
-        End If
-       
-    End Sub
+   
     Sub MostrarAñoParaCurso()
 
         conector.Close()
         conector.Open()
-        Dim qry As String = "select DISTINCT year(matricula.fecha_matricula) as año from matricula,alumno where alumno.rut_alumno = matricula.rut_alumno and matricula.estado= 'activo' ORDER BY year(fecha_matricula)"
+        Dim qry As String = "select DISTINCT matricula.año_academico from matricula,alumno where alumno.rut_alumno = matricula.rut_alumno and matricula.estado= 'activo' select DISTINCT matricula.año_academico from matricula,alumno where alumno.rut_alumno = matricula.rut_alumno and matricula.estado= 'activo' ORDER BY (matricula.año_academico)"
         Dim sqlcmd As New SqlCommand(qry, conector)
         'Dim drc As String
         Dim da As SqlDataAdapter = New SqlDataAdapter(sqlcmd)
@@ -47,11 +41,11 @@ Public Class SeleccionarAñoCurso
         da.Fill(ds)
 
         ComboBox1.DataSource = ds.Tables(0)
-        ComboBox1.DisplayMember = "año"
+        ComboBox1.DisplayMember = "año_academico"
         ComboBox1.SelectedItem = 0
 
         matricula.seleccion_año = ComboBox1.Text
-        matricula.ingreso_rut_buscador = TextBox1.Text
+
     End Sub
 
 
@@ -69,9 +63,9 @@ Public Class SeleccionarAñoCurso
 
     Private Sub Button1_Click(sender As System.Object, e As System.EventArgs) Handles Button1.Click
         matricula.seleccion_año = ComboBox1.Text
-        matricula.ingreso_rut_buscador = TextBox1.Text
+
         añoform = ComboBox1.Text
-        rut_form = TextBox1.Text
+
 
 
         primero_activas()
@@ -99,7 +93,7 @@ Public Class SeleccionarAñoCurso
             cover_año = añoform
             conector.Close()
             conector.Open()
-            Dim qryc As String = "select count (alumno.rut_alumno) from matricula,alumno where matricula.estado='activo' and matricula.curso_alumno= 1 and matricula.rut_alumno=alumno.rut_alumno and year(matricula.fecha_matricula)= " & cover_año & ""
+            Dim qryc As String = "select count (alumno.rut_alumno) from matricula,alumno where matricula.estado='activo' and matricula.curso_alumno= 1 and matricula.rut_alumno=alumno.rut_alumno and matricula.año_academico= " & cover_año & ""
             Dim sqlcmdc As New SqlCommand(qryc, conector)
             Dim drc As Integer
             drc = sqlcmdc.ExecuteScalar
@@ -124,7 +118,7 @@ Public Class SeleccionarAñoCurso
         Try
             conector.Close()
             conector.Open()
-            Dim qryc As String = "select count (alumno.rut_alumno) from matricula,alumno where matricula.estado='activo' and matricula.curso_alumno=2 and matricula.rut_alumno=alumno.rut_alumno and year(matricula.fecha_matricula)= " & cover_año & ""
+            Dim qryc As String = "select count (alumno.rut_alumno) from matricula,alumno where matricula.estado='activo' and matricula.curso_alumno=2 and matricula.rut_alumno=alumno.rut_alumno and matricula.año_academico= " & cover_año & ""
             Dim sqlcmdc As New SqlCommand(qryc, conector)
             Dim drc As Integer
             drc = sqlcmdc.ExecuteScalar
@@ -149,7 +143,7 @@ Public Class SeleccionarAñoCurso
         Try
             conector.Close()
             conector.Open()
-            Dim qryc As String = "select count (alumno.rut_alumno) from matricula,alumno where matricula.estado='activo' and matricula.curso_alumno=3 and matricula.rut_alumno=alumno.rut_alumno and year(matricula.fecha_matricula)= " & cover_año & ""
+            Dim qryc As String = "select count (alumno.rut_alumno) from matricula,alumno where matricula.estado='activo' and matricula.curso_alumno=3 and matricula.rut_alumno=alumno.rut_alumno and matricula.año_academico= " & cover_año & ""
             Dim sqlcmdc As New SqlCommand(qryc, conector)
             Dim drc As Integer
             drc = sqlcmdc.ExecuteScalar
@@ -174,7 +168,7 @@ Public Class SeleccionarAñoCurso
         Try
             conector.Close()
             conector.Open()
-            Dim qryc As String = "select count (alumno.rut_alumno) from matricula,alumno where matricula.estado='activo' and matricula.curso_alumno=4 and matricula.rut_alumno=alumno.rut_alumno and year(matricula.fecha_matricula)= " & cover_año & ""
+            Dim qryc As String = "select count (alumno.rut_alumno) from matricula,alumno where matricula.estado='activo' and matricula.curso_alumno=4 and matricula.rut_alumno=alumno.rut_alumno and matricula.año_academico= " & cover_año & ""
             Dim sqlcmdc As New SqlCommand(qryc, conector)
             Dim drc As Integer
             drc = sqlcmdc.ExecuteScalar
@@ -199,7 +193,7 @@ Public Class SeleccionarAñoCurso
         Try
             conector.Close()
             conector.Open()
-            Dim qryc As String = "select count (alumno.rut_alumno) from matricula,alumno where matricula.estado='activo' and matricula.curso_alumno=5 and matricula.rut_alumno=alumno.rut_alumno and year(matricula.fecha_matricula)= " & cover_año & ""
+            Dim qryc As String = "select count (alumno.rut_alumno) from matricula,alumno where matricula.estado='activo' and matricula.curso_alumno=5 and matricula.rut_alumno=alumno.rut_alumno and matricula.año_academico= " & cover_año & ""
             Dim sqlcmdc As New SqlCommand(qryc, conector)
             Dim drc As Integer
             drc = sqlcmdc.ExecuteScalar
@@ -224,7 +218,7 @@ Public Class SeleccionarAñoCurso
         Try
             conector.Close()
             conector.Open()
-            Dim qryc As String = "select count (alumno.rut_alumno) from matricula,alumno where matricula.estado='activo' and matricula.curso_alumno=6 and matricula.rut_alumno=alumno.rut_alumno and year(matricula.fecha_matricula)= " & cover_año & ""
+            Dim qryc As String = "select count (alumno.rut_alumno) from matricula,alumno where matricula.estado='activo' and matricula.curso_alumno=6 and matricula.rut_alumno=alumno.rut_alumno and matricula.año_academico= " & cover_año & ""
             Dim sqlcmdc As New SqlCommand(qryc, conector)
             Dim drc As Integer
             drc = sqlcmdc.ExecuteScalar
@@ -249,7 +243,7 @@ Public Class SeleccionarAñoCurso
         Try
             conector.Close()
             conector.Open()
-            Dim qryc As String = "select count (alumno.rut_alumno) from matricula,alumno where matricula.estado='activo' and matricula.curso_alumno=7 and matricula.rut_alumno=alumno.rut_alumno and year(matricula.fecha_matricula)= " & cover_año & ""
+            Dim qryc As String = "select count (alumno.rut_alumno) from matricula,alumno where matricula.estado='activo' and matricula.curso_alumno=7 and matricula.rut_alumno=alumno.rut_alumno and matricula.año_academico= " & cover_año & ""
             Dim sqlcmdc As New SqlCommand(qryc, conector)
             Dim drc As Integer
             drc = sqlcmdc.ExecuteScalar
@@ -274,7 +268,7 @@ Public Class SeleccionarAñoCurso
         Try
             conector.Close()
             conector.Open()
-            Dim qryc As String = "select count (alumno.rut_alumno) from matricula,alumno where matricula.estado='activo' and matricula.curso_alumno=8 and matricula.rut_alumno=alumno.rut_alumno and year(matricula.fecha_matricula)= " & cover_año & ""
+            Dim qryc As String = "select count (alumno.rut_alumno) from matricula,alumno where matricula.estado='activo' and matricula.curso_alumno=8 and matricula.rut_alumno=alumno.rut_alumno and matricula.año_academico= " & cover_año & ""
             Dim sqlcmdc As New SqlCommand(qryc, conector)
             Dim drc As Integer
             drc = sqlcmdc.ExecuteScalar
@@ -299,7 +293,7 @@ Public Class SeleccionarAñoCurso
         Try
             conector.Close()
             conector.Open()
-            Dim qryc As String = "select count (alumno.rut_alumno) from matricula,alumno where matricula.estado='activo' and matricula.curso_alumno=9 and matricula.rut_alumno=alumno.rut_alumno and year(matricula.fecha_matricula)= " & cover_año & ""
+            Dim qryc As String = "select count (alumno.rut_alumno) from matricula,alumno where matricula.estado='activo' and matricula.curso_alumno=9 and matricula.rut_alumno=alumno.rut_alumno and matricula.año_academico= " & cover_año & ""
             Dim sqlcmdc As New SqlCommand(qryc, conector)
             Dim drc As Integer
             drc = sqlcmdc.ExecuteScalar
@@ -324,7 +318,7 @@ Public Class SeleccionarAñoCurso
         Try
             conector.Close()
             conector.Open()
-            Dim qryc As String = "select count (alumno.rut_alumno) from matricula,alumno where matricula.estado='activo' and matricula.curso_alumno=10 and matricula.rut_alumno=alumno.rut_alumno and year(matricula.fecha_matricula)= " & cover_año & ""
+            Dim qryc As String = "select count (alumno.rut_alumno) from matricula,alumno where matricula.estado='activo' and matricula.curso_alumno=10 and matricula.rut_alumno=alumno.rut_alumno and matricula.año_academico= " & cover_año & ""
             Dim sqlcmdc As New SqlCommand(qryc, conector)
             Dim drc As Integer
             drc = sqlcmdc.ExecuteScalar
@@ -344,9 +338,9 @@ Public Class SeleccionarAñoCurso
         End Try
     End Sub
 
-    Private Sub Button2_Click(sender As System.Object, e As System.EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(sender As System.Object, e As System.EventArgs)
         conector.Close()
-        rut_form = TextBox1.Text
+
         añoform = ComboBox1.Text
         cover_año = añoform
 
@@ -354,7 +348,7 @@ Public Class SeleccionarAñoCurso
         Try
             matricula.rut_pdf_alumno = matricula.TextBox28.Text
             conector.Open()
-            Dim qry As String = "select alumno.rut_alumno ,alumno.nombres,alumno.apellidos,alumno.fecha_nacimiento, matricula.edad_alumno,curso.Nombre ,matricula.fono_urgencia_1 ,matricula.fono_urgencia_2,alumno.sexo,apoderado.rut_apoderado , apoderado.nombre_apoderado ,apoderado.domicilio , apoderado.fono  ,matricula.fecha_matricula ,matricula.escuela_procedencia ,matricula.cursos_repetidos ,matricula.domicilio_alumno ,matricula.alergico , matricula.grupo_sanguineo ,matricula.enfermedad ,matricula.grupo_pie ,matricula.nombre_padre ,matricula.nombre_madre ,matricula.rut_padre ,matricula.rut_madre ,matricula.trabajo_padre ,matricula.trabajo_madre ,matricula.escolaridad_padre ,matricula.escolaridad_madre ,matricula.vive_con ,matricula.casa_propia ,matricula.ingreso_mensual ,matricula.beneficio ,matricula.religion , usuario.nombre_usuario from alumno, apoderado, curso, matricula, usuario where matricula.rut_alumno = alumno.rut_alumno And apoderado.rut_apoderado = matricula.rut_apoderado And matricula.curso_alumno = curso.id_curso And matricula.id_usuario = usuario.id_usuario And matricula.rut_alumno ='" & rut_form & "' and year(matricula.fecha_matricula)= " & cover_año & " "
+            Dim qry As String = "select alumno.rut_alumno ,alumno.nombres,alumno.apellidos,alumno.fecha_nacimiento, matricula.edad_alumno,curso.Nombre ,matricula.fono_urgencia_1 ,matricula.fono_urgencia_2,alumno.sexo,apoderado.rut_apoderado , apoderado.nombre_apoderado ,apoderado.domicilio , apoderado.fono  ,matricula.fecha_matricula ,matricula.escuela_procedencia ,matricula.cursos_repetidos ,matricula.domicilio_alumno ,matricula.alergico , matricula.grupo_sanguineo ,matricula.enfermedad ,matricula.grupo_pie ,matricula.nombre_padre ,matricula.nombre_madre ,matricula.rut_padre ,matricula.rut_madre ,matricula.trabajo_padre ,matricula.trabajo_madre ,matricula.escolaridad_padre ,matricula.escolaridad_madre ,matricula.vive_con ,matricula.casa_propia ,matricula.ingreso_mensual ,matricula.beneficio ,matricula.religion , usuario.nombre_usuario, matricula.año_academico from alumno, apoderado, curso, matricula, usuario where matricula.rut_alumno = alumno.rut_alumno And apoderado.rut_apoderado = matricula.rut_apoderado And matricula.curso_alumno = curso.id_curso And matricula.id_usuario = usuario.id_usuario And matricula.rut_alumno ='" & rut_form & "' and year(matricula.fecha_matricula)= " & cover_año & " "
             Dim sqlcmd As New SqlCommand(qry, conector)
             Dim dr As SqlDataReader
             dr = sqlcmd.ExecuteReader
@@ -395,6 +389,7 @@ Public Class SeleccionarAñoCurso
                 Form1.Label32.Text = dr("beneficio")
                 Form1.Label33.Text = dr("religion")
                 Form1.Label34.Text = dr("nombre_usuario")
+                Form1.Label69.Text = dr("año_academico")
 
                 conector.Close()
                 Form1.Show()
@@ -411,10 +406,7 @@ Public Class SeleccionarAñoCurso
         conector.Close()
     End Sub
 
-    Private Sub TextBox1_TextChanged(sender As System.Object, e As System.EventArgs) Handles TextBox1.TextChanged
-        conector.Close()
-        If TextBox1.TextLength = 8 Then TextBox1.Text = ValidaRut(TextBox1.Text)
-    End Sub
+    
     Public Function ValidaRut(ByVal ElNumero As String) As String
         Try
             Dim Resultado As String = ""
