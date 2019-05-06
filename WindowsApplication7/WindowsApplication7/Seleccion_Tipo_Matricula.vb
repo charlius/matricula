@@ -55,4 +55,18 @@ Public Class Seleccion_Tipo_Matricula
         matricula.Enabled = False
         Me.Enabled = False
     End Sub
+
+    Private Sub PictureBox1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox1.Click
+        conector.Close()
+        conector.Close()
+        conector.Close()
+
+        matricula.Enabled = True
+        matricula.Show()
+        Me.Close()
+        Form1.Hide()
+        Form1.Close()
+        Ingreso_Rut_Matricula.Hide()
+        Ingreso_Rut_Matricula.Close()
+    End Sub
 End Class

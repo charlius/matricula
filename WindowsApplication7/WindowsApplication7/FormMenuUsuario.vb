@@ -202,7 +202,7 @@ Public Class FormMenuUsuario
         If MsgBox("¿ Seguro que desea salir ?", vbQuestion + vbYesNo, "Pregunta") = vbYes Then
             inicio1.Enabled = True
             inicio1.Show()
-            Me.Hide()
+            Me.Close()
         End If
     End Sub
 

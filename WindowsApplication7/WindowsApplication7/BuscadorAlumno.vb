@@ -119,4 +119,17 @@ Public Class BuscadorAlumno
         matricula.Show()
         Me.Hide()
     End Sub
+
+    Private Sub PictureBox1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox1.Click
+        conector.Close()
+        conector.Close()
+        conector.Close()
+
+        matricula.Enabled = True
+        matricula.Show()
+        Me.Close()
+
+    End Sub
+
+    
 End Class

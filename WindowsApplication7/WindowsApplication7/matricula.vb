@@ -730,7 +730,7 @@ Public Class matricula
         If MsgBox("¿ Seguro que desea salir ?", vbQuestion + vbYesNo, "Pregunta") = vbYes Then
             conector.Close()
             conector.Close()
-            End
+
 
             Me.Close()
         End If

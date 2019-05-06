@@ -208,4 +208,14 @@ Public Class Ingreso_Rut_Matricula
             conector.Close()
         End Try
     End Function
+
+    Private Sub PictureBox1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox1.Click
+        conector.Close()
+        conector.Close()
+        conector.Close()
+        Seleccion_Tipo_Matricula.Enabled = True
+        Seleccion_Tipo_Matricula.Show()
+        Me.Close()
+
+    End Sub
 End Class

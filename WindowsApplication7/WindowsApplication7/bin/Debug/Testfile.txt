@@ -1,5 +1,5 @@
-192.168.1.55
+DESKTOP-AVV9E8Q
 1433
 matriculas_ll
-servidorbdd
-1234321
+charles
+199314

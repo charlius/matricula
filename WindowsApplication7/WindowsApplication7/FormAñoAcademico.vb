@@ -211,4 +211,19 @@ Public Class FormAñoAcademico
                 e.SuppressKeyPress = True
         End Select
     End Sub
+
+
+    Private Sub PictureBox1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox1.Click
+        conector.Close()
+        conector.Close()
+        conector.Close()
+
+        Seleccion_Tipo_Matricula.Enabled = True
+        matricula.Enabled = False
+        Me.Close()
+        Form1.Hide()
+        Form1.Close()
+        Ingreso_Rut_Matricula.Hide()
+        Ingreso_Rut_Matricula.Close()
+    End Sub
 End Class

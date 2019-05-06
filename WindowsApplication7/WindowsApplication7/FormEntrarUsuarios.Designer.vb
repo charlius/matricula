@@ -125,7 +125,7 @@ Partial Class FormEntrarUsuarios
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Perpetua Titling MT", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.Gold
+        Me.Label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Label2.Location = New System.Drawing.Point(12, 81)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(105, 23)
@@ -136,7 +136,7 @@ Partial Class FormEntrarUsuarios
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Perpetua Titling MT", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.Gold
+        Me.Label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Label3.Location = New System.Drawing.Point(12, 135)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(151, 23)
@@ -156,7 +156,7 @@ Partial Class FormEntrarUsuarios
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.BackColor = System.Drawing.SystemColors.Control
         Me.ClientSize = New System.Drawing.Size(550, 313)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
@@ -165,6 +165,7 @@ Partial Class FormEntrarUsuarios
         Me.Controls.Add(Me.txtpass)
         Me.Controls.Add(Me.txtuser)
         Me.Controls.Add(Me.Panel1)
+        Me.ForeColor = System.Drawing.SystemColors.ControlText
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FormEntrarUsuarios"

@@ -132,4 +132,10 @@ Public Class FormEntrarUsuarios
             txtuser.Text = "NOMBRE DE USUARIO"
         End If
     End Sub
+
+
+
+
+
+
 End Class
