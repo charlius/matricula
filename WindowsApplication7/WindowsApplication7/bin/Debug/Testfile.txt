@@ -1,5 +1,5 @@
-DESKTOP-AVV9E8Q
+192.168.1.55
 1433
 matriculas_ll
-charles
-199314
+servidorbdd
+1234321

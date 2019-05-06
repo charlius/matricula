@@ -731,7 +731,7 @@ Public Class matricula
             conector.Close()
             conector.Close()
 
-
+            End
             Me.Close()
         End If
     End Sub
