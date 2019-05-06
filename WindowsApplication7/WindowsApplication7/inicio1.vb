@@ -126,7 +126,9 @@ Public Class inicio1
 
 
             If dr.Read() Then
-                matricula.Show()
+                'matricula.Show()
+                barra_load.Show()
+
                 Me.Hide()
                 nomUsuario = txtuser.Text
                 conector.Close()

@@ -19,6 +19,10 @@ WindowsApplication7
 	<summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
+</member><member name="P:WindowsApplication1.My.Resources.Resources._11">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
 </member><member name="P:WindowsApplication1.My.Resources.Resources.boton_de_minimizar">
 	<summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.

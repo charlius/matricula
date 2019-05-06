@@ -85,6 +85,12 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="barra_load.Designer.vb">
+      <DependentUpon>barra_load.vb</DependentUpon>
+    </Compile>
+    <Compile Include="barra_load.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="BuscadorAlumno.Designer.vb">
       <DependentUpon>BuscadorAlumno.vb</DependentUpon>
     </Compile>
@@ -170,6 +176,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="barra_load.resx">
+      <DependentUpon>barra_load.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BuscadorAlumno.resx">
       <DependentUpon>BuscadorAlumno.vb</DependentUpon>
     </EmbeddedResource>
