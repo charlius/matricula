@@ -25,7 +25,6 @@ Partial Class Form1
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -94,38 +93,27 @@ Partial Class Form1
         Me.Label71 = New System.Windows.Forms.Label()
         Me.Label72 = New System.Windows.Forms.Label()
         Me.Label35 = New System.Windows.Forms.Label()
-        Me.Button66 = New System.Windows.Forms.Button()
-        Me.Button64 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.Label36 = New System.Windows.Forms.Label()
         Me.Label67 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Label68 = New System.Windows.Forms.Label()
         Me.Label69 = New System.Windows.Forms.Label()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button66 = New System.Windows.Forms.Button()
+        Me.Button64 = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'OpenFileDialog1
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackColor = System.Drawing.Color.Cyan
-        Me.PictureBox1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(8, 26)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(154, 120)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 2
-        Me.PictureBox1.TabStop = False
         '
         'Label1
         '
@@ -838,6 +826,116 @@ Partial Class Form1
         Me.Label35.TabIndex = 122
         Me.Label35.Text = "Nombre Matriculador"
         '
+        'Label36
+        '
+        Me.Label36.AutoSize = True
+        Me.Label36.ForeColor = System.Drawing.Color.DarkSlateGray
+        Me.Label36.Location = New System.Drawing.Point(504, 90)
+        Me.Label36.Name = "Label36"
+        Me.Label36.Size = New System.Drawing.Size(98, 16)
+        Me.Label36.TabIndex = 193
+        Me.Label36.Text = "Sexo Alumno"
+        '
+        'Label67
+        '
+        Me.Label67.AutoSize = True
+        Me.Label67.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label67.ForeColor = System.Drawing.Color.DarkSlateGray
+        Me.Label67.Location = New System.Drawing.Point(512, 106)
+        Me.Label67.Name = "Label67"
+        Me.Label67.Size = New System.Drawing.Size(43, 15)
+        Me.Label67.TabIndex = 192
+        Me.Label67.Text = "XXXX"
+        '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.Color.Gold
+        Me.Panel1.Controls.Add(Me.PictureBox3)
+        Me.Panel1.Controls.Add(Me.PictureBox2)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(1310, 26)
+        Me.Panel1.TabIndex = 194
+        '
+        'Label68
+        '
+        Me.Label68.AutoSize = True
+        Me.Label68.ForeColor = System.Drawing.Color.DarkSlateGray
+        Me.Label68.Location = New System.Drawing.Point(1150, 375)
+        Me.Label68.Name = "Label68"
+        Me.Label68.Size = New System.Drawing.Size(117, 16)
+        Me.Label68.TabIndex = 196
+        Me.Label68.Text = "Año Academico"
+        '
+        'Label69
+        '
+        Me.Label69.AutoSize = True
+        Me.Label69.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label69.ForeColor = System.Drawing.Color.DarkSlateGray
+        Me.Label69.Location = New System.Drawing.Point(1160, 391)
+        Me.Label69.Name = "Label69"
+        Me.Label69.Size = New System.Drawing.Size(43, 15)
+        Me.Label69.TabIndex = 195
+        Me.Label69.Text = "XXXX"
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox3.Dock = System.Windows.Forms.DockStyle.Right
+        Me.PictureBox3.Image = Global.WindowsApplication1.My.Resources.Resources.boton_de_minimizar
+        Me.PictureBox3.Location = New System.Drawing.Point(1256, 0)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(27, 26)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox3.TabIndex = 11
+        Me.PictureBox3.TabStop = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox2.Dock = System.Windows.Forms.DockStyle.Right
+        Me.PictureBox2.Image = Global.WindowsApplication1.My.Resources.Resources.icon
+        Me.PictureBox2.Location = New System.Drawing.Point(1283, 0)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(27, 26)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox2.TabIndex = 9
+        Me.PictureBox2.TabStop = False
+        '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.SystemColors.Control
+        Me.Button2.BackgroundImage = CType(resources.GetObject("Button2.BackgroundImage"), System.Drawing.Image)
+        Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Button2.FlatAppearance.BorderSize = 3
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.Font = New System.Drawing.Font("Tahoma", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.ForeColor = System.Drawing.Color.Black
+        Me.Button2.ImageAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.Button2.Location = New System.Drawing.Point(503, 490)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(157, 193)
+        Me.Button2.TabIndex = 190
+        Me.Button2.Text = "" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "VER REGISTRO"
+        Me.Button2.UseVisualStyleBackColor = False
+        '
+        'Button1
+        '
+        Me.Button1.BackgroundImage = CType(resources.GetObject("Button1.BackgroundImage"), System.Drawing.Image)
+        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Button1.FlatAppearance.BorderSize = 3
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Tahoma", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.Color.Black
+        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.Button1.Location = New System.Drawing.Point(936, 490)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(167, 193)
+        Me.Button1.TabIndex = 189
+        Me.Button1.Text = "" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "GENERAR PDF"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'Button66
         '
         Me.Button66.BackColor = System.Drawing.SystemColors.Control
@@ -871,115 +969,17 @@ Partial Class Form1
         Me.Button64.Text = "" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "INGRESAR NUEVA MATRICULA"
         Me.Button64.UseVisualStyleBackColor = True
         '
-        'Button1
+        'PictureBox1
         '
-        Me.Button1.BackgroundImage = CType(resources.GetObject("Button1.BackgroundImage"), System.Drawing.Image)
-        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Button1.FlatAppearance.BorderSize = 3
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Tahoma", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.Black
-        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.Button1.Location = New System.Drawing.Point(936, 490)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(167, 193)
-        Me.Button1.TabIndex = 189
-        Me.Button1.Text = "" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "GENERAR PDF"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.BackColor = System.Drawing.SystemColors.Control
-        Me.Button2.BackgroundImage = CType(resources.GetObject("Button2.BackgroundImage"), System.Drawing.Image)
-        Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Button2.FlatAppearance.BorderSize = 3
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Tahoma", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.ForeColor = System.Drawing.Color.Black
-        Me.Button2.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.Button2.Location = New System.Drawing.Point(503, 490)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(157, 193)
-        Me.Button2.TabIndex = 190
-        Me.Button2.Text = "" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "VER REGISTRO"
-        Me.Button2.UseVisualStyleBackColor = False
-        '
-        'Label36
-        '
-        Me.Label36.AutoSize = True
-        Me.Label36.ForeColor = System.Drawing.Color.DarkSlateGray
-        Me.Label36.Location = New System.Drawing.Point(504, 90)
-        Me.Label36.Name = "Label36"
-        Me.Label36.Size = New System.Drawing.Size(98, 16)
-        Me.Label36.TabIndex = 193
-        Me.Label36.Text = "Sexo Alumno"
-        '
-        'Label67
-        '
-        Me.Label67.AutoSize = True
-        Me.Label67.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label67.ForeColor = System.Drawing.Color.DarkSlateGray
-        Me.Label67.Location = New System.Drawing.Point(512, 106)
-        Me.Label67.Name = "Label67"
-        Me.Label67.Size = New System.Drawing.Size(43, 15)
-        Me.Label67.TabIndex = 192
-        Me.Label67.Text = "XXXX"
-        '
-        'Panel1
-        '
-        Me.Panel1.BackColor = System.Drawing.Color.Gold
-        Me.Panel1.Controls.Add(Me.PictureBox3)
-        Me.Panel1.Controls.Add(Me.PictureBox2)
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1310, 26)
-        Me.Panel1.TabIndex = 194
-        '
-        'PictureBox3
-        '
-        Me.PictureBox3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox3.Image = Global.WindowsApplication1.My.Resources.Resources.boton_de_minimizar
-        Me.PictureBox3.Location = New System.Drawing.Point(1243, 0)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(27, 23)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox3.TabIndex = 11
-        Me.PictureBox3.TabStop = False
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox2.Image = Global.WindowsApplication1.My.Resources.Resources.icon
-        Me.PictureBox2.Location = New System.Drawing.Point(1276, 0)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(27, 23)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox2.TabIndex = 9
-        Me.PictureBox2.TabStop = False
-        '
-        'Label68
-        '
-        Me.Label68.AutoSize = True
-        Me.Label68.ForeColor = System.Drawing.Color.DarkSlateGray
-        Me.Label68.Location = New System.Drawing.Point(1150, 375)
-        Me.Label68.Name = "Label68"
-        Me.Label68.Size = New System.Drawing.Size(117, 16)
-        Me.Label68.TabIndex = 196
-        Me.Label68.Text = "Año Academico"
-        '
-        'Label69
-        '
-        Me.Label69.AutoSize = True
-        Me.Label69.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label69.ForeColor = System.Drawing.Color.DarkSlateGray
-        Me.Label69.Location = New System.Drawing.Point(1160, 391)
-        Me.Label69.Name = "Label69"
-        Me.Label69.Size = New System.Drawing.Size(43, 15)
-        Me.Label69.TabIndex = 195
-        Me.Label69.Text = "XXXX"
+        Me.PictureBox1.BackColor = System.Drawing.Color.Cyan
+        Me.PictureBox1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(8, 26)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(154, 120)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 2
+        Me.PictureBox1.TabStop = False
         '
         'Form1
         '
@@ -1073,10 +1073,10 @@ Partial Class Form1
         Me.Name = "Form1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "CONVERTIR A PDF"
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
