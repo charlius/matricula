@@ -131,5 +131,30 @@ Public Class BuscadorAlumno
 
     End Sub
 
-    
+    Public Function ValidaRut(ByVal ElNumero As String) As String
+        Try
+            Dim Resultado As String = ""
+            Dim Multiplicador As Integer = 2
+            Dim iNum As Integer = 0
+            Dim Suma As Integer = 0
+
+            For i As Integer = 8 To 1 Step -1
+                iNum = Mid(ElNumero, i, 1)
+                Suma += iNum * Multiplicador
+                Multiplicador += 1
+                If Multiplicador = 8 Then Multiplicador = 2
+            Next
+            Resultado = CStr(11 - (Suma Mod 11))
+            If Resultado = "10" Then Resultado = "K"
+            If Resultado = "11" Then Resultado = "0"
+            Return ElNumero & "-" & Resultado
+        Catch ex As Exception
+            conector.Close()
+        End Try
+    End Function
+    Private Sub TextBox1_TextChanged(sender As System.Object, e As System.EventArgs) Handles TextBox1.TextChanged
+        conector.Close()
+        If TextBox1.TextLength = 8 Then TextBox1.Text = ValidaRut(TextBox1.Text)
+    End Sub
+
 End Class

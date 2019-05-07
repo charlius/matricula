@@ -339,8 +339,7 @@ Public Class matricula
             insertar.ExecuteNonQuery()
 
             conector.Close()
-            MsgBox("Datos Ingresados Correctamente", MsgBoxStyle.Information, "Operacion Exitosa")
-
+          
 
             
 
@@ -348,7 +347,7 @@ Public Class matricula
             conector.Close()
 
         Catch ex As Exception
-            MsgBox("error" & vbCrLf & ex.Message)
+            MsgBox("Error Alumno" & vbCrLf & ex.Message)
             conector.Close()
         End Try
 
@@ -368,11 +367,6 @@ Public Class matricula
             conector.Open()
             insertar.ExecuteNonQuery()
             conector.Close()
-            MsgBox("Registro Actualizado Correctamente", MsgBoxStyle.Information, "Operacion Exitosa")
-           
-
-
-           
 
             TextBox28.Text = rut_completo_buscar
             conector.Close()
@@ -484,18 +478,15 @@ Public Class matricula
             insertar.ExecuteNonQuery()
 
             conector.Close()
-            MsgBox("Datos Ingresados Correctamente", MsgBoxStyle.Information, "Operacion Exitosa")
+
 
             TextBox27.Text = rut_completo_apoderado
-
-           
-
 
             conector.Close()
 
 
-
         Catch ex As Exception
+            MsgBox("Error Guardar Apoderado", MsgBoxStyle.Critical, "Atencion")
             conector.Close()
             conector.Close()
         End Try
@@ -711,6 +702,7 @@ Public Class matricula
         End If
         If rut_alumno_para_matricular <> "x" And rut_apoderado_para_matricular <> "x" Then
             check_no()
+            funcion_update_apoderado()
             insert_matricula()
             conector.Close()
         End If
@@ -719,6 +711,7 @@ Public Class matricula
             insert_matricula()
 
         End If
+    
     End Sub
 
 
@@ -862,7 +855,7 @@ Public Class matricula
             conector.Open()
             insertar.ExecuteNonQuery()
             conector.Close()
-            MsgBox("Registro Actualizado Correctamente", MsgBoxStyle.Information, "Operacion Exitosa")
+
             TextBox6.Enabled = False
             TextBox7.Enabled = False
             TextBox8.Enabled = False
@@ -873,6 +866,7 @@ Public Class matricula
 
             TextBox27.Text = rut_completo_apoderado
         Catch ex As Exception
+            MsgBox("Error Modificar Apoderado", MsgBoxStyle.Critical, "Atencion")
             conector.Close()
         End Try
         conector.Close()
@@ -917,7 +911,71 @@ Public Class matricula
             check_no()
             conector.Close()
             Dim cadena As String
-            cadena = String.Format("UPDATE matricula SET escuela_procedencia ='" & TextBox25.Text & "', cursos_repetidos = '" & TextBox23.Text & "', domicilio_alumno = '" & TextBox24.Text & "', alergico = '" & TextBox22.Text & "', grupo_sanguineo = '" & TextBox37.Text & "', enfermedad ='" & TextBox21.Text & "', grupo_pie ='" & ComboBox2.Text & "', nombre_padre = '" & TextBox20.Text & "', nombre_madre = '" & TextBox10.Text & "', rut_padre = '" & TextBox11.Text & "', rut_madre ='" & TextBox12.Text & "', trabajo_padre = '" & TextBox13.Text & "', trabajo_madre = '" & TextBox14.Text & "', escolaridad_padre = '" & TextBox15.Text & "', escolaridad_madre ='" & TextBox16.Text & "', vive_con = '" & TextBox17.Text & "', casa_propia = '" & ComboBox3.Text & "', ingreso_mensual= " & TextBox18.Text & ", beneficio = '" & TextBox19.Text & "', religion ='" & ComboBox4.Text & "', curso_alumno =" & codigo_de_curso & ", fono_urgencia_1 ='" & TextBox5.Text & "',fono_urgencia_2 ='" & TextBox29.Text & "', edad_alumno = '" & TextBox1.Text & "', estado = 'activo'. año_academico = " & TextBox31.Text & " where matricula.rut_alumno = '" & TextBox28.Text & "' and year(matricula.fecha_matricula)= " & calen.SelectionRange.Start.Year & " ")
+            cadena = String.Format("UPDATE matricula SET escuela_procedencia ='" & TextBox25.Text & "', cursos_repetidos = '" & TextBox23.Text & "', domicilio_alumno = '" & TextBox24.Text & "', alergico = '" & TextBox22.Text & "', grupo_sanguineo = '" & TextBox37.Text & "', enfermedad ='" & TextBox21.Text & "', grupo_pie ='" & ComboBox2.Text & "', nombre_padre = '" & TextBox20.Text & "', nombre_madre = '" & TextBox10.Text & "', rut_padre = '" & TextBox11.Text & "', rut_madre ='" & TextBox12.Text & "', trabajo_padre = '" & TextBox13.Text & "', trabajo_madre = '" & TextBox14.Text & "', escolaridad_padre = '" & TextBox15.Text & "', escolaridad_madre ='" & TextBox16.Text & "', vive_con = '" & TextBox17.Text & "', casa_propia = '" & ComboBox3.Text & "', ingreso_mensual= " & TextBox18.Text & ", beneficio = '" & TextBox19.Text & "', religion ='" & ComboBox4.Text & "', curso_alumno =" & codigo_de_curso & ", fono_urgencia_1 ='" & TextBox5.Text & "',fono_urgencia_2 ='" & TextBox29.Text & "', edad_alumno = '" & TextBox1.Text & "', estado = 'activo', año_academico = " & TextBox31.Text & " where matricula.rut_alumno = '" & TextBox28.Text & "' and year(matricula.fecha_matricula)= " & calen.SelectionRange.Start.Year & " ")
+            Dim insertar As New SqlCommand(cadena, conector)
+            conector.Open()
+            insertar.ExecuteNonQuery()
+            conector.Close()
+            MsgBox("Registro Actualizado Correctamente", MsgBoxStyle.Information, "Operacion Exitosa")
+
+            Button65.Visible = True
+            Button9.Visible = False
+            Button8.Visible = False
+
+            TextBox5.Enabled = False
+            TextBox29.Enabled = False
+            TextBox18.Enabled = False
+            TextBox19.Enabled = False
+            TextBox20.Enabled = False
+            TextBox21.Enabled = False
+            TextBox22.Enabled = False
+            TextBox23.Enabled = False
+            TextBox24.Enabled = False
+            TextBox25.Enabled = False
+            TextBox26.Enabled = False
+            TextBox27.Enabled = False
+            TextBox28.Enabled = False
+            TextBox10.Enabled = False
+            TextBox11.Enabled = False
+            TextBox12.Enabled = False
+            TextBox13.Enabled = False
+            TextBox14.Enabled = False
+            TextBox15.Enabled = False
+            TextBox16.Enabled = False
+            TextBox17.Enabled = False
+            TextBox37.Enabled = False
+
+            ComboBox1.Enabled = False
+            ComboBox2.Enabled = False
+            ComboBox3.Enabled = False
+            ComboBox4.Enabled = False
+
+            CheckBox1.Enabled = False
+            CheckBox2.Enabled = False
+            CheckBox3.Enabled = False
+            CheckBox4.Enabled = False
+            CheckBox5.Enabled = False
+            CheckBox6.Enabled = False
+            CheckBox7.Enabled = False
+            CheckBox8.Enabled = False
+
+
+            calen.Enabled = False
+
+            conector.Close()
+        Catch ex As Exception
+            MsgBox("ERROR INTENTE DE NUEVO", MsgBoxStyle.Critical, "Alerta" & vbCrLf & ex.Message)
+        End Try
+    End Sub
+    Sub update_matricula_2()
+        id_curso()
+        fecha_ma = calen.SelectionRange.Start
+        conector.Close()
+        Try
+            check_no()
+            conector.Close()
+            Dim cadena As String
+            cadena = String.Format("UPDATE matricula SET rut_apoderado='" & TextBox27.Text & "', escuela_procedencia ='" & TextBox25.Text & "', cursos_repetidos = '" & TextBox23.Text & "', domicilio_alumno = '" & TextBox24.Text & "', alergico = '" & TextBox22.Text & "', grupo_sanguineo = '" & TextBox37.Text & "', enfermedad ='" & TextBox21.Text & "', grupo_pie ='" & ComboBox2.Text & "', nombre_padre = '" & TextBox20.Text & "', nombre_madre = '" & TextBox10.Text & "', rut_padre = '" & TextBox11.Text & "', rut_madre ='" & TextBox12.Text & "', trabajo_padre = '" & TextBox13.Text & "', trabajo_madre = '" & TextBox14.Text & "', escolaridad_padre = '" & TextBox15.Text & "', escolaridad_madre ='" & TextBox16.Text & "', vive_con = '" & TextBox17.Text & "', casa_propia = '" & ComboBox3.Text & "', ingreso_mensual= " & TextBox18.Text & ", beneficio = '" & TextBox19.Text & "', religion ='" & ComboBox4.Text & "', curso_alumno =" & codigo_de_curso & ", fono_urgencia_1 ='" & TextBox5.Text & "',fono_urgencia_2 ='" & TextBox29.Text & "', edad_alumno = '" & TextBox1.Text & "', estado = 'activo', año_academico = " & TextBox31.Text & " where matricula.rut_alumno = '" & TextBox28.Text & "' and year(matricula.fecha_matricula)= " & calen.SelectionRange.Start.Year & " ")
             Dim insertar As New SqlCommand(cadena, conector)
             conector.Open()
             insertar.ExecuteNonQuery()
@@ -974,9 +1032,25 @@ Public Class matricula
         End Try
     End Sub
     Private Sub Button8_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button8.Click
-        funcion_update_alumno()
-        funcion_update_apoderado()
-        update_matricula()
+        conector.Close()
+        select_usuario()
+        conector.Close()
+        funcion_buscar_alumno_matricular()
+        funncion_buscar_apoderado_matricular()
+        conector.Close()
+        If rut_alumno_para_matricular <> "x" And rut_apoderado_para_matricular = "x" Then
+            funcion_update_alumno()
+            funcion_insert_apoderado()
+            update_matricula_2()
+            Button8.Visible = True
+        End If
+        If rut_alumno_para_matricular <> "x" And rut_apoderado_para_matricular <> "x" Then
+            funcion_update_alumno()
+            funcion_update_apoderado()
+            update_matricula()
+            Button8.Visible = True
+        End If
+       
     End Sub
 
     Private Sub Button28_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button28.Click
@@ -1073,127 +1147,162 @@ Public Class matricula
 
     End Sub
     Sub mostraralumnocursosegundo()
-        conector.Close()
-        int_año = (seleccion_año)
-        Dim da As New SqlDataAdapter("select alumno.rut_alumno'Rut del Alumno', alumno.nombres'Nombre',alumno.apellidos'Apellidos',alumno.fecha_nacimiento'Fecha Nacimiento',matricula.edad_alumno'Edad',matricula.fono_urgencia_1'Fono Urgencia 1',matricula.fono_urgencia_2'Fono Ugencia 2' from alumno,matricula where matricula.curso_alumno= 2 and matricula.estado= 'activo' and matricula.rut_alumno = alumno.rut_alumno and matricula.año_academico = " & int_año & "", conector)
-        Dim ds As New DataSet
-        conector.Open()
+        Try
+            conector.Close()
+            int_año = (seleccion_año)
+            Dim da As New SqlDataAdapter("select alumno.rut_alumno'Rut del Alumno', alumno.nombres'Nombre',alumno.apellidos'Apellidos',alumno.fecha_nacimiento'Fecha Nacimiento',matricula.edad_alumno'Edad',matricula.fono_urgencia_1'Fono Urgencia 1',matricula.fono_urgencia_2'Fono Ugencia 2' from alumno,matricula where matricula.curso_alumno= 2 and matricula.estado= 'activo' and matricula.rut_alumno = alumno.rut_alumno and matricula.año_academico = " & int_año & "", conector)
+            Dim ds As New DataSet
+            conector.Open()
 
-        da.Fill(ds)
-        DataGridView2.DataSource = ds.Tables(0)
-        conector.Close()
-        conector.Close()
+            da.Fill(ds)
+            DataGridView2.DataSource = ds.Tables(0)
+            conector.Close()
+            conector.Close()
+
+        Catch
+        End Try
     End Sub
 
     Sub mostraralumnocursotercero()
-        conector.Close()
-        int_año = (seleccion_año)
-        Dim da As New SqlDataAdapter("select alumno.rut_alumno'Rut del Alumno', alumno.nombres'Nombre',alumno.apellidos'Apellidos',alumno.fecha_nacimiento'Fecha Nacimiento',matricula.edad_alumno'Edad',matricula.fono_urgencia_1'Fono Urgencia 1',matricula.fono_urgencia_2'Fono Ugencia 2' from alumno,matricula where matricula.curso_alumno= 3 and matricula.estado= 'activo' and matricula.rut_alumno = alumno.rut_alumno and matricula.año_academico = " & int_año & "", conector)
-        Dim ds As New DataSet
-        conector.Open()
+        Try
+            conector.Close()
+            int_año = (seleccion_año)
+            Dim da As New SqlDataAdapter("select alumno.rut_alumno'Rut del Alumno', alumno.nombres'Nombre',alumno.apellidos'Apellidos',alumno.fecha_nacimiento'Fecha Nacimiento',matricula.edad_alumno'Edad',matricula.fono_urgencia_1'Fono Urgencia 1',matricula.fono_urgencia_2'Fono Ugencia 2' from alumno,matricula where matricula.curso_alumno= 3 and matricula.estado= 'activo' and matricula.rut_alumno = alumno.rut_alumno and matricula.año_academico = " & int_año & "", conector)
+            Dim ds As New DataSet
+            conector.Open()
 
-        da.Fill(ds)
-        DataGridView3.DataSource = ds.Tables(0)
-        conector.Close()
-        conector.Close()
+            da.Fill(ds)
+            DataGridView3.DataSource = ds.Tables(0)
+            conector.Close()
+            conector.Close()
+        Catch
+        End Try
     End Sub
     Sub mostraralumnocursocuarto()
-        conector.Close()
-        int_año = (seleccion_año)
-        Dim da As New SqlDataAdapter("select alumno.rut_alumno'Rut del Alumno', alumno.nombres'Nombre',alumno.apellidos'Apellidos',alumno.fecha_nacimiento'Fecha Nacimiento',matricula.edad_alumno'Edad',matricula.fono_urgencia_1'Fono Urgencia 1',matricula.fono_urgencia_2'Fono Ugencia 2' from alumno,matricula where matricula.curso_alumno= 4 and matricula.estado= 'activo' and matricula.rut_alumno = alumno.rut_alumno and matricula.año_academico = " & int_año & "", conector)
-        Dim ds As New DataSet
-        conector.Open()
+        Try
+            conector.Close()
+            int_año = (seleccion_año)
+            Dim da As New SqlDataAdapter("select alumno.rut_alumno'Rut del Alumno', alumno.nombres'Nombre',alumno.apellidos'Apellidos',alumno.fecha_nacimiento'Fecha Nacimiento',matricula.edad_alumno'Edad',matricula.fono_urgencia_1'Fono Urgencia 1',matricula.fono_urgencia_2'Fono Ugencia 2' from alumno,matricula where matricula.curso_alumno= 4 and matricula.estado= 'activo' and matricula.rut_alumno = alumno.rut_alumno and matricula.año_academico = " & int_año & "", conector)
+            Dim ds As New DataSet
+            conector.Open()
 
-        da.Fill(ds)
-        DataGridView4.DataSource = ds.Tables(0)
-        conector.Close()
-        conector.Close()
+            da.Fill(ds)
+            DataGridView4.DataSource = ds.Tables(0)
+            conector.Close()
+            conector.Close()
+
+        Catch
+        End Try
     End Sub
     Sub mostraralumnocursosexto()
-        conector.Close()
-        int_año = (seleccion_año)
-        Dim da As New SqlDataAdapter("select alumno.rut_alumno'Rut del Alumno', alumno.nombres'Nombre',alumno.apellidos'Apellidos',alumno.fecha_nacimiento'Fecha Nacimiento',matricula.edad_alumno'Edad',matricula.fono_urgencia_1'Fono Urgencia 1',matricula.fono_urgencia_2'Fono Ugencia 2' from alumno,matricula where matricula.curso_alumno= 6 and matricula.estado= 'activo' and matricula.rut_alumno = alumno.rut_alumno and matricula.año_academico = " & int_año & "", conector)
-        Dim ds As New DataSet
-        conector.Open()
+        Try
+            conector.Close()
+            int_año = (seleccion_año)
+            Dim da As New SqlDataAdapter("select alumno.rut_alumno'Rut del Alumno', alumno.nombres'Nombre',alumno.apellidos'Apellidos',alumno.fecha_nacimiento'Fecha Nacimiento',matricula.edad_alumno'Edad',matricula.fono_urgencia_1'Fono Urgencia 1',matricula.fono_urgencia_2'Fono Ugencia 2' from alumno,matricula where matricula.curso_alumno= 6 and matricula.estado= 'activo' and matricula.rut_alumno = alumno.rut_alumno and matricula.año_academico = " & int_año & "", conector)
+            Dim ds As New DataSet
+            conector.Open()
 
-        da.Fill(ds)
-        DataGridView6.DataSource = ds.Tables(0)
-        conector.Close()
-        conector.Close()
+            da.Fill(ds)
+            DataGridView6.DataSource = ds.Tables(0)
+            conector.Close()
+            conector.Close()
+
+        Catch
+        End Try
     End Sub
     Sub mostraralumnocursoquinto()
-        conector.Close()
-        int_año = (seleccion_año)
-        Dim da As New SqlDataAdapter("select alumno.rut_alumno'Rut del Alumno', alumno.nombres'Nombre',alumno.apellidos'Apellidos',alumno.fecha_nacimiento'Fecha Nacimiento',matricula.edad_alumno'Edad',matricula.fono_urgencia_1'Fono Urgencia 1',matricula.fono_urgencia_2'Fono Ugencia 2' from alumno,matricula where matricula.curso_alumno= 5 and matricula.estado= 'activo' and matricula.rut_alumno = alumno.rut_alumno and matricula.año_academico = " & int_año & "", conector)
-        Dim ds As New DataSet
-        conector.Open()
+        Try
+            conector.Close()
+            int_año = (seleccion_año)
+            Dim da As New SqlDataAdapter("select alumno.rut_alumno'Rut del Alumno', alumno.nombres'Nombre',alumno.apellidos'Apellidos',alumno.fecha_nacimiento'Fecha Nacimiento',matricula.edad_alumno'Edad',matricula.fono_urgencia_1'Fono Urgencia 1',matricula.fono_urgencia_2'Fono Ugencia 2' from alumno,matricula where matricula.curso_alumno= 5 and matricula.estado= 'activo' and matricula.rut_alumno = alumno.rut_alumno and matricula.año_academico = " & int_año & "", conector)
+            Dim ds As New DataSet
+            conector.Open()
 
-        da.Fill(ds)
-        DataGridView5.DataSource = ds.Tables(0)
-        conector.Close()
-        conector.Close()
+            da.Fill(ds)
+            DataGridView5.DataSource = ds.Tables(0)
+            conector.Close()
+            conector.Close()
+
+        Catch
+        End Try
     End Sub
     Sub mostraralumnocursoseptimo()
-        conector.Close()
-        int_año = (seleccion_año)
-        Dim da As New SqlDataAdapter("select alumno.rut_alumno'Rut del Alumno', alumno.nombres'Nombre',alumno.apellidos'Apellidos',alumno.fecha_nacimiento'Fecha Nacimiento',matricula.edad_alumno'Edad',matricula.fono_urgencia_1'Fono Urgencia 1',matricula.fono_urgencia_2'Fono Ugencia 2' from alumno,matricula where matricula.curso_alumno= 7 and matricula.estado= 'activo' and matricula.rut_alumno = alumno.rut_alumno and matricula.año_academico = " & int_año & "", conector)
-        Dim ds As New DataSet
-        conector.Open()
+        Try
+            conector.Close()
+            int_año = (seleccion_año)
+            Dim da As New SqlDataAdapter("select alumno.rut_alumno'Rut del Alumno', alumno.nombres'Nombre',alumno.apellidos'Apellidos',alumno.fecha_nacimiento'Fecha Nacimiento',matricula.edad_alumno'Edad',matricula.fono_urgencia_1'Fono Urgencia 1',matricula.fono_urgencia_2'Fono Ugencia 2' from alumno,matricula where matricula.curso_alumno= 7 and matricula.estado= 'activo' and matricula.rut_alumno = alumno.rut_alumno and matricula.año_academico = " & int_año & "", conector)
+            Dim ds As New DataSet
+            conector.Open()
 
-        da.Fill(ds)
-        DataGridView7.DataSource = ds.Tables(0)
-        conector.Close()
-        conector.Close()
+            da.Fill(ds)
+            DataGridView7.DataSource = ds.Tables(0)
+            conector.Close()
+            conector.Close()
+        Catch
+        End Try
     End Sub
     Sub mostraralumnocursooctavo()
-        conector.Close()
-        int_año = (seleccion_año)
-        Dim da As New SqlDataAdapter("select alumno.rut_alumno'Rut del Alumno', alumno.nombres'Nombre',alumno.apellidos'Apellidos',alumno.fecha_nacimiento'Fecha Nacimiento',matricula.edad_alumno'Edad',matricula.fono_urgencia_1'Fono Urgencia 1',matricula.fono_urgencia_2'Fono Ugencia 2' from alumno,matricula where matricula.curso_alumno= 8 and matricula.estado= 'activo' and matricula.rut_alumno = alumno.rut_alumno and matricula.año_academico = " & int_año & "", conector)
-        Dim ds As New DataSet
-        conector.Open()
+        Try
+            conector.Close()
+            int_año = (seleccion_año)
+            Dim da As New SqlDataAdapter("select alumno.rut_alumno'Rut del Alumno', alumno.nombres'Nombre',alumno.apellidos'Apellidos',alumno.fecha_nacimiento'Fecha Nacimiento',matricula.edad_alumno'Edad',matricula.fono_urgencia_1'Fono Urgencia 1',matricula.fono_urgencia_2'Fono Ugencia 2' from alumno,matricula where matricula.curso_alumno= 8 and matricula.estado= 'activo' and matricula.rut_alumno = alumno.rut_alumno and matricula.año_academico = " & int_año & "", conector)
+            Dim ds As New DataSet
+            conector.Open()
 
-        da.Fill(ds)
-        DataGridView8.DataSource = ds.Tables(0)
-        conector.Close()
-        conector.Close()
+            da.Fill(ds)
+            DataGridView8.DataSource = ds.Tables(0)
+            conector.Close()
+            conector.Close()
+
+        Catch
+        End Try
+
     End Sub
     Sub mostraralumnocursokinder()
-        conector.Close()
-        int_año = (seleccion_año)
-        Dim da As New SqlDataAdapter("select alumno.rut_alumno'Rut del Alumno', alumno.nombres'Nombre',alumno.apellidos'Apellidos',alumno.fecha_nacimiento'Fecha Nacimiento',matricula.edad_alumno'Edad',matricula.fono_urgencia_1'Fono Urgencia 1',matricula.fono_urgencia_2'Fono Ugencia 2' from alumno,matricula where matricula.curso_alumno= 9 and matricula.estado= 'activo' and matricula.rut_alumno = alumno.rut_alumno and matricula.año_academico = " & int_año & "", conector)
-        Dim ds As New DataSet
-        conector.Open()
+        Try
+            conector.Close()
+            int_año = (seleccion_año)
+            Dim da As New SqlDataAdapter("select alumno.rut_alumno'Rut del Alumno', alumno.nombres'Nombre',alumno.apellidos'Apellidos',alumno.fecha_nacimiento'Fecha Nacimiento',matricula.edad_alumno'Edad',matricula.fono_urgencia_1'Fono Urgencia 1',matricula.fono_urgencia_2'Fono Ugencia 2' from alumno,matricula where matricula.curso_alumno= 9 and matricula.estado= 'activo' and matricula.rut_alumno = alumno.rut_alumno and matricula.año_academico = " & int_año & "", conector)
+            Dim ds As New DataSet
+            conector.Open()
 
-        da.Fill(ds)
-        DataGridView9.DataSource = ds.Tables(0)
-        conector.Close()
-        conector.Close()
+            da.Fill(ds)
+            DataGridView9.DataSource = ds.Tables(0)
+            conector.Close()
+            conector.Close()
+        Catch
+        End Try
+
     End Sub
     Sub mostraralumnocursoprekinder()
-        conector.Close()
-        int_año = (seleccion_año)
-        Dim da As New SqlDataAdapter("select alumno.rut_alumno'Rut del Alumno', alumno.nombres'Nombre',alumno.apellidos'Apellidos',alumno.fecha_nacimiento'Fecha Nacimiento',matricula.edad_alumno'Edad',matricula.fono_urgencia_1'Fono Urgencia 1',matricula.fono_urgencia_2'Fono Ugencia 2' from alumno,matricula where matricula.curso_alumno= 10 and matricula.estado= 'activo' and matricula.rut_alumno = alumno.rut_alumno and matricula.año_academico = " & int_año & "", conector)
-        Dim ds As New DataSet
-        conector.Open()
+        Try
+            conector.Close()
+            int_año = (seleccion_año)
+            Dim da As New SqlDataAdapter("select alumno.rut_alumno'Rut del Alumno', alumno.nombres'Nombre',alumno.apellidos'Apellidos',alumno.fecha_nacimiento'Fecha Nacimiento',matricula.edad_alumno'Edad',matricula.fono_urgencia_1'Fono Urgencia 1',matricula.fono_urgencia_2'Fono Ugencia 2' from alumno,matricula where matricula.curso_alumno= 10 and matricula.estado= 'activo' and matricula.rut_alumno = alumno.rut_alumno and matricula.año_academico = " & int_año & "", conector)
+            Dim ds As New DataSet
+            conector.Open()
 
-        da.Fill(ds)
-        DataGridView10.DataSource = ds.Tables(0)
-        conector.Close()
-        conector.Close()
-
+            da.Fill(ds)
+            DataGridView10.DataSource = ds.Tables(0)
+            conector.Close()
+            conector.Close()
+        Catch
+        End Try
     End Sub
     Sub mostraralumnocursoprimero()
-        conector.Close()
-        int_año = (seleccion_año)
-        Dim da As New SqlDataAdapter("select alumno.rut_alumno'Rut del Alumno', alumno.nombres'Nombre',alumno.apellidos'Apellidos',alumno.fecha_nacimiento'Fecha Nacimiento',matricula.edad_alumno'Edad',matricula.fono_urgencia_1'Fono Urgencia 1',matricula.fono_urgencia_2'Fono Ugencia 2' from alumno,matricula where matricula.curso_alumno= 1 and matricula.estado= 'activo' and matricula.rut_alumno = alumno.rut_alumno and matricula.año_academico = " & int_año & "", conector)
-        Dim ds As New DataSet
-        conector.Open()
+        Try
+            conector.Close()
+            int_año = (seleccion_año)
+            Dim da As New SqlDataAdapter("select alumno.rut_alumno'Rut del Alumno', alumno.nombres'Nombre',alumno.apellidos'Apellidos',alumno.fecha_nacimiento'Fecha Nacimiento',matricula.edad_alumno'Edad',matricula.fono_urgencia_1'Fono Urgencia 1',matricula.fono_urgencia_2'Fono Ugencia 2' from alumno,matricula where matricula.curso_alumno= 1 and matricula.estado= 'activo' and matricula.rut_alumno = alumno.rut_alumno and matricula.año_academico = " & int_año & "", conector)
+            Dim ds As New DataSet
+            conector.Open()
 
-        da.Fill(ds)
-        DataGridView1.DataSource = ds.Tables(0)
-        conector.Close()
-        conector.Close()
-
+            da.Fill(ds)
+            DataGridView1.DataSource = ds.Tables(0)
+            conector.Close()
+            conector.Close()
+        Catch
+        End Try
     End Sub
 
 
@@ -1551,12 +1660,12 @@ Public Class matricula
 
     Private Sub Button65_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button65.Click
         conector.Close()
-        Dim fecha_para_form = calen.SelectionRange.Start.Year
+        Dim fecha_para_form = calen.SelectionRange.Start
 
         Try
             rut_pdf_alumno = TextBox28.Text
             conector.Open()
-            Dim qry As String = "select alumno.rut_alumno ,alumno.nombres,alumno.apellidos,alumno.fecha_nacimiento, matricula.edad_alumno,curso.Nombre ,matricula.fono_urgencia_1 ,matricula.fono_urgencia_2,alumno.sexo,apoderado.rut_apoderado , apoderado.nombre_apoderado ,apoderado.domicilio , apoderado.fono  ,matricula.fecha_matricula ,matricula.escuela_procedencia ,matricula.cursos_repetidos ,matricula.domicilio_alumno ,matricula.alergico , matricula.grupo_sanguineo ,matricula.enfermedad ,matricula.grupo_pie ,matricula.nombre_padre ,matricula.nombre_madre ,matricula.rut_padre ,matricula.rut_madre ,matricula.trabajo_padre ,matricula.trabajo_madre ,matricula.escolaridad_padre ,matricula.escolaridad_madre ,matricula.vive_con ,matricula.casa_propia ,matricula.ingreso_mensual ,matricula.beneficio ,matricula.religion , usuario.nombre_usuario, matricula.año_academico from alumno, apoderado, curso, matricula, usuario where matricula.rut_alumno = alumno.rut_alumno And apoderado.rut_apoderado = matricula.rut_apoderado And matricula.curso_alumno = curso.id_curso And matricula.id_usuario = usuario.id_usuario And matricula.rut_alumno ='" & rut_pdf_alumno & "' and year (matricula.fecha_matricula)= " & fecha_para_form & " "
+            Dim qry As String = "select alumno.rut_alumno ,alumno.nombres,alumno.apellidos,alumno.fecha_nacimiento, matricula.edad_alumno,curso.Nombre ,matricula.fono_urgencia_1 ,matricula.fono_urgencia_2,alumno.sexo,apoderado.rut_apoderado , apoderado.nombre_apoderado ,apoderado.domicilio , apoderado.fono  ,matricula.fecha_matricula ,matricula.escuela_procedencia ,matricula.cursos_repetidos ,matricula.domicilio_alumno ,matricula.alergico , matricula.grupo_sanguineo ,matricula.enfermedad ,matricula.grupo_pie ,matricula.nombre_padre ,matricula.nombre_madre ,matricula.rut_padre ,matricula.rut_madre ,matricula.trabajo_padre ,matricula.trabajo_madre ,matricula.escolaridad_padre ,matricula.escolaridad_madre ,matricula.vive_con ,matricula.casa_propia ,matricula.ingreso_mensual ,matricula.beneficio ,matricula.religion , usuario.nombre_usuario, matricula.año_academico from alumno, apoderado, curso, matricula, usuario where matricula.rut_alumno = alumno.rut_alumno And apoderado.rut_apoderado = matricula.rut_apoderado And matricula.curso_alumno = curso.id_curso And matricula.id_usuario = usuario.id_usuario And matricula.rut_alumno ='" & rut_pdf_alumno & "' and matricula.fecha_matricula = '" & fecha_para_form & "' "
             Dim sqlcmd As New SqlCommand(qry, conector)
             Dim dr As SqlDataReader
             dr = sqlcmd.ExecuteReader
@@ -1744,6 +1853,7 @@ Public Class matricula
         BuscadorAlumno.Button2.Visible = False
         BuscadorAlumno.Show()
         Me.Enabled = False
+        BuscadorAlumno.TextBox1.Text = ""
     End Sub
     Public Function ValidaRut(ByVal ElNumero As String) As String
         Try

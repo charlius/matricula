@@ -109,13 +109,15 @@ Public Class SeleccionarAñoCurso
 
         Catch ex As Exception
             conector.Close()
-            MsgBox("error fun" & vbCrLf & ex.Message)
+
         End Try
     End Sub
     Sub segundo_activas()
-        conector.Close()
-        cover_año = añoform
+
+       
         Try
+            conector.Close()
+            cover_año = añoform
             conector.Close()
             conector.Open()
             Dim qryc As String = "select count (alumno.rut_alumno) from matricula,alumno where matricula.estado='activo' and matricula.curso_alumno=2 and matricula.rut_alumno=alumno.rut_alumno and matricula.año_academico= " & cover_año & ""
@@ -134,13 +136,14 @@ Public Class SeleccionarAñoCurso
 
         Catch ex As Exception
             conector.Close()
-            MsgBox("error fun" & vbCrLf & ex.Message)
+
         End Try
     End Sub
     Sub tercero_activas()
-        cover_año = añoform
-        conector.Close()
+       
         Try
+            cover_año = añoform
+            conector.Close()
             conector.Close()
             conector.Open()
             Dim qryc As String = "select count (alumno.rut_alumno) from matricula,alumno where matricula.estado='activo' and matricula.curso_alumno=3 and matricula.rut_alumno=alumno.rut_alumno and matricula.año_academico= " & cover_año & ""
@@ -159,13 +162,14 @@ Public Class SeleccionarAñoCurso
 
         Catch ex As Exception
             conector.Close()
-            MsgBox("error fun" & vbCrLf & ex.Message)
+
         End Try
     End Sub
     Sub cuarto_activas()
-        cover_año = añoform
-        conector.Close()
+      
         Try
+            cover_año = añoform
+            conector.Close()
             conector.Close()
             conector.Open()
             Dim qryc As String = "select count (alumno.rut_alumno) from matricula,alumno where matricula.estado='activo' and matricula.curso_alumno=4 and matricula.rut_alumno=alumno.rut_alumno and matricula.año_academico= " & cover_año & ""
@@ -184,13 +188,14 @@ Public Class SeleccionarAñoCurso
 
         Catch ex As Exception
             conector.Close()
-            MsgBox("error fun" & vbCrLf & ex.Message)
+
         End Try
     End Sub
     Sub quinto_activas()
-        cover_año = añoform
-        conector.Close()
+      
         Try
+            cover_año = añoform
+            conector.Close()
             conector.Close()
             conector.Open()
             Dim qryc As String = "select count (alumno.rut_alumno) from matricula,alumno where matricula.estado='activo' and matricula.curso_alumno=5 and matricula.rut_alumno=alumno.rut_alumno and matricula.año_academico= " & cover_año & ""
@@ -209,13 +214,14 @@ Public Class SeleccionarAñoCurso
 
         Catch ex As Exception
             conector.Close()
-            MsgBox("error fun" & vbCrLf & ex.Message)
+
         End Try
     End Sub
     Sub sexto_activas()
-        cover_año = añoform
-        conector.Close()
+       
         Try
+            cover_año = añoform
+            conector.Close()
             conector.Close()
             conector.Open()
             Dim qryc As String = "select count (alumno.rut_alumno) from matricula,alumno where matricula.estado='activo' and matricula.curso_alumno=6 and matricula.rut_alumno=alumno.rut_alumno and matricula.año_academico= " & cover_año & ""
@@ -234,13 +240,14 @@ Public Class SeleccionarAñoCurso
 
         Catch ex As Exception
             conector.Close()
-            MsgBox("error fun" & vbCrLf & ex.Message)
+
         End Try
     End Sub
     Sub septimo_activas()
-        cover_año = añoform
-        conector.Close()
+      
         Try
+            cover_año = añoform
+            conector.Close()
             conector.Close()
             conector.Open()
             Dim qryc As String = "select count (alumno.rut_alumno) from matricula,alumno where matricula.estado='activo' and matricula.curso_alumno=7 and matricula.rut_alumno=alumno.rut_alumno and matricula.año_academico= " & cover_año & ""
@@ -259,13 +266,14 @@ Public Class SeleccionarAñoCurso
 
         Catch ex As Exception
             conector.Close()
-            MsgBox("error fun" & vbCrLf & ex.Message)
+
         End Try
     End Sub
     Sub octavo_activas()
-        cover_año = añoform
-        conector.Close()
+       
         Try
+            cover_año = añoform
+            conector.Close()
             conector.Close()
             conector.Open()
             Dim qryc As String = "select count (alumno.rut_alumno) from matricula,alumno where matricula.estado='activo' and matricula.curso_alumno=8 and matricula.rut_alumno=alumno.rut_alumno and matricula.año_academico= " & cover_año & ""
@@ -284,13 +292,14 @@ Public Class SeleccionarAñoCurso
 
         Catch ex As Exception
             conector.Close()
-            MsgBox("error fun" & vbCrLf & ex.Message)
+
         End Try
     End Sub
     Sub kinder_activas()
-        cover_año = añoform
-        conector.Close()
+     
         Try
+            cover_año = añoform
+            conector.Close()
             conector.Close()
             conector.Open()
             Dim qryc As String = "select count (alumno.rut_alumno) from matricula,alumno where matricula.estado='activo' and matricula.curso_alumno=9 and matricula.rut_alumno=alumno.rut_alumno and matricula.año_academico= " & cover_año & ""
@@ -309,13 +318,14 @@ Public Class SeleccionarAñoCurso
 
         Catch ex As Exception
             conector.Close()
-            MsgBox("error fun" & vbCrLf & ex.Message)
+
         End Try
     End Sub
     Sub prekinder_activas()
-        cover_año = añoform
-        conector.Close()
+       
         Try
+            cover_año = añoform
+            conector.Close()
             conector.Close()
             conector.Open()
             Dim qryc As String = "select count (alumno.rut_alumno) from matricula,alumno where matricula.estado='activo' and matricula.curso_alumno=10 and matricula.rut_alumno=alumno.rut_alumno and matricula.año_academico= " & cover_año & ""
@@ -334,18 +344,19 @@ Public Class SeleccionarAñoCurso
 
         Catch ex As Exception
             conector.Close()
-            MsgBox("error fun" & vbCrLf & ex.Message)
+
         End Try
     End Sub
 
     Private Sub Button2_Click(sender As System.Object, e As System.EventArgs)
         conector.Close()
 
-        añoform = ComboBox1.Text
-        cover_año = añoform
+        
 
 
         Try
+            añoform = ComboBox1.Text
+            cover_año = añoform
             matricula.rut_pdf_alumno = matricula.TextBox28.Text
             conector.Open()
             Dim qry As String = "select alumno.rut_alumno ,alumno.nombres,alumno.apellidos,alumno.fecha_nacimiento, matricula.edad_alumno,curso.Nombre ,matricula.fono_urgencia_1 ,matricula.fono_urgencia_2,alumno.sexo,apoderado.rut_apoderado , apoderado.nombre_apoderado ,apoderado.domicilio , apoderado.fono  ,matricula.fecha_matricula ,matricula.escuela_procedencia ,matricula.cursos_repetidos ,matricula.domicilio_alumno ,matricula.alergico , matricula.grupo_sanguineo ,matricula.enfermedad ,matricula.grupo_pie ,matricula.nombre_padre ,matricula.nombre_madre ,matricula.rut_padre ,matricula.rut_madre ,matricula.trabajo_padre ,matricula.trabajo_madre ,matricula.escolaridad_padre ,matricula.escolaridad_madre ,matricula.vive_con ,matricula.casa_propia ,matricula.ingreso_mensual ,matricula.beneficio ,matricula.religion , usuario.nombre_usuario, matricula.año_academico from alumno, apoderado, curso, matricula, usuario where matricula.rut_alumno = alumno.rut_alumno And apoderado.rut_apoderado = matricula.rut_apoderado And matricula.curso_alumno = curso.id_curso And matricula.id_usuario = usuario.id_usuario And matricula.rut_alumno ='" & rut_form & "' and year(matricula.fecha_matricula)= " & cover_año & " "
