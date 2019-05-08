@@ -443,6 +443,7 @@ Public Class Form1
 
                 PictureBox1.Enabled = False
 
+                check_campos()
                 matricula.TextBox1.Enabled = True
                 matricula.TextBox2.Enabled = True
                 matricula.TextBox3.Enabled = True
@@ -461,11 +462,10 @@ Public Class Form1
                 matricula.TextBox16.Enabled = True
                 matricula.TextBox17.Enabled = True
                 matricula.TextBox18.Enabled = True
-                matricula.TextBox19.Enabled = False
+
                 matricula.TextBox20.Enabled = True
                 matricula.TextBox21.Enabled = True
-                matricula.TextBox22.Enabled = False
-                matricula.TextBox23.Enabled = False
+              
                 matricula.TextBox24.Enabled = True
                 matricula.TextBox25.Enabled = True
                 matricula.TextBox26.Enabled = True
@@ -473,7 +473,7 @@ Public Class Form1
                 matricula.TextBox28.Enabled = True
                 matricula.TextBox29.Enabled = True
                 matricula.TextBox30.Enabled = True
-                matricula.TextBox37.Enabled = False
+
 
                 matricula.ComboBox1.Enabled = True
                 matricula.ComboBox2.Enabled = True
@@ -482,14 +482,14 @@ Public Class Form1
 
                 matricula.ComboBox6.Enabled = True
 
-                matricula.CheckBox1.Enabled = False
-                matricula.CheckBox2.Enabled = False
-                matricula.CheckBox3.Enabled = False
-                matricula.CheckBox4.Enabled = False
-                matricula.CheckBox5.Enabled = False
-                matricula.CheckBox6.Enabled = False
-                matricula.CheckBox7.Enabled = False
-                matricula.CheckBox8.Enabled = False
+                'matricula.CheckBox1.Enabled = False
+                'matricula.CheckBox2.Enabled = False
+                'matricula.CheckBox3.Enabled = False
+                'matricula.CheckBox4.Enabled = False
+                'matricula.CheckBox5.Enabled = False
+                'matricula.CheckBox6.Enabled = False
+                'matricula.CheckBox7.Enabled = False
+                'matricula.CheckBox8.Enabled = False
 
                 
                 matricula.Button28.Visible = False
@@ -502,7 +502,7 @@ Public Class Form1
               
                 conector.Close()
 
-                check_campos()
+
 
                 matricula.calendarn.Enabled = True
                 matricula.calen.Enabled = False

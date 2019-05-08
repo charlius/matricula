@@ -750,10 +750,6 @@ Public Class matricula
 
     End Sub
 
-    Private Sub Textbox9_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles TextBox9.KeyPress
-        e.Handled = ValidaChar(e.KeyChar)
-    End Sub
-
     Private Sub Button26_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
         TextBox2.Enabled = True
@@ -1836,10 +1832,7 @@ Public Class matricula
         End If
     End Sub
 
-    Private Sub TextBox11_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextBox11.TextChanged
-        If TextBox11.TextLength = 8 Then TextBox11.Text = ValidaRut(TextBox11.Text)
-        conector.Close()
-    End Sub
+  
 
 
     Private Sub Button13_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button13.Click
@@ -2013,16 +2006,6 @@ Public Class matricula
 
 
 
-    Private Sub TextBox9_TextChanged(sender As System.Object, e As System.EventArgs) Handles TextBox9.TextChanged
-        If TextBox9.TextLength = 8 Then TextBox9.Text = ValidaRut(TextBox9.Text)
-        conector.Close()
-    End Sub
-
-    Private Sub TextBox12_TextChanged(sender As System.Object, e As System.EventArgs) Handles TextBox12.TextChanged
-        If TextBox12.TextLength = 8 Then TextBox12.Text = ValidaRut(TextBox12.Text)
-        conector.Close()
-    End Sub
-
     Private Sub TextBox30_TextChanged(sender As System.Object, e As System.EventArgs) Handles TextBox30.TextChanged
         If TextBox30.TextLength = 8 Then TextBox30.Text = ValidaRut(TextBox30.Text)
         conector.Close()
@@ -2034,25 +2017,6 @@ Public Class matricula
     End Sub
 
     Private Sub textbox30_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles TextBox30.KeyDown
-        Select Case e.KeyData
-            Case Keys.A To Keys.Z Or Keys.Space
-
-                ' Números del 0 al 9
-
-                e.SuppressKeyPress = True
-        End Select
-    End Sub
-
-    Private Sub textbox12_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles TextBox12.KeyDown
-        Select Case e.KeyData
-            Case Keys.A To Keys.Z Or Keys.Space
-
-                ' Números del 0 al 9
-
-                e.SuppressKeyPress = True
-        End Select
-    End Sub
-    Private Sub textbox11_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles TextBox11.KeyDown
         Select Case e.KeyData
             Case Keys.A To Keys.Z Or Keys.Space
 
