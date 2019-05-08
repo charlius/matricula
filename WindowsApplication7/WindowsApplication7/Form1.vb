@@ -87,7 +87,7 @@ Public Class Form1
                 Dim ESCRITOR As PdfWriter = PdfWriter.GetInstance(DOCUMENTO, New FileStream(SaveFileDialog1.FileName, FileMode.Create))
                 DOCUMENTO.Open()
 
-                Dim im As Image = Image.GetInstance("C:\WindowsApplication7\WindowsApplication7\Resourses\ficha.jpg")
+                Dim im As Image = Image.GetInstance("C:\ficha.jpg")
 
                 DOCUMENTO.Add(im)
 
