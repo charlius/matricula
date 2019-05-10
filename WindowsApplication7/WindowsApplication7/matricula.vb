@@ -737,19 +737,6 @@ Public Class matricula
 
     End Sub
 
-    Private Sub Button17_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button17.Click
-        TabControl1.SelectedTab = TabControl1.TabPages.Item(1)
-        conector.Close()
-        conector.Close()
-    End Sub
-
-    Private Sub Button18_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button18.Click
-        TabControl1.SelectedTab = TabControl1.TabPages.Item(2)
-        conector.Close()
-
-
-    End Sub
-
     Private Sub Button26_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
         TextBox2.Enabled = True
@@ -1954,45 +1941,6 @@ Public Class matricula
         conector.Close()
     End Sub
 
-    Private Sub Button19_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button19.Click
-        TabControl1.SelectedTab = TabControl1.TabPages.Item(3)
-        TextBox26.Text = inicio1.nomUsuario
-        conector.Close()
-    End Sub
-
-    Private Sub Button22_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button22.Click
-        TextBox26.Text = inicio1.nomUsuario
-        conector.Close()
-        TabControl1.SelectedTab = TabControl1.TabPages.Item(1)
-    End Sub
-
-    Private Sub Button21_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button21.Click
-        TextBox26.Text = inicio1.nomUsuario
-        TabControl1.SelectedTab = TabControl1.TabPages.Item(2)
-        conector.Close()
-    End Sub
-
-    Private Sub Button20_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button20.Click
-        TextBox26.Text = inicio1.nomUsuario
-        TabControl1.SelectedTab = TabControl1.TabPages.Item(3)
-        conector.Close()
-    End Sub
-
-    Private Sub Button25_Click(sender As System.Object, e As System.EventArgs) Handles Button25.Click
-        TabControl1.SelectedTab = TabControl1.TabPages.Item(1)
-        conector.Close()
-    End Sub
-
-    Private Sub Button24_Click(sender As System.Object, e As System.EventArgs) Handles Button24.Click
-        TabControl1.SelectedTab = TabControl1.TabPages.Item(2)
-        conector.Close()
-    End Sub
-
-    Private Sub Button23_Click(sender As System.Object, e As System.EventArgs) Handles Button23.Click
-        TabControl1.SelectedTab = TabControl1.TabPages.Item(3)
-        conector.Close()
-    End Sub
-
     Private Sub PictureBox3_Click(sender As System.Object, e As System.EventArgs) Handles PictureBox3.Click
         Me.WindowState = FormWindowState.Minimized
         conector.Close()
@@ -2230,6 +2178,4 @@ Public Class matricula
         TextBox37.SelectionStart = TextBox37.TextLength + 1
     End Sub
 
- 
- 
 End Class

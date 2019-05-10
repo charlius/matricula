@@ -468,9 +468,9 @@ Public Class Form1
               
                 matricula.TextBox24.Enabled = True
                 matricula.TextBox25.Enabled = True
-                matricula.TextBox26.Enabled = True
-                matricula.TextBox27.Enabled = True
-                matricula.TextBox28.Enabled = True
+                matricula.TextBox26.Enabled = False
+                matricula.TextBox27.Enabled = False
+                matricula.TextBox28.Enabled = False
                 matricula.TextBox29.Enabled = True
                 matricula.TextBox30.Enabled = True
 
