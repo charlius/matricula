@@ -2177,5 +2177,67 @@ Public Class matricula
         TextBox37.Text = UCase(TextBox37.Text)
         TextBox37.SelectionStart = TextBox37.TextLength + 1
     End Sub
+    Public Function GetColumnasSize() As Single()
+        Dim values As Single() = New Single(DataGridView1.ColumnCount - 1) {}
+        For i As Integer = 0 To DataGridView1.ColumnCount - 1
+            values(i) = CSng(DataGridView1.Columns(i).Width)
+        Next
+        Return values
+    End Function
+    Public Sub ExportarDatosPDF(ByVal document As Document)
+        'Se crea un objeto PDFTable con el numero de columnas del DataGridView.  
+        Dim datatable As New PdfPTable(DataGridView1.ColumnCount)
+        'Se asignan algunas propiedades para el diseño del PDF.
+        datatable.DefaultCell.Padding = 3
+        Dim headerwidths As Single() = GetColumnasSize()
+        datatable.SetWidths(headerwidths)
+        datatable.WidthPercentage = 50
+        datatable.DefaultCell.BorderWidth = 2
+        datatable.DefaultCell.HorizontalAlignment = Element.ALIGN_CENTER
+        'Se crea el encabezado en el PDF.  
+        Dim encabezado As New Paragraph("Reporte", New Font(Font.Name = "Tahoma", 20, Font.Bold))
+        'Se crea el texto abajo del encabezado.
+        Dim texto As New Phrase("Reporte Ejemplo: " + Now.Date(), New Font(Font.Name = "Tahoma", 14, Font.Bold))
+        'Se capturan los nombres de las columnas del DataGridView.
+        For i As Integer = 0 To DataGridView1.ColumnCount - 1
+            datatable.AddCell(DataGridView1.Columns(i).HeaderText)
+        Next
+        datatable.HeaderRows = 1
+        datatable.DefaultCell.BorderWidth = 1
+        For i As Integer = 0 To DataGridView1.Rows.Count - 2
+            For j As Integer = 0 To DataGridView1.Columns.Count - 1
+                datatable.AddCell((DataGridView1(j, i).Value).ToString)
+            Next
+            datatable.CompleteRow()
+        Next
+        'da 2 tab entre columnas
+        datatable.AddCell("")
+        datatable.AddCell("")
+        'imprime resultados
+        datatable.AddCell(DataGridView1(0, 0).Value)
+        datatable.AddCell(DataGridView1(0, 0).Value)
+        datatable.CompleteRow()
+        'Se agrega etiquetas
+        document.Add(encabezado)
+        document.Add(texto)
+        document.Add(datatable)
+    End Sub
+    Private Sub Button50_Click(sender As System.Object, e As System.EventArgs) Handles Button50.Click
+        Try
+            ' Intentar generar el documento.
+            Dim doc As New Document(PageSize.A4.Rotate(), 10, 10, 10, 10)
+            ' Path que guarda el reporte en el escritorio de windows (Desktop).
+            Dim filename As String = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\Reporte.pdf"
+            Dim file As New FileStream(filename, FileMode.Create, FileAccess.Write, FileShare.ReadWrite)
+            PdfWriter.GetInstance(doc, file)
+            doc.Open()
+            ExportarDatosPDF(doc)
+            doc.Close()
+            Process.Start(filename)
+        Catch ex As Exception
+            'Si el intento es fallido, mostrar MsgBox.
+            MsgBox("error" & vbCrLf & ex.Message)
+        End Try
+    End Sub
 
 End Class

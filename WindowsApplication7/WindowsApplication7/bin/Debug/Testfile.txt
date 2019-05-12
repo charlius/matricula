@@ -1,5 +1,5 @@
-192.168.1.55
+HP_ROY\SQLEXP
 1433
 matriculas_ll
-servidorbdd
+sa
 1234321
