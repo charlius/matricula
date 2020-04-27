@@ -20,3 +20,7 @@ C:\Users\Roy\Documents\pruebasDeSoftware\WindowsApplication7\WindowsApplication7
 C:\Users\Roy\Documents\pruebasDeSoftware\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication7.exe
 C:\Users\Roy\Documents\pruebasDeSoftware\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication7.xml
 C:\Users\Roy\Documents\pruebasDeSoftware\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication7.pdb
+C:\Users\user\Documents\GitHub\matricula\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication7.vbprojAssemblyReference.cache
+C:\Users\user\Documents\GitHub\matricula\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication7.exe
+C:\Users\user\Documents\GitHub\matricula\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication7.xml
+C:\Users\user\Documents\GitHub\matricula\WindowsApplication7\WindowsApplication7\obj\x86\Debug\WindowsApplication7.pdb
