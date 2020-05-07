@@ -1,4 +1,4 @@
-import 'file:///C:/Users/user/Documents/GitHub/este_si_mapa/lib/page/login/opcion_login.dart';
+import 'package:estesimapa/page/login/opcion_login.dart';
 import 'package:flutter/material.dart';
 
 

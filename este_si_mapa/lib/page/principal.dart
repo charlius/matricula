@@ -4,6 +4,7 @@ import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:estesimapa/page/otrapage.dart';
 import 'package:estesimapa/page/proveedor.dart';
 import 'package:estesimapa/page/mapa.dart';
+import 'package:estesimapa/page/login/login.dart';
 
 //import 'package:flutter1/Page/estacion.dart';
 //import 'package:flutter1/Page/otrapage.dart';
@@ -14,10 +15,13 @@ void main() => runApp(MaterialApp(home: BottomNavBar()));
 class BottomNavBar extends StatefulWidget {
   @override
   _BottomNavBarState createState() => _BottomNavBarState();
+
 }
 
 class _BottomNavBarState extends State<BottomNavBar> {
+
   int pageIndex = 0;
+
   //GlobalKey _bottomNavigationKey = GlobalKey();
 
   final MapPage mmap = MapPage();

@@ -1,33 +1,39 @@
+//import 'dart:js';
+
+import 'package:estesimapa/models/main.dart';
 import 'package:estesimapa/page/login/crear_cuenta.dart';
 import 'package:flutter/material.dart';
 import 'package:estesimapa/page/principal.dart';
-
+import 'package:scoped_model/scoped_model.dart';
+import 'package:toast/toast.dart';
+import 'package:http/http.dart' as http;
 
 void main() => runApp(MyApp());
 
+final datoususario = TextEditingController();
+final datopass = TextEditingController();
+
+
+
+
 class MyApp extends StatelessWidget {
+
+
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // Try running your application with "flutter run". You'll see the
-        // application has a blue toolbar. Then, without quitting the app, try
-        // changing the primarySwatch below to Colors.green and then invoke
-        // "hot reload" (press "r" in the console where you ran "flutter run",
-        // or simply save your changes to "hot reload" in a Flutter IDE).
-        // Notice that the counter didn't reset back to zero; the application
-        // is not restarted.
-        primarySwatch: Colors.blue,
-      ),
-      home: MyHomePage(title: 'Flutter Login'),
 
-    );
+    final MainModel _model = MainModel();
+    return ScopedModel<MainModel>(
+        model: _model,
+        child: MaterialApp(
+          title: 'Flutter Demo',
+          theme: ThemeData(
+            primarySwatch: Colors.blue,
+          ),
+          home: MyHomePage(title: 'Flutter Demo Home Page'),
+        ));
   }
 }
 
@@ -63,143 +69,262 @@ class _MyHomePageState extends State<MyHomePage> {
 
 
   @override
-  Widget build(BuildContext context) {
-    var screenSize = MediaQuery.of(context).size;//sacar el largo y ancho de la pantalla
-    var width = screenSize.width;
-    var height = screenSize.height;
-    // This method is rerun every time setState is called, for instance as done
-    // by the _incrementCounter method above.
-    //
-    // The Flutter framework has been optimized to make rerunning build methods
-    // fast, so that you can just rebuild anything that needs updating rather
-    // than having to individually change instances of widgets.
-
-    final emailField = TextField(
-      controller: txtemail,
-      obscureText: true,
-      style: style,
-      decoration: InputDecoration(
-          contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
-          hintText: "Email",
-          border:
-          OutlineInputBorder(borderRadius: BorderRadius.circular(32.0))),
-    );
-
-    final passwordField = TextField(
-      controller: txtcontrasena,
-      obscureText: true,
-      style: style,
-      decoration: InputDecoration(
-          contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
-          hintText: "Password",
-          border:
-          OutlineInputBorder(borderRadius: BorderRadius.circular(32.0))),
-    );
+  Widget build(BuildContext context, ) {
+    return ScopedModelDescendant<MainModel>(
+        builder: (BuildContext context, Widget child, MainModel model) {
+      var screenSize = MediaQuery.of(context).size; //sacar el largo y ancho de la pantalla
+      var width = screenSize.width;
+      var height = screenSize.height;
+      // This method is rerun every time setState is called, for instance as done
+      // by the _incrementCounter method above.
+      //
+      // The Flutter framework has been optimized to make rerunning build methods
+      // fast, so that you can just rebuild anything that needs updating rather
+      // than having to individually change instances of widgets.
 
 
+      Future<List> obtenerUsuario() async {
+        var url = "http://parkii.tk/API/obtenerUsuario.php";
+        final response = await http.post(url, body: {
+          "usuario": datoususario.text,
+          "contrasena": datopass.text
+        });
+        if (response.body == "CORRECTO") {
+          Toast.show(
+              "Bienvenido",
+              context,
+              duration: Toast.LENGTH_LONG,
+              gravity: Toast.BOTTOM,
+              backgroundColor: Colors.green,
+              textColor: Colors.white
 
-    final loginButon = Material(
-      elevation: 5.0,
-      borderRadius: BorderRadius.circular(30.0),
-      color: Colors.blueGrey,
-      child: MaterialButton(
-        minWidth: MediaQuery.of(context).size.width,
-        padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
-        onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => BottomNavBar()),
           );
-        },
-        child: Text("Login",
-            textAlign: TextAlign.center,
-            style: style.copyWith(
-                color: Colors.white, fontWeight: FontWeight.bold)),
-      ),
-    );
-    final crearcuentaButon = Material(
-      elevation: 5.0,
-      borderRadius: BorderRadius.circular(30.0),
-      color: Colors.blueGrey,
-      child: MaterialButton(
-        minWidth: MediaQuery.of(context).size.width,
-        padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
-        onPressed: () {
-          showAlert(context);
-         // Navigator.push(context,MaterialPageRoute(builder: (context) => crear_cuenta()), );
-        },
-        child: Text("Crear cuenta",
-            textAlign: TextAlign.center,
-            style: style.copyWith(
-                color: Colors.white, fontWeight: FontWeight.bold)),
-      ),
-    );
-    final txt_recuperar = new FlatButton(
-      onPressed: () {
-        Navigator.pushNamed(context, "YourRoute");
-      },
-      child:  Text(
-        'Recuperar cuenta',
-        style: TextStyle(
-          decoration: TextDecoration.underline,
+
+          model.incrementCount();
+
+          Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => BottomNavBar())
+          );
+        } else if (response.body == "ERROR") {
+          Toast.show(
+              "LOGIN INCORRECTO",
+              context,
+              duration: Toast.LENGTH_LONG,
+              gravity: Toast.BOTTOM,
+              backgroundColor: Colors.red,
+              textColor: Colors.white
+          );
+        } else if (response.body == "ERROR ESTADO") {
+          Toast.show(
+              "CUENTA NO ACTIVADA",
+              context,
+              duration: Toast.LENGTH_LONG,
+              gravity: Toast.BOTTOM,
+              backgroundColor: Colors.red,
+              textColor: Colors.white
+          );
+        }
+      }
+
+
+      _validateEmail(String value) {
+        if (value.isEmpty) {
+          return 'El campo Email no puede estar vacío!';
+        }
+        // Regex para validación de email
+        String p = "[a-zA-Z0-9\+\.\_\%\-\+]{1,256}" +
+            "\\@" +
+            "[a-zA-Z0-9][a-zA-Z0-9\\-]{0,64}" +
+            "(" +
+            "\\." +
+            "[a-zA-Z0-9][a-zA-Z0-9\\-]{0,25}" +
+            ")+";
+        RegExp regExp = new RegExp(p);
+        if (regExp.hasMatch(value)) {
+          return null;
+        }
+        return 'El Email suministrado no es válido. Intente otro correo electrónico';
+      }
+
+
+      final emailField = TextFormField(
+        obscureText: false,
+        controller: datoususario,
+        validator: _validateEmail,
+        keyboardType: TextInputType.emailAddress,
+        style: style,
+        decoration: InputDecoration(
+            contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
+            hintText: "Email",
+            border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(32.0))),
+      );
+
+      final passwordField = TextField(
+        controller: datopass,
+        obscureText: true,
+        style: style,
+        decoration: InputDecoration(
+            contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
+            hintText: "Password",
+            border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(32.0))),
+      );
+
+      final loginButon = Material(
+        elevation: 5.0,
+        borderRadius: BorderRadius.circular(30.0),
+        color: Colors.blueGrey,
+        child: MaterialButton(
+          minWidth: MediaQuery
+              .of(context)
+              .size
+              .width,
+          padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
+          onPressed: () {
+            String email = datoususario.text;
+            String contra = datopass.text;
+            if (email.length < 5 || email.length > 200 || contra.length < 2 ||
+                contra.length > 50) {
+              if (email.length < 5 || email.length > 10) {
+                Toast.show(
+                    "Email incorrecto",
+                    context,
+                    duration: Toast.LENGTH_LONG,
+                    gravity: Toast.BOTTOM,
+                    backgroundColor: Colors.red,
+                    textColor: Colors.white
+                );
+              } else if (contra.length < 2 || contra.length > 50) {
+                Toast.show(
+                    "Contraseña incorrecta",
+                    context,
+                    duration: Toast.LENGTH_LONG,
+                    gravity: Toast.BOTTOM,
+                    backgroundColor: Colors.red,
+                    textColor: Colors.white
+                );
+              }
+            } else {
+              //showAlertDialog(context);
+              showDialog(
+                  barrierDismissible: false,
+                  context: context,
+                  builder: (context) {
+                    Future.delayed(Duration(seconds: 3), () {
+                      Navigator.of(context).pop(true);
+                    });
+
+                    return AlertDialog(
+                      title: Image.asset(
+                        "assets/cargando_3.gif", height: 100, width: 100,),
+                      //title: Text('Cargando' , textAlign: TextAlign.center,) ,
+                    );
+                  });
+              obtenerUsuario();
+            }
+            //Navigator.push(
+            //context,
+            //MaterialPageRoute(builder: (context) => BottomNavBar()),
+          },
+          child: Text("Login",
+              textAlign: TextAlign.center,
+              style: style.copyWith(
+                  color: Colors.white, fontWeight: FontWeight.bold)),
         ),
-      )
+      );
+      final crearcuentaButon = Material(
+        elevation: 5.0,
+        borderRadius: BorderRadius.circular(30.0),
+        color: Colors.blueGrey,
+        child: MaterialButton(
+          minWidth: MediaQuery
+              .of(context)
+              .size
+              .width,
+          padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
+          onPressed: () {
+            showAlert(context);
+            // Navigator.push(context,MaterialPageRoute(builder: (context) => crear_cuenta()), );
+          },
+          child: Text("Crear cuenta",
+              textAlign: TextAlign.center,
+              style: style.copyWith(
+                  color: Colors.white, fontWeight: FontWeight.bold)),
+        ),
+      );
+      final txt_recuperar = new FlatButton(
+          onPressed: () {
+            Navigator.pushNamed(context, "YourRoute");
+          },
+          child: Text(
+            'Recuperar cuenta',
+            style: TextStyle(
+              decoration: TextDecoration.underline,
+            ),
+          )
 
 
-);
+      );
 
 
-    return Scaffold(
+      return Scaffold(
 
+          body: SingleChildScrollView(
 
-        body: SingleChildScrollView(
+            child: Center(
 
-          child: Center(
+              child: Container(
+                color: Colors.white70,
+                child: Padding(
 
-            child: Container(
-              color: Colors.white70,
-              child: Padding(
-
-                padding: const EdgeInsets.all(36.0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    SizedBox(
-                      height: 155.0,
-                      child: Image.asset(
-                        "assets/logo_prueba2.png",
-                        fit: BoxFit.contain,
+                  padding: const EdgeInsets.all(36.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      SizedBox(
+                        height: 155.0,
+                        child: Image.asset(
+                          "assets/logo_prueba2.png",
+                          fit: BoxFit.contain,
+                        ),
                       ),
-                    ),
-                    SizedBox(height: 45.0),
-                    emailField,
-                    SizedBox(height: 25.0),
-                    passwordField,
-                    SizedBox(
-                      height: 35.0,
-                    ),
-                    loginButon,
-                    SizedBox(
-                      height: 15.0,
-                    ),
-                    SizedBox(
-                      height: 15.0,
-                    ),
-                    crearcuentaButon,
-                    txt_recuperar,
-                    SizedBox(
-                      height: height,
-                    ),
+                      SizedBox(height: 45.0),
+                      emailField,
+                      SizedBox(height: 25.0),
+                      passwordField,
+                      SizedBox(
+                        height: 35.0,
+                      ),
+                      loginButon,
+                      SizedBox(
+                        height: 15.0,
+                      ),
+                      SizedBox(
+                        height: 15.0,
+                      ),
+                      crearcuentaButon,
+                      txt_recuperar,
+                      SizedBox(
+                        height: height,
+                      ),
 
-                  ],
+                    ],
+                  ),
                 ),
               ),
             ),
-          ),
-        )
-    );
-  }
+          )
+      );
+    });
+
+        }
+
+
+
+
 
   void showAlert(BuildContext context) {
     if (true){
@@ -230,8 +355,6 @@ class _MyHomePageState extends State<MyHomePage> {
                    ),
 
                       SizedBox(height: 10.0),
-
-
                       Material(
                           borderRadius: BorderRadius.circular(30.0),
                           color: Colors.blueGrey,
