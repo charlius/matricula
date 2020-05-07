@@ -36,6 +36,7 @@ dependencies:
   toast: ^0.1.5
   mailer: ^3.0.3
   scoped_model: ^1.0.1
+  flutter_bloc: ^0.21.0
 
 dev_dependencies:
   flutter_test:

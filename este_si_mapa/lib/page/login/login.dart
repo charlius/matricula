@@ -209,11 +209,14 @@ class _MyHomePageState extends State<MyHomePage> {
                 );
               }
             } else {
+              datopass.text=" ";
+              datoususario.text="";
               //showAlertDialog(context);
               showDialog(
                   barrierDismissible: false,
                   context: context,
                   builder: (context) {
+
                     Future.delayed(Duration(seconds: 3), () {
                       Navigator.of(context).pop(true);
                     });
