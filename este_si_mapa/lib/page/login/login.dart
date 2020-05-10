@@ -340,7 +340,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     children: <Widget>[
                       SizedBox(height: 10.0),
                       Text(
-                          "ingresa tu nombre y apellido",textScaleFactor: 1.0 ,  textAlign: TextAlign.right
+                          "ingresa la clave de tu condominio",textScaleFactor: 1.0 ,  textAlign: TextAlign.right
                       ),
                      TextField(
                        controller: txtclavecondominio,
@@ -413,9 +413,25 @@ class _MyHomePageState extends State<MyHomePage> {
                           color: Colors.blueGrey,
                           child:MaterialButton(
                             onPressed: (){
+                              showDialog(
+                                  barrierDismissible: false,
+                                  context: context,
+                                  builder: (context) {
 
+                                    Future.delayed(Duration(seconds: 3), () {
+                                      Navigator.of(context).pop(true);
+                                    });
+
+                                    return AlertDialog(
+                                      title: Image.asset(
+                                        "assets/cargando_3.gif", height: 100, width: 100,),
+                                      //title: Text('Cargando' , textAlign: TextAlign.center,) ,
+                                    );
+                                  });
                               obteneremail(context);
-
+                              Future.delayed(Duration(seconds: 4), () {
+                                Navigator.of(context).pop(true);
+                              });
 
 
                             },

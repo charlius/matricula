@@ -136,11 +136,11 @@ class _otraPageState extends State<otrapage>{
         padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
         onPressed: () {
 
-         dato_select= "nuevo";
-          // Navigator.push(
-           // context,
-           // MaterialPageRoute(builder: (context) => vehiculos),
-         // );
+
+           Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => vehiculos),
+         );
         },
         child: Text("Mis vehiculos",
             textAlign: TextAlign.center,
