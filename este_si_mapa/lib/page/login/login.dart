@@ -254,10 +254,10 @@ class _MyHomePageState extends State<MyHomePage> {
       );
       final txt_recuperar = new FlatButton(
           onPressed: () {
-            Navigator.pushNamed(context, "YourRoute");
+           showAlert_recuperpass(context);
           },
           child: Text(
-            'Recuperar cuenta',
+            'Recuperar contraseña',
             style: TextStyle(
               decoration: TextDecoration.underline,
             ),
