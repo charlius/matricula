@@ -53,11 +53,15 @@ class otrapage extends StatefulWidget{
   _otraPageState createState() => _otraPageState();
 }
 class _otraPageState extends State<otrapage>{
+  TextEditingController txtnombre = new TextEditingController();
+  TextEditingController txtapellido = new TextEditingController();
+  TextEditingController txttelefono = new TextEditingController();
+  TextEditingController txtemail = new TextEditingController();
   //final MainModel dato_correo = " ";
 
   void initState() {
 
-    //FetchJSON();
+//    FetchJSON();
   }
 
   //String corr = "edderhr07@gmail.com";
@@ -78,6 +82,7 @@ class _otraPageState extends State<otrapage>{
     TextField Field_nombres(nombres_text) {
       final nombreField = TextField(
         obscureText: false,
+        controller: txtnombre ,
 
         decoration: InputDecoration(
             contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
@@ -94,6 +99,7 @@ class _otraPageState extends State<otrapage>{
     TextField Field_telefono(telefono_text) {
     final telefonolField = TextField(
       obscureText: false,
+      controller: txttelefono,
       decoration: InputDecoration(
           contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
           hintText: telefono_text,
@@ -108,6 +114,7 @@ class _otraPageState extends State<otrapage>{
     TextField email_texto(email_text){
       final emailField = TextField(
         obscureText: false,
+        controller: txtemail,
         decoration: InputDecoration(
             contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
             hintText: email_text,
@@ -165,24 +172,19 @@ class _otraPageState extends State<otrapage>{
 
     FetchJSON(String dato_correo) async {
       print (dato_correo);
-      Toast.show(
-          dato_correo,
-          context,
-          duration: Toast.LENGTH_LONG,
-          gravity: Toast.BOTTOM,
-          backgroundColor: Colors.yellow,
-          textColor: Colors.white
-      );
+
       var Response = await http.post(
         "http://parkii.tk/API/select_usuario.php",
-        body: {"correo":  dato_correo,},);
+        body: {"correo":  dato_correo},);
       if (Response.statusCode == 200) {
         String responseBody = Response.body;
         var responseJSON = json.decode(responseBody);
-        correo = responseJSON['correo'].toString();
-        nombre = responseJSON['nombre'].toString();
+
+        txtemail.text = responseJSON['correo'].toString();
         apellido = responseJSON['apellido'].toString();
-        telefono = responseJSON['telefono'].toString();
+        nombre = responseJSON['nombre'].toString();
+        txtnombre.text = nombre +" "+ apellido;
+        txttelefono.text = responseJSON['telefono'].toString();
 
         isData = true;
         setState(() {
@@ -216,15 +218,8 @@ class _otraPageState extends State<otrapage>{
         body: ScopedModelDescendant<MainModel>(
     // ignore: missing_return
             builder: (BuildContext context, Widget child, MainModel model) {
-              String dato_corr = model.name;
-              Toast.show(
-                  model.name.toString(),
-                  context,
-                  duration: Toast.LENGTH_LONG,
-                  gravity: Toast.BOTTOM,
-                  backgroundColor: Colors.green,
-                  textColor: Colors.white
-              );
+              String dato_corr = model.name.toString();
+
               FetchJSON(dato_corr);
               return Center(
 
@@ -249,6 +244,7 @@ class _otraPageState extends State<otrapage>{
             ),
             SizedBox(height: 5.0),
             Field_nombres(nombre + " " + apellido),
+
             SizedBox(height: 5.0),
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
@@ -261,6 +257,7 @@ class _otraPageState extends State<otrapage>{
             ),
             SizedBox(height: 5.0),
             Field_telefono(telefono),
+
             SizedBox(height: 5.0),
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
@@ -279,7 +276,9 @@ class _otraPageState extends State<otrapage>{
             cerrarsesionButton,
             SizedBox(height: 0.0),
           ],
+
         ),
+
       ),
               );
     }), // This trailing comma makes auto-formatting nicer for build methods.
