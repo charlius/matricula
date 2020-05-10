@@ -96,6 +96,7 @@ class _MyHomePageState extends State<MyHomePage> {
               textColor: Colors.white
 
           );
+          model.updateName(datoususario.text);
           Navigator.push(
               context,
               MaterialPageRoute(builder: (context) => BottomNavBar())
