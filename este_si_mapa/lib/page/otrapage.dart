@@ -16,33 +16,8 @@ import '../main.dart';
 
 void main() =>runApp(otrapage());
 
-var clase_dato = main();
 
 
-Future<Persona> fetchPost()async{
-  final response = await http.get("http://parkii.tk/API/select_usuario.php");
-  if (response.statusCode == 200){
-    return Persona.fromJson(json.decode(response.body));
-
-  }else{
-    throw Exception ("fallo");
-  }
-}
-class Persona{
-
-  final String correo ;
-  final String nombre;
-  final String telefono;
-
-  Persona({this.correo, this.nombre, this.telefono});
-  factory Persona.fromJson(Map<String,dynamic> json){
-    return Persona(
-      correo: json['correo'],
-      nombre: json['nombre'],
-      telefono: json['telefono'],
-    );
-  }
-}
 
 
 class otrapage extends StatefulWidget{

@@ -1,7 +1,11 @@
+import 'dart:convert';
+
 import 'package:estesimapa/page/principal.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:estesimapa/page/otrapage.dart';
+import 'package:toast/toast.dart';
+import 'package:http/http.dart' as http;
 
 
 
@@ -17,7 +21,8 @@ class misautos extends State<pagevehiculos> {
 
   List<String> marcas_auto = ['nissan', 'chevrolet', 'toyota', 'suzuki', 'dodge', 'kia'];
   List<String> color_auto = ['blanco', 'azul', 'rojo', 'amarillo', 'negro', 'plateado'];
-  String seleccion_marca;
+  List<String> dato_auto;
+  Map<String, dynamic>  seleccion_marca;
   String seleccion_color;// Option 2
 
   @override
@@ -93,6 +98,114 @@ class misautos extends State<pagevehiculos> {
                 color: Colors.white, fontWeight: FontWeight.bold)),
       ),
     );
+    final eliminarButton = Material(
+      elevation: 5.0,
+      borderRadius: BorderRadius.circular(30.0),
+      color: Colors.red,
+      child: MaterialButton(
+        minWidth: 50,
+        padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => BottomNavBar()),
+          );
+        },
+        child: Text("quitar",
+            textAlign: TextAlign.center,
+            style: style.copyWith(
+                color: Colors.white, fontWeight: FontWeight.bold)),
+      ),
+    );
+
+    FetchJSON() async {
+      String op ="1";
+      var Response = await http.post(
+        "http://parkii.tk/API/consulta_patente.php",
+        body: {"op":  op},);
+
+      if (Response.statusCode == 200) {
+        final parsed = json.decode(Response.body);
+         int i=1;
+
+
+        Toast.show(
+            parsed.toString(),
+            context,
+            duration: Toast.LENGTH_LONG,
+            gravity: Toast.CENTER,
+            backgroundColor: Colors.red,
+            textColor: Colors.white
+        );
+
+
+       // dato_auto= responseJSON['2'];
+
+
+
+          for(final jsonString in parsed) {
+                
+          }
+
+
+        var isData = true;
+
+      } else {
+        print('Something went wrong. \nResponse Code : ${Response.statusCode}');
+        Toast.show(
+            Response.statusCode.toString(),
+            context,
+            duration: Toast.LENGTH_LONG,
+            gravity: Toast.CENTER,
+            backgroundColor: Colors.red,
+            textColor: Colors.white
+        );
+      }
+    }
+     autos(int num){
+      return Container(
+
+        //color: Colors.brown,
+        padding: EdgeInsets.all(10),
+        width: 180,
+        decoration: BoxDecoration(
+          color: Colors.white,
+          border: Border.all(width: 3)
+        ),
+        child: Column(
+          children: <Widget>[
+            Text("patente:  "),
+            Text("marca:  "),
+            Text("modelo: "),
+            Text("color:  "),
+            SizedBox(height: 30),
+            IconButton(
+              icon: Image.asset("assets/basurero.png"),
+              tooltip: 'Increase volume by 10',
+              onPressed: () {
+                setState(() {
+                  Toast.show(
+                     "esto es",
+                      context,
+                      duration: Toast.LENGTH_LONG,
+                      gravity: Toast.CENTER,
+                      backgroundColor: Colors.red,
+                      textColor: Colors.white
+                  );
+                 FetchJSON();
+                });
+              },
+            ),
+           // eliminarButton
+
+
+          ],
+        ),
+      );
+    }
+    setState(() {
+    });
+
 
 
 
@@ -221,12 +334,33 @@ class misautos extends State<pagevehiculos> {
                     Text('Mis vehiculos ',textScaleFactor: 0.8 , style: style.copyWith(color: Colors.black), textAlign: TextAlign.right,),
                   ],
                 ),
-                SizedBox(height: 200.0),
+                SizedBox(height: 15.0),
+                Container(
+                    height: 180.0,
+                  child:
+                    ListView(
+                      scrollDirection: Axis.horizontal,
+                      children: <Widget>[
+
+                        autos(1),
+                        autos(1),
+                        autos(1),
+                        autos(1),
+
+
+                       
+                      ],
+                    ),
+
+                ),
 
               ],
+
             ),
           ),
         ) // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
+
+
 }
