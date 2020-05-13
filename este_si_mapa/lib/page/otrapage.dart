@@ -179,6 +179,21 @@ class _otraPageState extends State<otrapage>{
             actions: <Widget>[
               IconButton(icon: Icon(Icons.settings),
                 onPressed:() {
+                  showDialog(
+                      barrierDismissible: false,
+                      context: context,
+                      builder: (context) {
+
+                        Future.delayed(Duration(seconds: 2), () {
+                          Navigator.of(context).pop(true);
+                        });
+
+                        return AlertDialog(
+                          title: Image.asset(
+                            "assets/cargando_3.gif", height: 100, width: 100,),
+                          //title: Text('Cargando' , textAlign: TextAlign.center,) ,
+                        );
+                      });
                   Navigator.push(
                     context,
                     MaterialPageRoute(builder: (context) => editarperfil),

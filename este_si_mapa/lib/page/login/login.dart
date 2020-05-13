@@ -358,12 +358,43 @@ class _MyHomePageState extends State<MyHomePage> {
                           borderRadius: BorderRadius.circular(30.0),
                           color: Colors.blueGrey,
                           child:MaterialButton(
-                            onPressed: (){
-                              Navigator.push(context,MaterialPageRoute(builder: (context) => crear_cuenta()), );
+                            onPressed: () async {
+                              var url = "http://parkii.tk/API/select_condominio.php";
+                              final response = await http.post(url, body: {
+                                "clave": txtclavecondominio.text,
+                              });
+                              if (response.body == "CORRECTO") {
+
+                                Toast.show(
+                                    "CLAVE ACEPTADA",
+                                    context,
+                                    duration: Toast.LENGTH_LONG,
+                                    gravity: Toast.BOTTOM,
+                                    backgroundColor: Colors.green,
+                                    textColor: Colors.white
+                                );
+
+                                Navigator.push
+                                  (context,MaterialPageRoute(builder: (context) => crear_cuenta()), );
+
+                                //Navigator.of(context).pop();
+
+                              } else if (response.body == "ERROR") {
+
+                                Toast.show(
+                                    "CLAVE INCORRECTA",
+                                    context,
+                                    duration: Toast.LENGTH_LONG,
+                                    gravity: Toast.BOTTOM,
+                                    backgroundColor: Colors.red,
+                                    textColor: Colors.white
+                                );
+                              }
                             },
                             minWidth: 280,
                             padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
-                            child: Text("verfificar"),
+                            child: Text("verfificar" , style: style.copyWith(
+                                color: Colors.white, fontWeight: FontWeight.bold , fontSize: 15)),
                           )
 
                       ),
@@ -550,8 +581,5 @@ class _MyHomePageState extends State<MyHomePage> {
       );
     }
   }
-
-
-
 }
 
