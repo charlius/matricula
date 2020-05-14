@@ -220,7 +220,7 @@ class crear_cuenta extends StatelessWidget {
     final message = Message()
       ..from = Address(username)
       ..recipients.add(txtemail.text) //recipent email
-      ..subject = 'Recuperacion de contraseña - ${DateTime.now().day}' //subject of the email
+      ..subject = 'Cuenta Parkii creada - ${DateTime.now().day}' //subject of the email
       ..text = 'Este correo se a enviado para acttualizar tu contraseña\nSi tu no as solicitado el cambio de contraseña ignora este correo.' //body of the email
       ..html = "<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>"
           "    <html xmlns='http://www.w3.org/1999/xhtml'>"
@@ -242,7 +242,7 @@ class crear_cuenta extends StatelessWidget {
           "<h2><center>Bienvenido "+txtnombre.text+" a tu aplicacion Parkii..!!</center> </h2>"
           "<br>"
           "<h3><center> Haz creado tu cuenta con exito en la aplicacion Parkii</center></h3>"
-          "<h3><center>ahora solo necesitas activar la cuenta haciendo en click en el siguiente enlace, recuerda ingresar la contraseña creada para tu usuario.!</center></h3>"
+          "<h3><center>ahora solo necesitas activar la cuenta haciendo  click en el siguiente enlace.</center></h3>"
           "<br>"
           "<center><a href='http://www.parkii.tk/API/generarcorreo.php?email="+txtemail.text+"&sha="+hash+"' class='btn btn-primary btn-lg active' role='button' aria-pressed='true'>ACTIVA TU CUENTA</a></center>"
           "<center>"
