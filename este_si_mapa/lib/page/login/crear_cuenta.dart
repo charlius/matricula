@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:estesimapa/page/otrapage.dart';
+import 'package:flutter/services.dart';
 import 'package:mailer/mailer.dart';
 import 'package:mailer/smtp_server.dart';
 
@@ -32,7 +33,7 @@ class crear_cuenta extends StatelessWidget {
       obscureText: false,
       decoration: InputDecoration(
           contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
-          hintText: "nombre...",
+          hintText: "Nombres",
           hintStyle: TextStyle(fontSize: 15.0 , color: Colors.black),
           border:
           OutlineInputBorder(borderRadius: BorderRadius.circular(32.0))),
@@ -42,9 +43,13 @@ class crear_cuenta extends StatelessWidget {
     final telefonofield = TextField(
       controller: txttelefono,
       obscureText: false,
+      keyboardType: TextInputType.number,
+      inputFormatters: <TextInputFormatter>[
+        WhitelistingTextInputFormatter.digitsOnly
+      ],
       decoration: InputDecoration(
           contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
-          hintText: "telefono...",
+          hintText: "Telefono",
           hintStyle: TextStyle(fontSize: 15.0 , color: Colors.black),
           border:
           OutlineInputBorder(borderRadius: BorderRadius.circular(32.0))),
@@ -52,10 +57,11 @@ class crear_cuenta extends StatelessWidget {
 
     final emailfield = TextField(
       controller: txtemail,
+      keyboardType: TextInputType.emailAddress,
       obscureText: false,
       decoration: InputDecoration(
           contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
-          hintText: "castroarias@gmail.com",
+          hintText: "correo@gmail.com",
 
           hintStyle: TextStyle(fontSize: 15.0 , color: Colors.black),
           border:
@@ -66,7 +72,7 @@ class crear_cuenta extends StatelessWidget {
       obscureText: false,
       decoration: InputDecoration(
           contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
-          hintText: "Arias Castro",
+          hintText: "Apellidos",
 
           hintStyle: TextStyle(fontSize: 15.0 , color: Colors.black),
           border:
@@ -92,9 +98,53 @@ class crear_cuenta extends StatelessWidget {
       child: MaterialButton(
         minWidth: 200,
         padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
-        onPressed: () {
+        onPressed: () async {
+          if (txttelefono.text.length>9 || txttelefono.text.length <9 ||
+              txtcontrasena.text.length < 6 || txtcontrasena.text.length > 30 ||
+              txtnombre.text.length < 5 || txtnombre.text.length > 150 ||
+              txtapellido.text.length > 150 || txtapellido.text.length < 5){
+
+            Toast.show(
+                "Ingrese datos correctos",
+                context,
+                duration: Toast.LENGTH_LONG,
+                gravity: Toast.BOTTOM,
+                backgroundColor: Colors.red,
+                textColor: Colors.white
+            );
+
+          }else {
+            var url = "http://parkii.tk/API/consultaremail.php";
+            final response = await http.post(url, body: {
+              "email": txtemail.text,
+            });
+            if (response.body == "correcto") {
+              Toast.show(
+                  "Este Email ya tiene una cuenta asociada",
+                  context,
+                  duration: Toast.LENGTH_LONG,
+                  gravity: Toast.BOTTOM,
+                  backgroundColor: Colors.red,
+                  textColor: Colors.white
+              );
+
+
+              //Navigator.of(context).pop();
+
+            } else if (response.body == "incorrecto") {
+              Toast.show(
+                  "Correo aceptado",
+                  context,
+                  duration: Toast.LENGTH_LONG,
+                  gravity: Toast.BOTTOM,
+                  backgroundColor: Colors.green,
+                  textColor: Colors.white
+              );
+              obtenerUsuario(context);
+            }
+          }
+
           //Navigator.push(context,MaterialPageRoute(builder: (context) => BottomNavBar()),);
-          obtenerUsuario(context);
         },
         child: Text("Crear cuenta",
             textAlign: TextAlign.center,
@@ -220,7 +270,7 @@ class crear_cuenta extends StatelessWidget {
     final message = Message()
       ..from = Address(username)
       ..recipients.add(txtemail.text) //recipent email
-      ..subject = 'Cuenta Parkii creada - ${DateTime.now().day}' //subject of the email
+      ..subject = 'Recuperacion de contraseña - ${DateTime.now().day}' //subject of the email
       ..text = 'Este correo se a enviado para acttualizar tu contraseña\nSi tu no as solicitado el cambio de contraseña ignora este correo.' //body of the email
       ..html = "<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>"
           "    <html xmlns='http://www.w3.org/1999/xhtml'>"
@@ -242,7 +292,7 @@ class crear_cuenta extends StatelessWidget {
           "<h2><center>Bienvenido "+txtnombre.text+" a tu aplicacion Parkii..!!</center> </h2>"
           "<br>"
           "<h3><center> Haz creado tu cuenta con exito en la aplicacion Parkii</center></h3>"
-          "<h3><center>ahora solo necesitas activar la cuenta haciendo  click en el siguiente enlace.</center></h3>"
+          "<h3><center>ahora solo necesitas activar la cuenta haciendo en click en el siguiente enlace, recuerda ingresar la contraseña creada para tu usuario.!</center></h3>"
           "<br>"
           "<center><a href='http://www.parkii.tk/API/generarcorreo.php?email="+txtemail.text+"&sha="+hash+"' class='btn btn-primary btn-lg active' role='button' aria-pressed='true'>ACTIVA TU CUENTA</a></center>"
           "<center>"

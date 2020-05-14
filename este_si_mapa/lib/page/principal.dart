@@ -41,6 +41,19 @@ class _BottomNavBarState extends State<BottomNavBar> {
         return prov;
         break;
       case 2:
+        showDialog(
+            barrierDismissible: false,
+            context: context,
+            builder: (context) {
+              Future.delayed(Duration(seconds: 3), () {
+                Navigator.of(context).pop(true);
+              });
+              return AlertDialog(
+                title: Image.asset(
+                  "assets/cargando_3.gif", height: 100, width: 100,),
+                //title: Text('Cargando' , textAlign: TextAlign.center,) ,
+              );
+            });
         return perfil;
         break;
       case 3:

@@ -210,7 +210,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   context: context,
                   builder: (context) {
 
-                    Future.delayed(Duration(seconds: 3), () {
+                    Future.delayed(Duration(seconds: 5), () {
                       Navigator.of(context).pop(true);
                     });
 
