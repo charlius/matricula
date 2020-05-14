@@ -24,9 +24,13 @@ class misautos extends State<pagevehiculos> {
   List<String> dato_auto;
   Map<String, dynamic>  seleccion_marca;
   String seleccion_color;// Option 2
+  int i=1;
+  List<dynamic> cont;
+
 
   @override
   Widget build(BuildContext context) {
+    var n = 2;
     TextStyle style = TextStyle(fontFamily: 'Montserrat', fontSize: 12.0);
 
     final pagevehiculos vehiculos = pagevehiculos();
@@ -118,6 +122,45 @@ class misautos extends State<pagevehiculos> {
       ),
     );
 
+    autos2(int num){
+
+          var c = new Container(
+
+            //color: Colors.brown,
+            padding: EdgeInsets.all(10),
+            width: 180,
+            decoration: BoxDecoration(
+                color: Colors.white,
+                border: Border.all(width: 3)
+            ),
+            child: Column(
+              children: <Widget>[
+                Text("patente:  "),
+                Text("marca:  "),
+                Text("modelo: "),
+                Text("color:  "),
+                SizedBox(height: 30),
+                IconButton(
+                  icon: Image.asset("assets/basurero.png"),
+                  tooltip: 'Increase volume by 10',
+                  onPressed: () {
+                    setState(() {
+
+
+                    });
+                  },
+                ),
+                // eliminarButton
+
+
+              ],
+            ),
+      );
+     for(int i=0;i<3;i++){
+       return c ;
+     }
+    }
+
     FetchJSON() async {
       String op ="1";
       var Response = await http.post(
@@ -126,28 +169,24 @@ class misautos extends State<pagevehiculos> {
 
       if (Response.statusCode == 200) {
         final parsed = json.decode(Response.body);
-         int i=1;
 
 
-        Toast.show(
-            parsed.toString(),
-            context,
-            duration: Toast.LENGTH_LONG,
-            gravity: Toast.CENTER,
-            backgroundColor: Colors.red,
-            textColor: Colors.white
-        );
+        //List<String> auto = new List<String>.from(parsed);
+        //print(auto.toString());
+        // dato_auto= responseJSON['2'];
+        Future<List<Container>> lista;
+        while(parsed[i.toString()]!= null) {
 
-
-       // dato_auto= responseJSON['2'];
+          i++;
 
 
 
-          for(final jsonString in parsed) {
-                
-          }
+        }
 
 
+
+
+        n= i;
         var isData = true;
 
       } else {
@@ -161,16 +200,21 @@ class misautos extends State<pagevehiculos> {
             textColor: Colors.white
         );
       }
+      setState(() {
+        print("entro etsas " + i.toString() + " veces");
+      });
     }
-     autos(int num){
+
+    autos(int num){
+
       return Container(
 
         //color: Colors.brown,
         padding: EdgeInsets.all(10),
         width: 180,
         decoration: BoxDecoration(
-          color: Colors.white,
-          border: Border.all(width: 3)
+            color: Colors.white,
+            border: Border.all(width: 3)
         ),
         child: Column(
           children: <Widget>[
@@ -184,34 +228,32 @@ class misautos extends State<pagevehiculos> {
               tooltip: 'Increase volume by 10',
               onPressed: () {
                 setState(() {
-                  Toast.show(
-                     "esto es",
-                      context,
-                      duration: Toast.LENGTH_LONG,
-                      gravity: Toast.CENTER,
-                      backgroundColor: Colors.red,
-                      textColor: Colors.white
-                  );
-                 FetchJSON();
+
+
                 });
               },
             ),
-           // eliminarButton
+            // eliminarButton
 
 
           ],
         ),
       );
     }
-    setState(() {
-    });
+
+
+contenedor(){
+
+}
+
 
 
 
 
     String dropdownValue = 'One';
-
+    FetchJSON();
     return Scaffold(
+
 
 
         appBar: AppBar(
@@ -335,21 +377,18 @@ class misautos extends State<pagevehiculos> {
                   ],
                 ),
                 SizedBox(height: 15.0),
+
                 Container(
+
                     height: 180.0,
                   child:
                     ListView(
+
                       scrollDirection: Axis.horizontal,
-                      children: <Widget>[
-
-                        autos(1),
-                        autos(1),
-                        autos(1),
-                        autos(1),
-
-
-                       
-                      ],
+                       children: List.generate(i, (index){
+                              FetchJSON();
+                            return autos(2);
+                    }),
                     ),
 
                 ),
@@ -360,7 +399,15 @@ class misautos extends State<pagevehiculos> {
           ),
         ) // This trailing comma makes auto-formatting nicer for build methods.
     );
+
   }
 
+  @protected
+  @mustCallSuper
+  void initState() {
+  // FetchJSON();
+  }
 
 }
+
+

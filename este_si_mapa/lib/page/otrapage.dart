@@ -146,7 +146,7 @@ class _otraPageState extends State<otrapage>{
 
 
     FetchJSON(String dato_correo) async {
-      print (dato_correo);
+
 
       var Response = await http.post(
         "http://parkii.tk/API/select_usuario.php",
