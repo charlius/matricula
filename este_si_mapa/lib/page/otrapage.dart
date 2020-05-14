@@ -201,7 +201,16 @@ class _otraPageState extends State<otrapage>{
                 },
               ),
             ],
-            title: Text("Perfil",textAlign: TextAlign.center,)
+            title: Text("Perfil",textAlign: TextAlign.center,),
+          leading: IconButton(
+            icon: Icon(Icons.keyboard_backspace) ,
+            onPressed: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => BottomNavBar())
+              );
+            },
+          ),
         ),
 
         backgroundColor: Colors.white,

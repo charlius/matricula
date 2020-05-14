@@ -45,7 +45,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
             barrierDismissible: false,
             context: context,
             builder: (context) {
-              Future.delayed(Duration(seconds: 3), () {
+              Future.delayed(Duration(seconds: 2), () {
                 Navigator.of(context).pop(true);
               });
               return AlertDialog(
