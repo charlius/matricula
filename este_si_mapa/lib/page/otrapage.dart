@@ -105,7 +105,7 @@ class _otraPageState extends State<otrapage>{
     final misvehiculosButton = Material(
       elevation: 5.0,
       borderRadius: BorderRadius.circular(30.0),
-      color: Colors.blueGrey,
+      color: Colors.greenAccent,
       child: MaterialButton(
         minWidth: 200,
         padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
@@ -120,7 +120,7 @@ class _otraPageState extends State<otrapage>{
         child: Text("Mis vehiculos",
             textAlign: TextAlign.center,
             style: style.copyWith(
-                color: Colors.white, fontWeight: FontWeight.bold)),
+                color: Colors.black, fontWeight: FontWeight.bold)),
       ),
     );
 
@@ -140,7 +140,7 @@ class _otraPageState extends State<otrapage>{
         child: Text("Cerrar sesion",
             textAlign: TextAlign.center,
             style: style.copyWith(
-                color: Colors.white, fontWeight: FontWeight.bold)),
+                color: Colors.black, fontWeight: FontWeight.bold)),
       ),
     );
 
@@ -175,9 +175,9 @@ class _otraPageState extends State<otrapage>{
     return Scaffold(
 
         appBar: AppBar(
-            backgroundColor: Colors.blueGrey,
+            backgroundColor: Colors.orangeAccent,
             actions: <Widget>[
-              IconButton(icon: Icon(Icons.settings),
+              IconButton(icon: Icon(Icons.settings,color: Colors.black,),
                 onPressed:() {
                   showDialog(
                       barrierDismissible: false,
@@ -201,9 +201,9 @@ class _otraPageState extends State<otrapage>{
                 },
               ),
             ],
-            title: Text("Perfil",textAlign: TextAlign.center,),
+            title: Text("Perfil",textAlign: TextAlign.center,style: TextStyle(color: Colors.black)),
           leading: IconButton(
-            icon: Icon(Icons.keyboard_backspace) ,
+            icon: Icon(Icons.keyboard_backspace,color: Colors.black,) ,
             onPressed: () {
               Navigator.push(
                   context,

@@ -170,7 +170,7 @@ class _editPerfilState extends State<editperfil> {
     return Scaffold(
 
         appBar: AppBar(leading: IconButton(
-          icon: Icon(Icons.keyboard_backspace) ,
+          icon: Icon(Icons.keyboard_backspace,color: Colors.black,) ,
           onPressed: () {
             Navigator.pop(
               context,
@@ -178,8 +178,8 @@ class _editPerfilState extends State<editperfil> {
             );
           },
         ),
-            backgroundColor: Colors.blueGrey,
-            title: Text("Modificar mi perfil",)
+            backgroundColor: Colors.orangeAccent,
+            title: Text("Modificar mi perfil",style: TextStyle(color: Colors.black),)
         ),
 
         backgroundColor: Colors.white,
@@ -248,7 +248,7 @@ class _editPerfilState extends State<editperfil> {
                         Material(
                             elevation: 5.0,
                             borderRadius: BorderRadius.circular(30.0),
-                            color: Colors.blueGrey,
+                            color: Colors.greenAccent,
                             child: MaterialButton(
                               minWidth: 200,
                               padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
@@ -273,7 +273,7 @@ class _editPerfilState extends State<editperfil> {
                               child: Text("Guardar cambios",
                                   textAlign: TextAlign.center,
                                   style: style.copyWith(
-                                      color: Colors.white, fontWeight: FontWeight.bold)),
+                                      color: Colors.black, fontWeight: FontWeight.bold)),
                             )
                         ),
                       ],

@@ -86,7 +86,7 @@ class misautos extends State<pagevehiculos> {
     final registrarButton = Material(
       elevation: 5.0,
       borderRadius: BorderRadius.circular(30.0),
-      color: Colors.blueGrey,
+      color: Colors.greenAccent,
       child: MaterialButton(
         minWidth: 200,
         padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
@@ -99,7 +99,7 @@ class misautos extends State<pagevehiculos> {
         child: Text("Registrar Vehiculo",
             textAlign: TextAlign.center,
             style: style.copyWith(
-                color: Colors.white, fontWeight: FontWeight.bold)),
+                color: Colors.black, fontWeight: FontWeight.bold)),
       ),
     );
     final eliminarButton = Material(
@@ -257,10 +257,11 @@ contenedor(){
 
 
         appBar: AppBar(
-            backgroundColor: Colors.blueGrey,
+            backgroundColor: Colors.orangeAccent,
+
             // Here we take the value from the MyHomePage object that was created by
             // the App.build method, and use it to set our appbar title.
-            title: Text("Vehiculos",textAlign: TextAlign.center,)
+            title: Text("Vehiculos",textAlign: TextAlign.center,style: TextStyle(color: Colors.black),)
         ),
         backgroundColor: Colors.white,
         body: Center(
