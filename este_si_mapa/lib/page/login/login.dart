@@ -1,10 +1,10 @@
 //import 'dart:js';
-
 import 'package:estesimapa/models/main.dart';
 import 'package:estesimapa/page/cliente.dart';
 import 'package:estesimapa/page/login/crear_cuenta.dart';
 import 'package:flutter/material.dart';
 import 'package:estesimapa/page/principal.dart';
+import 'package:flutter/services.dart';
 import 'package:mailer/mailer.dart';
 import 'package:mailer/smtp_server.dart';
 import 'package:scoped_model/scoped_model.dart';
@@ -15,16 +15,10 @@ void main() => runApp(MyApp());
 
 final datoususario = TextEditingController();
 final datopass = TextEditingController();
-
-
+final datopatente = TextEditingController();
 
 
 class MyApp extends StatelessWidget {
-
-
-
-  // This widget is the root of your application.hola
-
 
   @override
   Widget build(BuildContext context) {
@@ -41,8 +35,6 @@ class MyApp extends StatelessWidget {
         ));
   }
 }
-
-
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
 
@@ -53,7 +45,6 @@ class MyHomePage extends StatefulWidget {
   _MyHomePageState createState() => _MyHomePageState();
 }
 
-
 class _MyHomePageState extends State<MyHomePage> {
   TextEditingController txtemail = new TextEditingController();
   TextEditingController txtemail2 = new TextEditingController();
@@ -62,9 +53,11 @@ class _MyHomePageState extends State<MyHomePage> {
   TextEditingController txtcontrasena = new TextEditingController();
   TextEditingController txtclavecondominio = new TextEditingController();
 
-  TextStyle style = TextStyle(fontFamily: 'Montserrat', fontSize: 20.0);
-   BottomNavBar principal = BottomNavBar();
+  TextEditingController datotelefono = new TextEditingController();
+  TextEditingController datonombres = new TextEditingController();
 
+  TextStyle style = TextStyle(fontFamily: 'Montserrat', fontSize: 20.0);
+  BottomNavBar principal = BottomNavBar();
 
 
 
@@ -74,258 +67,472 @@ class _MyHomePageState extends State<MyHomePage> {
 
         builder: (BuildContext context, Widget child, MainModel model) {
 
-      var screenSize = MediaQuery.of(context).size; //sacar el largo y ancho de la pantalla
-      var width = screenSize.width;
-      var height = screenSize.height;
+          var screenSize = MediaQuery.of(context).size; //sacar el largo y ancho de la pantalla
+          var width = screenSize.width;
+          var height = screenSize.height;
 
-      Future<List> obtenerUsuario() async {
+          final nombrefield = TextFormField(
+            obscureText: false,
+            controller: datonombres,
+            decoration: InputDecoration(
+                hintText: "Nombres Y  Apellidos",
 
-
-        var url = "http://parkii.tk/API/obtenerUsuario.php";
-        final response = await http.post(url, body: {
-          "usuario": datoususario.text,
-          "contrasena": datopass.text
-        });
-        if (response.body == "CORRECTO") {
-          Toast.show(
-              "Bienvenido",
-              context,
-              duration: Toast.LENGTH_LONG,
-              gravity: Toast.BOTTOM,
-              backgroundColor: Colors.green,
-              textColor: Colors.white
-
-          );
-          model.updateName(datoususario.text);
-          Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => BottomNavBar())
-          );
-        } else if (response.body == "ERROR") {
-          Toast.show(
-              "LOGIN INCORRECTO",
-              context,
-              duration: Toast.LENGTH_LONG,
-              gravity: Toast.BOTTOM,
-              backgroundColor: Colors.red,
-              textColor: Colors.white
-          );
-        } else if (response.body == "ERROR ESTADO") {
-          Toast.show(
-              "CUENTA NO ACTIVADA",
-              context,
-              duration: Toast.LENGTH_LONG,
-              gravity: Toast.BOTTOM,
-              backgroundColor: Colors.red,
-              textColor: Colors.white
-          );
-        }
-      }
-
-
-      _validateEmail(String value) {
-        if (value.isEmpty) {
-          return 'El campo Email no puede estar vacío!';
-        }
-        // Regex para validación de email
-        String p = "[a-zA-Z0-9\+\.\_\%\-\+]{1,256}" +
-            "\\@" +
-            "[a-zA-Z0-9][a-zA-Z0-9\\-]{0,64}" +
-            "(" +
-            "\\." +
-            "[a-zA-Z0-9][a-zA-Z0-9\\-]{0,25}" +
-            ")+";
-        RegExp regExp = new RegExp(p);
-        if (regExp.hasMatch(value)) {
-          return null;
-        }
-        return 'El Email suministrado no es válido. Intente otro correo electrónico';
-      }
-
-      final emailField = TextFormField(
-        obscureText: false,
-        controller: datoususario,
-        validator: _validateEmail,
-        keyboardType: TextInputType.emailAddress,
-        style: style,
-        decoration: InputDecoration(
-            contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
-            hintText: "Email",
-            border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(32.0))),
-      );
-
-      final passwordField = TextField(
-        controller: datopass,
-        obscureText: true,
-        style: style,
-        decoration: InputDecoration(
-            contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
-            hintText: "Password",
-            border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(32.0))),
-      );
-
-
-      final loginButon = Material(
-        elevation: 5.0,
-        borderRadius: BorderRadius.circular(30.0),
-        color: Colors.blueGrey,
-        child: MaterialButton(
-          minWidth: MediaQuery
-              .of(context)
-              .size
-              .width,
-          padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
-          onPressed: () {
-            String email = datoususario.text;
-            String contra = datopass.text;
-            if (email.length < 5 || email.length > 200 || contra.length < 2 ||
-                contra.length > 50) {
-              if (email.length < 5 || email.length > 10) {
-                Toast.show(
-                    "Email incorrecto",
-                    context,
-                    duration: Toast.LENGTH_LONG,
-                    gravity: Toast.BOTTOM,
-                    backgroundColor: Colors.red,
-                    textColor: Colors.white
-                );
-              } else if (contra.length < 2 || contra.length > 50) {
-                Toast.show(
-                    "Contraseña incorrecta",
-                    context,
-                    duration: Toast.LENGTH_LONG,
-                    gravity: Toast.BOTTOM,
-                    backgroundColor: Colors.red,
-                    textColor: Colors.white
-                );
-              }
-            } else {
-              //datopass.text=" ";
-              //datoususario.text="";
-              //showAlertDialog(context);
-              showDialog(
-                  barrierDismissible: false,
-                  context: context,
-                  builder: (context) {
-
-                    Future.delayed(Duration(seconds: 5), () {
-                      Navigator.of(context).pop(true);
-                    });
-
-                    return AlertDialog(
-                      title: Image.asset(
-                        "assets/cargando_3.gif", height: 100, width: 100,),
-                      //title: Text('Cargando' , textAlign: TextAlign.center,) ,
-                    );
-                  });
-
-              obtenerUsuario();
-            }
-            //Navigator.push(
-            //context,
-            //MaterialPageRoute(builder: (context) => BottomNavBar()),
-          },
-          child: Text("Login",
-              textAlign: TextAlign.center,
-              style: style.copyWith(
-                  color: Colors.white, fontWeight: FontWeight.bold)),
-        ),
-      );
-      final crearcuentaButon = Material(
-        elevation: 5.0,
-        borderRadius: BorderRadius.circular(30.0),
-        color: Colors.blueGrey,
-        child: MaterialButton(
-          minWidth: MediaQuery
-              .of(context)
-              .size
-              .width,
-          padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
-          onPressed: () {
-            showAlert(context);
-            // Navigator.push(context,MaterialPageRoute(builder: (context) => crear_cuenta()), );
-          },
-          child: Text("Crear cuenta",
-              textAlign: TextAlign.center,
-              style: style.copyWith(
-                  color: Colors.white, fontWeight: FontWeight.bold)),
-        ),
-      );
-      final txt_recuperar = new FlatButton(
-          onPressed: () {
-           showAlert_recuperpass(context);
-          },
-          child: Text(
-            'Recuperar contraseña',
-            style: TextStyle(
-              decoration: TextDecoration.underline,
+                border: OutlineInputBorder()
             ),
-          )
+          );
+          final telefonofield = TextFormField(
+            obscureText: false,
+            controller: datotelefono,
+            keyboardType: TextInputType.number,
+            inputFormatters: <TextInputFormatter>[
+              WhitelistingTextInputFormatter.digitsOnly
+            ],
+
+            decoration: InputDecoration(
+                hintText: "912345678",
+                border: OutlineInputBorder()
+            ),
+          );
+
+          Future<List> obtenerUsuario() async {
+            var url = "http://parkii.tk/API/obtenerUsuario.php";
+            final response = await http.post(url, body: {
+              "usuario": datoususario.text,
+              "contrasena": datopass.text
+            });
+            if (response.body == "CORRECTO") {
+              Toast.show(
+                  "Bienvenido",
+                  context,
+                  duration: Toast.LENGTH_LONG,
+                  gravity: Toast.BOTTOM,
+                  backgroundColor: Colors.green,
+                  textColor: Colors.white
+              );
+              model.updateName(datoususario.text);
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => BottomNavBar())
+              );
+            } else if (response.body == "ERROR") {
+              Toast.show(
+                  "LOGIN INCORRECTO",
+                  context,
+                  duration: Toast.LENGTH_LONG,
+                  gravity: Toast.BOTTOM,
+                  backgroundColor: Colors.red,
+                  textColor: Colors.white
+              );
+            } else if (response.body == "ERROR ESTADO") {
+              Toast.show(
+                  "CUENTA NO ACTIVADA",
+                  context,
+                  duration: Toast.LENGTH_LONG,
+                  gravity: Toast.BOTTOM,
+                  backgroundColor: Colors.red,
+                  textColor: Colors.white
+              );}}
+
+          _validateEmail(String value) {
+            if (value.isEmpty) {
+              return 'El campo Email no puede estar vacío!';
+            }
+            // Regex para validación de email
+            String p = "[a-zA-Z0-9\+\.\_\%\-\+]{1,256}" +
+                "\\@" +
+                "[a-zA-Z0-9][a-zA-Z0-9\\-]{0,64}" +
+                "(" +
+                "\\." +
+                "[a-zA-Z0-9][a-zA-Z0-9\\-]{0,25}" +
+                ")+";
+            RegExp regExp = new RegExp(p);
+            if (regExp.hasMatch(value)) {
+              return null;
+            }
+            return 'El Email suministrado no es válido. Intente otro correo electrónico';
+          }
+
+          final emailField = TextFormField(
+            obscureText: false,
+            controller: datoususario,
+            validator: _validateEmail,
+            keyboardType: TextInputType.emailAddress,
+            style: style,
+            decoration: InputDecoration(
+                contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
+                hintText: "Email",
+                border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(32.0))),
+          );
+
+          final passwordField = TextField(
+            controller: datopass,
+            obscureText: true,
+            style: style,
+            decoration: InputDecoration(
+                contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
+                hintText: "Password",
+                border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(32.0))),
+          );
 
 
-      );
+          final loginButon = Material(
+            elevation: 5.0,
+            borderRadius: BorderRadius.circular(30.0),
+            color: Colors.blueGrey,
+            child: MaterialButton(
+              minWidth: MediaQuery
+                  .of(context)
+                  .size
+                  .width,
+              padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
+              onPressed: () {
+                String email = datoususario.text;
+                String contra = datopass.text;
+                if (email.length < 5 || email.length > 200 || contra.length < 2 ||
+                    contra.length > 50) {
+                  if (email.length < 5 || email.length > 10) {
+                    Toast.show(
+                        "Email incorrecto",
+                        context,
+                        duration: Toast.LENGTH_LONG,
+                        gravity: Toast.BOTTOM,
+                        backgroundColor: Colors.red,
+                        textColor: Colors.white
+                    );
+                  } else if (contra.length < 2 || contra.length > 50) {
+                    Toast.show(
+                        "Contraseña incorrecta",
+                        context,
+                        duration: Toast.LENGTH_LONG,
+                        gravity: Toast.BOTTOM,
+                        backgroundColor: Colors.red,
+                        textColor: Colors.white
+                    );
+                  }
+                } else {
+                  showDialog(
+                      barrierDismissible: false,
+                      context: context,
+                      builder: (context) {
+
+                        Future.delayed(Duration(seconds: 5), () {
+                          Navigator.of(context).pop(true);
+                        });
+
+                        return AlertDialog(
+                          title: Image.asset(
+                            "assets/cargando_3.gif", height: 100, width: 100,),
+                          //title: Text('Cargando' , textAlign: TextAlign.center,) ,
+                        );
+                      });
+
+                  obtenerUsuario();
+                }},
+              child: Text("Login",
+                  textAlign: TextAlign.center,
+                  style: style.copyWith(
+                      color: Colors.white, fontWeight: FontWeight.bold)),
+            ),
+          );
+          final crearcuentaButon = Material(
+            elevation: 5.0,
+            borderRadius: BorderRadius.circular(30.0),
+            color: Colors.blueGrey,
+            child: MaterialButton(
+              minWidth: MediaQuery
+                  .of(context)
+                  .size
+                  .width,
+              padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
+              onPressed: () {
+                showAlert_crearcuenta(context);
+                // Navigator.push(context,MaterialPageRoute(builder: (context) => crear_cuenta()), );
+              },
+              child: Text("Crear cuenta",
+                  textAlign: TextAlign.center,
+                  style: style.copyWith(
+                      color: Colors.white, fontWeight: FontWeight.bold)),
+            ),
+          );
+          final txt_recuperar = new FlatButton(
+              onPressed: () {
+                showAlert_recuperpass(context);
+              },
+              child: Text(
+                'Recuperar contraseña',
+                style: TextStyle(
+                  decoration: TextDecoration.underline,
+                ),
+              )
 
 
-      return Scaffold(
+          );
 
-          body: SingleChildScrollView(
+          TextField creartextfield(texto){
+            final emailField = TextField(
+              obscureText: false,
+              controller: datopatente,
+              enabled: true,
+              decoration: InputDecoration(
+                  hintText: texto,
 
-            child: Center(
+                  border: OutlineInputBorder()
+              ),
+            );
+            return emailField;
+          }
+          void showAlert_invitado(BuildContext context) {
+            if (true){
+            }
+            showDialog(context: context,
+                builder: (BuildContext context){
+                  return AlertDialog(
+                    backgroundColor: Colors.white,
+                    content: Form(
+                      child: Container(
+                        child: new SingleChildScrollView(
+                          child: Column(
+                            children: <Widget>[
+                              SizedBox(height: 10.0),
+                              Text(
+                                  "ingresa tu nombre y apellido",textScaleFactor: 1.0 ,  textAlign: TextAlign.right
+                              ),
+                              nombrefield,
+                              SizedBox(height: 10.0),
+                              Text(
+                                  "ingresa tu numero telefonico",textScaleFactor: 1.0 ,  textAlign: TextAlign.right
+                              ),
+                              telefonofield,
+                              SizedBox(height: 10.0),
+                              Material(
+                                  borderRadius: BorderRadius.circular(30.0),
+                                  color: Colors.blueGrey,
+                                  child:MaterialButton(
+                                    minWidth: 280,
+                                    padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
+                                    onPressed: () async {
+                                      if (datonombres.text.length >200 || datonombres.text.length < 5 || datotelefono.text.length > 9 || datotelefono.text.length <9){
+                                        Toast.show(
+                                            "Ingrese los datos correspondientes",
+                                            context,
+                                            duration: Toast.LENGTH_LONG,
+                                            gravity: Toast.BOTTOM,
+                                            backgroundColor: Colors.red,
+                                            textColor: Colors.white
+                                        );
+                                      }else{
+                                        var url = "http://parkii.tk/API/guardar_invitado.php";
 
-              child: Container(
-                color: Colors.white70,
-                child: Padding(
+                                        final response = await http.post(url, body: {
+                                          "nombre": datonombres.text,
+                                          "telefono": datotelefono.text,
 
-                  padding: const EdgeInsets.all(36.0),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      SizedBox(
-                        height: 155.0,
-                        child: Image.asset(
-                          "assets/logo-parkii_v2_250x250.png",
-                          fit: BoxFit.contain,
+                                        });
+                                        if(response.body == "ingresado" || response.body == "CORRECTO" ) {
+                                          Toast.show(
+                                              "Ingresado Satisfactoriamente",
+                                              context,
+                                              duration: Toast.LENGTH_LONG,
+                                              gravity: Toast.BOTTOM,
+                                              backgroundColor: Colors.green,
+                                              textColor: Colors.white
+                                          );
+                                          Navigator.push(
+                                              context,
+                                              MaterialPageRoute(builder: (context) => BottomNavBar())
+                                          );
+
+                                        } else  {
+                                          //   showAlertDialog2(context);
+                                          Toast.show(
+                                              "Error al ingresar",
+                                              context,
+                                              duration: Toast.LENGTH_LONG,
+                                              gravity: Toast.BOTTOM,
+                                              backgroundColor: Colors.red,
+                                              textColor: Colors.white
+                                          );
+                                        }
+                                      }},
+                                    child: Text("Ingresar" ,
+                                        style: style.copyWith(
+                                            color: Colors.white, fontWeight: FontWeight.bold , fontSize: 15 )),
+                                  )
+                              ),
+                            ],
+                          ),
                         ),
                       ),
-                      SizedBox(height: 45.0),
-                      emailField,
-                      SizedBox(height: 25.0),
-                      passwordField,
-                      SizedBox(
-                        height: 35.0,
-                      ),
-                      loginButon,
-                      SizedBox(
-                        height: 15.0,
-                      ),
-                      SizedBox(
-                        height: 15.0,
-                      ),
-                      crearcuentaButon,
-                      txt_recuperar,
-                      SizedBox(
-                        height: height,
-                      ),
+                    ),
+                  );
+                }
+            );
+          }
 
-                    ],
+
+          Future<List> obtenerPatente() async {
+            var url = "http://parkii.tk/API/consulta_patente.php";
+            final response = await http.post(url, body: {
+              "patente": datopatente.text,
+
+            });
+            if(response.body == "CORRECTO") {
+
+              Toast.show(
+                  "PATENTE ADMITIDA",
+                  context,
+                  duration: Toast.LENGTH_LONG,
+                  gravity: Toast.BOTTOM,
+                  backgroundColor: Colors.green,
+                  textColor: Colors.white
+              );
+              showAlert_invitado(context);
+            } else if(response.body == "ERROR") {
+              //showAlertDialog2(context);
+              Toast.show(
+                  "PATENTE INCORRECTA",
+                  context,
+                  duration: Toast.LENGTH_LONG,
+                  gravity: Toast.BOTTOM,
+                  backgroundColor: Colors.red,
+                  textColor: Colors.white
+              );
+            }else if(response.body == "ERROR ESTADO") {
+              //showAlertDialog2(context);
+              Toast.show(
+                  "VEHICULO DADO DE BAJA",
+                  context,
+                  duration: Toast.LENGTH_LONG,
+                  gravity: Toast.BOTTOM,
+                  backgroundColor: Colors.red,
+                  textColor: Colors.white
+              );
+            }
+          }
+
+          return Scaffold(
+              body: SingleChildScrollView(
+                child: Center(
+                  child: Container(
+                    color: Colors.white70,
+                    child: Padding(
+                      padding: const EdgeInsets.all(36.0),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.center,
+
+                        children: <Widget>[
+                          SizedBox(
+                            height: 155.0,
+                            child: Image.asset(
+                              "assets/logo-parkii_v2_250x250.png",
+                              fit: BoxFit.contain,
+                            ),
+                          ),
+                          SizedBox(height: 45.0),
+                          emailField,
+                          SizedBox(height: 25.0),
+                          passwordField,
+                          SizedBox(
+                            height: 35.0,
+                          ),
+                          loginButon,
+                          SizedBox(
+                            height: 15.0,
+                          ),
+                          SizedBox(
+                            height: 15.0,
+                          ),
+                          crearcuentaButon,
+                          txt_recuperar,
+                          SizedBox(height: 15,),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            children: <Widget>[
+                              //SizedBox (height: 10,),
+                              FloatingActionButton(
+                                child: Icon(Icons.people),
+                                elevation: 0.0,
+                                backgroundColor: Colors.blueGrey,
+                                onPressed:(){
+                                  showDialog(context: context,
+                                      builder: (BuildContext context){
+                                        return AlertDialog(
+                                          backgroundColor: Colors.white,
+                                          content: Form(
+                                              child: Container(
+                                                  child: new SingleChildScrollView(
+                                                    child: Column(
+                                                      children: <Widget>[
+                                                        Text(
+                                                            "ingresa tu patente",textScaleFactor: 1.0 ,  textAlign: TextAlign.right
+                                                        ),
+                                                        SizedBox(height: 10,),
+                                                        creartextfield("patente"),
+                                                        SizedBox(height: 10,),
+                                                        Material(
+                                                            borderRadius: BorderRadius.circular(30.0),
+                                                            color: Colors.blueGrey,
+                                                            child:MaterialButton(
+                                                              onPressed: () {
+                                                                showDialog(
+                                                                    barrierDismissible: false,
+                                                                    context: context,
+                                                                    builder: (context) {
+
+                                                                      Future.delayed(Duration(seconds: 0), () {
+                                                                        Navigator.of(context).pop(true);
+                                                                      });
+
+                                                                      return AlertDialog(
+                                                                        title: Image.asset(
+                                                                          "assets/cargando_3.gif", height: 100, width: 100,),
+                                                                      );
+                                                                    });
+                                                                obtenerPatente();
+                                                                //showAlert_invitado(context);
+                                                              },
+                                                              minWidth: 280,
+                                                              padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
+                                                              child: Text("verificar",
+                                                                  style: style.copyWith(
+                                                                      color: Colors.white, fontWeight: FontWeight.bold )),
+                                                            )
+                                                        ),
+                                                      ],
+                                                    ),
+                                                  )
+                                              )
+                                          ),
+                                        );
+                                      });
+                                },
+                              ),
+                              //Text('Invitado',textScaleFactor: 0.8 , style: style.copyWith(color: Colors.black), textAlign: TextAlign.right,),
+                            ],
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            children: <Widget>[
+                              //SizedBox (height: 10,),
+                              Text('Invitado',textScaleFactor: 0.8 , style: style.copyWith(color: Colors.black), textAlign: TextAlign.right,),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
                   ),
                 ),
-              ),
-            ),
-          )
-      );
-    });
+              )
+          );
+        });
 
-        }
+  }
 
 
-
-
-
-  void showAlert(BuildContext context) {
+  void showAlert_crearcuenta(BuildContext context) {
     if (true){
 
     }
@@ -342,16 +549,16 @@ class _MyHomePageState extends State<MyHomePage> {
                       Text(
                           "ingresa la clave de tu condominio",textScaleFactor: 1.0 ,  textAlign: TextAlign.right
                       ),
-                     TextField(
-                       controller: txtclavecondominio,
-                       obscureText: true,
-                       style: style,
-                       decoration: InputDecoration(
-                        contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
-                      hintText: "clave condominio...",
-                          border:
-                       OutlineInputBorder(borderRadius: BorderRadius.circular(32.0))),
-                   ),
+                      TextField(
+                        controller: txtclavecondominio,
+                        obscureText: true,
+                        style: style,
+                        decoration: InputDecoration(
+                            contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
+                            hintText: "clave condominio...",
+                            border:
+                            OutlineInputBorder(borderRadius: BorderRadius.circular(32.0))),
+                      ),
 
                       SizedBox(height: 10.0),
                       Material(
@@ -409,6 +616,64 @@ class _MyHomePageState extends State<MyHomePage> {
     );
 
   }
+  Future<List> GuardarInvitado() async {
+    var url = "http://parkii.tk/API/guardar_invitado.php";
+
+    final response = await http.post(url, body: {
+      "nombre": datonombres.text,
+      "telefono": datotelefono.text,
+
+    });
+    if(response.body == "ingresado" || response.body == "CORRECTO" ) {
+      Toast.show(
+          "Ingresado Satisfactoriamente",
+          context,
+          duration: Toast.LENGTH_LONG,
+          gravity: Toast.BOTTOM,
+          backgroundColor: Colors.green,
+          textColor: Colors.white
+      );
+      Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => BottomNavBar())
+      );
+
+    } else  {
+      //   showAlertDialog2(context);
+      Toast.show(
+          "Error al ingresar",
+          context,
+          duration: Toast.LENGTH_LONG,
+          gravity: Toast.BOTTOM,
+          backgroundColor: Colors.red,
+          textColor: Colors.white
+      );
+    }}
+  showAlertDialogPrincipal(BuildContext context){
+    Future.delayed(Duration(seconds: 3), () {
+      Navigator.pop(context);
+      Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => BottomNavBar())
+      );
+    });
+    AlertDialog alert=AlertDialog(
+      content: new Row(
+        children: [
+          CircularProgressIndicator(),
+          Container(margin: EdgeInsets.only(left: 5),child:Text("Loading" ), ),
+        ],
+      ),
+    );
+
+    showDialog(barrierDismissible: false,
+      context:context,
+      builder:(BuildContext context){
+        return alert;
+      },
+    );
+  }
+
 
   void showAlert_recuperpass(BuildContext context) {
     if (true){
@@ -582,4 +847,3 @@ class _MyHomePageState extends State<MyHomePage> {
     }
   }
 }
-

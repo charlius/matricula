@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../bloc/splash_screen_bloc.dart';
-import 'login/opcion_login.dart';
 import 'splash_screen_widget.dart';
+import 'package:estesimapa/page/login/login.dart';
 
 // This the widget where the BLoC states and events are handled.
 class SplashScreen extends StatelessWidget {
@@ -28,7 +28,7 @@ class SplashScreen extends StatelessWidget {
               if ((state is Initial) || (state is Loading)) {
                 return SplashScreenWidget();
               } else if (state is Loaded) {
-                return opcion_login();
+                return MyApp();
               }
             },
           ),
