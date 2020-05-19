@@ -11,14 +11,14 @@ import 'package:scoped_model/scoped_model.dart';
 import 'package:toast/toast.dart';
 import 'package:http/http.dart' as http;
 
-void main() => runApp(MyApp());
+void main() => runApp(login());
 
 final datoususario = TextEditingController();
 final datopass = TextEditingController();
 final datopatente = TextEditingController();
 
 
-class MyApp extends StatelessWidget {
+class login extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {

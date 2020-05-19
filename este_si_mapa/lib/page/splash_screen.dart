@@ -1,37 +1,103 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-
-import '../bloc/splash_screen_bloc.dart';
-import 'splash_screen_widget.dart';
+import 'dart:async';
+import 'package:shimmer/shimmer.dart';
+//import 'package:splash_screen_demo/home_screen.dart';
+//import 'package:splash_screen_demo/login_screen.dart';
 import 'package:estesimapa/page/login/login.dart';
 
-// This the widget where the BLoC states and events are handled.
-class SplashScreen extends StatelessWidget {
+
+
+class SplashScreen extends StatefulWidget {
   @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: _buildBody(context),
+  _SplashScreenState createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen> {
+
+  @override
+  void initState() {
+    super.initState();
+
+    _mockCheckForSession().then(
+            (status) {
+          if (status) {
+            _navigateToHome();
+          } else {
+            _navigateToLogin();
+          }
+        }
     );
   }
 
-  BlocProvider<SplashScreenBloc> _buildBody(BuildContext context) {
-    return BlocProvider(
-      builder: (context) => SplashScreenBloc(),
-      child: Container(
-        height: MediaQuery.of(context).size.height,
-        width: MediaQuery.of(context).size.width,
-        color: Colors.orange,
-        child: Center(
-          // Here I have used BlocBuilder, but instead you can also use BlocListner as well.
-          child: BlocBuilder<SplashScreenBloc, SplashScreenState>(
-            builder: (context, state) {
-              if ((state is Initial) || (state is Loading)) {
-                return SplashScreenWidget();
-              } else if (state is Loaded) {
-                return MyApp();
-              }
-            },
-          ),
+
+  Future<bool> _mockCheckForSession() async {
+    await Future.delayed(Duration(milliseconds: 5000), () {});
+
+    return true;
+  }
+
+  void _navigateToHome() {
+    Navigator.of(context).pushReplacement(
+        MaterialPageRoute(
+            builder: (BuildContext context) => login()
+        )
+    );
+  }
+
+  void _navigateToLogin() {
+    Navigator.of(context).pushReplacement(
+        MaterialPageRoute(
+            builder: (BuildContext context) => login()
+        )
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.orange,
+      body: Container(
+        child: Stack(
+          alignment: Alignment.center,
+          children: <Widget>[
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+
+                Opacity(
+                  opacity: 0.5,
+                  //child: Image.asset('assets/logo-parkii_v2_250x250.png')
+                ),
+                SizedBox(height: 10,),
+              ],
+            ),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: <Widget>[
+                SizedBox(
+                  height: 155.0,
+                  child: Image.asset(
+                    "assets/logo-parkii_v2_250x250.png",
+                    fit: BoxFit.contain,
+                  ),
+                ), // Here place your app logo, tagline etc..
+
+                Padding(
+                  padding: EdgeInsets.only(
+                    top: 30,
+                    bottom: 30,
+                  ),
+                ),
+                // Here place a gif or a loader as I did.
+                CircularProgressIndicator(
+                  backgroundColor: Colors.white,
+                ),
+              ],
+            ),
+
+
+          ],
         ),
       ),
     );
