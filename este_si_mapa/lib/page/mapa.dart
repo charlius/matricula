@@ -52,7 +52,7 @@ class mappage extends State<MapPage> {
             child: Column(
                 children: <Widget>[
                   SizedBox(height: 100,),
-                  imagensubir("assets/barrera_arriba.png"),
+                  //imagensubir("assets/barrera_arriba.png"),
                   SizedBox(height: 200,),
                   MaterialButton(
                     minWidth: 200.0,

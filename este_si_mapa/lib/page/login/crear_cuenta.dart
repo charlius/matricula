@@ -292,7 +292,7 @@ class crear_cuenta extends StatelessWidget {
           "<h2><center>Bienvenido "+txtnombre.text+" a tu aplicacion Parkii..!!</center> </h2>"
           "<br>"
           "<h3><center> Haz creado tu cuenta con exito en la aplicacion Parkii</center></h3>"
-          "<h3><center>ahora solo necesitas activar la cuenta haciendo en click en el siguiente enlace, recuerda ingresar la contraseña creada para tu usuario.!</center></h3>"
+          "<h3><center>ahora solo necesitas activar la cuenta haciendo click en el siguiente enlace, recuerda ingresar la contraseña creada para tu usuario.!</center></h3>"
           "<br>"
           "<center><a href='http://www.parkii.tk/API/generarcorreo.php?email="+txtemail.text+"&sha="+hash+"' class='btn btn-primary btn-lg active' role='button' aria-pressed='true'>ACTIVA TU CUENTA</a></center>"
           "<center>"
