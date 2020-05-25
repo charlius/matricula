@@ -1,4 +1,6 @@
 //import 'dart:js';
+import 'dart:convert';
+
 import 'package:estesimapa/models/main.dart';
 import 'package:estesimapa/page/cliente.dart';
 import 'package:estesimapa/page/login/crear_cuenta.dart';
@@ -59,6 +61,33 @@ class _MyHomePageState extends State<MyHomePage> {
   TextStyle style = TextStyle(fontFamily: 'Montserrat', fontSize: 20.0);
   BottomNavBar principal = BottomNavBar();
 
+  String codigo_condominio ;
+
+  String _mySelection;
+
+  final String url = "http://parkii.tk/API/consulta_condominio_nombre.php";
+
+  List data = List(); //edited line
+
+  Future<String> getSWData() async {
+    var res = await http
+        .get(Uri.encodeFull(url), headers: {"Accept": "application/json"});
+    var resBody = json.decode(res.body);
+
+    setState(() {
+      data = resBody;
+    });
+
+    print(resBody);
+
+    return "Sucess";
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    this.getSWData();
+  }
 
 
   @override
@@ -80,6 +109,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 border: OutlineInputBorder()
             ),
           );
+
           final telefonofield = TextFormField(
             obscureText: false,
             controller: datotelefono,
@@ -376,6 +406,7 @@ class _MyHomePageState extends State<MyHomePage> {
             var url = "http://parkii.tk/API/consulta_patente.php";
             final response = await http.post(url, body: {
               "patente": datopatente.text,
+              "cod_condominio": _mySelection,
 
             });
             if(response.body == "CORRECTO") {
@@ -388,6 +419,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   backgroundColor: Colors.green,
                   textColor: Colors.white
               );
+              model.updateCodCondominio(_mySelection);
               showAlert_invitado(context);
             } else if(response.body == "ERROR") {
               //showAlertDialog2(context);
@@ -457,20 +489,39 @@ class _MyHomePageState extends State<MyHomePage> {
                                 elevation: 0.0,
                                 backgroundColor: Colors.blueGrey,
                                 onPressed:(){
-                                  showDialog(context: context,
-                                      builder: (BuildContext context){
+                                  showDialog(
+                                      context: context,
+                                      builder: (context){
+                                        return StatefulBuilder(
+                                        builder: (context, setState) {
                                         return AlertDialog(
+                                          title: Text("Ingrese Patente y Condominio"),
                                           backgroundColor: Colors.white,
                                           content: Form(
                                               child: Container(
                                                   child: new SingleChildScrollView(
                                                     child: Column(
                                                       children: <Widget>[
-                                                        Text(
-                                                            "ingresa tu patente",textScaleFactor: 1.0 ,  textAlign: TextAlign.right
-                                                        ),
                                                         SizedBox(height: 10,),
-                                                        creartextfield("patente"),
+                                                        creartextfield("Ingrese Patente"),
+                                                        SizedBox(height: 10,),
+                                                        new DropdownButton(
+                                                          hint: Text('Selecciona Condominio',textAlign: TextAlign.left, textScaleFactor: 1.0,), // Not necessary for Option 1
+                                                          items: data.map((item) {
+                                                            return new DropdownMenuItem(
+                                                              child: new Text(item['nombre']),
+                                                              value: item['cod_condiminio'].toString(),
+                                                            );
+                                                          }).toList(),
+                                                          onChanged: (newVal) {
+                                                            setState(() {
+                                                              _mySelection = newVal;
+                                                            });
+                                                          },
+                                                          value: _mySelection,
+
+
+                                                        ),
                                                         SizedBox(height: 10,),
                                                         Material(
                                                             borderRadius: BorderRadius.circular(30.0),
@@ -507,7 +558,10 @@ class _MyHomePageState extends State<MyHomePage> {
                                               )
                                           ),
                                         );
-                                      });
+                                      }
+                                      );
+                                },
+                                  );
                                 },
                               ),
                               //Text('Invitado',textScaleFactor: 0.8 , style: style.copyWith(color: Colors.black), textAlign: TextAlign.right,),
