@@ -128,12 +128,10 @@ class _editPerfilState extends State<editperfil> {
 
         isData = false;
 
-
       } else {
         print('Something went wrong. \nResponse Code : ${Response.statusCode}');
       }
     }
-
 
     Future<List> ModificarUsuario() async {
       var url = "http://parkii.tk/API/modificar_usuario.php";
@@ -188,7 +186,7 @@ class _editPerfilState extends State<editperfil> {
             builder: (BuildContext context, Widget child, MainModel model) {
               String dato_corr = model.name.toString();
               FetchJSON(dato_corr);
-
+              FetchJSON(dato_corr);
               return Center(
                   child: new SingleChildScrollView(
                     child: Column(

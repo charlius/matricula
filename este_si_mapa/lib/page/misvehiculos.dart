@@ -319,10 +319,8 @@ contenedor(){
               return Center(
                 child: new SingleChildScrollView(
                   child: Column(
-
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
-
                       Text('Registrar nuevo vehiculo ', textScaleFactor: 1.3,
                         style: style.copyWith(color: Colors.black),),
                       SizedBox(height: 15.0),
@@ -330,7 +328,6 @@ contenedor(){
                       Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: <Widget>[
-
                           //SizedBox (height: 10,),
                           Text('Patente ', textScaleFactor: 0.8,
                             style: style.copyWith(color: Colors.black),

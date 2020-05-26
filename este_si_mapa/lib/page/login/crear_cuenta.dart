@@ -33,8 +33,8 @@ class crear_cuenta extends StatelessWidget {
       obscureText: false,
       decoration: InputDecoration(
           contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
-          hintText: "Nombres",
-          hintStyle: TextStyle(fontSize: 15.0 , color: Colors.black),
+          labelText: "Ingrese Nombre",
+          hintStyle: TextStyle(fontSize: 15.0 ),
           border:
           OutlineInputBorder(borderRadius: BorderRadius.circular(32.0))),
 
@@ -49,8 +49,8 @@ class crear_cuenta extends StatelessWidget {
       ],
       decoration: InputDecoration(
           contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
-          hintText: "Telefono",
-          hintStyle: TextStyle(fontSize: 15.0 , color: Colors.black),
+          labelText: "Ingrese Telefono",
+          hintStyle: TextStyle(fontSize: 15.0 ),
           border:
           OutlineInputBorder(borderRadius: BorderRadius.circular(32.0))),
     );
@@ -61,9 +61,9 @@ class crear_cuenta extends StatelessWidget {
       obscureText: false,
       decoration: InputDecoration(
           contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
-          hintText: "correo@gmail.com",
+          labelText: "Ingrese Correo",
 
-          hintStyle: TextStyle(fontSize: 15.0 , color: Colors.black),
+          hintStyle: TextStyle(fontSize: 15.0 ),
           border:
           OutlineInputBorder(borderRadius: BorderRadius.circular(32.0))),
     );
@@ -72,9 +72,9 @@ class crear_cuenta extends StatelessWidget {
       obscureText: false,
       decoration: InputDecoration(
           contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
-          hintText: "Apellidos",
+          labelText: "Ingrese Apellido",
 
-          hintStyle: TextStyle(fontSize: 15.0 , color: Colors.black),
+          hintStyle: TextStyle(fontSize: 15.0 ),
           border:
           OutlineInputBorder(borderRadius: BorderRadius.circular(32.0))),
     );
@@ -83,9 +83,10 @@ class crear_cuenta extends StatelessWidget {
       obscureText: false,
       decoration: InputDecoration(
           contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
-          hintText: "****",
+          //hintText: "****",
+          labelText: "Ingresa Contraseña",
 
-          hintStyle: TextStyle(fontSize: 15.0 , color: Colors.black),
+          hintStyle: TextStyle(fontSize: 15.0 ),
           border:
           OutlineInputBorder(borderRadius: BorderRadius.circular(32.0))),
     );

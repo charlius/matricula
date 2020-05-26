@@ -4,6 +4,7 @@ import 'dart:convert';
 import 'package:estesimapa/models/main.dart';
 import 'package:estesimapa/page/cliente.dart';
 import 'package:estesimapa/page/login/crear_cuenta.dart';
+import 'package:estesimapa/page/login/pageinvitado.dart';
 import 'package:flutter/material.dart';
 import 'package:estesimapa/page/principal.dart';
 import 'package:flutter/services.dart';
@@ -61,32 +62,14 @@ class _MyHomePageState extends State<MyHomePage> {
   TextStyle style = TextStyle(fontFamily: 'Montserrat', fontSize: 20.0);
   BottomNavBar principal = BottomNavBar();
 
-  String codigo_condominio ;
 
-  String _mySelection;
 
-  final String url = "http://parkii.tk/API/consulta_condominio_nombre.php";
 
-  List data = List(); //edited line
-
-  Future<String> getSWData() async {
-    var res = await http
-        .get(Uri.encodeFull(url), headers: {"Accept": "application/json"});
-    var resBody = json.decode(res.body);
-
-    setState(() {
-      data = resBody;
-    });
-
-    print(resBody);
-
-    return "Sucess";
-  }
 
   @override
   void initState() {
     super.initState();
-    this.getSWData();
+
   }
 
 
@@ -99,30 +82,6 @@ class _MyHomePageState extends State<MyHomePage> {
           var screenSize = MediaQuery.of(context).size; //sacar el largo y ancho de la pantalla
           var width = screenSize.width;
           var height = screenSize.height;
-
-          final nombrefield = TextFormField(
-            obscureText: false,
-            controller: datonombres,
-            decoration: InputDecoration(
-                hintText: "Nombres Y  Apellidos",
-
-                border: OutlineInputBorder()
-            ),
-          );
-
-          final telefonofield = TextFormField(
-            obscureText: false,
-            controller: datotelefono,
-            keyboardType: TextInputType.number,
-            inputFormatters: <TextInputFormatter>[
-              WhitelistingTextInputFormatter.digitsOnly
-            ],
-
-            decoration: InputDecoration(
-                hintText: "912345678",
-                border: OutlineInputBorder()
-            ),
-          );
 
           Future<List> obtenerUsuario() async {
             var url = "http://parkii.tk/API/obtenerUsuario.php";
@@ -300,150 +259,6 @@ class _MyHomePageState extends State<MyHomePage> {
 
           );
 
-          TextField creartextfield(texto){
-            final emailField = TextField(
-              obscureText: false,
-              controller: datopatente,
-              enabled: true,
-              decoration: InputDecoration(
-                  hintText: texto,
-
-                  border: OutlineInputBorder()
-              ),
-            );
-            return emailField;
-          }
-          void showAlert_invitado(BuildContext context) {
-            if (true){
-            }
-            showDialog(context: context,
-                builder: (BuildContext context){
-                  return AlertDialog(
-                    backgroundColor: Colors.white,
-                    content: Form(
-                      child: Container(
-                        child: new SingleChildScrollView(
-                          child: Column(
-                            children: <Widget>[
-                              SizedBox(height: 10.0),
-                              Text(
-                                  "ingresa tu nombre y apellido",textScaleFactor: 1.0 ,  textAlign: TextAlign.right
-                              ),
-                              nombrefield,
-                              SizedBox(height: 10.0),
-                              Text(
-                                  "ingresa tu numero telefonico",textScaleFactor: 1.0 ,  textAlign: TextAlign.right
-                              ),
-                              telefonofield,
-                              SizedBox(height: 10.0),
-                              Material(
-                                  borderRadius: BorderRadius.circular(30.0),
-                                  color: Colors.blueGrey,
-                                  child:MaterialButton(
-                                    minWidth: 280,
-                                    padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
-                                    onPressed: () async {
-                                      if (datonombres.text.length >200 || datonombres.text.length < 5 || datotelefono.text.length > 9 || datotelefono.text.length <9){
-                                        Toast.show(
-                                            "Ingrese los datos correspondientes",
-                                            context,
-                                            duration: Toast.LENGTH_LONG,
-                                            gravity: Toast.BOTTOM,
-                                            backgroundColor: Colors.red,
-                                            textColor: Colors.white
-                                        );
-                                      }else{
-                                        var url = "http://parkii.tk/API/guardar_invitado.php";
-
-                                        final response = await http.post(url, body: {
-                                          "nombre": datonombres.text,
-                                          "telefono": datotelefono.text,
-
-                                        });
-                                        if(response.body == "ingresado" || response.body == "CORRECTO" ) {
-                                          Toast.show(
-                                              "Ingresado Satisfactoriamente",
-                                              context,
-                                              duration: Toast.LENGTH_LONG,
-                                              gravity: Toast.BOTTOM,
-                                              backgroundColor: Colors.green,
-                                              textColor: Colors.white
-                                          );
-                                          Navigator.push(
-                                              context,
-                                              MaterialPageRoute(builder: (context) => BottomNavBar())
-                                          );
-
-                                        } else  {
-                                          //   showAlertDialog2(context);
-                                          Toast.show(
-                                              "Error al ingresar",
-                                              context,
-                                              duration: Toast.LENGTH_LONG,
-                                              gravity: Toast.BOTTOM,
-                                              backgroundColor: Colors.red,
-                                              textColor: Colors.white
-                                          );
-                                        }
-                                      }},
-                                    child: Text("Ingresar" ,
-                                        style: style.copyWith(
-                                            color: Colors.white, fontWeight: FontWeight.bold , fontSize: 15 )),
-                                  )
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                  );
-                }
-            );
-          }
-
-
-          Future<List> obtenerPatente() async {
-            var url = "http://parkii.tk/API/consulta_patente.php";
-            final response = await http.post(url, body: {
-              "patente": datopatente.text,
-              "cod_condominio": _mySelection,
-
-            });
-            if(response.body == "CORRECTO") {
-
-              Toast.show(
-                  "PATENTE ADMITIDA",
-                  context,
-                  duration: Toast.LENGTH_LONG,
-                  gravity: Toast.BOTTOM,
-                  backgroundColor: Colors.green,
-                  textColor: Colors.white
-              );
-              model.updateCodCondominio(_mySelection);
-              showAlert_invitado(context);
-            } else if(response.body == "ERROR") {
-              //showAlertDialog2(context);
-              Toast.show(
-                  "PATENTE INCORRECTA",
-                  context,
-                  duration: Toast.LENGTH_LONG,
-                  gravity: Toast.BOTTOM,
-                  backgroundColor: Colors.red,
-                  textColor: Colors.white
-              );
-            }else if(response.body == "ERROR ESTADO") {
-              //showAlertDialog2(context);
-              Toast.show(
-                  "VEHICULO DADO DE BAJA",
-                  context,
-                  duration: Toast.LENGTH_LONG,
-                  gravity: Toast.BOTTOM,
-                  backgroundColor: Colors.red,
-                  textColor: Colors.white
-              );
-            }
-          }
-
           return Scaffold(
               body: SingleChildScrollView(
                 child: Center(
@@ -489,78 +304,10 @@ class _MyHomePageState extends State<MyHomePage> {
                                 elevation: 0.0,
                                 backgroundColor: Colors.blueGrey,
                                 onPressed:(){
-                                  showDialog(
-                                      context: context,
-                                      builder: (context){
-                                        return StatefulBuilder(
-                                        builder: (context, setState) {
-                                        return AlertDialog(
-                                          title: Text("Ingrese Patente y Condominio"),
-                                          backgroundColor: Colors.white,
-                                          content: Form(
-                                              child: Container(
-                                                  child: new SingleChildScrollView(
-                                                    child: Column(
-                                                      children: <Widget>[
-                                                        SizedBox(height: 10,),
-                                                        creartextfield("Ingrese Patente"),
-                                                        SizedBox(height: 10,),
-                                                        new DropdownButton(
-                                                          hint: Text('Selecciona Condominio',textAlign: TextAlign.left, textScaleFactor: 1.0,), // Not necessary for Option 1
-                                                          items: data.map((item) {
-                                                            return new DropdownMenuItem(
-                                                              child: new Text(item['nombre']),
-                                                              value: item['cod_condiminio'].toString(),
-                                                            );
-                                                          }).toList(),
-                                                          onChanged: (newVal) {
-                                                            setState(() {
-                                                              _mySelection = newVal;
-                                                            });
-                                                          },
-                                                          value: _mySelection,
 
-
-                                                        ),
-                                                        SizedBox(height: 10,),
-                                                        Material(
-                                                            borderRadius: BorderRadius.circular(30.0),
-                                                            color: Colors.blueGrey,
-                                                            child:MaterialButton(
-                                                              onPressed: () {
-                                                                showDialog(
-                                                                    barrierDismissible: false,
-                                                                    context: context,
-                                                                    builder: (context) {
-
-                                                                      Future.delayed(Duration(seconds: 0), () {
-                                                                        Navigator.of(context).pop(true);
-                                                                      });
-
-                                                                      return AlertDialog(
-                                                                        title: Image.asset(
-                                                                          "assets/cargando_3.gif", height: 100, width: 100,),
-                                                                      );
-                                                                    });
-                                                                obtenerPatente();
-                                                                //showAlert_invitado(context);
-                                                              },
-                                                              minWidth: 280,
-                                                              padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
-                                                              child: Text("verificar",
-                                                                  style: style.copyWith(
-                                                                      color: Colors.white, fontWeight: FontWeight.bold )),
-                                                            )
-                                                        ),
-                                                      ],
-                                                    ),
-                                                  )
-                                              )
-                                          ),
-                                        );
-                                      }
-                                      );
-                                },
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(builder: (context) => pageinvitado())
                                   );
                                 },
                               ),
@@ -670,39 +417,6 @@ class _MyHomePageState extends State<MyHomePage> {
     );
 
   }
-  Future<List> GuardarInvitado() async {
-    var url = "http://parkii.tk/API/guardar_invitado.php";
-
-    final response = await http.post(url, body: {
-      "nombre": datonombres.text,
-      "telefono": datotelefono.text,
-
-    });
-    if(response.body == "ingresado" || response.body == "CORRECTO" ) {
-      Toast.show(
-          "Ingresado Satisfactoriamente",
-          context,
-          duration: Toast.LENGTH_LONG,
-          gravity: Toast.BOTTOM,
-          backgroundColor: Colors.green,
-          textColor: Colors.white
-      );
-      Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => BottomNavBar())
-      );
-
-    } else  {
-      //   showAlertDialog2(context);
-      Toast.show(
-          "Error al ingresar",
-          context,
-          duration: Toast.LENGTH_LONG,
-          gravity: Toast.BOTTOM,
-          backgroundColor: Colors.red,
-          textColor: Colors.white
-      );
-    }}
   showAlertDialogPrincipal(BuildContext context){
     Future.delayed(Duration(seconds: 3), () {
       Navigator.pop(context);

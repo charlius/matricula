@@ -16,10 +16,6 @@ import '../main.dart';
 
 void main() =>runApp(otrapage());
 
-
-
-
-
 class otrapage extends StatefulWidget{
   final String text;
   otrapage({Key key, @required this.text}) : super(key: key);
@@ -35,13 +31,9 @@ class _otraPageState extends State<otrapage>{
   //final MainModel dato_correo = " ";
 
   void initState() {
-
 //    FetchJSON();
   }
-
   //String corr = "edderhr07@gmail.com";
-
-
   @override
   Widget build(BuildContext context) {
     String correo="", nombre="", apellido="" , telefono="";
