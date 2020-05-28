@@ -38,6 +38,7 @@ dependencies:
   scoped_model: ^1.0.1
   flutter_bloc: ^0.21.0
   shimmer: ^1.0.1
+  shared_preferences : ^ 0.5.2
 
 dev_dependencies:
   flutter_test:

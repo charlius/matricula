@@ -13,6 +13,7 @@ import 'package:mailer/smtp_server.dart';
 import 'package:scoped_model/scoped_model.dart';
 import 'package:toast/toast.dart';
 import 'package:http/http.dart' as http;
+import 'package:shared_preferences/shared_preferences.dart';
 
 void main() => runApp(login());
 
@@ -61,27 +62,41 @@ class _MyHomePageState extends State<MyHomePage> {
 
   TextStyle style = TextStyle(fontFamily: 'Montserrat', fontSize: 20.0);
   BottomNavBar principal = BottomNavBar();
-
-
-
-
+  String dato_save= "";
 
   @override
   void initState() {
     super.initState();
-
   }
-
 
   @override
   Widget build(BuildContext context, ) {
-    return ScopedModelDescendant<MainModel>(
 
+    addStringToSF(correo_guardar) async {
+      SharedPreferences prefs = await SharedPreferences.getInstance();
+      prefs.setString('stringValue', correo_guardar);
+
+    }
+
+    getStringValuesSF() async {
+      SharedPreferences prefs = await SharedPreferences.getInstance();
+      //Return String
+      String stringValue = prefs.getString('stringValue');
+      dato_save = stringValue;
+      print("lllllllllllllllllllllllllllllll" + dato_save);
+      return dato_save;
+    }
+    getStringValuesSF();
+
+    return ScopedModelDescendant<MainModel>(
         builder: (BuildContext context, Widget child, MainModel model) {
+
 
           var screenSize = MediaQuery.of(context).size; //sacar el largo y ancho de la pantalla
           var width = screenSize.width;
           var height = screenSize.height;
+
+
 
           Future<List> obtenerUsuario() async {
             var url = "http://parkii.tk/API/obtenerUsuario.php";
@@ -177,6 +192,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   .width,
               padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
               onPressed: () {
+                addStringToSF(datoususario.text);
                 String email = datoususario.text;
                 String contra = datopass.text;
                 if (email.length < 5 || email.length > 200 || contra.length < 2 ||
@@ -255,12 +271,10 @@ class _MyHomePageState extends State<MyHomePage> {
                   decoration: TextDecoration.underline,
                 ),
               )
-
-
           );
-
           return Scaffold(
               body: SingleChildScrollView(
+
                 child: Center(
                   child: Container(
                     color: Colors.white70,
@@ -269,7 +283,6 @@ class _MyHomePageState extends State<MyHomePage> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.center,
                         mainAxisAlignment: MainAxisAlignment.center,
-
                         children: <Widget>[
                           SizedBox(
                             height: 155.0,
@@ -304,6 +317,15 @@ class _MyHomePageState extends State<MyHomePage> {
                                 elevation: 0.0,
                                 backgroundColor: Colors.blueGrey,
                                 onPressed:(){
+
+                                  Toast.show(
+                                      dato_save,
+                                      context,
+                                      duration: Toast.LENGTH_LONG,
+                                      gravity: Toast.BOTTOM,
+                                      backgroundColor: Colors.red,
+                                      textColor: Colors.white
+                                  );
 
                                   Navigator.push(
                                       context,
