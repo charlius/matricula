@@ -5,6 +5,7 @@ import 'package:estesimapa/page/principal.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:estesimapa/page/otrapage.dart';
+import  'vehiculosListView.dart';
 import 'package:scoped_model/scoped_model.dart';
 import 'package:toast/toast.dart';
 import 'package:http/http.dart' as http;
@@ -445,15 +446,8 @@ contenedor(){
                       Container(
 
                         height: 180.0,
-                        child:
-                        ListView(
+                        child: vehiculosListView()
 
-                          scrollDirection: Axis.horizontal,
-                          children: List.generate(i - 1, (index) {
-                            FetchJSON(1);
-                            return autos(2);
-                          }),
-                        ),
 
                       ),
 
