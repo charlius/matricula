@@ -124,9 +124,10 @@ class vehiculosListView extends StatelessWidget {
           Text("color:  "+color),
           SizedBox(height: 30),
           IconButton(
-            //icon: Image.asset("assets/basurero.png"),
-            icon: Icon(Icons.delete),
+            icon: Image.asset("assets/basurero.png"),
+            //icon: Icon(Icons.delete),
             tooltip: 'Increase volume by 10',
+            
             onPressed: () {
 
 
